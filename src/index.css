@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* HEADER TITLE: Playwrite England SemiJoined */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+/* Merriweather */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+/* Atkinson */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  /* FONTS */
+  --atkinson: "Atkinson Hyperlegible", sans-serif;
+  --merryweather: "Merriweather", serif;
+  --playwrite: "Playwrite GB S", serif;
+
+  --weight_regular: 400;
+  --weight_bold: 700;
+  --weight_black: 900;
+  --weight_light: 300;
+
+  --size_regular: 2vh;
+  --size_regular_big: 3vh;
+  --size_hero: 5rem;
+
+  /* WEBSITE COLOR PALETTE */
+
+  --orangebittersweet: #F25757;
+  --yellowmaize: #F2E863;
+  --yellownaples: #F2CD60;
+  
+  --sun: #FFC300;        
+  --evening :#FF7676;
+  --sunhover: #FF5733;
+  --moon: #EAF2E3;          
+  --moonhover: #1C1C3C; 
+
+  /* island animation page */
+  --skyblue: #6495ED;          /* day */
+  --skybluetwo: #5D8AA8;       /* gray day */
+  --skybluethree: #B0E0E6;     /* less gray day */
+  --skybluefour: #CCCCFF;      /* delicate blue gray day */
+  --skyblue: #00BFFF;          /* light turquoise day */
+  --sky_rgba: rgba(135, 206, 235, 0); /* for header title: opacity is set to 0 */
+  --sea: #61E8E1;      
+  --seatwo: #87CEEB;       /* sea */
+  --night: #003366;  /* night */
+  --night_two: #0F4C81;  /* night */
+  --deeppurple: #5C4B8A;    /* night */
+  --red:  #FF6F61;
+  --tangerine: #FFB347;  
+  --green: #84DE02; 
+  --pink: #FF85B3; 
+  --redtwo :#FF7676;
+  --coral: #F79D84;
+  --svg_islets: rgb(63, 169, 245);
+  --svg_beach: rgb(252, 238, 33);
+  --svg_land:  rgb(43, 137, 64); ;
+
+  /* sizes */
+
+  /* durations keyframes*/
+  --moon_sun_night: 30s;
+
+  /* z-index (objects / text / containers etc) */
+  --sun_moon_z: 8;
+  --cloud_z: 6;
+  --night_z: 4;
+  --text_z: 10;
+
+
+  /* margins */
+  --margin_small_h: 2vh;
+  --margin_small_w: 2vw;
+  --margin_smallbig_h: 6vh;
+  --margin_smallbig_w: 6vw;
 }

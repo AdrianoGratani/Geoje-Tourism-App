@@ -1,0 +1,131 @@
+html {
+    height: 100%;
+    overflow: scroll;
+}
+
+.body, .main{
+    background-color: var(--moon);
+    font-family: var(--playwrite);
+}
+
+
+/* ____header */
+.menu_page_header {
+    margin-bottom: var(--margin_small_h);
+}
+
+.menu_page_nav {
+    margin-top: var(--margin_small_h);
+    margin-left: var(--margin_small_w);
+    box-sizing: border-box;
+}
+
+.menu_page_ul {
+    display: flex;
+    gap: 10px;
+}
+
+.menu_page_ul li {
+    box-sizing: border-box;
+    margin-right: var(--margin_small_w);
+    font-size: var( --size_regular_big);
+    border-bottom: solid 1px transparent;
+    transition: border-bottom 2s;
+    /* border box: ogni li element occupa solo lo spazio del suo testo */
+
+}
+.menu_page_ul li:hover {
+    margin-right: var(--margin_small_w);
+    border-bottom: solid 1px black;
+    cursor: pointer;
+    transition: border-bottom 2s;
+}
+
+/* _____hero */
+
+.hero_container {
+    display: flex;
+    flex-direction: row;
+    /* gap: var(--margin_smallbig_w); */
+    /* margin-top: var(--margin_smallbig_h); */
+    margin-left: var(--margin_small_w);
+    margin-right: var(--margin_small_w);
+}
+
+.hero_maps_and_description_container {
+    width: 50vw;
+    height: 100vh;
+}
+
+.hero_maps_container {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: var(--margin_smallbig_h); */
+    animation: svg_opacity 3.5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes svg_opacity {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ____hero text  */
+
+.hero_text_container {
+    white-space: nowrap;
+    overflow: visible;
+    font-family: var(--merryweather);
+    font-size: var(--size_hero);
+    /* background-color: blue; */
+}
+
+.hero_geoje {
+    transition: color 2.5s;
+    font-size: 10rem;
+}
+
+.land {
+    color: var(--svg_land);
+}
+
+.beach {
+    color: var(--svg_beach) ;
+}
+
+.islets {
+    color: var(--svg_islets);
+}
+
+
+/* hero text description */
+.hero_text_description_container {
+    /* background-color: red; */
+    height: 20vh;
+    width: 20vh;
+}
+
+/* map section */
+
+.single_map_section_container {
+    margin-top: var(--margin_smallbig_h);
+    margin-left: var(--margin_smallbig_w);
+    height: 80vh;
+    width: 25vw;
+}
+.islet_map {
+    height: 90vh;
+    width: 30vw;
+}
