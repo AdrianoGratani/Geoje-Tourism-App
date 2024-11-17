@@ -1,13 +1,112 @@
+/* this class is assigned dynamically at each render: the animation it's __not__ 'infinite', also to avoid sync issues with the setInterval */
+/* animation timing __must__ be slightly (~100ms) longer than the setinterval */
 .svg_hero_map_container svg {
     width: 25vw;
     height: auto;   
+    animation: svg_opacity 3.7s ;
+    /* animation-timing-function: ease-in-out; */
 }
 
+/* this class is assigned dynamically at each render: the animation it's __not__ 'infinite', also to avoid sync issues with the setInterval */
+/* animation timing __must__ be slightly (~100ms) longer than the setinterval */
 .svg_hero_map_container_islets svg {
     width: 35vw;
-    height: auto;   
+    height: auto;
+    animation: svg_opacity 3.7s ;
+    /* animation-timing-function: ease-in-out;;    */
+}
+
+/* svg text: */
+.svg_hero_map_text_container {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg_hero_map_text_title {
+    opacity: 0.9;
+    font-size: var(--size_regular_big);
+    animation: text_opacity 3.5s infinite ease;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+}
+
+.hero_span {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2px;
+}
+
+.hero_span_0 {
+    color: var(--svg_land);
+}
+.hero_span_1 {
+    color: var(--svg_beach);
+}
+.hero_span_2 {
+    color: var(--svg_islets);
+}
+
+/* icons:  */
+.svg_hero_map_text_icon {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.hero_icon {
+    width: 50px;
+    /* height: auto; */
+    animation: text_opacity 3.7s infinite ease;
+}
+
+.icon_1 {
+    color: var(--svg_land);
     
 }
+.icon_2 {
+    color: var(--svg_beach);
+
+}
+.icon_3 {
+    color: var(--svg_islets);
+}
+
+@keyframes svg_opacity {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes text_opacity {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 
 /* colors of svg restored: */
 

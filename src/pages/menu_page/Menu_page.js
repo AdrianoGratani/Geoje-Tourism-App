@@ -1,12 +1,10 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
-import text_data from "./text_data";
 
 import Hero_map_animated from "../../components/animated/hero_maps/Hero_map_animated";
+import Maps_menu from "../../components/navbar/Maps_menu";
 
-import {ReactComponent as Geoje_land} from "./geoje_land.svg";
-import {ReactComponent as Geoje_beach} from "./geoje_beach.svg";
-import {ReactComponent as Geoje_islets} from "./geoje_islets.svg";
+import Sections from '../../components/sections/Sections';
 
 import "./menu_page.css";
 import "./svg.css";
@@ -38,14 +36,8 @@ export default function Menu_page() {
             <header class="menu_page_header">
                 <nav class="menu_page_nav">
                     <ul class="menu_page_ul">
-                        <li>Mainland</li>
-                        <li>Seaside</li>
-                        <li>Islets</li>
-                        <li>Food</li>
-                        <li>Hiking</li>
-                        <li>Infos</li>
-                        <li>About</li>
-                        <li>Login</li>
+                        <li className="menu_about_me">AboutMe</li>
+                        <Maps_menu />
                     </ul>
                 </nav>
             </header>
@@ -60,7 +52,7 @@ export default function Menu_page() {
                     <div class="hero_text_container">
                         <h1><span class={`hero_geoje ${hero_geoje_current_color}`}>Everything</span> <br/>
                         about  <span class={`hero_geoje ${hero_geoje_current_color}`} >Geoje</span>. <br/> 
-                            In one Place.
+                            In one Place. <br />
                         </h1>
                     </div>
                 {/* hero maps */}
@@ -68,25 +60,14 @@ export default function Menu_page() {
                         <div class="hero_maps_container">
                             <Hero_map_animated index={hero_geoje_current_color}/>
                         </div>
-                        <div class="hero_text_description_container">
+                        {/* <div class="hero_text_description_container">
                             {text_data.hero_description.beach}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
-
 
 {/* text goes to the RIGHT of the map */}
-                <div class="map_sections_container">
-                    <div class="single_map_section_container">
-                        <Geoje_land class="geoje_land_svg"/>
-                    </div>
-                    <div class="single_map_section_container">
-                        <Geoje_beach class="geoje_land_svg"/>
-                    </div>
-                    <div class="single_map_section_container islet_map">
-                        <Geoje_islets class="geoje_land_svg"/>
-                    </div>
-                </div>
+                   <Sections />
 
             </main>
 

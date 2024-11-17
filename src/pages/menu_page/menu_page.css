@@ -22,24 +22,32 @@ html {
 
 .menu_page_ul {
     display: flex;
+    flex-direction: row;
     gap: 10px;
 }
 
+/* in default state there is one li only for maps. */
 .menu_page_ul li {
+    /* background-color: red; */
     box-sizing: border-box;
-    margin-right: var(--margin_small_w);
+    /* THIS margin affects the relation maps-icon */
+    margin-left: var(--margin_small_w);
     font-size: var( --size_regular_big);
     border-bottom: solid 1px transparent;
-    transition: border-bottom 2s;
+    transition: border-bottom 0.7s, margin-right 2s;
     /* border box: ogni li element occupa solo lo spazio del suo testo */
+    
 
 }
 .menu_page_ul li:hover {
-    margin-right: var(--margin_small_w);
+    /* margin-right: var(--margin_small_w); */
     border-bottom: solid 1px black;
     cursor: pointer;
-    transition: border-bottom 2s;
+    transition: border-bottom 0.7s;
 }
+
+
+
 
 /* _____hero */
 
@@ -63,23 +71,6 @@ html {
     align-items: center;
     justify-content: center;
     /* margin-bottom: var(--margin_smallbig_h); */
-    animation: svg_opacity 3.5s infinite;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes svg_opacity {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1
-    }
-    100% {
-        opacity: 0;
-    }
 }
 
 /* ____hero text  */
@@ -88,7 +79,8 @@ html {
     white-space: nowrap;
     overflow: visible;
     font-family: var(--merryweather);
-    font-size: var(--size_hero);
+    font-size: var(--size_hero_big);
+
     /* background-color: blue; */
 }
 
@@ -117,15 +109,4 @@ html {
     width: 20vh;
 }
 
-/* map section */
-
-.single_map_section_container {
-    margin-top: var(--margin_smallbig_h);
-    margin-left: var(--margin_smallbig_w);
-    height: 80vh;
-    width: 25vw;
-}
-.islet_map {
-    height: 90vh;
-    width: 30vw;
-}
+/* sections: */

@@ -1,0 +1,6 @@
+.single_map_section_container_land {
+    margin-top: var(--margin_smallbig_h);
+    margin-left: var(--margin_smallbig_w);
+    height: 80vh;
+    width: 25vw;
+}
