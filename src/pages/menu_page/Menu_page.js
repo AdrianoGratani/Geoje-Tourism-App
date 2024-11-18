@@ -50,7 +50,7 @@ export default function Menu_page() {
                 <div class="hero_container">
                 {/* hero text */}
                     <div class="hero_text_container">
-                        <h1><span class={`hero_geoje ${hero_geoje_current_color}`}>Everything</span> <br/>
+                        <h1><span class={`hero_geoje ${hero_geoje_current_color} `}>Everything</span> <br/>
                         about  <span class={`hero_geoje ${hero_geoje_current_color}`} >Geoje</span>. <br/> 
                             In one Place. <br />
                         </h1>
@@ -60,9 +60,7 @@ export default function Menu_page() {
                         <div class="hero_maps_container">
                             <Hero_map_animated index={hero_geoje_current_color}/>
                         </div>
-                        {/* <div class="hero_text_description_container">
-                            {text_data.hero_description.beach}
-                        </div> */}
+                       
                     </div>
                 </div>
 
@@ -74,24 +72,3 @@ export default function Menu_page() {
         </body>
     )
 }
-
-/*
-create a map illustration of geoje:
-https://dribbble.com/stories/2019/03/27/how-to-create-an-illustrated-map-in-8-simple-steps
-
-CITIES
-jangseungpo
-gujora
-okpo           Okpo waterside park
-jisaepo         sonocalm
-
-BEAUTY
-Daegeumsan   view
-mundong waterfall
-naedo island
-oedo island, botania
-Geoje Botanical Garden Jungle Dome
-Gyeryong-san
-
-
-*/

@@ -18,6 +18,8 @@
 
   --size_regular: 2vh;
   --size_regular_big: 3vh;
+  --size_title: 4rem;
+  --size_subtitle: 2rem;
   --size_hero: 5rem;
   --size_hero_big: 8rem;
 
@@ -47,13 +49,18 @@
   --deeppurple: #5C4B8A;    /* night */
   --red:  #FF6F61;
   --tangerine: #FFB347;  
-  --green: #84DE02; 
+  --green: #181b13; 
   --pink: #FF85B3; 
   --redtwo :#FF7676;
   --coral: #F79D84;
   --svg_islets: rgb(63, 169, 245);
   --svg_beach: rgb(252, 238, 33);
   --svg_land:  rgb(43, 137, 64); ;
+
+  /* sections, background: */
+  --section_islets: hwb(205 24% 4% / 0.115);
+  --section_beach: hwb(56 13% 1% / 0.091);
+  --section_land:  hwb(133 17% 46% / 0.084); ;
 
   /* sizes */
 

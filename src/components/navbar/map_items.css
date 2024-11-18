@@ -1,16 +1,13 @@
 .map_items_container {
     display: flex;
     position:absolute;
-    /* visibility: hidden; */
     left: 11vw;
     top: var(--margin_small_h);
     animation: item_compares 1s ease-in-out 1;
 }
-
 .map_items_container_hide {
     display: flex;
     position:absolute;
-    /* visibility: hidden; */
     top: var(--margin_small_h);
     opacity: 1;
     animation: item_hides 1.1s ease-in-out 1;
@@ -39,6 +36,12 @@
 .item_food {
     transition: color 0.2s, width 0.1s, height 0.1s;
 }
+.item_cities {
+    transition: color 0.2s, width 0.1s, height 0.1s;
+}
+.item_infos {
+    transition: color 0.2s, width 0.1s, height 0.1s;
+}
 
 .item_sea:hover {
     color: var(--svg_beach);
@@ -63,6 +66,20 @@
 
 .item_food:hover {
     color: var(--redtwo);
+    width: 28px;
+    height: auto;
+    transition: color 0.2s, width 0.1s, height 0.1s;
+}
+
+.item_cities:hover {
+    color: var(--coral);
+    width: 28px;
+    height: auto;
+    transition: color 0.2s, width 0.1s, height 0.1s;
+}
+
+.item_infos:hover {
+    color: var(--moonhover);
     width: 28px;
     height: auto;
     transition: color 0.2s, width 0.1s, height 0.1s;

@@ -1,3 +1,28 @@
 .map_sections_container {
-    background-color: red;
+    /* background-color: red; */
+    width: 95vw;
+    margin-left: var(--margin_small_w);
+    margin-right: var(--margin_small_w);
 }
+
+/* the section general style: */
+.single_section_container {
+    /* background-color: blue; */
+    height: 100vh;
+    margin-bottom: var(--margin_small_w);
+    display: flex;
+    flex-direction: row;
+}
+
+.s_land {
+    background-color: var(--section_land);
+}
+
+.s_sea {
+    background-color: var(--section_beach);
+}
+
+.s_islets {
+    background-color: var(--section_islets);
+}
+

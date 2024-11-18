@@ -33,7 +33,7 @@ html {
     /* THIS margin affects the relation maps-icon */
     margin-left: var(--margin_small_w);
     font-size: var( --size_regular_big);
-    border-bottom: solid 1px transparent;
+    border-bottom: solid  transparent;
     transition: border-bottom 0.7s, margin-right 2s;
     /* border box: ogni li element occupa solo lo spazio del suo testo */
     
@@ -41,7 +41,7 @@ html {
 }
 .menu_page_ul li:hover {
     /* margin-right: var(--margin_small_w); */
-    border-bottom: solid 1px black;
+    border-bottom:  solid 2px black;
     cursor: pointer;
     transition: border-bottom 0.7s;
 }

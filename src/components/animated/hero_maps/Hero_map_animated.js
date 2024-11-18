@@ -27,7 +27,8 @@ export default function Hero_map_animated( index ) {
 
     const t = text_data;
     
-    console.log(islets +". index prop: " + index.index + ". current map: " + svgMaps[current_hero_color_props_index]);   // debug
+    // console.log(islets +". index prop: " + index.index + ". current map: " + svgMaps[current_hero_color_props_index]);   // debug
+    
     return (
         <div class="svg_hero_container">
             <div class={`${islets ? 

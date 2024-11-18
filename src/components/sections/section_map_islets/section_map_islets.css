@@ -1,9 +1,11 @@
 .single_map_section_container {
-    margin-top: var(--margin_smallbig_h);
-    margin-left: var(--margin_smallbig_w);
+
 }
 
 .islet_map {
-    height: 90vh;
+    height: inherit;
     width: 30vw;
+    display: flex;
+    justify-content: center;
 }
+

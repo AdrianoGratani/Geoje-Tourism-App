@@ -1,0 +1,29 @@
+/* section_text style: */
+.text_container {
+    width: 70vw;
+    /* font-family: var(--merryweather); */
+    
+}
+
+.text_title {
+    height: 11vh;
+    font-size: var(--size_title);
+    text-align: center;
+    margin-top: var(--margin_small_h);
+    margin-bottom: var(--margin_small_h);
+}
+
+.text_subtitle {
+    height: 6vh;
+    text-align: center;
+    font-size: var(--size_subtitle);
+    margin-bottom: var(--margin_small_h);
+}
+
+.text_text {
+    font-family: var(--atkinson);
+    margin-right: var(--margin_smallbig_w);
+    margin-left: var(--margin_smallbig_w);
+    line-height: 35px;
+    font-size: 1.5rem;
+}
