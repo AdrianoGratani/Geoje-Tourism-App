@@ -55,12 +55,23 @@
   --coral: #F79D84;
   --svg_islets: rgb(63, 169, 245);
   --svg_beach: rgb(252, 238, 33);
-  --svg_land:  rgb(43, 137, 64); ;
-
+  --svg_land:  rgb(43, 137, 64);
+  
   /* sections, background: */
   --section_islets: hwb(205 24% 4% / 0.115);
   --section_beach: hwb(56 13% 1% / 0.091);
   --section_land:  hwb(133 17% 46% / 0.084); ;
+  /* cards: */
+  --card_land:  hwb(133 17% 46% / 0.124);;
+  --card_land_hover:  hwb(133 17% 46% / 0.34);
+  --card_icon_mainland: hwb(34 55% 18%);
+  --card_sea: hwb(56 13% 1% / 0.252);
+  --card_sea_hover: hwb(56 13% 1% / 0.491);
+  --card_icon_sea: hwb(5 38% 0% / 0.632);
+  --card_islets: hwb(205 24% 4% / 0.197);
+  --card_islets_hover: hwb(205 24% 4% / 0.473);
+  --card_icon_islets:hwb(92 89% 5% / 0.318);
+  
 
   /* sizes */
 
@@ -73,10 +84,20 @@
   --night_z: 4;
   --text_z: 10;
 
+  /* radius */
+  --radius_cards: 10px;
+  --radius_cards_hover: 20px;
 
   /* margins */
   --margin_small_h: 2vh;
   --margin_small_w: 2vw;
   --margin_smallbig_h: 6vh;
   --margin_smallbig_w: 6vw;
+
+  /* paddings */
+  --padding_xxxsmall: 10px;
+  --padding_small_h: 1vh;
+  --padding_small_w: 1vw;
+  --padding_smallbig_h: 2vh;
+  --padding_smallbig_w: 2vw;
 }

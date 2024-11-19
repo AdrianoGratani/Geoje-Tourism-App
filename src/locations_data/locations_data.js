@@ -10,42 +10,6 @@ const locations_data = {
             picture: "image_path.jpg"
         },
          {
-            name: "montagna_2",
-            height: "500mt",
-            difficulty: "difficult",
-            length: "3 km",
-            steepness: "very steep",
-            duration: "3 hours",
-            picture: "image_path.jpg"
-        },
-         {
-            name: "montagna_3",
-            height: "500mt",
-            difficulty: "difficult",
-            length: "3 km",
-            steepness: "very steep",
-            duration: "3 hours",
-            picture: "image_path.jpg"
-        },
-         {
-            name: "montagna_4",
-            height: "500mt",
-            difficulty: "difficult",
-            length: "3 km",
-            steepness: "very steep",
-            duration: "3 hours",
-            picture: "image_path.jpg"
-        },
-         {
-            name: "montagna_4",
-            height: "500mt",
-            difficulty: "difficult",
-            length: "3 km",
-            steepness: "very steep",
-            duration: "3 hours",
-            picture: "image_path.jpg"
-        },
-         {
             name: "montagna_4",
             height: "500mt",
             difficulty: "difficult",
@@ -205,6 +169,60 @@ const locations_data = {
             cafes: "cafes",
         },
          {
+            name: "spiaggia_2",
+            sand: "no sand",
+            parking: "no parking",
+            cafes: "cafes",
+        },
+         {
+            name: "spiaggia_2",
+            sand: "no sand",
+            parking: "no parking",
+            cafes: "cafes",
+        },
+         {
+            name: "spiaggia_2",
+            sand: "no sand",
+            parking: "no parking",
+            cafes: "cafes",
+        },
+         {
+            name: "spiaggia_2",
+            sand: "no sand",
+            parking: "no parking",
+            cafes: "cafes",
+        },
+         {
+            name: "spiaggia_2",
+            sand: "no sand",
+            parking: "no parking",
+            cafes: "cafes",
+        },
+         {
+            name: "spiaggia_2",
+            sand: "no sand",
+            parking: "no parking",
+            cafes: "cafes",
+        },
+         {
+            name: "spiaggia_2",
+            sand: "no sand",
+            parking: "no parking",
+            cafes: "cafes",
+        },
+         {
+            name: "spiaggia_2",
+            sand: "no sand",
+            parking: "no parking",
+            cafes: "cafes",
+        },
+         {
+            name: "spiaggia_2",
+            sand: "no sand",
+            parking: "no parking",
+            cafes: "cafes",
+        },
+         {
             name: "spiaggia_3",
             sand: "no sand",
             parking: "no parking",
@@ -234,37 +252,142 @@ const locations_data = {
         {
             name: "islet uno",
             sand: "sand and hike",
-            car: "you can drive",
+            car: "yes",
             eat: "there are restaurants",
-            bridge: "only for walking"
+            bridge: "only walk"
         },
         {
             name: "islet due",
             sand: "sand and hike",
-            car: "you can drive",
+            car: "yes",
             eat: "there are restaurants",
-            bridge: "only for walking"
+            bridge: "only walk"
         },
         {
             name: "islet tre",
             sand: "sand and hike",
-            car: "you can drive",
+            car: "yes",
             eat: "there are restaurants",
-            bridge: "only for walking"
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
+        },
+        {
+            name: "islet tre",
+            sand: "sand and hike",
+            car: "yes",
+            eat: "there are restaurants",
+            bridge: "only walk"
         },
         {
             name: "islet quattro",
             sand: "sand and hike",
-            car: "you can drive",
+            car: "yes",
             eat: "there are restaurants",
-            bridge: "only for walking"
+            bridge: "only walk"
         },
         {
             name: "islet cinque",
             sand: "sand and hike",
-            car: "you can drive",
+            car: "yes",
             eat: "there are restaurants",
-            bridge: "only for walking"
+            bridge: "only walk"
         },
     ]
 }

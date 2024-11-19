@@ -31,11 +31,11 @@
 /* ______________________________________________________________________________________________________________ */
 /* cards area container: */
 .cards_area_container {
+    /* background-color: blue; */
     margin-right: var(--margin_smallbig_w);
     margin-left: var(--margin_smallbig_w);
     margin-top: var(--margin_small_h);
     margin-bottom: var(--margin_small_h);
-    background-color: blue;
     width: 60vw;
     display: flex;
     flex-flow: wrap;    

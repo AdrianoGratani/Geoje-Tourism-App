@@ -1,3 +1,168 @@
+/* MAINLAND */
+
 .card_mainland_container {
-    
+    width: 8vw;
+    height: 13vh;
+    border-radius: var(--radius_cards);
+    background-color: var(--card_land);   
+    padding: var(--padding_xxxsmall);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transition: background-color 1s, width 0.05s;
+}
+
+.card_mainland_container:hover {
+    /* since there are many cards, if you reset width and height directly, on hovering, the other cards will shrink, and it's not nice. */
+    transform: scale(1.025);
+    background-color: var(--card_land_hover);   
+    border-radius: var(--radius_cards_hover);
+    transition: background-color 1s, transform 0.05s, border-radius 0.4s;
+}
+
+.icon_container {  /* for mainland*/
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    background-color: var(--card_icon_mainland);
+    border-radius: var(--radius_cards);
+}
+
+.card_name_mainland {
+    display: flex; 
+     gap: 10px;
+}
+
+.card_difficulty {
+    display: flex; 
+    gap: 10px;
+}
+
+.card_length {
+    display: flex; 
+    gap: 10px;
+}
+
+.card_duration {
+    display: flex; 
+    gap: 10px;
+}
+
+
+/*    SEASIDE    */
+.card_seaside_container {
+    width: 8vw;
+    height: 13vh;
+    border-radius: var(--radius_cards);
+    background-color: var(--card_sea);   
+    padding: var(--padding_xxxsmall);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transition: background-color 1s, width 0.05s;
+}
+
+.card_seaside_container:hover {
+    /* since there are many cards, if you reset width and height directly, on hovering, the other cards will shrink, and it's not nice. */
+    transform: scale(1.025);
+    background-color: var(--card_sea_hover);   
+    border-radius: var(--radius_cards_hover);
+    transition: background-color 1s, transform 0.05s, border-radius 0.4s;
+}
+
+.icon_container_seaside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card_icon_sea);
+    padding: 3px;
+    border-radius: var(--radius_cards);
+}
+
+.card_name_seaside {
+    display: flex;
+    gap: 10px; 
+ /* background-color: red; */
+}
+
+.card_name_seaside {
+    display: flex;
+    gap: 10px;
+}
+
+.card_sand {
+    display: flex;
+    gap: 10px;
+}
+
+.card_name_parking {
+    display: flex;
+    gap: 10px;
+}
+
+.card_name_cafes {
+    display: flex;
+    gap: 10px;
+}
+
+/* ISLETS */
+
+.card_islets_container {
+    width: 8vw;
+    height: 13vh;
+    border-radius: var(--radius_cards);
+    background-color: var(--card_islets);   
+    padding: var(--padding_xxxsmall);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transition: background-color 1s, width 0.05s;
+}
+
+.card_islets_container:hover {
+    /* since there are many cards, if you reset width and height directly, on hovering, the other cards will shrink, and it's not nice. */
+    transform: scale(1.025);
+    background-color: var(--card_islets_hover);   
+    border-radius: var(--radius_cards_hover);
+    transition: background-color 1s, transform 0.05s, border-radius 0.4s;
+}
+
+.icon_container_islets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card_icon_islets);
+    padding: 3px;
+    border-radius: var(--radius_cards);
+}
+
+.card_name_islets {
+    display: flex;
+    gap: 10px; 
+ /* background-color: red; */
+}
+
+.card_name_islets {
+    display: flex;
+    gap: 10px;
+}
+
+.card_name_islets {
+    display: flex;
+    gap: 10px;
+}
+
+.card_name_bycar {
+    display: flex;
+    gap: 10px;
+}
+
+.card_name_bridge {
+    display: flex;
+    gap: 10px;
 }
