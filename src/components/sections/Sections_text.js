@@ -2,10 +2,9 @@ import React from 'react';
 import "./sections_text.css";
 import Card_section_location from '../card/Card_section_location';
 
-export default function Sections_text({text_data}) {
+export default function Sections_text({text_data, cards_data}) {
 
-
-    return (
+    return (   // text description on top, cards about each location on the bottom.
         <div>
             {/* title and a brief description of each section. */}
             <div className="text_container">
@@ -16,7 +15,8 @@ export default function Sections_text({text_data}) {
             </div>
 
             {/* cards for each interesting point. useContext is used for making the map responsive with user interactions. */}
-            {/* .map() of locations.js is used for dynamic rendering of Card.js component. */}
+            {/* .map() of locations.js is used for dynamic rendering of Card.js component. 
+                VERY IMPORTANT: .map() callback scope must be indented within round brackets, NOT curly brackets*/}
             {/* 
                 - this componentSections_text has a useState inherited from Sections,
                 which is sent to each Card children. 
@@ -30,8 +30,12 @@ export default function Sections_text({text_data}) {
                      the specific <path> changes style, now is a orange-brown for Mailand, orange-red in Seaside, yellow in Islets
             */}
 
-            <div className="text_container">
-                <Card_section_location  />
+            <div className="cards_area_container">
+                {
+                    cards_data.map((c, i)=> (
+                      <Card_section_location card_data={c} id_index={i}/>
+                    ))
+                }
             </div>        
         </div>
     )
