@@ -1,15 +1,17 @@
 /* MAINLAND */
 
 .card_mainland_container {
-    width: 8vw;
-    height: 13vh;
+    font-family: var(--atkinson);
+    font-size: 2.5vh;
+    width: 14vw;
+    height: 11vh;
     border-radius: var(--radius_cards);
     background-color: var(--card_land);   
     padding: var(--padding_xxxsmall);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 1vh;
     transition: background-color 1s, width 0.05s;
 }
 
@@ -33,29 +35,39 @@
 
 .card_name_mainland {
     display: flex; 
-     gap: 10px;
+     gap: 5px;
+
 }
 
 .card_difficulty {
     display: flex; 
-    gap: 10px;
+    gap: 5px;
 }
 
 .card_length {
     display: flex; 
-    gap: 10px;
+    gap: 5px;
 }
 
 .card_duration {
     display: flex; 
+    gap: 5px;
+}
+
+.card_additional_infos {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
     gap: 10px;
 }
 
 
 /*    SEASIDE    */
 .card_seaside_container {
-    width: 8vw;
-    height: 13vh;
+    font-family: var(--atkinson);
+    font-size: 2.5vh;
+    width: 12vw;
+    height: 17vh;
     border-radius: var(--radius_cards);
     background-color: var(--card_sea);   
     padding: var(--padding_xxxsmall);
@@ -112,8 +124,10 @@
 /* ISLETS */
 
 .card_islets_container {
-    width: 8vw;
-    height: 13vh;
+    font-family: var(--atkinson);
+    font-size: 2.5vh;
+    width: 12vw;
+    height: 17vh;
     border-radius: var(--radius_cards);
     background-color: var(--card_islets);   
     padding: var(--padding_xxxsmall);

@@ -1,8 +1,6 @@
 .map_sections_container {
     /* background-color: red; */
-    width: 95vw;
-    margin-left: var(--margin_small_w);
-    margin-right: var(--margin_small_w);
+    width: 100vw;
 }
 
 /* the section general style: */

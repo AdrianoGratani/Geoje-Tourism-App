@@ -1,7 +1,41 @@
-.single_map_section_container_land {
+.map_and_icons_container {
+    width: 700px;
+    min-width: 700px;
+    max-width: 700px;
     height: inherit;
-    width: 25vw;
+    min-height: inherit;
+    max-height: inherit;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+}
+
+.single_map_section_container_land {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     /* background-color: red; */
+    position: relative;
+
+}
+
+
+
+/* ICONS */
+.i0 {
+    width:fit-content;
+    height:fit-content;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    background-color: yellow;
+}
+
+.i1 {
+    width:fit-content;
+    height:fit-content;
+    position: absolute;
+    top: 10%;
+    left: 58%;
+    background-color: red;
 }

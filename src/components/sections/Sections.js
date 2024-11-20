@@ -57,6 +57,7 @@ export default function Sections() {
                 <Section_map_islets/>
                 <Sections_text text_data={i} cards_data={is}/>
             </div>
+            
         </div>
     )
 }

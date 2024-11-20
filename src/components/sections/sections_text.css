@@ -1,8 +1,10 @@
+.text_and_cards_container {
+}
+
 /* section_text style: */
 .text_container {
     width: 70vw;
-    /* font-family: var(--merryweather); */
-    
+    /* background-color: red; */
 }
 
 .text_title {
@@ -32,11 +34,9 @@
 /* cards area container: */
 .cards_area_container {
     /* background-color: blue; */
-    margin-right: var(--margin_smallbig_w);
-    margin-left: var(--margin_smallbig_w);
     margin-top: var(--margin_small_h);
     margin-bottom: var(--margin_small_h);
-    width: 60vw;
     display: flex;
     flex-flow: wrap;    
+    justify-content: center;
 }
