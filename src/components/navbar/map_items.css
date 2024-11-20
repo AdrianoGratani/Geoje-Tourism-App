@@ -13,10 +13,14 @@
     animation: item_hides 1.1s ease-in-out 1;
 }
 
+.item_container {
+    background-color: yellow;
+}
+
 .header_icon {
     margin-bottom: auto;
-    width: 20px;
-    height: auto;
+    width: 100%;
+    height: 25px;
     margin-right: 4px;
 }
 
@@ -45,43 +49,31 @@
 
 .item_sea:hover {
     color: var(--svg_beach);
-    width: 28px;
-    height: auto;
     transition: color 0.2s, width 0.1s, height 0.1s;
 }
 
 .item_hike:hover {
     color: var(--svg_land);
-    width: 28px;
-    height: auto;
     transition: color 0.2s, width 0.1s, height 0.1s;
 }
 
 .item_isl:hover {
     color: var(--svg_islets);
-    width: 28px;
-    height: auto;
     transition: color 0.2s, width 0.1s, height 0.1s;
 }
 
 .item_food:hover {
     color: var(--redtwo);
-    width: 28px;
-    height: auto;
     transition: color 0.2s, width 0.1s, height 0.1s;
 }
 
 .item_cities:hover {
     color: var(--coral);
-    width: 28px;
-    height: auto;
     transition: color 0.2s, width 0.1s, height 0.1s;
 }
 
 .item_infos:hover {
     color: var(--moonhover);
-    width: 28px;
-    height: auto;
     transition: color 0.2s, width 0.1s, height 0.1s;
 }
 

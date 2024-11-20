@@ -35,22 +35,22 @@ const Map_items = ({maps_triggered, setMaps_triggered}) => {
 
     return (
         <div onClick={()=>wait_trigger_useState()} className={` ${item_hides ? "map_items_container_hide" : "map_items_container"}`} >
-            <li className="item " onClick={()=>go_to_section("land")} >
+            <li className="item_container " onClick={()=>go_to_section("land")} >
                 {ti[0]} Hiking
             </li>
-            <li className="item " onClick={()=>go_to_section("sea")}>
+            <li className="item_container " onClick={()=>go_to_section("sea")}>
                 {ti[1]} Seaside
             </li>
-            <li className="item " onClick={()=>go_to_section("islets")}>
+            <li className="item_container " onClick={()=>go_to_section("islets")}>
                 {ti[2]} Islets
             </li>
-            <li className="item " >
+            <li className="item_container " >
                 {ti[3]} Food
              </li>
-            <li className="item " >
+            <li className="item_container " >
                 {ti[5]} Towns
              </li>
-            <li className="item " >
+            <li className="item_container " >
                 {ti[4]} Infos
              </li>
         </div>

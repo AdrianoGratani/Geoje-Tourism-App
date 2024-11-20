@@ -135,8 +135,8 @@
 .card_islets_container {
     font-family: var(--atkinson);
     font-size: 2.5vh;
-    width: 12vw;
-    height: 17vh;
+    width: 14vw;
+    height: 11vh;
     border-radius: var(--radius_cards);
     background-color: var(--card_islets);   
     padding: var(--padding_xxxsmall);

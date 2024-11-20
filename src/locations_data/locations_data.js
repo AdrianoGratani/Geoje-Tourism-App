@@ -256,63 +256,63 @@ const locations_data = {
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "only walk"
+            bridge: "no"
         },
         {
             name: "islet due",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "only walk"
+            bridge: "no"
         },
         {
             name: "islet tre",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "only walk"
+            bridge: "no"
         },
         {
             name: "islet tre",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "only walk"
+            bridge: "no"
         },
         {
             name: "islet tre",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "only walk"
+            bridge: "no"
         },
         {
             name: "islet tre",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "only walk"
+            bridge: "no"
         },
         {
             name: "islet tre",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "only walk"
+            bridge: "no"
         },
         {
             name: "islet tre",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "only walk"
+            bridge: "no"
         },
         {
             name: "islet tre",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "only walk"
+            bridge: "no"
         },
       
     ]

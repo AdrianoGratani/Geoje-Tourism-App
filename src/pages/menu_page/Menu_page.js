@@ -3,8 +3,8 @@ import {useState, useEffect} from 'react';
 
 import Hero_map_animated from "../../components/animated/hero_maps/Hero_map_animated";
 import Maps_menu from "../../components/navbar/Maps_menu";
-
 import Sections from '../../components/sections/Sections';
+import FooterMain from "../../components/FooterMain";
 
 import "./menu_page.css";
 import "./svg.css";
@@ -33,6 +33,8 @@ export default function Menu_page() {
 
     return (
         <body class="body">
+
+            {/* main page header  */}
             <header class="menu_page_header">
                 <nav class="menu_page_nav">
                     <ul class="menu_page_ul">
@@ -43,7 +45,7 @@ export default function Menu_page() {
             </header>
 
 
-{/* hero text - hero maps   //  maps */}
+            {/* main page hero text - hero maps   //  maps */}
             <main class="main">
 
                 {/* hero */}
@@ -64,8 +66,10 @@ export default function Menu_page() {
                     </div>
                 </div>
 
-{/* text goes to the RIGHT of the map */}
-                   <Sections />
+                {/* text goes to the RIGHT of the map */}
+                <Sections />
+                <FooterMain/>
+                
 
             </main>
 

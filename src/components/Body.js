@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from "./header/Header";
 import Main from "./Main";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import "./body.css"
-
+// this whole content must go into About Me page.
 
 
 export default function Body() {
@@ -14,7 +14,7 @@ export default function Body() {
                 {/* animated elements inside Main */}
                 <Main />
                 
-                <Footer />
+                {/* <Footer /> */}
             </div>
                
         </body>

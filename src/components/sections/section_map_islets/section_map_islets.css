@@ -1,11 +1,51 @@
-.single_map_section_container {
+.map_and_icons_container {
+    .map_and_icons_container {
+        width: 800px;
+        min-width: 800px;
+        max-width: 800px;
+        height: inherit;
+        min-height: inherit;
+        max-height: inherit;
+        /* background-color: blue; */
+        display: flex;
+        justify-content: center;
+    }
+    
+}
 
+.single_map_section_container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    position: relative;
 }
 
 .islet_map {
+
     height: inherit;
-    width: 30vw;
+    min-height: inherit;
+    max-height: inherit;
     display: flex;
     justify-content: center;
 }
 
+
+/* ICONS */
+.is0 {
+    width:fit-content;
+    height:fit-content;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    background-color: yellow;
+}
+
+.is1 {
+    width:fit-content;
+    height:fit-content;
+    position: absolute;
+    top: 10%;
+    left: 58%;
+    background-color: red;
+}

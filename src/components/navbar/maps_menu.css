@@ -31,6 +31,7 @@
 }
 
 .map_li_icon_hovered {
+    
     transform: rotate(180deg);
     transition: transform 0.3s;
 }
