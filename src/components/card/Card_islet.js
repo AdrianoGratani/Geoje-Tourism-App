@@ -18,7 +18,10 @@ export default function Card_islet({card_data, id_index}) {
     };
 
     return (
+        // upper line: name;  lower line: infos.
         <div className="card_islets_container">
+
+            {/* name takes a full line. */}
             <h1 className="card_name_islets">
                 <div className="icon_container_islets">
                     <GiIsland />
@@ -27,22 +30,26 @@ export default function Card_islet({card_data, id_index}) {
                     {islets_card_data_keys.n}
                 </div>
             </h1>
-            <h4 className="card_name_bycar">
-                <div className="icon_container_islets">
-                    <FaCarSide />
-                </div>
-                <div className="islets_text">
-                    {islets_card_data_keys.c}
-                </div>
-            </h4>
-            <h4 className="card_name_bridge">
-                <div className="icon_container_islets">
-                    <FaBridgeWater />
-                </div>
-                <div className="islets_text">
-                    {islets_card_data_keys.b}
-                </div>
-            </h4>
+
+            {/* additional card infos take one line altogether. */}
+            <div class="card_additional_infos">
+                <h4 className="card_name_bycar">
+                    <div className="icon_container_islets">
+                        <FaCarSide />
+                    </div>
+                    <div className="islets_text">
+                        {islets_card_data_keys.c}
+                    </div>
+                </h4>
+                <h4 className="card_name_bridge">
+                    <div className="icon_container_islets">
+                        <FaBridgeWater />
+                    </div>
+                    <div className="islets_text">
+                        {islets_card_data_keys.b}
+                    </div>
+                </h4>
+            </div>
           
         </div>
     )

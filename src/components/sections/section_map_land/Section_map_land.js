@@ -48,22 +48,23 @@ export default function Section_map_land() {
                     ...etc ...etc
                 ]
             */}
-            <div class="i0" id="i0">
-                {/* use 'style' to set position of the svg icon.  */}
-                <IconHike style={{ 
-                    width: '1.6vw', 
-                    height: 'auto' 
-                    }} 
-                />
-            </div>
-            <div class="i1" id="i0">
-                {/* use 'style' to set position of the svg icon.  */}
-                <IconHike style={{ 
-                    width: '1.6vw', 
-                    height: 'auto' 
-                    }} 
-                />
-            </div>
+
+                <div class="i0" id="i0">
+                    {/* use 'style' to set position of the svg icon.  */}
+                    <IconHike style={{ 
+                        width: '1.6vw', 
+                        height: 'auto' 
+                        }} 
+                    />
+                </div>
+                <div class="i1" id="i0">
+                    {/* use 'style' to set position of the svg icon.  */}
+                    <IconHike style={{ 
+                        width: '1.6vw', 
+                        height: 'auto' 
+                        }} 
+                    />
+                </div>
             </div>
         </div>
     )

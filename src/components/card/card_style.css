@@ -35,8 +35,7 @@
 
 .card_name_mainland {
     display: flex; 
-     gap: 5px;
-
+    gap: 5px;
 }
 
 .card_difficulty {
@@ -66,15 +65,15 @@
 .card_seaside_container {
     font-family: var(--atkinson);
     font-size: 2.5vh;
-    width: 12vw;
-    height: 17vh;
+    width: 14vw;
+    height: 11vh;
     border-radius: var(--radius_cards);
     background-color: var(--card_sea);   
     padding: var(--padding_xxxsmall);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 10px;
     transition: background-color 1s, width 0.05s;
 }
 
@@ -97,6 +96,8 @@
 
 .card_name_seaside {
     display: flex;
+    display: flex;
+    flex-direction: row;
     gap: 10px; 
  /* background-color: red; */
 }
@@ -118,6 +119,14 @@
 
 .card_name_cafes {
     display: flex;
+    gap: 10px;
+}
+
+
+.card_additional_infos_sea {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
     gap: 10px;
 }
 

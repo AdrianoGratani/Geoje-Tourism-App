@@ -5,14 +5,14 @@ import Card_section_location from '../card/Card_section_location';
 export default function Sections_text({text_data, cards_data}) {
 
     return (   // text description on top, cards about each location on the bottom.
-        <div>
+        <div class="text_and_cards_container">
             {/* title and a brief description of each section. */}
             <div className="text_container">
                 <h2 className="text_title">{text_data.title}</h2>
                 <h3 className="text_subtitle">{text_data.subtitle}</h3>
                 <p className="text_text">{text_data.text_1}</p>
                 <p className="text_text">{text_data.text_2}</p>
-            </div>
+            </div>  
 
             {/* cards for each interesting point. useContext is used for making the map responsive with user interactions. */}
             {/* .map() of locations.js is used for dynamic rendering of Card.js component. 
