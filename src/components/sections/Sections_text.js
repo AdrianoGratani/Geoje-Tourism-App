@@ -1,11 +1,36 @@
 import React from 'react';
-import "./sections_text.css";
+import { useEffect } from 'react';
 import Card_section_location from '../card/Card_section_location';
+import { useCardContext } from '../../context/CardContext';
 
-export default function Sections_text({text_data, cards_data}) {
+import "./sections_text.css";
+
+export default function Sections_text({text_data, cards_data, section}) {
+
+
+    // CONTEXT:
+    const { 
+        cardIsClicked, setCardIsClicked,
+        currentlyVisitedSection, setCurrentlyVisitedSection,
+        currentlyClickedCardID, setCurrentlyClickedCardID  
+    } = useCardContext();
+
+
+
+
+    // debug:
+    useEffect(() => {
+        if(currentlyVisitedSection === section && cardIsClicked && currentlyClickedCardID !== null){
+            console.log("Section_text.js; This is happening in: " + currentlyVisitedSection + " and current ID is:" + currentlyClickedCardID);
+        }
+    }, [currentlyClickedCardID]);
+
 
     return (   // text description on top, cards about each location on the bottom.
         <div class="text_and_cards_container">
+            <div>
+                questo text dipende dal context
+            </div>
             {/* title and a brief description of each section. */}
             <div className="text_container">
                 <h2 className="text_title">{text_data.title}</h2>
@@ -14,9 +39,7 @@ export default function Sections_text({text_data, cards_data}) {
                 <p className="text_text">{text_data.text_2}</p>
             </div>  
 
-            {/* cards for each interesting point. useContext is used for making the map responsive with user interactions. */}
-            {/* .map() of locations.js is used for dynamic rendering of Card.js component. 
-                VERY IMPORTANT: .map() callback scope must be indented within round brackets, NOT curly brackets*/}
+            
             {/* 
                 - this componentSections_text has a useState inherited from Sections,
                 which is sent to each Card children. 
@@ -31,8 +54,11 @@ export default function Sections_text({text_data, cards_data}) {
             */}
 
             <div className="cards_area_container">
+                {/* cards for each interesting point. useContext is used for making the map responsive with user interactions. */}
                 {
                     cards_data.map((c, i)=> (
+                        //  .map() of locations.js is used for dynamic rendering of Card.js component. 
+                        // VERY IMPORTANT: .map() callback scope must be indented within round brackets, NOT curly brackets
                       <Card_section_location card_data={c} id_index={i}/>
                     ))
                 }

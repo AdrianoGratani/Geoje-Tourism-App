@@ -11,10 +11,18 @@ const CardContext = createContext();                                            
 
 export const  CardContextProvider = ( {children} ) => {                                   // this generates a Provider for the useState data.
 
-    const [cardIsClicked, setCardIsClicked] = useState(false);                            // which is this data.
+    // which is this data.
+    const [cardIsClicked, setCardIsClicked] = useState(false);               
+    const [currentlyVisitedSection, setCurrentlyVisitedSection] = useState(null);         
+    const [currentlyClickedCardID, setCurrentlyClickedCardID] = useState(null);    
 
     return (
-        <CardContext.Provider cardIsClicked={{ cardIsClicked, setCardIsClicked }}>         {/* return a Provider of the Context, which is just a component storing the useState GLOBALLY. */}      
+        // IMPORTANT: `value` is the __only__ valide props name for the Provider prop. otherwise react returns an Error because the useContext gets 'undefined': the component using Context is NOT able to access the context data.
+        <CardContext.Provider value={{ 
+            cardIsClicked, setCardIsClicked, 
+            currentlyVisitedSection, setCurrentlyVisitedSection,
+            currentlyClickedCardID, setCurrentlyClickedCardID,
+         }}>         {/* return a Provider of the Context, which is just a component storing the useState GLOBALLY. */}      
             { 
                 children                                                                   // any other component which is wrapped within this useState Context Provider, receives the Context with the useState. 
             }
@@ -22,4 +30,4 @@ export const  CardContextProvider = ( {children} ) => {                         
     )
 };
 
-export const useCardContext = () => useContext(CardContext);                               // this function is vital to actually manipulate and USE the global context data.
+export const useCardContext = () => useContext(CardContext);                               // this function is vital to actually manipulate and USE the global context data you just created.

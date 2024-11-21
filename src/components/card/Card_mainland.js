@@ -1,26 +1,19 @@
 import React from 'react';
-import "./card_style.css";
 import { FaMountain } from "react-icons/fa6";
 import { FaPersonHiking } from "react-icons/fa6";
 import { FaRightLeft } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa6";
-import { useState } from 'react';
+import { useEffect } from 'react';
 
+// import the utility to USE the context useState data:
+import { useCardContext } from '../../context/CardContext';
+
+import "./card_style.css";
 import "./ext_card_mainland.css";
 
 export default function Card_mainland({card_data, id_index}) {
 
-    // this component dynamically renders Card_small or Card_Ext, based on the value stored in `user_clicked_to_enlarge`;
-    // by default, the value is set to `fales`, so the small card is rendered.
-    // Card_Ext is absolutely positioned and compares with an animation, which is quite similar to the moonLight sky in AboutMe page.
-
-    const [user_clicked_to_enlarge, setUser_clicked_to_enlarge] = useState(false);   // when `false`, card is shown; when `true` an animation of the extended card appears from the top left corner of Section.
-
-    function handleClickCardVersion() { 
-        setUser_clicked_to_enlarge(!user_clicked_to_enlarge);
-    }
-
-
+    //  PROPS DATA:
     let c = card_data;
     let mainland_card_data_keys = {
         // limited size card data:
@@ -34,13 +27,44 @@ export default function Card_mainland({card_data, id_index}) {
         p : c.picture,
     };
 
+    // CONTEXT DATA:
+    const { 
+            cardIsClicked, setCardIsClicked,
+            currentlyVisitedSection, setCurrentlyVisitedSection,
+            currentlyClickedCardID, setCurrentlyClickedCardID  
+        } = useCardContext();
+
+    // CONTEXT EVALUATOR FUNCTIONS:
+    function evaluateCardClick() {
+        setCardIsClicked(true);
+    }
+
+    function evaluateRendering() {                       // once big Card gets rendered, if you click on it, it will trigger other functions to set cardIsClicked to false and currentlyclickedCardID back to null.
+        setCurrentlyClickedCardID(id_index);
+    }
+
+    function evaluateCurrentSection() {
+        setCurrentlyVisitedSection("mainland");
+    }
+
+    function manipulateContextData() {
+        evaluateCardClick();
+        evaluateRendering();
+        evaluateCurrentSection();
+    }
+
+    // debug:
+    useEffect(()=> {
+        if(id_index === currentlyClickedCardID && cardIsClicked) {
+            console.log("Card_mainland.js. ID of the current card is:" + currentlyClickedCardID + "and current section is: " + currentlyVisitedSection);
+        }
+    }, [currentlyClickedCardID])
+
     return (
         
         // upper line: name;  lower line: infos.   >>> EVENT LISTENER GOES HERE TO THE CONTAINER.
-                    <div className="card_mainland_container" onClick={handleClickCardVersion}> 
-                        {
-                            user_clicked_to_enlarge ? <ExtCardMainland/> : null
-                        }
+                    <div className="card_mainland_container"  onClick={manipulateContextData}> 
+             
                         
                         {/* SMALL CARD COMPONENT. */}
                         {/* name takes a full line. */}
@@ -82,18 +106,4 @@ export default function Card_mainland({card_data, id_index}) {
                         </div>
                     </div>
     )
-}
-
-
-// EXTENDEND CARD:
-
-function ExtCardMainland() {
-
-    return (
-        <div class="ext_card_container" id="ext_card_container">
-            <h1>
-                Extended card
-            </h1>
-        </div>
-        )
 }
