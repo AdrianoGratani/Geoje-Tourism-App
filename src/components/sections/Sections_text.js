@@ -1,12 +1,16 @@
 import React from 'react';
 import { useEffect } from 'react';
-import Card_section_location from '../card/Card_section_location';
 import { useCardContext } from '../../context/CardContext';
+import Card_section_location from '../card/Card_section_location';
+// extended cards:
+// import {ExtMainland} from "../extended_cards/extended_card_mainland/ExtMainland";     {} WHEN IMPORTING  export default components, is wrong.
+import ExtMainland from "../extended_cards/extended_card_mainland/ExtMainland";
+import ExtSeaside from "../extended_cards/extended_card_seaside/ExtSeaside";
+import ExtIslets from "../extended_cards/extended_card_islets/ExtIslets";
 
 import "./sections_text.css";
 
 export default function Sections_text({text_data, cards_data, section}) {
-
 
     // CONTEXT:
     const { 
@@ -15,22 +19,39 @@ export default function Sections_text({text_data, cards_data, section}) {
         currentlyClickedCardID, setCurrentlyClickedCardID  
     } = useCardContext();
 
+    let display_extended_card = currentlyVisitedSection === section 
+                                && cardIsClicked 
+                                && currentlyClickedCardID !== null;
 
 
+
+    function ExtCardSectionEvaluator() {                                // for each section the extended card has different style and animation.
+        if(section === "mainland") {
+            return <ExtMainland cards_data={cards_data} section={section} currentlyClickedCardID={currentlyClickedCardID}/>;
+        }
+        else if(section === "seaside") {
+            return <ExtSeaside cards_data={cards_data} section={section} currentlyClickedCardID={currentlyClickedCardID}/>
+        }
+        else if(section === "islets") {
+            return   <ExtIslets cards_data={cards_data} section={section} currentlyClickedCardID={currentlyClickedCardID}/>
+        }
+    }
 
     // debug:
     useEffect(() => {
-        if(currentlyVisitedSection === section && cardIsClicked && currentlyClickedCardID !== null){
+        if(display_extended_card){
             console.log("Section_text.js; This is happening in: " + currentlyVisitedSection + " and current ID is:" + currentlyClickedCardID);
         }
     }, [currentlyClickedCardID]);
 
-
     return (   // text description on top, cards about each location on the bottom.
         <div class="text_and_cards_container">
-            <div>
-                questo text dipende dal context
-            </div>
+            {
+                display_extended_card 
+                ? ExtCardSectionEvaluator()
+                : null
+            }
+
             {/* title and a brief description of each section. */}
             <div className="text_container">
                 <h2 className="text_title">{text_data.title}</h2>

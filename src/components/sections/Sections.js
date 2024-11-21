@@ -1,5 +1,4 @@
 import React from 'react';
-import {useState} from 'react';
 // map svg component:
 import Section_map_land from './section_map_land/Section_map_land';
 import Section_map_sea from './section_map_sea/Section_map_sea';
