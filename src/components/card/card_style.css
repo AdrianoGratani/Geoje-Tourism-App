@@ -1,6 +1,7 @@
 /* MAINLAND */
 
 .card_mainland_container {
+    position: relative;
     font-family: var(--atkinson);
     font-size: 2.5vh;
     width: 14vw;

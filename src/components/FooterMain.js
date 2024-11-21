@@ -1,7 +1,6 @@
 import React from 'react';
 import "./footer_main.css";
 
-
 export default function FooterMain() {
 
     return (
@@ -81,6 +80,9 @@ export default function FooterMain() {
             </div>
 
             {/* footer of the footer: copyright and year */}
+            <div className="footer_footer_container">
+
+            </div>
 
         </div>
     )

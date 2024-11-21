@@ -8,7 +8,8 @@ import About_me_page from '../src/pages/about_me_page/About_me_page';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // routing: you move from one page to the other.
 
-
+// the context data Provider component,  for Card rendering:
+import { CardContextProvider } from "./context/CardContext";
 
 function App() {
   return (
@@ -18,8 +19,13 @@ function App() {
         url of landing page is: http://localhost:3000/(on local) */}
         <Route path="/"  element={<Body/>} />
 
-        {/* in order to go to the menu, url has to switch to: http://localhost:3000/menu_page */}
-        <Route path="/menu_page" element={<Menu_page/>}/>
+          {/* in order to go to the menu, url has to switch to: http://localhost:3000/menu_page */}
+            <Route path="/menu_page" element={
+              <CardContextProvider>
+                <Menu_page/>
+             </CardContextProvider>
+             }
+            />
        
         {/* in order to go to the about_me, url has to switch to: http://localhost:3000/about_me */}
         <Route path="/about_me_page" element={<About_me_page/>}/>

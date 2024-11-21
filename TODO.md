@@ -1,12 +1,20 @@
-# fix seaside and islets map svg, and the card section (just copy what you did for Mainland)
+# TODAY figure it out an algorithm to render dynamically map icons svg with proper absolute position cohordinates for `top` and `left`
 
-# import data for each location into js files.
+# TODAY import data for each location into js files.
+    - 17 mainland spots.
+    - 9 beaches.
+    - 6 islets.
+    - find pictures for each spot (find out if onLoad() is necessary.);
+    - in locations_data.js add a `description` key. you will use this key for the expanded version of the card.
 
-# figure it out an algorithm to render dynamically map icons svg with proper absolute position cohordinates for `top` and `left`
+# TODAY build a Ext_card component.
+  - when the user [click] the card, the Ext_card compares with transition. 
+  - when it clicks [outside] the card, or the ['X'] sign, it disappears with transition.
+  - Name and all the data, [plus] pictures and the description.
 
-
->> food map
->> towns map
+# <repeat for these sections:> 
+    >> food map
+    >> towns map
 
 // lastly:
 
@@ -15,8 +23,9 @@ turn the welcome page into the about me page
 responsiveness for: mobile
 responsiveness for: tablet
 
-design a footer 
+apply the [style] for the footer  (STRUCTURE DONE, layout organized) 
 
+# DONE fix seaside and islets map svg, and the card section (just copy what you did for Mainland)
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
