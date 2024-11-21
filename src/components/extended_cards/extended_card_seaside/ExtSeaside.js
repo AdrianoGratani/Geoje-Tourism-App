@@ -3,8 +3,11 @@ import React from 'react';    // CONTEXT:
 import { useCardContext } from '../../../context/CardContext';
 import "../ext_card_style.css";
 
-
 export default function ExtSeaside({resetContextData, cards_data, section, currentlyClickedCardID}) {
+
+    // cards_data: is a whole bunch of data for all the cards. you must retrieve the one you need.
+
+
 
     const { 
         setCardIsClicked,

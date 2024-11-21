@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useCardContext } from '../../../context/CardContext';
+import "../ext_card_style.css";
 
 export default function ExtMainland({ cards_data, section, currentlyClickedCardID}) {
-
+    let card_data_extracted = cards_data[currentlyClickedCardID];
+    const [toggle_animation, setToggle_animation] = useState(true);
     // CONTEXT:
     const { 
+        cardIsClicked, 
         setCardIsClicked,
+        currentlyVisitedSection,
         setCurrentlyVisitedSection,
         setCurrentlyClickedCardID  
     } = useCardContext();
@@ -15,16 +19,24 @@ export default function ExtMainland({ cards_data, section, currentlyClickedCardI
             setCurrentlyClickedCardID(null);
             setCurrentlyVisitedSection(null);
     }
-
+    
+   
     function handle_reset_data() {
+        setToggle_animation(false)
         setTimeout(()=> {
             resetContextData();
+            // add the removed class here,
         }, 1000)
     }
 
+
+
     return (
-        <div onClick={handle_reset_data}>
-            card {section} item {currentlyClickedCardID}
+        <div id="ext_card_container" onClick={handle_reset_data}
+            // class={`ext_card_container ${toggle_animation ? "ext_card_container_appears" : "ext_card_container_fades"}`}
+            class={`ext_card_container ext_card_container_appears ${toggle_animation===false ? "ext_card_container_fades" : ""}`}
+        >
+           {currentlyClickedCardID}
         </div>
     )
 }

@@ -45,7 +45,10 @@ export default function Sections_text({text_data, cards_data, section}) {
     }, [currentlyClickedCardID]);
 
     return (   // text description on top, cards about each location on the bottom.
+
         <div class="text_and_cards_container">
+
+            {/* EXTENDED CARD */}
             {
                 display_extended_card 
                 ? ExtCardSectionEvaluator()
