@@ -1,15 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { useCardContext } from '../../../context/CardContext';
 import "../ext_card_style.css";
 
-export default function ExtMainland({ cards_data, section, currentlyClickedCardID}) {
-    let card_data_extracted = cards_data[currentlyClickedCardID];
+export default function ExtMainland({ 
+    // cards_data, 
+    // section, 
+    currentlyClickedCardID
+}) {
+    // let card_data_extracted = cards_data[currentlyClickedCardID];
     const [toggle_animation, setToggle_animation] = useState(true);
+    
     // CONTEXT:
     const { 
         cardIsClicked, 
         setCardIsClicked,
-        currentlyVisitedSection,
+        // currentlyVisitedSection,
         setCurrentlyVisitedSection,
         setCurrentlyClickedCardID  
     } = useCardContext();
@@ -22,6 +27,7 @@ export default function ExtMainland({ cards_data, section, currentlyClickedCardI
     
    
     function handle_reset_data() {
+        console.log("etx_mainland.js: cardIsClicked is " + cardIsClicked)
         setToggle_animation(false)
         setTimeout(()=> {
             resetContextData();

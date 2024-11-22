@@ -22,7 +22,20 @@
 
 
 /* ICONS */
-.i0 {
+
+.m_icon_container {
+    position: absolute;
+    /* top: 100px;
+    left: 600px; */
+    background-color: yellow;
+}
+
+
+
+
+
+/* debug */
+/* .i0 {
     width:fit-content;
     height:fit-content;
     position: absolute;
@@ -38,4 +51,4 @@
     top: 10%;
     left: 58%;
     background-color: red;
-}
+} */

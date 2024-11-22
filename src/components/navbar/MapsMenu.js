@@ -1,11 +1,11 @@
 import React from "react";
 import {useState} from 'react';
-import Map_items from "./Map_items"
+import MapItems from "./MapItems"
 import { AiOutlineDown } from "react-icons/ai";
 import "./maps_menu.css";
 
 
-export default function Maps_menu() {
+export default function MapsMenu() {
 
     const [maps_triggered, setMaps_triggered] = useState(true);
     const [map_li_fades, setMap_li_fades] = useState(false);
@@ -30,7 +30,7 @@ export default function Maps_menu() {
                             <AiOutlineDown className={` ${map_li_fades ? "maps_li_fades map_li_icon_hovered" : "maps_li"}`} onMouseEnter={() =>  wait_trigger_useState()}/>
                         </div>
                     </div>
-                :   <Map_items maps_triggered={maps_triggered} setMaps_triggered={setMaps_triggered}/>
+                :   <MapItems maps_triggered={maps_triggered} setMaps_triggered={setMaps_triggered}/>
             }
         </div>
     )

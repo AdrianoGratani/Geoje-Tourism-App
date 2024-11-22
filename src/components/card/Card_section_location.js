@@ -31,14 +31,14 @@ export default function Card_section_location({card_data, id_index}) {
         <Card_islet card_data={card_data} id_index={id_index}/>,
     ];
 
-    function evaluator(card_data_name) {
-        if(card_data_name.toLowerCase().includes("montagna")) {
+    function evaluator(card_data_arg) {
+        if(card_data_arg.toLowerCase().includes("mainland")) {
             return card_components[0];
         }
-        else if(card_data_name.toLowerCase().includes("spiaggia")) {
+        else if(card_data_arg.toLowerCase().includes("seaside")) {
             return card_components[1];
         }
-        else if(card_data_name.toLowerCase().includes("islet")) {
+        else if(card_data_arg.toLowerCase().includes("islet")) {
             return card_components[2];
         }
     };
@@ -46,7 +46,7 @@ export default function Card_section_location({card_data, id_index}) {
     return (
         <div className="card_container">
             {
-                evaluator(card_data.name)
+                evaluator(card_data.id)
             }
         </div>
     );

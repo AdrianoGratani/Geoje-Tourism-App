@@ -7,7 +7,7 @@ import { FaLandmarkDome } from "react-icons/fa6";
 import { FaCity } from "react-icons/fa6";
 import "./map_items.css";
 
-const Map_items = ({maps_triggered, setMaps_triggered}) => {
+const MapItems = ({maps_triggered, setMaps_triggered}) => {
     const [item_hides, setItem_hides] = useState(false);
     const ti = [
         <FaMountainSun className="header_icon item_hike"/>,
@@ -57,4 +57,4 @@ const Map_items = ({maps_triggered, setMaps_triggered}) => {
     )
 }
 
-export default Map_items;
+export default MapItems;

@@ -9,6 +9,9 @@ import {ReactComponent as IconHike} from "../../../img/hike.svg";
 import {ReactComponent as IconCableCar} from "../../../img/cable.svg"
 import {ReactComponent as LightHouse} from "../../../img/faro.svg"
 
+// for incon rendering: a loop over the mainland array.
+import locations_data from "../../../locations_data/locations_data";
+
 import "./section_map_land.css";
 
 export default function Section_map_land() {
@@ -18,20 +21,7 @@ export default function Section_map_land() {
         <div class="map_and_icons_container">
 
             {/* map svg */}
-            <div class="single_map_section_container_land">
-                <Geoje_land className="geoje_land_svg" style={{ 
-                    // min-width etc retains the svg size over browser size changes;
-                    width: '700px', 
-                    minWidth: '700px',
-                    maxWidth: '700px',
-                    height: '850px',
-                    minHeight: '850px',
-                    maxHeight: '850px',
-                    margin: '1vw' 
-                    }} 
-                />
-
-            {/* map icons svg ------>  use .map() to generate them dynamically, 
+              {/* map icons svg ------>  use .map() to generate them dynamically, 
             with INLINE CSS for the container too. the container must have an ID
                 retrieve cohordinates for top and left from an array of objects:
                 MountainLocations = [
@@ -49,23 +39,60 @@ export default function Section_map_land() {
                 ]
             */}
 
-                <div class="i0" id="i0">
-                    {/* use 'style' to set position of the svg icon.  */}
-                    <IconHike style={{ 
-                        width: '1.6vw', 
-                        height: 'auto' 
-                        }} 
-                    />
-                </div>
-                <div class="i1" id="i0">
-                    {/* use 'style' to set position of the svg icon.  */}
-                    <IconHike style={{ 
-                        width: '1.6vw', 
-                        height: 'auto' 
-                        }} 
-                    />
-                </div>
+            <div class="single_map_section_container_land">
+                <Geoje_land className="geoje_land_svg" style={{ 
+                    // min-width etc retains the svg size over browser size changes;
+                    width: '700px', 
+                    minWidth: '700px',
+                    maxWidth: '700px',
+                    height: '850px',
+                    minHeight: '850px',
+                    maxHeight: '850px',
+                    margin: '1vw' 
+                    }} 
+                />
+                
+                {
+                    locations_data.mainland.map((location, index) => (
+                        <div class="m_icon_container"
+                            style={{
+                                position: 'absolute',
+                                top: `${location.top}px`,
+                                left:`${location.left}px`,
+                                width: 'fit-content',
+                                height: 'fit-content',
+                            }}>
+
+                            <IconHike style={{
+                                 width: '30px', 
+                                 minWidth: '30px',
+                                 maxWidth: '30px',
+                                 height: '30px',
+                                 minHeight: '30px',
+                                 maxHeight: '30px',
+                                 margin: '3px',
+                            }}/>
+                        </div>
+                    ))
+                }
             </div>
         </div>
     )
 }
+
+// {/* icon rendering - debug: */}
+//     {/* use 'style' to set position of the svg icon.  */}
+// {/* <div class="i0" id="i0">
+//     <IconHike style={{ 
+//         width: '1.6vw', 
+//         height: 'auto' 
+//         }} 
+//     />
+// </div>
+// <div class="i1" id="i0">
+//     <IconHike style={{ 
+//         width: '1.6vw', 
+//         height: 'auto' 
+//         }} 
+//     />
+// </div> */}
