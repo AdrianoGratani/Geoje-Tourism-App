@@ -62,14 +62,14 @@ export default function Section_map_land() {
                                 width: 'fit-content',
                                 height: 'fit-content',
                             }}>
-
+                                    {/* {location.name} */}
                             <IconHike style={{
-                                 width: '30px', 
-                                 minWidth: '30px',
-                                 maxWidth: '30px',
-                                 height: '30px',
-                                 minHeight: '30px',
-                                 maxHeight: '30px',
+                                 width: '24px', 
+                                 minWidth: '24px',
+                                 maxWidth: '24px',
+                                 height: '24px',
+                                 minHeight: '24px',
+                                 maxHeight: '24px',
                                  margin: '3px',
                             }}/>
                         </div>
