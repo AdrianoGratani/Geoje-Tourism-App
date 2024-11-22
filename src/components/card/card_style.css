@@ -34,6 +34,12 @@
     border-radius: var(--radius_cards);
 }
 
+/* CONTEXT DATA TRIGGERS THIS CLASS BASED ON USER HOVER: */
+.m_card_effect{
+    background-color: var(--card_land_hover);
+}
+
+
 .card_name_mainland {
     display: flex; 
     gap: 5px;

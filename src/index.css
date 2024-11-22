@@ -71,6 +71,8 @@
   --card_islets: hwb(205 24% 4% / 0.197);
   --card_islets_hover: hwb(205 24% 4% / 0.473);
   --card_icon_islets:hwb(92 89% 5% / 0.318);
+  --card_effect: hwb(155 24% 4% / 0.658);
+  --m_icon_effect: hwb(155 24% 4% / 0.658);
   
 
   /* sizes */

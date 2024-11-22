@@ -212,7 +212,7 @@ const locations_data = {
             name: "Naebongsan",
             id: "mainland_naebongsan",
             height: "500mt",
-            top: "690",
+            top: "780",
             left: "360",
             difficulty: "A",
             length: "3km",

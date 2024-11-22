@@ -1,4 +1,7 @@
 import React from 'react';
+import locations_data from "../../../locations_data/locations_data";
+import { useCardContext } from '../../../context/CardContext';
+import { useEffect } from 'react';
 /*
     icons are SVG. to position each icon within the map svg, and make everything interactive, I treat them as React components inside <div> containers.
     to move them, change size, change color, add-remove classes for interactivity, I use their div container.
@@ -9,12 +12,28 @@ import {ReactComponent as IconHike} from "../../../img/hike.svg";
 import {ReactComponent as IconCableCar} from "../../../img/cable.svg"
 import {ReactComponent as LightHouse} from "../../../img/faro.svg"
 
+
 // for incon rendering: a loop over the mainland array.
-import locations_data from "../../../locations_data/locations_data";
 
 import "./section_map_land.css";
 
 export default function Section_map_land() {
+
+    // CONTEXT:
+    const { 
+        currentlyHoveredIcon, setCurrentlyHoveredIcon, currentlyHoveredCard 
+    } = useCardContext(); 
+
+    function send_icon_id_to_context(location_id) {
+        setCurrentlyHoveredIcon(location_id)
+    }
+    function remove_icon_id_from_context() {
+        setCurrentlyHoveredIcon(null);
+    }
+    
+    useEffect(()=> {
+        console.log(". currently hovered icon: " + currentlyHoveredIcon);      // debug;
+    }, [currentlyHoveredIcon])
 
     return (
 
@@ -54,7 +73,13 @@ export default function Section_map_land() {
                 
                 {
                     locations_data.mainland.map((location, index) => (
-                        <div class="m_icon_container"
+                        <div 
+                        class={`m_icon_container ${currentlyHoveredCard === location.id
+                                                    ? "m_icon_effect"
+                                                    : ""    
+                                                    }`} 
+                        onMouseEnter={()=>send_icon_id_to_context(location.id)}
+                        onMouseLeave={()=>remove_icon_id_from_context()}
                             style={{
                                 position: 'absolute',
                                 top: `${location.top}px`,
@@ -62,7 +87,7 @@ export default function Section_map_land() {
                                 width: 'fit-content',
                                 height: 'fit-content',
                             }}>
-                                    {/* {location.name} */}
+                                    {/* debug: {location.name} */}
                             <IconHike style={{
                                  width: '24px', 
                                  minWidth: '24px',
