@@ -252,8 +252,8 @@ const locations_data = {
             left: "520",
         },
          {
-            name: "Sibangseon-Chakjang",
-            id: "seaside_sibangseon-chakjang",
+            name: "Sibangseon",
+            id: "seaside_sibangseon",
             sand: "no",
             parking: "yes",
             cafes: "yes",

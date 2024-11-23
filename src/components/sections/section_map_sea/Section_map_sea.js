@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useCardContext } from '../../../context/CardContext';
 import locations_data from '../../../locations_data/locations_data';
 
 
@@ -12,9 +12,24 @@ import "./section_map_sea.css";
 
 export default function Section_map_sea() {
 
+    // CONTEXT DATA
+    const {
+            // data for icon/card events:
+            currentlyHoveredIcon, setCurrentlyHoveredIcon,
+            currentlyHoveredCard, setCurrentlyHoveredIconCard,
+    } = useCardContext();
+
+
+    function set_currently_hovered_icon_context(icon_id) {
+        setCurrentlyHoveredIcon(icon_id);   
+    }
+    function remove_currently_hovered_icon_context() {
+        setCurrentlyHoveredIcon(null);   
+    }
     
     return (
         <div className='map_and_icons_container'>
+            {/* SVG MAP */}
             <div class="single_map_section_container_sea">
                 <Geoje_sea class="geoje_land_svg" style={{ 
                     // min-width etc retains the svg size over browser size changes;
@@ -25,17 +40,22 @@ export default function Section_map_sea() {
                     minHeight: '850px',
                     maxHeight: '850px',
                     margin: '1vw' 
-                    }} />
+                }} />
 
+
+                {/* SVG ICON */}
                     {
                         locations_data.seaside.map((sea_location) => (
                             <div className="s_icon_container"
-                            style={{
-                                backgroundColor: 'yellow',                                position: 'absolute',
-                                top: `${sea_location.top}px`,
-                                left: `${sea_location.left}px`,
-                                width: 'fit-content',
-                                height: 'fit-content',
+                                onMouseEnter={()=> set_currently_hovered_icon_context(sea_location.id)}
+                                onMouseLeave={()=> remove_currently_hovered_icon_context()}
+                                style={{
+                                    position: 'absolute',
+                                    backgroundColor: 'yellow',                               
+                                    top: `${sea_location.top}px`,
+                                    left: `${sea_location.left}px`,
+                                    width: 'fit-content',
+                                    height: 'fit-content',
                             }}>
                                 {/* {sea_location.id} */}
                                <Icon_sea 
