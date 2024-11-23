@@ -1,9 +1,14 @@
 //////////// <<schedule>> //////////////////////                                                                                   x = DONE
 
-## MAINLAND FIRST.
+## TODAY REPEAT EVERYTHING you did for mainland FOR SEASIDE AND ISLETS.
+- locations_data with name for places and [ID]                                                                                      X
+- same [layout] for the [icon] svg                                                                                                  X
+- 'top' 'left' keys in locations_data.js                                                                                            X
+- context data for currently clicked icon and card as well [id]
+- ternary operations for adding/removing style from cards or icons, based on [context] data
+- [extended] card: logic and basic appearence.
 
-
-# FINISH THE HTML STRUCTURE AND CSS <LAYOUT> FOR THE EXTENDED CARD    
+# TODAY FINISH THE HTML STRUCTURE AND CSS <LAYOUT> FOR THE EXTENDED CARD    
    - import 5 pictures [CAROUSEL] for each location. 
 
 # TODAY import data for each location into js files.

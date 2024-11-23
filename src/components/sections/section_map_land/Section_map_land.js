@@ -72,7 +72,8 @@ export default function Section_map_land() {
                 />
                 
                 {
-                    locations_data.mainland.map((location, index) => (
+                    locations_data.mainland.map((location) => (
+                        // icon container
                         <div 
                         class={`m_icon_container ${currentlyHoveredCard === location.id
                                                     ? "m_icon_effect"
@@ -87,6 +88,7 @@ export default function Section_map_land() {
                                 width: 'fit-content',
                                 height: 'fit-content',
                             }}>
+                                {/* icon */}
                                     {/* debug: {location.name} */}
                             <IconHike style={{
                                  width: '24px', 
@@ -104,20 +106,3 @@ export default function Section_map_land() {
         </div>
     )
 }
-
-// {/* icon rendering - debug: */}
-//     {/* use 'style' to set position of the svg icon.  */}
-// {/* <div class="i0" id="i0">
-//     <IconHike style={{ 
-//         width: '1.6vw', 
-//         height: 'auto' 
-//         }} 
-//     />
-// </div>
-// <div class="i1" id="i0">
-//     <IconHike style={{ 
-//         width: '1.6vw', 
-//         height: 'auto' 
-//         }} 
-//     />
-// </div> */}

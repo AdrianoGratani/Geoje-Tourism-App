@@ -1,4 +1,9 @@
 import React from 'react';
+
+import locations_data from '../../../locations_data/locations_data';
+
+
+// icons:
 import {ReactComponent as Geoje_sea} from "../../../img/geoje_beach.svg";
 import {ReactComponent as Icon_sea} from "../../../img/beach.svg";
 import {ReactComponent as Icon_LightHouse} from "../../../img/faro.svg";
@@ -7,6 +12,7 @@ import "./section_map_sea.css";
 
 export default function Section_map_sea() {
 
+    
     return (
         <div className='map_and_icons_container'>
             <div class="single_map_section_container_sea">
@@ -21,49 +27,36 @@ export default function Section_map_sea() {
                     margin: '1vw' 
                     }} />
 
-                <div class="s0" id="s0">
-                    {/* use 'style' to set position of the svg icon.  */}
-                    <Icon_sea style={{ 
-                        width: '1.6vw', 
-                        height: 'auto' 
-                        }} 
-                    />
-                    </div>
+                    {
+                        locations_data.seaside.map((sea_location) => (
+                            <div className="s_icon_container"
+                            style={{
+                                backgroundColor: 'yellow',                                position: 'absolute',
+                                top: `${sea_location.top}px`,
+                                left: `${sea_location.left}px`,
+                                width: 'fit-content',
+                                height: 'fit-content',
+                            }}>
+                                {/* {sea_location.id} */}
+                               <Icon_sea 
+                                    style={{
+                                        width: '24px', 
+                                        minWidth: '24px',
+                                        maxWidth: '24px',
+                                        height: '24px',
+                                        minHeight: '24px',
+                                        maxHeight: '24px',
+                                        margin: '3px',
+                                    }}
+                               /> 
 
-                <div class="s1" id="s1">
-                    {/* use 'style' to set position of the svg icon.  */}
-                    <Icon_LightHouse style={{ 
-                        width: '1.6vw', 
-                        height: 'auto' 
-                        }} 
-                    />
-                </div>
+                            </div>
+                        ))
+                    }
             </div>
-
         </div>
-
-
-
-
 
     )
 
-    {/* map icons svg ------>  use .map() to generate them dynamically, 
-            with INLINE CSS for the container too. the container must have an ID
-                retrieve cohordinates for top and left from an array of objects:
-                MountainLocations = [
-                    {
-                        name: LocationName,
-                        top: x,
-                        y: y
-                    },
-                    {
-                        name: LocationName,
-                        top: x,
-                        y: y
-                    },
-                    ...etc ...etc
-                ]
-            */}
 }
 
