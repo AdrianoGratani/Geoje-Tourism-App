@@ -1,10 +1,11 @@
 //////////// <<schedule>> //////////////////////                                                                                   x = DONE
 
-# TODAY DO THE LAYOUT FOR EACH SECTION
+# TODAY DO THE LAYOUT FOR EACH SECTION: text , cards icon, events
 
 # TODAY import data for each location into js files.
     - find TEXT and pictures [CAROUSEL] for each spot (find out if onLoad() is necessary.);
     - in locations_data.js add a `description` key. you will use this key for the expanded version of the card.
+    - fix the [LAYOUT] for this section;
 
 # <repeat EVERYTHING for these sections:> 
     >> food map

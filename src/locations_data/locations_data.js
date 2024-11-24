@@ -13,7 +13,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3h",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
          {
              name: "Aengsan",
@@ -25,7 +25,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3h",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
         {
             name: "Daegumsan",
@@ -37,7 +37,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
          {
              name: "Mangwolsan",
@@ -49,7 +49,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
         {
             name: "Mangchisan",
@@ -61,7 +61,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
         {
             name: "Guksabong",
@@ -73,7 +73,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
          {
             name: "Siraesan",
@@ -85,7 +85,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
         {
             name: "Dundeok-Kiseong",
@@ -97,7 +97,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
          {
             name: "Sangbangsan",
@@ -109,7 +109,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
          {
             name: "Gyeryongsan",
@@ -121,7 +121,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
          {
             name: "Mundong",
@@ -133,7 +133,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg",
+            picture_folder: "image_path.jpg",
             special: "waterfall"
         },
          {
@@ -146,7 +146,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
          {
             name: "Seonjasan",
@@ -158,7 +158,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
          {
             name: "Gucheonjeosooji",
@@ -170,7 +170,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
          {
             name: "Bukbyeongsan",
@@ -182,7 +182,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
          {
             name: "Garasan",
@@ -194,7 +194,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
          {
             name: "Jayeon-Hyuyangrim",
@@ -206,7 +206,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
         {
             name: "Naebongsan",
@@ -218,7 +218,7 @@ const locations_data = {
             length: "3km",
             steepness: "very steep",
             duration: "3H",
-            picture: "image_path.jpg"
+            picture_folder: "image_path.jpg"
         },
         
     ],
@@ -233,6 +233,7 @@ const locations_data = {
             cafes: "yes",
             top: "15",
             left: "490",
+            picture_folder: ""
         },
          {
             name: "Hwangpo",
@@ -242,6 +243,7 @@ const locations_data = {
             cafes: "yes",
             top: "80",
             left: "400",
+            picture_folder: ""
         },
          {
             name: "Mul-an",
@@ -251,6 +253,7 @@ const locations_data = {
             cafes: "yes",
             top: "80",
             left: "520",
+            picture_folder: ""
         },
          {
             name: "Sibangseon",
@@ -260,6 +263,7 @@ const locations_data = {
             cafes: "yes",
             top: "210",
             left: "525",
+            picture_folder: ""
         },
          {
             name: "Deokpo",
@@ -269,6 +273,7 @@ const locations_data = {
             cafes: "yes",
             top: "320",
             left: "540",
+            picture_folder: ""
         },
          {
             name: "Wahyeon",
@@ -278,6 +283,7 @@ const locations_data = {
             cafes: "yes",
             top: "630",
             left: "565",
+            picture_folder: ""
         },
          {
             name: "Gujora",
@@ -287,6 +293,7 @@ const locations_data = {
             cafes: "yes",
             top: "570",
             left: "480",
+            picture_folder: ""
         },
          {
             name: "Mangchi",
@@ -296,6 +303,7 @@ const locations_data = {
             cafes: "yes",
             top: "660",
             left: "420",
+            picture_folder: ""
         },
          {
             name: "Baram-ui Ondeok",
@@ -305,6 +313,7 @@ const locations_data = {
             cafes: "yes",
             top: "740",
             left: "480",
+            picture_folder: ""
         },
          {
             name: "Dolteumi",
@@ -314,6 +323,7 @@ const locations_data = {
             cafes: "yes",
             top: "745",
             left: "420",
+            picture_folder: ""
         },
          {
             name: "Yeocha",
@@ -323,6 +333,7 @@ const locations_data = {
             cafes: "yes",
             top: "815",
             left: "360",
+            picture_folder: ""
         },
          {
             name: "Geunpo Maeul",
@@ -332,6 +343,7 @@ const locations_data = {
             cafes: "yes",
             top: "780",
             left: "290",
+            picture_folder: ""
         },
          {
             name: "Deokwon",
@@ -341,6 +353,7 @@ const locations_data = {
             cafes: "yes",
             top: "650",
             left: "280",
+            picture_folder: ""
         },
          {
             name: "Jukrim",
@@ -350,6 +363,7 @@ const locations_data = {
             cafes: "yes",
             top: "500",
             left: "290",
+            picture_folder: ""
         },
          {
             name: "Sagok",
@@ -359,6 +373,7 @@ const locations_data = {
             cafes: "yes",
             top: "350",
             left: "210",
+            picture_folder: ""
         },
     ],
 
@@ -373,6 +388,7 @@ const locations_data = {
             bridge: "no",
             top: "100",
             left: "500",
+            picture_folder: ""
         },
         {
             name: "Daeju-do",
@@ -383,6 +399,7 @@ const locations_data = {
             bridge: "no",
             top: "100",
             left: "620",
+            picture_folder: ""
         },
         {
             name: "Isu-do",
@@ -393,6 +410,7 @@ const locations_data = {
             bridge: "no",
             top: "200",
             left: "500",
+            picture_folder: ""
         },
         {
             name: "Jisim-do",
@@ -403,6 +421,7 @@ const locations_data = {
             bridge: "no",
             top: "500",
             left: "520",
+            picture_folder: ""
         },
         {
             name: "Nae-do",
@@ -413,6 +432,7 @@ const locations_data = {
             bridge: "no",
             top: "600",
             left: "430",
+            picture_folder: ""
         },
         {
             name: "Oe-do",
@@ -423,6 +443,7 @@ const locations_data = {
             bridge: "no",
             top: "670",
             left: "430",
+            picture_folder: ""
         },
         {
             name: "Jangsa-do",
@@ -433,6 +454,7 @@ const locations_data = {
             bridge: "no",
             top: "740",
             left: "100",
+            picture_folder: ""
         },
         {
             name: "Sandal-do",
@@ -443,6 +465,7 @@ const locations_data = {
             bridge: "no",
             top: "500",
             left: "110",
+            picture_folder: ""
         },
         {
             name: "Gajo-do",
@@ -453,6 +476,7 @@ const locations_data = {
             bridge: "no",
             top: "178",
             left: "40",
+            picture_folder: ""
         },
       
     ]
