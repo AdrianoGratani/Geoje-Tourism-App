@@ -1,9 +1,9 @@
 // NO FULL WORDS IN CARDS, JUST LETTERS
-// north to south. west to east.
 
 const locations_data = {
     mainland: [
-         {
+        // north to south. west to east.
+        {
             name: "Nongso",
             id:"mainland_nongso",
             height: "500mt",
@@ -16,8 +16,8 @@ const locations_data = {
             picture: "image_path.jpg"
         },
          {
-            name: "Aengsan",
-            id:"mainland_aengsan",
+             name: "Aengsan",
+             id:"mainland_aengsan",
             height: "500mt",
             top: "210",
             left: "330",
@@ -27,7 +27,7 @@ const locations_data = {
             duration: "3h",
             picture: "image_path.jpg"
         },
-         {
+        {
             name: "Daegumsan",
             id: "mainland_daegumsan",
             height: "500mt",
@@ -40,7 +40,7 @@ const locations_data = {
             picture: "image_path.jpg"
         },
          {
-            name: "Mangwolsan",
+             name: "Mangwolsan",
             id: "mainland_mangwolsan",
             height: "500mt",
             top: "270",
@@ -51,7 +51,7 @@ const locations_data = {
             duration: "3H",
             picture: "image_path.jpg"
         },
-         {
+        {
             name: "Mangchisan",
             id: "mainland_mangchisan",
             height: "500mt",
@@ -63,7 +63,7 @@ const locations_data = {
             duration: "3H",
             picture: "image_path.jpg"
         },
-         {
+        {
             name: "Guksabong",
             id: "mainland_guksabong",
             height: "500mt",
@@ -87,7 +87,7 @@ const locations_data = {
             duration: "3H",
             picture: "image_path.jpg"
         },
-         {
+        {
             name: "Dundeok-Kiseong",
             id: "mainland_dundeok-Kiseong",
             height: "500mt",
@@ -137,7 +137,7 @@ const locations_data = {
             special: "waterfall"
         },
          {
-            name: "Oknyeobong",
+             name: "Oknyeobong",
             id: "mainland_oknyeobong",
             height: "500mt",
             top: "470",
@@ -208,7 +208,7 @@ const locations_data = {
             duration: "3H",
             picture: "image_path.jpg"
         },
-         {
+        {
             name: "Naebongsan",
             id: "mainland_naebongsan",
             height: "500mt",
@@ -224,7 +224,8 @@ const locations_data = {
     ],
 
     seaside: [
-         {
+        // north to south. clockwise.
+        {
             name: "Guyeong",
             id: "seaside_guyeong",
             sand: "no",
@@ -362,77 +363,96 @@ const locations_data = {
     ],
 
     islets: [
+        // north to south. clockwise.
         {
-            name: "islet uno",
-            id: "islet_islet uno",
+            name: "Jeo-do",
+            id: "islet_jeo-do",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "no"
+            bridge: "no",
+            top: "100",
+            left: "500",
         },
         {
-            name: "islet due",
-            id: "islet_islet due",
+            name: "Daeju-do",
+            id: "islet_daeju-do",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "no"
+            bridge: "no",
+            top: "100",
+            left: "620",
         },
         {
-            name: "islet tre",
-            id: "islet_islet tre",
+            name: "Isu-do",
+            id: "islet_isu-do",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "no"
+            bridge: "no",
+            top: "200",
+            left: "500",
         },
         {
-            name: "islet tre",
-            id: "islet_islet tre",
+            name: "Jisim-do",
+            id: "islet_jisim-do",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "no"
+            bridge: "no",
+            top: "500",
+            left: "520",
         },
         {
-            name: "islet tre",
-            id: "islet_islet tre",
+            name: "Nae-do",
+            id: "islet_nae-do",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "no"
+            bridge: "no",
+            top: "600",
+            left: "430",
         },
         {
-            name: "islet tre",
-            id: "islet_islet tre",
+            name: "Oe-do",
+            id: "islet_oe-do",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "no"
+            bridge: "no",
+            top: "670",
+            left: "430",
         },
         {
-            name: "islet tre",
-            id: "islet_islet tre",
+            name: "Jangsa-do",
+            id: "islet_jangsa-do",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "no"
+            bridge: "no",
+            top: "740",
+            left: "100",
         },
         {
-            name: "islet tre",
-            id: "islet_islet tre",
+            name: "Sandal-do",
+            id: "islet_sandal-do",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "no"
+            bridge: "no",
+            top: "500",
+            left: "110",
         },
         {
-            name: "islet tre",
-            id: "islet_islet tre",
+            name: "Gajo-do",
+            id: "islet_gajo-do",
             sand: "sand and hike",
             car: "yes",
             eat: "there are restaurants",
-            bridge: "no"
+            bridge: "no",
+            top: "178",
+            left: "40",
         },
       
     ]

@@ -71,6 +71,7 @@ export default function Section_map_land() {
                     }} 
                 />
                 
+                {/* svg icons: */}
                 {
                     locations_data.mainland.map((location) => (
                         // icon container
@@ -89,7 +90,7 @@ export default function Section_map_land() {
                                 height: 'fit-content',
                             }}>
                                 {/* icon */}
-                                    {/* debug: {location.name} */}
+                                {/* debug: {location.name} */}
                             <IconHike style={{
                                  width: '24px', 
                                  minWidth: '24px',

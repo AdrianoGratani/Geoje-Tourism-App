@@ -4,8 +4,12 @@ import {ReactComponent as Svg_islets} from "../../../img/islet.svg";
 
 import "./section_map_islets.css";
 
+// icon data rendering:
+import locations_data from '../../../locations_data/locations_data';
+
 
 export default function Section_map_islets() {
+    const icons_islets_data = locations_data.islets;
 
     return (
         <div class="map_and_icons_container">
@@ -41,23 +45,35 @@ export default function Section_map_islets() {
                     ...etc ...etc
                 ]
             */}
+ 
+            
+            {
+                icons_islets_data.map((islet)=> (
+                    <div 
+                    className="is_icon_container"
+                    style={{
+                        width: 'fit-content',
+                        height: 'fit-content',
+                        position: 'absolute',
+                        top: `${islet.top}px`,
+                        left: `${islet.left}px`,
+                    }}
+                    >
 
-                <div class="is0" id="is0">
-                    {/* use 'style' to set position of the svg icon.  */}
-                    <Svg_islets style={{ 
-                        width: '1.6vw', 
-                        height: 'auto' 
-                        }} 
-                    />
-                </div>
-                <div class="is1" id="is1">
-                    {/* use 'style' to set position of the svg icon.  */}
-                    <Svg_islets style={{ 
-                        width: '1.6vw', 
-                        height: 'auto' 
-                        }} 
-                    />
-                </div>
+                        <Svg_islets
+                            style={{
+                                width: '24px', 
+                                minWidth: '24px',
+                                maxWidth: '24px',
+                                height: '24px',
+                                minHeight: '24px',
+                                maxHeight: '24px',
+                                margin: '3px',
+                            }}
+                        />
+                    </div>
+                ))
+            }
             </div>
         </div>
     )
