@@ -1,15 +1,39 @@
 import React from 'react';
+import { useEffect } from 'react';
 import {ReactComponent as Geoje_islets} from "../../../img/geoje_islets.svg";
 import {ReactComponent as Svg_islets} from "../../../img/islet.svg";
-
+import { useCardContext } from '../../../context/CardContext';
 import "./section_map_islets.css";
 
 // icon data rendering:
 import locations_data from '../../../locations_data/locations_data';
 
-
 export default function Section_map_islets() {
-    const icons_islets_data = locations_data.islets;
+    const icons_islets_data = locations_data.islets;                                                // data for icon positioning.
+
+    // CONTEXT DATA for icon layout - card layout interactions:
+    const {
+        currentlyHoveredIcon, setCurrentlyHoveredIcon,
+        currentlyHoveredCard,
+    } = useCardContext();
+
+
+    function handle_icon_hovered_context(set_case, set_data) {
+        switch(set_case) {
+            case "set_context":
+                setCurrentlyHoveredIcon(set_data);
+                break;
+            
+            case "delete_context":
+                setCurrentlyHoveredIcon(set_data);
+                break;
+        }
+    }
+
+    // debug:
+    // useEffect(()=> {
+    //     console.log(currentlyHoveredCard);
+    // },[currentlyHoveredCard]);
 
     return (
         <div class="map_and_icons_container">
@@ -46,11 +70,19 @@ export default function Section_map_islets() {
                 ]
             */}
  
-            
+            {/* data maping -> icon container -> icon */}
             {
                 icons_islets_data.map((islet)=> (
+
                     <div 
-                    className="is_icon_container"
+                    // if currentlyHoveredCard state is same as the islet.id, add some style to make the icon stand out:
+                    className={`is_icon_container ${currentlyHoveredCard === islet.id
+                                                    ? "is_icon_effect"
+                                                    : ""                                
+                    }`}
+
+                    onMouseEnter={()=> handle_icon_hovered_context("set_context", islet.id)}
+                    onMouseLeave={()=> handle_icon_hovered_context("delete_context", null)}
                     style={{
                         width: 'fit-content',
                         height: 'fit-content',
@@ -59,7 +91,7 @@ export default function Section_map_islets() {
                         left: `${islet.left}px`,
                     }}
                     >
-
+                    {/* {islet.id} */}
                         <Svg_islets
                             style={{
                                 width: '24px', 

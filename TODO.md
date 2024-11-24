@@ -1,24 +1,10 @@
 //////////// <<schedule>> //////////////////////                                                                                   x = DONE
 
-## TODAY REPEAT EVERYTHING you did for mainland FOR SEASIDE [X] AND ISLETS [TODO].
-- locations_data with name for places and [ID]                                                                                      X
-- same [layout] for the [icon] svg                                                                                                  X
-- 'top' 'left' keys in locations_data.js                                                                                            X
-- context data for currently clicked icon and card as well [id]                                                                     X
-- ternary operations for adding/removing style from cards or icons, based on [context] data                                         X
-- [extended] card: logic and basic appearence.                                                                                      X
-
-# TODAY FINISH THE HTML STRUCTURE AND CSS <LAYOUT> FOR THE EXTENDED CARD    
-   - import 5 pictures [CAROUSEL] for each location. 
+# TODAY DO THE LAYOUT FOR EACH SECTION
 
 # TODAY import data for each location into js files.
-    - 17 mainland spots.
-    - 9 beaches.
-    - 6 islets.
-    - find pictures for each spot (find out if onLoad() is necessary.);
+    - find TEXT and pictures [CAROUSEL] for each spot (find out if onLoad() is necessary.);
     - in locations_data.js add a `description` key. you will use this key for the expanded version of the card.
-
-# TODAY extend what you have done to Mainland, to Seaside and Islets sections. 
 
 # <repeat EVERYTHING for these sections:> 
     >> food map
@@ -74,6 +60,16 @@ DONE and connect them with the Cards data.
       >>> context `currentlyHoveredCard` State variable is now updated with this ID value,
           and every Icon has a [ternary] operator in their div container: 
             TTTT[if] the context value 
+
+
+done REPEAT EVERYTHING you did for mainland FOR SEASIDE [X] AND ISLETS [X].
+- locations_data with name for places and [ID]                                                                                      X
+- same [layout] for the [icon] svg                                                                                                  X
+- 'top' 'left' keys in locations_data.js                                                                                            X
+- context data for currently clicked icon and card as well [id]                                                                     X
+- ternary operations for adding/removing style from cards or icons, based on [context] data                                         X
+- [extended] card: logic and basic appearence.                                                                                      X
+
 
 
 //////////// <ideas to implement> //////////////////////

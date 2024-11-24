@@ -32,20 +32,8 @@
 
 
 /* ICONS */
-.is0 {
-    width:fit-content;
-    height:fit-content;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    background-color: yellow;
-}
 
-.is1 {
-    width:fit-content;
-    height:fit-content;
-    position: absolute;
-    top: 10%;
-    left: 58%;
+/* contextdata-based class */
+.is_icon_effect {
     background-color: red;
 }

@@ -1,13 +1,30 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { GiIsland } from "react-icons/gi";
 import { FaCarSide } from "react-icons/fa6";
 import { FaBridgeWater } from "react-icons/fa6";
 
-export default function Card_islet({card_data, id_index}) {
+// import the utility to USE the context useState data:
+import { useCardContext } from '../../context/CardContext';
 
+import "./card_style.css";
+
+export default function Card_islet({card_data}) {
+
+    // CONTEXT DATA:
+    const { 
+        cardIsClicked, setCardIsClicked,
+        currentlyVisitedSection, setCurrentlyVisitedSection,
+        currentlyClickedCardID, setCurrentlyClickedCardID,
+        // data for hovering: 
+        currentlyHoveredIcon, setCurrentlyHoveredIcon,
+        currentlyHoveredCard, setCurrentlyHoveredIconCard,  
+    } = useCardContext();
+
+    // props data:
     let c = card_data;
-
     let islets_card_data_keys = {
+        id: c.id,
         // short card data
         n : c.name,
         c : c.car,
@@ -17,9 +34,29 @@ export default function Card_islet({card_data, id_index}) {
         e : c.eat,
     };
 
+    function set_context_currently_hovered_card(islet_card_id) {
+        setCurrentlyHoveredIconCard(islet_card_id);
+    }
+
+    //debug:
+    // useEffect(()=> {
+    //     console.log(currentlyHoveredCard)
+    // },[currentlyHoveredCard]);
+
     return (
         // upper line: name;  lower line: infos.
-        <div className="card_islets_container">
+
+        <div
+            // check if the icon for this card is being hovered: 
+            className={`card_islets_container 
+                        ${currentlyHoveredIcon === card_data.id
+                          ? "is_card_effect"
+                          : ""
+                        }`}
+            // event listener to set the context data:
+            onMouseEnter={()=> set_context_currently_hovered_card(card_data.id)}
+            onMouseLeave={()=> set_context_currently_hovered_card(null)}
+        >
 
             {/* name takes a full line. */}
             <h1 className="card_name_islets">
@@ -50,7 +87,6 @@ export default function Card_islet({card_data, id_index}) {
                     </div>
                 </h4>
             </div>
-          
         </div>
     )
 }
