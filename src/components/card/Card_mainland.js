@@ -9,7 +9,6 @@ import { useEffect } from 'react';
 import { useCardContext } from '../../context/CardContext';
 
 import "./card_style.css";
-import "./ext_card_mainland.css";
 
 export default function Card_mainland({card_data, id_index}) {
     
@@ -65,17 +64,6 @@ export default function Card_mainland({card_data, id_index}) {
         evaluateRendering();
         evaluateCurrentSection();
     }
-
-    // debug:
-    // useEffect(()=> {
-    //     console.log("current card: " + currentlyHoveredCard);
-    // }, [currentlyHoveredCard]);
-
-    // useEffect(()=> {
-    //     if(id_index === currentlyClickedCardID && cardIsClicked) {
-    //         console.log("Card_mainland.js. ID of the current card is:" + currentlyClickedCardID + "and current section is: " + currentlyVisitedSection);
-    //     }
-    // }, [currentlyClickedCardID]);
 
     return (
         

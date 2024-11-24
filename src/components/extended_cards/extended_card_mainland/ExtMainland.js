@@ -27,7 +27,7 @@ export default function ExtMainland({
     
    
     function handle_reset_data() {
-        console.log("etx_mainland.js: cardIsClicked is " + cardIsClicked)
+        // console.log("etx_mainland.js: cardIsClicked is " + cardIsClicked)
         setToggle_animation(false)
         setTimeout(()=> {
             resetContextData();

@@ -81,14 +81,10 @@ export default function Section_map_sea() {
                                         margin: '3px',
                                     }}
                                /> 
-
                             </div>
                         ))
                     }
             </div>
         </div>
-
     )
-
 }
-

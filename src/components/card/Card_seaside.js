@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCardContext } from '../../context/CardContext';
 import { useEffect } from 'react';
-
+import { useState } from 'react';
 
 import "./card_style.css";
 
@@ -14,13 +14,18 @@ import { FaGlassWaterDroplet } from "react-icons/fa6";
 
 export default function Card_seaside({ card_data }) {
 
+    // state for external card rendering:
+
     // CONTEXT:
     const {
         // context data for ext card:
+        cardIsClicked, setCardIsClicked,
         currentlyClickedCardID, setCurrentlyClickedCardID,
+         
         // context data for icon/card events:
         currentlyHoveredIcon, setCurrentlyHoveredIcon,
         currentlyHoveredCard, setCurrentlyHoveredIconCard,
+        currentlyVisitedSection, setCurrentlyVisitedSection,
         } = useCardContext();
 
     // props data:
@@ -40,18 +45,15 @@ export default function Card_seaside({ card_data }) {
         setCurrentlyHoveredIconCard(null);
     }
 
+    function handle_context_seaside_clicked_card_(card_id) {
+        setCardIsClicked(true);            // context state for external card rendering:
 
-    // debug
-    // function k(id) {
-    //     if(id === currentlyHoveredIcon) {
-    //         console.log((currentlyHoveredIcon === id) + "in " + id)
-    //         return id === currentlyHoveredIcon;
-    //     }
-    // }
-    // useEffect(()=> {
-    //     // console.log(". currently hovered icon: " + currentlyHoveredIcon);      // debug;
-    //     console.log("currentrly hovered card: " + currentlyHoveredCard);
-    // }, [currentlyHoveredCard])
+        // set context data:
+        setCurrentlyVisitedSection("seaside");
+        setCurrentlyClickedCardID(card_id);
+        
+        console.log(card_id + "   " + currentlyClickedCardID + " " + currentlyVisitedSection + " " + cardIsClicked); // for debugging:
+    }
 
     return (
         // [LAYOUT] upper line: name;  lower line: infos.
@@ -59,6 +61,9 @@ export default function Card_seaside({ card_data }) {
             // event listeners for card_icon events, based on the context data
             onMouseEnter={ ()=> set_context_currently_hovered_card(seaside_card_data_keys.id) }
             onMouseLeave={ ()=> remove_context_currently_hovered_card() } 
+
+            // event listener for extended card:
+            onClick={()=> handle_context_seaside_clicked_card_(card_data.id)}
             >
             {/* name takes a full line. */}
             <h1 className="card_name_seaside">
@@ -66,7 +71,6 @@ export default function Card_seaside({ card_data }) {
                     <FaHouseTsunami class="icon_sea"/>
                 </div>
                 <div className="seaside_text">
-                    {/* {k(c.id)} */}
                     {seaside_card_data_keys.n}
                 </div>
             </h1>
