@@ -19,6 +19,11 @@ export default function Section_map_sea() {
             currentlyHoveredCard, setCurrentlyHoveredIconCard,
     } = useCardContext();
 
+    function check_hovered_card(current_icon_id) {
+        if(currentlyHoveredCard === current_icon_id){
+            return 1;
+        }
+    }
 
     function set_currently_hovered_icon_context(icon_id) {
         setCurrentlyHoveredIcon(icon_id);   
@@ -42,21 +47,28 @@ export default function Section_map_sea() {
                     margin: '1vw' 
                 }} />
 
-
                 {/* SVG ICON */}
                     {
                         locations_data.seaside.map((sea_location) => (
-                            <div className="s_icon_container"
-                                onMouseEnter={()=> set_currently_hovered_icon_context(sea_location.id)}
-                                onMouseLeave={()=> remove_currently_hovered_icon_context()}
-                                style={{
-                                    position: 'absolute',
-                                    backgroundColor: 'yellow',                               
-                                    top: `${sea_location.top}px`,
-                                    left: `${sea_location.left}px`,
-                                    width: 'fit-content',
-                                    height: 'fit-content',
-                            }}>
+                            <div id="s_icon_container"
+                            onMouseEnter={()=> set_currently_hovered_icon_context(sea_location.id)}
+                            onMouseLeave={()=> remove_currently_hovered_icon_context()}
+                            style={{
+                                position: 'absolute',
+                                // backgroundColor: 'yellow',                               
+                                top: `${sea_location.top}px`,
+                                left: `${sea_location.left}px`,
+                                width: 'fit-content',
+                                height: 'fit-content',
+                            }}
+                            //  
+                            className={ `s_icon_container 
+                                        ${currentlyHoveredCard === sea_location.id
+                                          ? "seaside_hovered_card_icon_effect"
+                                          : ""
+                                        }`
+                                    }
+                            >
                                 {/* {sea_location.id} */}
                                <Icon_sea 
                                     style={{

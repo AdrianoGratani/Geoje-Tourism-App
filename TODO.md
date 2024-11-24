@@ -4,8 +4,8 @@
 - locations_data with name for places and [ID]                                                                                      X
 - same [layout] for the [icon] svg                                                                                                  X
 - 'top' 'left' keys in locations_data.js                                                                                            X
-- context data for currently clicked icon and card as well [id]
-- ternary operations for adding/removing style from cards or icons, based on [context] data
+- context data for currently clicked icon and card as well [id]                                                                     X
+- ternary operations for adding/removing style from cards or icons, based on [context] data                                         X
 - [extended] card: logic and basic appearence.
 
 # TODAY FINISH THE HTML STRUCTURE AND CSS <LAYOUT> FOR THE EXTENDED CARD    

@@ -20,19 +20,9 @@
 
 /* icons */
 
-.s0 {
-    width:fit-content;
-    height:fit-content;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-}
-
-.s1 {
-    width:fit-content;
-    height:fit-content;
-    position: absolute;
-    top: 10%;
-    left: 58%;
+.s_icon_container {
     background-color: red;
+}
+.seaside_hovered_card_icon_effect {
+    background-color: yellow;
 }

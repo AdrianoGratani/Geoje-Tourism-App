@@ -39,6 +39,8 @@ export default function Card_seaside({ card_data }) {
     function remove_context_currently_hovered_card() {
         setCurrentlyHoveredIconCard(null);
     }
+
+
     // debug
     // function k(id) {
     //     if(id === currentlyHoveredIcon) {
@@ -46,9 +48,6 @@ export default function Card_seaside({ card_data }) {
     //         return id === currentlyHoveredIcon;
     //     }
     // }
-
-    
-    
     // useEffect(()=> {
     //     // console.log(". currently hovered icon: " + currentlyHoveredIcon);      // debug;
     //     console.log("currentrly hovered card: " + currentlyHoveredCard);
