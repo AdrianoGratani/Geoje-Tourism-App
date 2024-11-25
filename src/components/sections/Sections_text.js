@@ -86,6 +86,8 @@ export default function Sections_text({text_data, cards_data, section}) {
                             // <div>debug: {currentlyVisitedSection}</div>
 
                       // SET THE id_index TO >>>>>>> {c.id}
+
+                      
                       <Card_section_location card_data={c} id_index={i}/>
                     ))
                 }

@@ -14,6 +14,8 @@ export default function Card_mainland({card_data, id_index}) {
     
     // CONTEXT DATA:
     const { 
+            card_data_for_ext_card,
+             setCard_data_for_ext_card,
             cardIsClicked, setCardIsClicked,
             currentlyVisitedSection, setCurrentlyVisitedSection,
             currentlyClickedCardID, setCurrentlyClickedCardID,
@@ -59,7 +61,8 @@ export default function Card_mainland({card_data, id_index}) {
         setCurrentlyVisitedSection("mainland");
     }
 
-    function manipulateContextData() {
+    function manipulateContextData(d_for_ext_card) {
+        setCard_data_for_ext_card(d_for_ext_card);
         evaluateCardClick();
         evaluateRendering();
         evaluateCurrentSection();
@@ -73,7 +76,7 @@ export default function Card_mainland({card_data, id_index}) {
                                       ? "m_card_effect"
                                       : ""
             }`}  
-        onClick={manipulateContextData}
+        onClick={()=>manipulateContextData(card_data)}
         onMouseEnter={()=> send_hovered_card_data_to_context(mainland_card_data_keys.id)}
         onMouseLeave={()=> remove_hovered_card_data_to_context()}
         > 

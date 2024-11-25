@@ -19,6 +19,8 @@ export default function Card_seaside({ card_data }) {
     // CONTEXT:
     const {
         // context data for ext card:
+        card_data_for_ext_card,
+        setCard_data_for_ext_card,
         cardIsClicked, setCardIsClicked,
         currentlyClickedCardID, setCurrentlyClickedCardID,
          
@@ -46,6 +48,7 @@ export default function Card_seaside({ card_data }) {
     }
 
     function handle_context_seaside_clicked_card_(card_id) {
+        setCard_data_for_ext_card(card_data);
         setCardIsClicked(true);            // context state for external card rendering:
 
         // set context data:

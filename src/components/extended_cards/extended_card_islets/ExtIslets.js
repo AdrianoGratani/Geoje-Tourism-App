@@ -18,13 +18,13 @@ export default function ExtIslets({resetContextData, cards_data}) {
     } = useCardContext();
 
     function resetContextData() {                                          // when you click the extended card, means you don't want to see it, so this function makes it disappear.
+            setCard_data_for_ext_card(null)
             setCardIsClicked(false);
             setCurrentlyVisitedSection(null);
             setCurrentlyClickedCardID(null);
     }
 
     function handle_reset_data() {
-        setCard_data_for_ext_card(null)
         setToggle_animation(!toggle_animation);
         console.log(cards_data.id);
         setTimeout(()=> {

@@ -11,15 +11,18 @@ export default function ExtSeaside({resetContextData, cards_data}) {
 
     // cards_data: is a whole bunch of data for all the cards. you must retrieve the one you need.
     const { 
+        card_data_for_ext_card,
+        setCard_data_for_ext_card,
         setCardIsClicked,
         setCurrentlyVisitedSection,
         setCurrentlyClickedCardID  
     } = useCardContext();
 
     function resetContextData() {                                          // when you click the extended card, means you don't want to see it, so this function makes it disappear.
-            setCardIsClicked(false);
-            setCurrentlyClickedCardID(null);
-            setCurrentlyVisitedSection(null);
+        setCard_data_for_ext_card(null);    
+        setCardIsClicked(false);
+        setCurrentlyClickedCardID(null);
+        setCurrentlyVisitedSection(null);
     }
 
     function handle_reset_data() {
@@ -37,7 +40,7 @@ export default function ExtSeaside({resetContextData, cards_data}) {
             <div class="ext_card_text_container">
 
                 <div class="ext_card_title_container">
-                    <h1></h1>
+                    <h1>{card_data_for_ext_card.name}</h1>
                 </div>
             </div>
 

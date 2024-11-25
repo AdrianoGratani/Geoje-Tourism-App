@@ -12,6 +12,8 @@ export default function ExtMainland({
     
     // CONTEXT:
     const { 
+        card_data_for_ext_card,
+        setCard_data_for_ext_card,
         cardIsClicked, 
         setCardIsClicked,
         // currentlyVisitedSection,
@@ -20,9 +22,10 @@ export default function ExtMainland({
     } = useCardContext();
 
     function resetContextData() {                                          // when you click the extended card, means you don't want to see it, so this function makes it disappear.
-            setCardIsClicked(false);
-            setCurrentlyClickedCardID(null);
-            setCurrentlyVisitedSection(null);
+        setCard_data_for_ext_card(null);    
+        setCardIsClicked(false);
+        setCurrentlyClickedCardID(null);
+        setCurrentlyVisitedSection(null);
     }
     
    
@@ -43,7 +46,7 @@ export default function ExtMainland({
             class={`ext_card_container ext_card_container_appears ${toggle_animation===false ? "ext_card_container_fades" : ""}`}
         >
         {/* same layout for all sections. */}
-
+        {card_data_for_ext_card.name}
 
 
         </div>
