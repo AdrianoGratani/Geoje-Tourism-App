@@ -1,5 +1,6 @@
 // NO FULL WORDS IN CARDS, JUST LETTERS
 
+
 const locations_data = {
     mainland: [
         // north to south. west to east.
