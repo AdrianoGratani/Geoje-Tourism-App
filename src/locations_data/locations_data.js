@@ -6,6 +6,7 @@ const locations_data = {
         // north to south. west to east.
         {
             name: "Nongso",
+            subtitle:"subtitle",
             id:"mainland_nongso",
             height: "500mt",
             top: "20",
@@ -18,6 +19,7 @@ const locations_data = {
         },
          {
              name: "Aengsan",
+             subtitle:"subtitle",
              id:"mainland_aengsan",
             height: "500mt",
             top: "210",
@@ -30,6 +32,7 @@ const locations_data = {
         },
         {
             name: "Daegumsan",
+            subtitle:"subtitle",
             id: "mainland_daegumsan",
             height: "500mt",
             top: "220",
@@ -42,6 +45,7 @@ const locations_data = {
         },
          {
              name: "Mangwolsan",
+             subtitle:"subtitle",
             id: "mainland_mangwolsan",
             height: "500mt",
             top: "270",
@@ -54,6 +58,7 @@ const locations_data = {
         },
         {
             name: "Mangchisan",
+            subtitle:"subtitle",
             id: "mainland_mangchisan",
             height: "500mt",
             top: "310",
@@ -66,6 +71,7 @@ const locations_data = {
         },
         {
             name: "Guksabong",
+            subtitle:"subtitle",
             id: "mainland_guksabong",
             height: "500mt",
             top: "330",
@@ -78,6 +84,7 @@ const locations_data = {
         },
          {
             name: "Siraesan",
+            subtitle:"subtitle",
             id: "mainland_siraesan",
             height: "500mt",
             top: "360",
@@ -90,6 +97,7 @@ const locations_data = {
         },
         {
             name: "Dundeok-Kiseong",
+            subtitle:"subtitle",
             id: "mainland_dundeok-Kiseong",
             height: "500mt",
             top: "410",
@@ -102,6 +110,7 @@ const locations_data = {
         },
          {
             name: "Sangbangsan",
+            subtitle:"subtitle",
             id: "mainland_sangbangsan",
             height: "mainland_sangbangsan",
             top: "430",
@@ -114,6 +123,7 @@ const locations_data = {
         },
          {
             name: "Gyeryongsan",
+            subtitle:"subtitle",
             id: "mainland_gyeryongsan",
             height: "500mt",
             top: "430",
@@ -126,6 +136,7 @@ const locations_data = {
         },
          {
             name: "Mundong",
+            subtitle:"subtitle",
             id: "undong",
             height: "mainland_mundong",
             top: "460",
@@ -139,6 +150,7 @@ const locations_data = {
         },
          {
              name: "Oknyeobong",
+             subtitle:"subtitle",
             id: "mainland_oknyeobong",
             height: "500mt",
             top: "470",
@@ -151,6 +163,7 @@ const locations_data = {
         },
          {
             name: "Seonjasan",
+            subtitle:"subtitle",
             id: "mainland_seonjasan",
             height: "500mt",
             top: "510",
@@ -163,6 +176,7 @@ const locations_data = {
         },
          {
             name: "Gucheonjeosooji",
+            subtitle:"subtitle",
             id: "mainland_gucheonjeosooji",
             height: "500mt",
             top: "520",
@@ -175,6 +189,7 @@ const locations_data = {
         },
          {
             name: "Bukbyeongsan",
+            subtitle:"subtitle",
             id: "mainland_bukbyeongsan",
             height: "500mt",
             top: "630",
@@ -187,6 +202,7 @@ const locations_data = {
         },
          {
             name: "Garasan",
+            subtitle:"subtitle",
             id: "mainland_garasan",
             height: "500mt",
             top: "390",
@@ -199,6 +215,7 @@ const locations_data = {
         },
          {
             name: "Jayeon-Hyuyangrim",
+            subtitle:"subtitle",
             id: "mainland_jayeon-hyuyangrim",
             height: "500mt",
             top: "580",
@@ -211,6 +228,7 @@ const locations_data = {
         },
         {
             name: "Naebongsan",
+            subtitle:"subtitle",
             id: "mainland_naebongsan",
             height: "500mt",
             top: "780",
@@ -228,6 +246,7 @@ const locations_data = {
         // north to south. clockwise.
         {
             name: "Guyeong",
+            subtitle:"subtitle",
             id: "seaside_guyeong",
             sand: "no",
             parking: "yes",
@@ -238,6 +257,7 @@ const locations_data = {
         },
          {
             name: "Hwangpo",
+            subtitle:"subtitle",
             id: "seaside_hwangpo",
             sand: "no",
             parking: "yes",
@@ -248,6 +268,7 @@ const locations_data = {
         },
          {
             name: "Mul-an",
+            subtitle:"subtitle",
             id: "seaside-mul-an",
             sand: "no",
             parking: "yes",
@@ -258,6 +279,7 @@ const locations_data = {
         },
          {
             name: "Sibangseon",
+            subtitle:"subtitle",
             id: "seaside_sibangseon",
             sand: "no",
             parking: "yes",
@@ -268,6 +290,7 @@ const locations_data = {
         },
          {
             name: "Deokpo",
+            subtitle:"subtitle",
             id: "seaside_deokpo",
             sand: "no",
             parking: "yes",
@@ -278,6 +301,7 @@ const locations_data = {
         },
          {
             name: "Wahyeon",
+            subtitle:"subtitle",
             id: "seaside_wahyeon",
             sand: "no",
             parking: "yes",
@@ -288,6 +312,7 @@ const locations_data = {
         },
          {
             name: "Gujora",
+            subtitle:"subtitle",
             id: "seaside_gujora",
             sand: "no",
             parking: "yes",
@@ -298,6 +323,7 @@ const locations_data = {
         },
          {
             name: "Mangchi",
+            subtitle:"subtitle",
             id: "seaside_mangchi",
             sand: "no",
             parking: "yes",
@@ -308,6 +334,7 @@ const locations_data = {
         },
          {
             name: "Baram-ui Ondeok",
+            subtitle:"subtitle",
             id: "seaside_baram-uiondeok",
             sand: "no",
             parking: "yes",
@@ -318,6 +345,7 @@ const locations_data = {
         },
          {
             name: "Dolteumi",
+            subtitle:"subtitle",
             id: "seaside_dolteumi",
             sand: "no",
             parking: "yes",
@@ -328,6 +356,7 @@ const locations_data = {
         },
          {
             name: "Yeocha",
+            subtitle:"subtitle",
             id: "seaside_yeocha",
             sand: "no",
             parking: "yes",
@@ -338,6 +367,7 @@ const locations_data = {
         },
          {
             name: "Geunpo Maeul",
+            subtitle:"subtitle",
             id: "seaside_geunpomaeul",
             sand: "no",
             parking: "yes",
@@ -348,6 +378,7 @@ const locations_data = {
         },
          {
             name: "Deokwon",
+            subtitle:"subtitle",
             id: "seaside_deokwon",
             sand: "no",
             parking: "yes",
@@ -358,6 +389,7 @@ const locations_data = {
         },
          {
             name: "Jukrim",
+            subtitle:"subtitle",
             id: "seaside_jukrim",
             sand: "no",
             parking: "yes",
@@ -368,6 +400,7 @@ const locations_data = {
         },
          {
             name: "Sagok",
+            subtitle:"subtitle",
             id: "seaside_sagok",
             sand: "no",
             parking: "yes",
@@ -382,6 +415,7 @@ const locations_data = {
         // north to south. clockwise.
         {
             name: "Jeo-do",
+            subtitle:"subtitle",
             id: "islet_jeo-do",
             sand: "sand and hike",
             car: "yes",
@@ -393,6 +427,7 @@ const locations_data = {
         },
         {
             name: "Daeju-do",
+            subtitle:"subtitle",
             id: "islet_daeju-do",
             sand: "sand and hike",
             car: "yes",
@@ -400,10 +435,11 @@ const locations_data = {
             bridge: "no",
             top: "100",
             left: "620",
-            picture_folder: ""
+            picture_folder: "p"
         },
         {
             name: "Isu-do",
+            subtitle:"subtitle",
             id: "islet_isu-do",
             sand: "sand and hike",
             car: "yes",
@@ -411,10 +447,11 @@ const locations_data = {
             bridge: "no",
             top: "200",
             left: "500",
-            picture_folder: ""
+            picture_folder: "ciao"
         },
         {
             name: "Jisim-do",
+            subtitle:"subtitle",
             id: "islet_jisim-do",
             sand: "sand and hike",
             car: "yes",
@@ -426,6 +463,7 @@ const locations_data = {
         },
         {
             name: "Nae-do",
+            subtitle:"subtitle",
             id: "islet_nae-do",
             sand: "sand and hike",
             car: "yes",
@@ -437,6 +475,7 @@ const locations_data = {
         },
         {
             name: "Oe-do",
+            subtitle:"subtitle",
             id: "islet_oe-do",
             sand: "sand and hike",
             car: "yes",
@@ -448,6 +487,7 @@ const locations_data = {
         },
         {
             name: "Jangsa-do",
+            subtitle:"subtitle",
             id: "islet_jangsa-do",
             sand: "sand and hike",
             car: "yes",
@@ -459,6 +499,7 @@ const locations_data = {
         },
         {
             name: "Sandal-do",
+            subtitle:"subtitle",
             id: "islet_sandal-do",
             sand: "sand and hike",
             car: "yes",
@@ -470,6 +511,7 @@ const locations_data = {
         },
         {
             name: "Gajo-do",
+            subtitle:"subtitle",
             id: "islet_gajo-do",
             sand: "sand and hike",
             car: "yes",

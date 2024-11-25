@@ -1,4 +1,4 @@
-/* EXTERNAL CARD MAINLAND */
+/* EXTERNAL GENERAL CARD LAYOUT */
 
 .ext_card_container {
     background-color: var(--ext_card_land);
@@ -7,6 +7,25 @@
     position: relative;
     transition: height 2s ease-in-out;
 }
+
+.ext_card_text_container {
+    background-color: red;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.ext_card_title_container {
+    font-size: var(--size_title);
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+}
+.ext_card_title {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* EXTERNAL CARD MAINLAND */
 
 .ext_card_container_appears {
     animation: appear 0.5s ease-in-out;
