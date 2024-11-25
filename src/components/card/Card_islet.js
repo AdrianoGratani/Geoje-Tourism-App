@@ -38,10 +38,18 @@ export default function Card_islet({card_data}) {
         setCurrentlyHoveredIconCard(islet_card_id);
     }
 
+    function handle_context_data_extended_cards(is_card_clicked, visited_section_name, clicked_card_id) {
+        setCardIsClicked(is_card_clicked);
+        setCurrentlyVisitedSection(visited_section_name);
+        setCurrentlyClickedCardID(clicked_card_id);
+    }
+
     //debug:
-    // useEffect(()=> {
-    //     console.log(currentlyHoveredCard)
-    // },[currentlyHoveredCard]);
+    useEffect(()=> {
+        console.log(currentlyHoveredCard);
+        console.log(currentlyVisitedSection);
+        console.log(currentlyClickedCardID);
+    },[currentlyHoveredCard]);
 
     return (
         // upper line: name;  lower line: infos.
@@ -53,6 +61,10 @@ export default function Card_islet({card_data}) {
                           ? "is_card_effect"
                           : ""
                         }`}
+
+            // event listener to set extended CArd:
+            onClick={()=> handle_context_data_extended_cards(true, "islets", card_data.id)}
+
             // event listener to set the context data:
             onMouseEnter={()=> set_context_currently_hovered_card(card_data.id)}
             onMouseLeave={()=> set_context_currently_hovered_card(null)}

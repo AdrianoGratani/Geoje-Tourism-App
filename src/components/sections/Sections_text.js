@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useCardContext } from '../../context/CardContext';
 import Card_section_location from '../card/Card_section_location';
-// extended cards:
+// extended cards are RENDERED FROM HERE:
 // import {ExtMainland} from "../extended_cards/extended_card_mainland/ExtMainland";     {} WHEN IMPORTING  export default components, is wrong.
 import ExtMainland from "../extended_cards/extended_card_mainland/ExtMainland";
 import ExtSeaside from "../extended_cards/extended_card_seaside/ExtSeaside";
