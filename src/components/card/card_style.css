@@ -94,7 +94,7 @@
 
 /* context triggered classes MUST go AFTER the default style class, otherwise they get read and immediately overridden */
 .s_card_effect{
-    background-color: red;
+    background-color: var(--s_card_effect);
 }
 
 .icon_container_seaside {
@@ -205,5 +205,5 @@
 
 /* context triggered classes MUST go AFTER the default style class, otherwise they get read and immediately overridden */
 .is_card_effect{
-    background-color: red;
+    background-color: var(--card_islets_effect);
 }

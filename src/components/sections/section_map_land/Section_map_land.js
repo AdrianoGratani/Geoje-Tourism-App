@@ -14,12 +14,11 @@ import {ReactComponent as LightHouse} from "../../../img/faro.svg"
 
 
 // for incon rendering: a loop over the mainland array.
-
 import "./section_map_land.css";
 
 export default function Section_map_land() {
 
-    // CONTEXT:
+    // CONTEXT aND SETTERS:
     const { 
         currentlyHoveredIcon, setCurrentlyHoveredIcon, currentlyHoveredCard 
     } = useCardContext(); 
@@ -92,12 +91,12 @@ export default function Section_map_land() {
                                 {/* icon */}
                                 {/* debug: {location.name} */}
                             <IconHike style={{
-                                 width: '24px', 
-                                 minWidth: '24px',
-                                 maxWidth: '24px',
-                                 height: '24px',
-                                 minHeight: '24px',
-                                 maxHeight: '24px',
+                                 width: '31px', 
+                                 minWidth: '31px',
+                                 maxWidth: '31px',
+                                 height: '31px',
+                                 minHeight: '31px',
+                                 maxHeight: '31px',
                                  margin: '3px',
                             }}/>
                         </div>

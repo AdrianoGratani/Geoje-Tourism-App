@@ -21,8 +21,17 @@
 /* icons */
 
 .s_icon_container {
-    background-color: red;
+    border-radius: 10px;
+    padding: 1px;
+    background-color: var(--s_icon);
+    transition: background-color 0.3s ease-in-out, padding  0.3s ease-in-out;
+}
+.s_icon_container:hover {
+    padding: 4px;
+    background-color: var(--s_icon_hover);
+    transition: background-color 0.3s ease-in-out, padding  0.3s ease-in-out;
 }
 .seaside_hovered_card_icon_effect {
     background-color: yellow;
+    transition: background-color 0.3s ease-in-out;
 }

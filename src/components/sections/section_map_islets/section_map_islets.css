@@ -22,7 +22,6 @@
 }
 
 .islet_map {
-
     height: inherit;
     min-height: inherit;
     max-height: inherit;
@@ -34,6 +33,17 @@
 /* ICONS */
 
 /* contextdata-based class */
+.is_icon_container {
+    border-radius:  10px;
+    background-color: var(--is_icon);
+    transition: background-color 0.5s;
+}
+.is_icon_container:hover {
+    background-color: var(--svg_islets);
+    transition: background-color 0.5s;
+} 
+
 .is_icon_effect {
-    background-color: red;
+    background-color: var(--svg_islets);
+    transition: background-color 0.5s;
 }

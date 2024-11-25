@@ -1,7 +1,7 @@
 /* EXTERNAL CARD MAINLAND */
 
 .ext_card_container {
-    background-color: red;
+    background-color: var(--ext_card_land);
     width: 100%;
     height: 0%;
     position: relative;
@@ -21,7 +21,7 @@
 /* EXTERNAL CARD SEASIDE */
 
 .ext_sea_card_container {
-    background-color: yellow;
+    background-color: var(--ext_card_sea);
     width: 100%;
     height: 0%;
     position: relative;
@@ -34,6 +34,25 @@
 }
 
 .ext_sea_card_container_fades {
+    transition: height 0.5s ease-in-out;
+    height: 0%;
+}
+
+/* EXTERNAL CARD ISLETS */
+.ext_islet_card_container {
+    background-color: var(--ext_card_islets);
+    width: 100%;
+    height: 0%;
+    position: relative;
+    transition: height 2s ease-in-out;
+}
+
+.ext_islet_card_container_appears {
+    animation: appear 0.5s ease-in-out;
+    height: 100%;
+}
+
+.ext_islet_card_container_fades {
     transition: height 0.5s ease-in-out;
     height: 0%;
 }

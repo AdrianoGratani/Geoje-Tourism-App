@@ -94,12 +94,12 @@ export default function Section_map_islets() {
                     {/* {islet.id} */}
                         <Svg_islets
                             style={{
-                                width: '24px', 
-                                minWidth: '24px',
-                                maxWidth: '24px',
-                                height: '24px',
-                                minHeight: '24px',
-                                maxHeight: '24px',
+                                width: '35px', 
+                                minWidth: '35px',
+                                maxWidth: '35px',
+                                height: '35px',
+                                minHeight: '35px',
+                                maxHeight: '35px',
                                 margin: '3px',
                             }}
                         />

@@ -28,9 +28,10 @@ export default function ExtIslets({resetContextData, cards_data, section, curren
     }
 
     return (
-        <div id="ext_card_container" onClick={handle_reset_data}
+        <div id="ext_islet_card_container" onClick={handle_reset_data}
         // BUG class={`ext_card_container ${toggle_animation ? "ext_card_container_appears" : "ext_card_container_fades"}`}
-        class={`ext_card_container ext_card_container_appears ${toggle_animation===false ? "ext_card_container_fades" : ""}`}
+        class={`ext_islet_card_container ext_islet_card_container_appears
+              ${toggle_animation===false ? "ext_islet_card_container_fades" : ""}`}
     >
        {currentlyClickedCardID}
     </div>

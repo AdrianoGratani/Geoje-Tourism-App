@@ -72,12 +72,12 @@ export default function Section_map_sea() {
                                 {/* {sea_location.id} */}
                                <Icon_sea 
                                     style={{
-                                        width: '24px', 
-                                        minWidth: '24px',
-                                        maxWidth: '24px',
-                                        height: '24px',
-                                        minHeight: '24px',
-                                        maxHeight: '24px',
+                                        width: '31px', 
+                                        minWidth: '31px',
+                                        maxWidth: '31px',
+                                        height: '31px',
+                                        minHeight: '31px',
+                                        maxHeight: '31px',
                                         margin: '3px',
                                     }}
                                /> 

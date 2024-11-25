@@ -33,6 +33,7 @@
   --evening :#FF7676;
   --sunhover: #FF5733;
   --moon: #EAF2E3;          
+  --moon_icon_land: hwb(92 89% 5% / 0.384);          
   --moonhover: #1C1C3C; 
 
   /* island animation page */
@@ -66,14 +67,27 @@
   --card_land_hover:  hwb(133 17% 46% / 0.34);
   --card_icon_mainland: hwb(34 55% 18%);
   --card_sea: hwb(56 13% 1% / 0.252);
-  --card_sea_hover: hwb(56 13% 1% / 0.491);
+  --card_sea_hover: hwb(56 13% 1% / 0.637);
   --card_icon_sea: hwb(5 38% 0% / 0.632);
   --card_islets: hwb(205 24% 4% / 0.197);
   --card_islets_hover: hwb(205 24% 4% / 0.473);
   --card_icon_islets:hwb(92 89% 5% / 0.318);
   --card_effect: hwb(155 24% 4% / 0.658);
   --m_icon_effect: hwb(155 24% 4% / 0.658);
+  --is_icon: hwb(54 13% 0% / 0.438);
+  --icon_land_effect: hwb(155 24% 4%);
+  --icon_effect: hwb(205 0% 3% / 0.863);
+  --islet_icon_hovered: hwb(182 0% 0% / 0.445);
+  --card_islets_effect: hwb(205 0% 0% / 0.973);
+  --s_icon: hwb(56 13% 1% / 0.548);
+  --s_icon_hover: hwb(56 0% 0%);
+  --s_card_effect: hwb(56 13% 1% / 0.856);
   
+  /* external cards */
+  --ext_card_land:  hwb(133 17% 46% / 0.322);
+  --ext_card_sea:  hwb(56 0% 0% / 0.479);
+  --ext_card_islets: hwb(205 0% 0% / 0.39);
+
 
   /* sizes */
 
