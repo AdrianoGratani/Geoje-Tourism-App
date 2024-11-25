@@ -3,9 +3,11 @@ import { useState } from 'react';
 import { useCardContext } from '../../../context/CardContext';
 import "../ext_card_style.css";
 
-export default function ExtSeaside({resetContextData, cards_data, section, currentlyClickedCardID}) {
+export default function ExtSeaside({resetContextData, cards_data}) {
 
     const [extended_card_toggled, SetExtended_card_toggled] = useState(true);
+
+    const c = cards_data;
 
     // cards_data: is a whole bunch of data for all the cards. you must retrieve the one you need.
     const { 
@@ -30,7 +32,17 @@ export default function ExtSeaside({resetContextData, cards_data, section, curre
     return (
         <div class={`ext_sea_card_container ext_sea_card_container_appears ${extended_card_toggled === false ? "ext_sea_card_container_fades" : ""}`} 
         onClick={handle_reset_data}>
-            {section}  card, item: {currentlyClickedCardID}
+        {/* same layout for all sections. */}
+
+            <div class="ext_card_text_container">
+
+                <div class="ext_card_title_container">
+                    <h1></h1>
+                </div>
+            </div>
+
+
+
         </div>
     )
 }

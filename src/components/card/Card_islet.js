@@ -13,6 +13,7 @@ export default function Card_islet({card_data}) {
 
     // CONTEXT DATA:
     const { 
+        card_data_for_ext_card, setCard_data_for_ext_card,
         cardIsClicked, setCardIsClicked,
         currentlyVisitedSection, setCurrentlyVisitedSection,
         currentlyClickedCardID, setCurrentlyClickedCardID,
@@ -38,7 +39,8 @@ export default function Card_islet({card_data}) {
         setCurrentlyHoveredIconCard(islet_card_id);
     }
 
-    function handle_context_data_extended_cards(is_card_clicked, visited_section_name, clicked_card_id) {
+    function handle_context_data_extended_cards(data_for_ext_card, is_card_clicked, visited_section_name, clicked_card_id) {
+        setCard_data_for_ext_card(data_for_ext_card);                      // both card and ext card are in secthion_text but separated by few layers. send the clicked card data to a context state variable
         setCardIsClicked(is_card_clicked);
         setCurrentlyVisitedSection(visited_section_name);
         setCurrentlyClickedCardID(clicked_card_id);
@@ -63,7 +65,7 @@ export default function Card_islet({card_data}) {
                         }`}
 
             // event listener to set extended CArd:
-            onClick={()=> handle_context_data_extended_cards(true, "islets", card_data.id)}
+            onClick={()=> handle_context_data_extended_cards(card_data, true, "islets", card_data.id)}
 
             // event listener to set the context data:
             onMouseEnter={()=> set_context_currently_hovered_card(card_data.id)}

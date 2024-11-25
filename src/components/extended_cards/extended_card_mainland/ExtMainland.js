@@ -42,7 +42,10 @@ export default function ExtMainland({
             // class={`ext_card_container ${toggle_animation ? "ext_card_container_appears" : "ext_card_container_fades"}`}
             class={`ext_card_container ext_card_container_appears ${toggle_animation===false ? "ext_card_container_fades" : ""}`}
         >
-           {currentlyClickedCardID}
+        {/* same layout for all sections. */}
+
+
+
         </div>
     )
 }

@@ -17,6 +17,7 @@ export const  CardContextProvider = ( {children} ) => {                         
     const [currentlyClickedCardID, setCurrentlyClickedCardID] = useState(null);    
     const [currentlyHoveredIcon, setCurrentlyHoveredIcon] = useState(null);    
     const [currentlyHoveredCard, setCurrentlyHoveredIconCard] = useState(null);    
+    const [card_data_for_ext_card, setCard_data_for_ext_card] =useState(null);
 
     return (
         // IMPORTANT: `value` is the __only__ valide props name for the Provider prop. otherwise react returns an Error because the useContext gets 'undefined': the component using Context is NOT able to access the context data.
@@ -26,6 +27,7 @@ export const  CardContextProvider = ( {children} ) => {                         
             currentlyClickedCardID, setCurrentlyClickedCardID,
             currentlyHoveredIcon, setCurrentlyHoveredIcon,
             currentlyHoveredCard, setCurrentlyHoveredIconCard,
+            card_data_for_ext_card, setCard_data_for_ext_card,
          }}>         {/* return a Provider of the Context, which is just a component storing the useState GLOBALLY. */}      
             { 
                 children                                                                   // any other component which is wrapped within this useState Context Provider, receives the Context with the useState. 
