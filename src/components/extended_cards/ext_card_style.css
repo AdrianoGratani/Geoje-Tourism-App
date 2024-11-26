@@ -9,26 +9,111 @@
 }
 
 .ext_card_text_container {
-    background-color: red;
+    /* background-color: red; */
     margin: 20px;
+    margin-bottom: 2px;
     display: flex;
     flex-direction: column;
 }
+
+
+/* INFOS */
+/* mainland */
+
 .ext_card_title_container {
-    font-size: var(--size_title);
-    background-color: blue;
+    /* background-color: blue; */
     justify-content: center;
     align-items: center;
 }
 .ext_card_title {
+    font-size: var(--size_title);
+    text-align: center;
+    color: rgb(0, 48, 12);
+    padding-bottom: 10px;
+}
+.ext_card_infos_subtitle {
+    font-size: var(--size_ext_subtitle);
+    text-align: center;
+    color: rgb(92, 153, 107);
+    padding-bottom: 10px;
+}
+.ext_card_infos_container p {
+    font-family: var(--merryweather);
+    font-size: var(--size_ext_text);
+    color: rgb(0, 48, 12);
+    margin-bottom: 3px;
+}
+
+/* infos islets */
+.ext_card_islets_title {
+    font-size: var(--size_title);
+    color: hwb(212 2% 73%);
+    text-align: center;
+    padding-bottom: 10px;
+}
+.ext_card_islets_infos_subtitle {
+    font-size: var(--size_ext_subtitle);
+    color: hwb(211 79% 3%);
     text-align: center;
     padding-bottom: 10px;
 }
 
-.ext_card_infos_container p {
+.ext_card_islets_infos_container p {
     font-family: var(--merryweather);
     font-size: var(--size_ext_text);
-    color: white;
+    color: hwb(212 2% 73%);
+    margin-bottom: 3px;
+}
+
+.ext_card_description_title {
+    margin-top: var( --margin_small_h) ;
+    font-size: 1.2rem; 
+    background-color: white;
+    width:fit-content;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.ext_card_islets_description_container p {
+    color: hwb(212 2% 73%);
+    font-weight: bold;
+    font-size: 1.2rem; 
+    line-height: 2.5rem;
+}
+
+/* seaside */
+
+.ext_card_seaside_title {
+    font-size: var(--size_title);
+    color: hwb(9 1% 61%);
+    text-align: center;
+    padding-bottom: 10px;
+}
+.ext_card_seaside_infos_subtitle {
+    font-size: var(--size_ext_subtitle);
+    color: hwb(8 28% 50%);
+    text-align: center;
+    padding-bottom: 10px;
+}
+.ext_card_seaside_infos_container p{
+    font-family: var(--merryweather);
+    font-size: var(--size_ext_text);
+    color: hwb(9 1% 61%);
+    margin-bottom: 3px;
+}
+
+.ext_card_sea_description_container p {
+    color: hwb(9 1% 61%);
+    font-weight: bold;
+    font-size: 1.2rem; 
+    line-height: 2.5rem;
+}
+
+.ext_card_islets_description_container p {
+    color: hwb(212 2% 73%);
+    font-weight: bold;
+    font-size: 1.2rem; 
+    line-height: 2.5rem;
 }
 
 /* EXTERNAL CARD MAINLAND */

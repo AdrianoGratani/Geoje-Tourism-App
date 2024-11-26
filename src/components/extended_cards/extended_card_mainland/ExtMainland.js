@@ -48,7 +48,6 @@ export default function ExtMainland({
         >
         {/* same layout for all sections. */}
 
-
             <div class="ext_card_text_container">
 
                 <div class="ext_card_title_container">
@@ -60,14 +59,15 @@ export default function ExtMainland({
                     </div>
                 </div>
 
+                {/* picture_folder: "" */}
+                <div class="ext_card_text_container">
+                        <Carousel />
+                </div>
 
                 <div class="ext_card_infos_container">
-
-                    {/* picture_folder: "" */}
-                    <div class="ext_card_text_container">
-                            <Carousel />
-                    </div>
-
+                <h1 className="ext_card_description_title">
+                    Useful Infos
+                </h1>
                     {/* all the infos */}
                     <div class="ext_card_infos_height_container">
                         <p class="ext_card_infos_height">
@@ -97,6 +97,10 @@ export default function ExtMainland({
 
                     {/* description: */}
                     <div class="ext_card_description_container">
+                        <h1 className="ext_card_description_title">
+                            Description
+                        </h1>
+                        
                         <p class="ext_card_description">
                             {card_data_for_ext_card.description}
                         </p>

@@ -41,29 +41,32 @@ export default function ExtSeaside({resetContextData, cards_data}) {
         <div class="ext_card_text_container">
 
             <div class="ext_card_title_container">
-                <h1 class="ext_card_title">{card_data_for_ext_card.name}</h1>
+                <h1 class="ext_card_seaside_title">{card_data_for_ext_card.name}</h1>
                 <div class="ext_card_infos_subtitle_container">
-                    <h2 class="ext_card_infos_subtitle">
+                    <h2 class="ext_card_seaside_infos_subtitle">
                         {card_data_for_ext_card.subtitle}
                     </h2>
                 </div>
             </div>
 
-            <div class="ext_card_infos_container">
+            {/* picture_folder: "" */}
+            <div class="ext_card_text_container">
+                    <Carousel />
+            </div>
 
-                {/* picture_folder: "" */}
-                <div class="ext_card_text_container">
-                        <Carousel />
-                </div>
+            <div class="ext_card_seaside_infos_container">
+                <h1 className="ext_card_description_title">
+                Useful Infos for {card_data_for_ext_card.name}:
+                </h1>
 
                 <div class="ext_card_infos_sand_container">
                     <p class="ext_card_infos_sand">
-                    Sandy or rocky beach? {card_data_for_ext_card.sand}
+                    {card_data_for_ext_card.name} is sandy or rocky beach? {card_data_for_ext_card.sand}
                     </p>
                 </div>
                 <div class="ext_card_infos_car_container">
                     <p class="ext_card_infos_car">
-                    Parking available? {card_data_for_ext_card.parking}
+                    Car Parking is available? {card_data_for_ext_card.parking}
                     </p>
                 </div>
                 <div class="ext_card_infos_eat_container">
@@ -74,7 +77,10 @@ export default function ExtSeaside({resetContextData, cards_data}) {
                 
 
                   {/* description: */}
-                  <div class="ext_card_description_container">
+                  <div class="ext_card_sea_description_container">
+                        <h1 className="ext_card_description_title">
+                            Description
+                        </h1>
                         <p class="ext_card_description">
                             {card_data_for_ext_card.description}
                         </p>

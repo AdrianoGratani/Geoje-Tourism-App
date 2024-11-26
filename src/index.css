@@ -18,10 +18,12 @@
 
   --size_regular: 2vh;
   --size_ext_text: 1.5rem;
+  --size_ext_description: 1.2rem;
 
   --size_regular_big: 3vh;
   --size_title: 4rem;
   --size_subtitle: 2rem;
+  --size_ext_subtitle: 3rem;
   --size_hero: 5rem;
   --size_hero_big: 8rem;
 
@@ -89,6 +91,7 @@
   --ext_card_land:  hwb(133 17% 46% / 0.322);
   --ext_card_sea:  hwb(56 0% 0% / 0.479);
   --ext_card_islets: hwb(205 0% 0% / 0.39);
+  --ext_card_text: hwb(205 0% 0% / 0.39);
 
 
   /* sizes */

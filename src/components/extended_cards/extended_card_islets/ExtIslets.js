@@ -47,46 +47,52 @@ export default function ExtIslets({resetContextData, cards_data}) {
             <div class="ext_card_text_container">
 
                 <div class="ext_card_title_container">
-                    <h1 class="ext_card_title">{card_data_for_ext_card.name}</h1>
+                    <h1 class="ext_card_islets_title">{card_data_for_ext_card.name}</h1>
                     <div class="ext_card_infos_subtitle_container">
-                        <h2 class="ext_card_infos_subtitle">
+                        <h2 class="ext_card_islets_infos_subtitle">
                             {card_data_for_ext_card.subtitle}
                         </h2>
                     </div>
                 </div>
 
-                <div class="ext_card_infos_container">
+                {/* picture carousel goes here */}
+                {/* picture_folder: "" */}
+                <div class="ext_card_text_container">
+                    <Carousel />
+                </div>
 
-                    {/* picture carousel goes here */}
-                    {/* picture_folder: "" */}
-                    <div class="ext_card_text_container">
-                        <Carousel />
-                    </div>
+                <div class="ext_card_islets_infos_container">
 
+                    <h1 className="ext_card_description_title">
+                    Useful Infos about {card_data_for_ext_card.name}:
+                    </h1>
                     <div class="ext_card_infos_car_container">
                         <p class="ext_card_infos_car">
-                        Can I reach this island by car? {card_data_for_ext_card.car}
+                        Can I reach it by car? {card_data_for_ext_card.car}
                         </p>
                     </div>
                     <div class="ext_card_infos_sand_container">
                         <p class="ext_card_infos_sand">
-                        Can I swim there, or just hike? {card_data_for_ext_card.sand}
+                        Can I swim in {card_data_for_ext_card.name}, or just hike? {card_data_for_ext_card.sand}
                         </p>
                     </div>
                     <div class="ext_card_infos_eat_container">
                         <p class="ext_card_infos_eat">
-                        There are restaurants? {card_data_for_ext_card.eat}
+                        Are there any restaurants in {card_data_for_ext_card.name}? {card_data_for_ext_card.eat}
                         </p>
                     </div>
                     <div class="ext_card_infos_bridge_container">
                         <p class="ext_card_infos_bridge">
-                            This island is reachable by bridge or by ferry?
-                            {card_data_for_ext_card.bridge}
+                        Is it reachable by bridge or by ferry?
+                        {card_data_for_ext_card.bridge}
                         </p>
                     </div>
 
                     {/* description: */}
-                    <div class="ext_card_description_container">
+                    <div class="ext_card_islets_description_container">
+                        <h1 className="ext_card_description_title">
+                            Description:
+                        </h1>
                         <p class="ext_card_description">
                             {card_data_for_ext_card.description}
                         </p>
