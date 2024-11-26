@@ -25,6 +25,12 @@
     padding-bottom: 10px;
 }
 
+.ext_card_infos_container p {
+    font-family: var(--merryweather);
+    font-size: var(--size_ext_text);
+    color: white;
+}
+
 /* EXTERNAL CARD MAINLAND */
 
 .ext_card_container_appears {

@@ -53,43 +53,56 @@ export default function ExtMainland({
 
                 <div class="ext_card_title_container">
                     <h1 class="ext_card_title">{card_data_for_ext_card.name}</h1>
-                </div>
-
-                <div class="ext_card_text_container">
-                        <Carousel />
-                </div>
-
-                <div class="ext_card_infos_container">
                     <div class="ext_card_infos_subtitle_container">
                         <h2 class="ext_card_infos_subtitle">
                             {card_data_for_ext_card.subtitle}
                         </h2>
                     </div>
+                </div>
+
+
+                <div class="ext_card_infos_container">
 
                     {/* picture_folder: "" */}
-                    <div class="ext_card_infos_sand_container">
-                        <p class="ext_card_infos_sand">
-                        {card_data_for_ext_card.sand}
+                    <div class="ext_card_text_container">
+                            <Carousel />
+                    </div>
+
+                    {/* all the infos */}
+                    <div class="ext_card_infos_height_container">
+                        <p class="ext_card_infos_height">
+                        Height: {card_data_for_ext_card.height}
                         </p>
                     </div>
-                    <div class="ext_card_infos_car_container">
-                        <p class="ext_card_infos_car">
-                        {card_data_for_ext_card.car}
+                    <div class="ext_card_infos_difficulty_container">
+                        <p class="ext_card_infos_difficulty">
+                        Difficulty of this Hike: {card_data_for_ext_card.difficulty}
                         </p>
                     </div>
-                    <div class="ext_card_infos_eat_container">
-                        <p class="ext_card_infos_eat">
-                        {card_data_for_ext_card.eat}
+                    <div class="ext_card_infos_length_container">
+                        <p class="ext_card_infos_length">
+                        Length of this Hike: {card_data_for_ext_card.length}
                         </p>
                     </div>
-                    <div class="ext_card_infos_bridge_container">
-                        <p class="ext_card_infos_bridge">
-                            {card_data_for_ext_card.bridge}
+                    <div class="ext_card_infos_steepness_container">
+                        <p class="ext_card_infos_steepness">
+                            Average Steepness: {card_data_for_ext_card.steepness}
+                        </p>
+                    </div>
+                    <div class="ext_card_infos_duration_container">
+                        <p class="ext_card_infos_duration">
+                            Overall duration of this Hike (at medium pace): {card_data_for_ext_card.duration}
+                        </p>
+                    </div>
+
+                    {/* description: */}
+                    <div class="ext_card_description_container">
+                        <p class="ext_card_description">
+                            {card_data_for_ext_card.description}
                         </p>
                     </div>
                 </div>
             </div>
-        
 
         </div>
     )

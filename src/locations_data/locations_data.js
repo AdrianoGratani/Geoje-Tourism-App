@@ -7,6 +7,7 @@ const locations_data = {
         {
             name: "Nongso",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id:"mainland_nongso",
             height: "500mt",
             top: "20",
@@ -20,6 +21,7 @@ const locations_data = {
          {
              name: "Aengsan",
              subtitle:"subtitle",
+             description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
              id:"mainland_aengsan",
             height: "500mt",
             top: "210",
@@ -33,6 +35,7 @@ const locations_data = {
         {
             name: "Daegumsan",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_daegumsan",
             height: "500mt",
             top: "220",
@@ -46,6 +49,7 @@ const locations_data = {
          {
              name: "Mangwolsan",
              subtitle:"subtitle",
+             description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_mangwolsan",
             height: "500mt",
             top: "270",
@@ -59,6 +63,7 @@ const locations_data = {
         {
             name: "Mangchisan",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_mangchisan",
             height: "500mt",
             top: "310",
@@ -72,6 +77,7 @@ const locations_data = {
         {
             name: "Guksabong",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_guksabong",
             height: "500mt",
             top: "330",
@@ -85,6 +91,7 @@ const locations_data = {
          {
             name: "Siraesan",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_siraesan",
             height: "500mt",
             top: "360",
@@ -98,6 +105,7 @@ const locations_data = {
         {
             name: "Dundeok-Kiseong",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_dundeok-Kiseong",
             height: "500mt",
             top: "410",
@@ -111,6 +119,7 @@ const locations_data = {
          {
             name: "Sangbangsan",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_sangbangsan",
             height: "mainland_sangbangsan",
             top: "430",
@@ -124,6 +133,7 @@ const locations_data = {
          {
             name: "Gyeryongsan",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_gyeryongsan",
             height: "500mt",
             top: "430",
@@ -137,6 +147,7 @@ const locations_data = {
          {
             name: "Mundong",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "undong",
             height: "mainland_mundong",
             top: "460",
@@ -151,6 +162,7 @@ const locations_data = {
          {
              name: "Oknyeobong",
              subtitle:"subtitle",
+             description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_oknyeobong",
             height: "500mt",
             top: "470",
@@ -164,6 +176,7 @@ const locations_data = {
          {
             name: "Seonjasan",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_seonjasan",
             height: "500mt",
             top: "510",
@@ -177,6 +190,7 @@ const locations_data = {
          {
             name: "Gucheonjeosooji",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_gucheonjeosooji",
             height: "500mt",
             top: "520",
@@ -190,6 +204,7 @@ const locations_data = {
          {
             name: "Bukbyeongsan",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_bukbyeongsan",
             height: "500mt",
             top: "630",
@@ -203,6 +218,7 @@ const locations_data = {
          {
             name: "Garasan",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_garasan",
             height: "500mt",
             top: "390",
@@ -216,6 +232,7 @@ const locations_data = {
          {
             name: "Jayeon-Hyuyangrim",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_jayeon-hyuyangrim",
             height: "500mt",
             top: "580",
@@ -229,6 +246,7 @@ const locations_data = {
         {
             name: "Naebongsan",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "mainland_naebongsan",
             height: "500mt",
             top: "780",
@@ -247,6 +265,7 @@ const locations_data = {
         {
             name: "Guyeong",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_guyeong",
             sand: "no",
             parking: "yes",
@@ -258,6 +277,7 @@ const locations_data = {
          {
             name: "Hwangpo",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_hwangpo",
             sand: "no",
             parking: "yes",
@@ -269,6 +289,7 @@ const locations_data = {
          {
             name: "Mul-an",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside-mul-an",
             sand: "no",
             parking: "yes",
@@ -280,6 +301,7 @@ const locations_data = {
          {
             name: "Sibangseon",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_sibangseon",
             sand: "no",
             parking: "yes",
@@ -291,6 +313,7 @@ const locations_data = {
          {
             name: "Deokpo",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_deokpo",
             sand: "no",
             parking: "yes",
@@ -302,6 +325,7 @@ const locations_data = {
          {
             name: "Wahyeon",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_wahyeon",
             sand: "no",
             parking: "yes",
@@ -313,6 +337,7 @@ const locations_data = {
          {
             name: "Gujora",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_gujora",
             sand: "no",
             parking: "yes",
@@ -324,6 +349,7 @@ const locations_data = {
          {
             name: "Mangchi",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_mangchi",
             sand: "no",
             parking: "yes",
@@ -335,6 +361,7 @@ const locations_data = {
          {
             name: "Baram-ui Ondeok",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_baram-uiondeok",
             sand: "no",
             parking: "yes",
@@ -346,6 +373,7 @@ const locations_data = {
          {
             name: "Dolteumi",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_dolteumi",
             sand: "no",
             parking: "yes",
@@ -357,6 +385,7 @@ const locations_data = {
          {
             name: "Yeocha",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_yeocha",
             sand: "no",
             parking: "yes",
@@ -368,6 +397,7 @@ const locations_data = {
          {
             name: "Geunpo Maeul",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_geunpomaeul",
             sand: "no",
             parking: "yes",
@@ -379,6 +409,7 @@ const locations_data = {
          {
             name: "Deokwon",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_deokwon",
             sand: "no",
             parking: "yes",
@@ -390,6 +421,7 @@ const locations_data = {
          {
             name: "Jukrim",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_jukrim",
             sand: "no",
             parking: "yes",
@@ -401,6 +433,7 @@ const locations_data = {
          {
             name: "Sagok",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "seaside_sagok",
             sand: "no",
             parking: "yes",
@@ -416,6 +449,7 @@ const locations_data = {
         {
             name: "Jeo-do",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "islet_jeo-do",
             sand: "sand and hike",
             car: "yes",
@@ -428,6 +462,7 @@ const locations_data = {
         {
             name: "Daeju-do",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "islet_daeju-do",
             sand: "sand and hike",
             car: "yes",
@@ -440,6 +475,7 @@ const locations_data = {
         {
             name: "Isu-do",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "islet_isu-do",
             sand: "sand and hike",
             car: "yes",
@@ -452,6 +488,7 @@ const locations_data = {
         {
             name: "Jisim-do",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "islet_jisim-do",
             sand: "sand and hike",
             car: "yes",
@@ -464,6 +501,7 @@ const locations_data = {
         {
             name: "Nae-do",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "islet_nae-do",
             sand: "sand and hike",
             car: "yes",
@@ -476,6 +514,7 @@ const locations_data = {
         {
             name: "Oe-do",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "islet_oe-do",
             sand: "sand and hike",
             car: "yes",
@@ -488,6 +527,7 @@ const locations_data = {
         {
             name: "Jangsa-do",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "islet_jangsa-do",
             sand: "sand and hike",
             car: "yes",
@@ -500,6 +540,7 @@ const locations_data = {
         {
             name: "Sandal-do",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "islet_sandal-do",
             sand: "sand and hike",
             car: "yes",
@@ -512,6 +553,7 @@ const locations_data = {
         {
             name: "Gajo-do",
             subtitle:"subtitle",
+            description: "This field contains an in-depth description of each place. How to reach it, If there are restaurants, cafes, and type of experience as well. Since this website is mainly built to showcase programming ability, and writing precise analysis for each place would take too long, I think is not necessary to provide a real description (for now)",
             id: "islet_gajo-do",
             sand: "sand and hike",
             car: "yes",

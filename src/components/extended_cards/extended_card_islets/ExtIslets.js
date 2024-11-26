@@ -36,51 +36,59 @@ export default function ExtIslets({resetContextData, cards_data}) {
 
     return (
         
-        <div id="ext_islet_card_container" onClick={handle_reset_data}
-        // BUG class={`ext_card_container ${toggle_animation ? "ext_card_container_appears" : "ext_card_container_fades"}`}
-        class={`ext_islet_card_container ext_islet_card_container_appears
-        ${toggle_animation===false ? "ext_islet_card_container_fades" : ""}`}
+        <div id="ext_islet_card_container" 
+            onClick={handle_reset_data}
+            // BUG class={`ext_card_container ${toggle_animation ? "ext_card_container_appears" : "ext_card_container_fades"}`}
+            class={`ext_islet_card_container ext_islet_card_container_appears
+            ${toggle_animation===false ? "ext_islet_card_container_fades" : ""}`}
         >
         {/* same layout, for all sections. */}
-
-            {/* picture carousel goes here */}
-
-            <div class="ext_card_text_container">
-                <Carousel />
-            </div>
 
             <div class="ext_card_text_container">
 
                 <div class="ext_card_title_container">
                     <h1 class="ext_card_title">{card_data_for_ext_card.name}</h1>
-                </div>
-
-                <div class="ext_card_infos_container">
                     <div class="ext_card_infos_subtitle_container">
                         <h2 class="ext_card_infos_subtitle">
                             {card_data_for_ext_card.subtitle}
                         </h2>
                     </div>
+                </div>
 
+                <div class="ext_card_infos_container">
+
+                    {/* picture carousel goes here */}
                     {/* picture_folder: "" */}
-                    <div class="ext_card_infos_sand_container">
-                        <p class="ext_card_infos_sand">
-                        {card_data_for_ext_card.sand}
-                        </p>
+                    <div class="ext_card_text_container">
+                        <Carousel />
                     </div>
+
                     <div class="ext_card_infos_car_container">
                         <p class="ext_card_infos_car">
-                        {card_data_for_ext_card.car}
+                        Can I reach this island by car? {card_data_for_ext_card.car}
+                        </p>
+                    </div>
+                    <div class="ext_card_infos_sand_container">
+                        <p class="ext_card_infos_sand">
+                        Can I swim there, or just hike? {card_data_for_ext_card.sand}
                         </p>
                     </div>
                     <div class="ext_card_infos_eat_container">
                         <p class="ext_card_infos_eat">
-                        {card_data_for_ext_card.eat}
+                        There are restaurants? {card_data_for_ext_card.eat}
                         </p>
                     </div>
                     <div class="ext_card_infos_bridge_container">
                         <p class="ext_card_infos_bridge">
+                            This island is reachable by bridge or by ferry?
                             {card_data_for_ext_card.bridge}
+                        </p>
+                    </div>
+
+                    {/* description: */}
+                    <div class="ext_card_description_container">
+                        <p class="ext_card_description">
+                            {card_data_for_ext_card.description}
                         </p>
                     </div>
                 </div>

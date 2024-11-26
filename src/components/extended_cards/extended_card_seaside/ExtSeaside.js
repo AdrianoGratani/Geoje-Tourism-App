@@ -18,7 +18,7 @@ export default function ExtSeaside({resetContextData, cards_data}) {
         setCurrentlyVisitedSection,
         setCurrentlyClickedCardID  
     } = useCardContext();
-
+ 
     function resetContextData() {                                          // when you click the extended card, means you don't want to see it, so this function makes it disappear.
         setCard_data_for_ext_card(null);    
         setCardIsClicked(false);
@@ -42,45 +42,45 @@ export default function ExtSeaside({resetContextData, cards_data}) {
 
             <div class="ext_card_title_container">
                 <h1 class="ext_card_title">{card_data_for_ext_card.name}</h1>
-            </div>
-
-            <div class="ext_card_text_container">
-                    <Carousel />
-            </div>
-
-            <div class="ext_card_infos_container">
                 <div class="ext_card_infos_subtitle_container">
                     <h2 class="ext_card_infos_subtitle">
                         {card_data_for_ext_card.subtitle}
                     </h2>
                 </div>
+            </div>
+
+            <div class="ext_card_infos_container">
 
                 {/* picture_folder: "" */}
+                <div class="ext_card_text_container">
+                        <Carousel />
+                </div>
+
                 <div class="ext_card_infos_sand_container">
                     <p class="ext_card_infos_sand">
-                    {card_data_for_ext_card.sand}
+                    Sandy or rocky beach? {card_data_for_ext_card.sand}
                     </p>
                 </div>
                 <div class="ext_card_infos_car_container">
                     <p class="ext_card_infos_car">
-                    {card_data_for_ext_card.car}
+                    Parking available? {card_data_for_ext_card.parking}
                     </p>
                 </div>
                 <div class="ext_card_infos_eat_container">
                     <p class="ext_card_infos_eat">
-                    {card_data_for_ext_card.eat}
+                    Are there restaurants nearby? {card_data_for_ext_card.cafes}
                     </p>
                 </div>
-                <div class="ext_card_infos_bridge_container">
-                    <p class="ext_card_infos_bridge">
-                        {card_data_for_ext_card.bridge}
-                    </p>
-                </div>
+                
+
+                  {/* description: */}
+                  <div class="ext_card_description_container">
+                        <p class="ext_card_description">
+                            {card_data_for_ext_card.description}
+                        </p>
+                    </div>
             </div>
         </div>
-
-
-
-        </div>
+    </div>
     )
 }
