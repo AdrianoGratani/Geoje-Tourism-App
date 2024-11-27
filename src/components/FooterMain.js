@@ -1,70 +1,109 @@
 import React from 'react';
+import {useState, useEffect} from 'react';
 import "./footer_main.css";
+
+function FooterTextAnimation({textIn, intrvl}) {
+    // the string is always there, just invisible;
+    // split the string in array of chars and map through.
+    // you use a useStte iterator to move along
+    // every new char found, switch it to visible.
+   
+    const [currCharsDisplayed, setCurrCharsDisplayed ] = useState('');   
+    const [i, setI] = useState(0)
+    const [rand, setRand] = useState(100 + Math.random() * 400);
+
+    useEffect(()=> {                                            // update the text every time the current Chars displayed increase/change
+
+            const interval = setInterval(()=> {        
+
+                        setRand(                                             /// random set of interval
+                            Math.floor(50 + Math.random() * 300)
+                        )
+
+                        setCurrCharsDisplayed((prev) => {                   /// show the next char
+                            if (prev.length >= textIn.length) {
+                                return '';
+                            } else {
+                                return prev += textIn[i]
+                            }
+                        });
+
+                        setI( (prev) => {                                   // update the char pointer to the next (or first)
+                            if (prev === textIn.length) {return prev-prev}
+                            else {return prev += 1}
+                        });
+
+                    }, rand);
+
+            return ()=> clearInterval(interval);
+    },[ currCharsDisplayed])
+
+
+    return (
+        <div  
+        // style={{ width: (rand) + 'px' }}
+        >
+            <div>
+            {currCharsDisplayed}
+            </div>
+        </div>
+    )
+
+       
+}
 
 export default function FooterMain() {
 
+    const animStr = "  Nice to meet you.      Welcome to this Website.        "
+
     return (
+// {/*  A PICTURE MAYBE?  */}
+// {/* https://ifonts.xyz/almarena-neue-font-family.html    for the animation */}
+// {/* https://fonnts.com/cotoris/   for the form description text  */}
+// {/* https://www.1001freefonts.com/bodoni.font   elegant. */}
+
+
         <div className="footer_container playfair-display_it_light">
 
-{/*  A PICTURE MAYBE?  */}
-{/* https://ifonts.xyz/almarena-neue-font-family.html    for the animation */}
-{/* https://fonnts.com/cotoris/   for the form description text  */}
-{/* https://www.1001freefonts.com/bodoni.font   elegant. */}
-
-
-            {/* the header */}
             <div className="footer_header_container ">
-                {/* LEFT */}
                 <div className="footer_header_left">
                     <div className="footer_header_logo_container">
-                        {/* logo goes here */} here is the logo
+                         here is the logo
                     </div>
                     <div className="footer_header_job_container">
-                        {/* your job, in few words, of just a cool phrases "Adriano solves Problems." 
-                        use two <p>, one up one down*/}Adriano, <br/> Frontend Dev.
+                        Adriano Gratani, <br /> FrontEnd Developer.
                     </div>
                     <div className="footer_header_address_container">
-                        {/* your address here 
-                        use two <p>, one up one down*/}
                         Geoje, <br /> South Korea.
                     </div>
                 </div>
 
-                {/* RIGHT */}
-                <div className="footer_header_right">
-                    <div className="footer_header_aboutme">
-                        {/* LINK ON CLICK: describe your life, max 400 chars. comes as animation like night.js, 200 characters max.*/}
-                        My Journey
+                <div className="footer_header_right playfair-display_light">
+                    <div className="footer_header_aboutme link">
+                        <a href="#">My Journey</a>
                     </div>
-                    <div className="footer_header_method">
-                        {/* my ethics of works. comes as animation like night.js, 200 characters max. */}
-                        Work Ethic
+                    <div className="footer_header_method link">
+                        <a href="#">Work Ethic</a>
                     </div>
-                    <div className="footer_header_code">
-                        {/* write something like: "check the code". is a link to github repo for this project. */}
-                        My Code
+                    <div className="footer_header_code link">
+                        <a href="#">My Code</a>
                     </div>
                 </div>
             </div>
 
-            {/* the animation  */}
             <div class="footer_animation_container playfair-display_light">
-                {/* automatic writing of phrase like "Write me! [< cancel this] Read the about me! [< cancel this]" infinite loop*/}
-                big animation for text in the middle
+                <div class="a">
+                    <FooterTextAnimation textIn={animStr} interval={1000} />
+                </div>
             </div>
             
-            {/* form(left) and links(right) */}
             <div className="footer_form_links_container">
                 
-                {/* form */}
                 <div className="footer_form_container">
                     <div className="footer_form_description_container playfair-display_light">
-                        {/* "contact me for more informations or to share insights with me." */}
                         Contact me for further discussion about Frontend development
                     </div>
                     <div className="footer_form_container">
-                        {/* form goes here, name and email */}
-                        {/* button to send, down */}
 
                         <form class="footer_form">
                             <placeholder class="placeholder_name" id="name"></placeholder>
@@ -76,42 +115,36 @@ export default function FooterMain() {
                     </div>
                 </div>
 
-                {/* links: social(left) and addresses(right) */}
                 <div className="footer_links_container">
-                    {/* social */}
                     <div className="footer_links_social_container">
-                        {/* a title phrase: "Socializer" */}
-                        {/* stacked on top of each other: portfolio website, linkedIn, GitHub*/}
-                        <h1 class="links_title">My Links</h1>
+                        <h1 class="links_title ">
+                        <FooterTextAnimation textIn={"   My Links!    "} interval={1000} />
+                            </h1>
                         <a href="#" class="link playfair-display_light">GitHub</a>
                         <a href="#" class="link playfair-display_light">LinkedIn</a>
                         <a href="#" class="link playfair-display_light">Youtube</a>
                         <a href="#" class="link playfair-display_light">CV</a>
                         
-                        {/* signature: just your name in a fancy font it goes UNDER the social*/}
                         <div className="footer_signature_container">
-                            <div className="footer_signature">
+                            <div className="footer_signature playfair-display_light">
                                 Adriano Gratani
                             </div>
                         </div>
                     </div>
-                    {/* addresses */}
                     <div className="footer_links_addresses_container">
-                        {/* a title phrase: "say hello!" */}
-                        {/* stacked on top of each other: email telephone number address */}
-                        <h1 class="hello_title">say 'hello!'</h1>
-                        <a href="#" class="link playfair-display_light">mail</a>
-                        <a href="#" class="link playfair-display_light">telephone</a>
+                        <h1 class="hello_title">
+                            <FooterTextAnimation textIn={"   _Say 'hello!'   "} interval={1000} />
+                            
+                            </h1>
+                        <a href="#" class="link playfair-display_light">Mail</a>
+                        <a href="#" class="link playfair-display_light">Telephone</a>
                         <a href="#" class="link playfair-display_light">Full Address</a>
                     </div>
                 </div>
             </div>
 
-
-
-            {/* footer of the footer: copyright and year */}
             <div className="footer_footer_container">
-                <div>copyright</div>
+                <div>Copyright</div>
                 <div>Go to top</div>
             </div>
 

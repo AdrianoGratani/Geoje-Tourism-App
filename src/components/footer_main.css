@@ -7,13 +7,6 @@
   font-style: normal;
 }
 
-.playfair-display_bold {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-}
-
 .playfair-display_it_light {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -21,11 +14,21 @@
   font-style: italic;
 }
 
-.playfair-display_it_bold {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: italic;
+/* animation */
+
+.a {
+  opacity: .7;
+  height: 15vh;
+  background-color: white;
+  width: 100vw;
+  color: black;
+  transition: width 0.2s ease-in-out;
+  display: flex;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer_container {
@@ -51,6 +54,11 @@
   margin-right: 2vw;
 }
 
+.footer_header_logo_container {
+  border-right: 1px solid;
+  padding-right: 2vw;
+}
+
 .footer_header_left {
   display: flex;
   flex-direction: row;
@@ -65,19 +73,25 @@
   display: flex;
   flex-direction: row;
   gap: 5vw;
+  border-left: 1px solid;
+  padding-left: 2vw;
   /* background-color: red; */
 }
 
 /* middle: aniamtion */
 .footer_animation_container {
+  font-size: 3rem;
   margin-top: 15vh;
   /* background-color: blue; */
   width:fit-content;
-  margin-left: 10vw;
+  margin-right: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer_form_links_container {
-  margin-top: 10vh;
+  margin-top: 5vh;
   /* background-color: blue; */
   margin-left: 10vw;
   display: flex;
@@ -87,25 +101,34 @@
 /* links */
 
 .footer_links_container {
+  margin-left: 8vw;
+  border-left: 1px solid;
   display: flex;
   flex-direction: row;
+}
+
+.link {
+  font-size: 0.9rem;
 }
 
 .footer_links_social_container, .footer_links_addresses_container {
   display: flex;
   flex-direction:  column;
-  margin-left: 10vw;
+  margin-left: 5vw;
   gap: 1.8vh;
 }
 .links_title, .hello_title {
-  margin-bottom: 2vh;
+  height: 2rem;
+  font-size: 1.2rem;
   /* background-color: red; */
 }
 
 /* signature */
 
 .footer_signature_container {
+  opacity: .8;
   margin-top: 10vh;
+  font-size: 1.5rem;
 }
 
 .footer_footer_container {
