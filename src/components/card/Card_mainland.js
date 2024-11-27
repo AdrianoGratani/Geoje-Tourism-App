@@ -14,6 +14,7 @@ export default function Card_mainland({card_data, id_index}) {
     
     // CONTEXT DATA:
     const { 
+        toggle_animation, setToggle_animation,
             card_data_for_ext_card,
              setCard_data_for_ext_card,
             cardIsClicked, setCardIsClicked,
@@ -26,11 +27,11 @@ export default function Card_mainland({card_data, id_index}) {
 
     function send_hovered_card_data_to_context(hovered_card_id) {
         setCurrentlyHoveredIconCard(hovered_card_id);        
-        console.log("current card: " + currentlyHoveredCard);
+        // console.log("current card: " + currentlyHoveredCard);
     }
     function remove_hovered_card_data_to_context() {
         setCurrentlyHoveredIconCard(null);        
-        console.log("current card: " + currentlyHoveredCard);
+        // console.log("current card: " + currentlyHoveredCard);
     }
     
     //  PROPS DATA:
@@ -62,6 +63,7 @@ export default function Card_mainland({card_data, id_index}) {
     }
 
     function manipulateContextData(d_for_ext_card) {
+        setToggle_animation(true);
         setCard_data_for_ext_card(d_for_ext_card);
         evaluateCardClick();
         evaluateRendering();

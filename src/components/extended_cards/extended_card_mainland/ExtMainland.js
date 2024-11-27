@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, {  useState, useEffect } from 'react'
 import { useCardContext } from '../../../context/CardContext';
 import "../ext_card_style.css";
 import Carousel from '../extended_card_carousel/Carousel';
@@ -9,17 +9,22 @@ export default function ExtMainland({
     currentlyClickedCardID
 }) {
     // let card_data_extracted = cards_data[currentlyClickedCardID];
-    const [toggle_animation, setToggle_animation] = useState(true);
     
     // CONTEXT:
     const { 
+        toggle_animation, setToggle_animation,
         card_data_for_ext_card,
         setCard_data_for_ext_card,
         cardIsClicked, 
         setCardIsClicked,
         // currentlyVisitedSection,
         setCurrentlyVisitedSection,
-        setCurrentlyClickedCardID  
+        setCurrentlyClickedCardID,
+        
+        setClickedIcon,
+        currentlyHoveredIcon,
+        setCurrentlyHoveredIcon
+
     } = useCardContext();
 
     function resetContextData() {                                          // when you click the extended card, means you don't want to see it, so this function makes it disappear.
@@ -27,6 +32,10 @@ export default function ExtMainland({
         setCardIsClicked(false);
         setCurrentlyClickedCardID(null);
         setCurrentlyVisitedSection(null);
+        setClickedIcon(null);
+        setToggle_animation(false);
+        setCard_data_for_ext_card(null);
+        setCurrentlyHoveredIcon(null);
     }
     
    
@@ -39,21 +48,42 @@ export default function ExtMainland({
         }, 1000)
     }
 
+    let previousIcon = currentlyHoveredIcon;
+    function hoveredIconChanges(currentIcon) {
+        if(currentIcon !== previousIcon) {
+            console.log(currentIcon, previousIcon)
+            previousIcon = currentIcon;
+            return true;
+        }
+        return false;
+    }
 
+    const [newIcon_hovered, setNewIcon_hovered] = useState(false);
+    useEffect(()=> {
+        setNewIcon_hovered(true);
+        setTimeout(()=> {
+            setNewIcon_hovered(false);
+        }, 1000) 
+    } , [currentlyHoveredIcon]);
 
     return (
-        <div id="ext_card_container" onClick={handle_reset_data}
+        <div id="ext_card_container" 
+            onClick={handle_reset_data}
             // class={`ext_card_container ${toggle_animation ? "ext_card_container_appears" : "ext_card_container_fades"}`}
-            class={`ext_card_container ext_card_container_appears ${toggle_animation===false ? "ext_card_container_fades" : ""}`}
+            class={`ext_card_container ext_card_container_appears  ${toggle_animation===false ? "ext_card_container_fades" : ""}`}
         >
         {/* same layout for all sections. */}
 
-            <div class="ext_card_text_container">
+            <div class={`ext_card_text_container ${newIcon_hovered ? "ext_card_title_appears" : ""}`}>
 
                 <div class="ext_card_title_container">
-                    <h1 class="ext_card_title">{card_data_for_ext_card.name}</h1>
+                    <h1 
+                    class={`ext_card_title ${newIcon_hovered ? "ext_card_title_appears" : ""}`}>
+                        {card_data_for_ext_card.name}
+                    </h1>
+
                     <div class="ext_card_infos_subtitle_container">
-                        <h2 class="ext_card_infos_subtitle">
+                        <h2 class={`ext_card_infos_subtitle  ${newIcon_hovered ? "ext_card_title_appears" : ""}`}>
                             {card_data_for_ext_card.subtitle}
                         </h2>
                     </div>

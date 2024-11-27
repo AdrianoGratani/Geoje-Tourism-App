@@ -1,7 +1,6 @@
 import React from 'react';
-import locations_data from "../../../locations_data/locations_data";
 import { useCardContext } from '../../../context/CardContext';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 /*
     icons are SVG. to position each icon within the map svg, and make everything interactive, I treat them as React components inside <div> containers.
     to move them, change size, change color, add-remove classes for interactivity, I use their div container.
@@ -12,31 +11,71 @@ import {ReactComponent as IconHike} from "../../../img/hike.svg";
 import {ReactComponent as IconCableCar} from "../../../img/cable.svg"
 import {ReactComponent as LightHouse} from "../../../img/faro.svg"
 
+import locations_data from '../../../locations_data/locations_data';
+
 
 // for incon rendering: a loop over the mainland array.
 import "./section_map_land.css";
+import Card_islet from '../../card/Card_islet';
 
 export default function Section_map_land() {
 
+    // const mainland_data = locations_data.mainland;
+
     // CONTEXT aND SETTERS:
     const { 
-        currentlyHoveredIcon, setCurrentlyHoveredIcon, currentlyHoveredCard 
+        resetContextData,
+        toggle_animation, setToggle_animation,
+        currentlyHoveredIcon, setCurrentlyHoveredIcon, 
+        currentlyHoveredCard,
+        cardIsClicked, setCardIsClicked,
+        currentlyVisitedSection, setCurrentlyVisitedSection,
+        clickedIcon, setClickedIcon,
+        card_data_for_ext_card, setCard_data_for_ext_card,
     } = useCardContext(); 
 
-    function send_icon_id_to_context(location_id) {
+    // ___ON HOVER
+    function send_icon_id_to_context(location_id, location_data) {
+        setToggle_animation(true);
         setCurrentlyHoveredIcon(location_id)
+        setClickedIcon(location_id);
+        setCardIsClicked(true);
+        setCurrentlyVisitedSection("mainland");
+        setCard_data_for_ext_card(location_data);
     }
     function remove_icon_id_from_context() {
-        setCurrentlyHoveredIcon(null);
+        // setToggle_animation(false);
+        //     setCurrentlyHoveredIcon(null);
+        //     setClickedIcon(null);
+        //     setCardIsClicked(false);
+        //     setCurrentlyVisitedSection(null);
+        //     setCard_data_for_ext_card(null);
+    }
+
+    // on icon click:
+    const [icon_toggled, setIcon_toggled] = useState(false);
+
+    function triggerExtCard() {
+            setToggle_animation(false);
+            setCurrentlyHoveredIcon(null);
+            // setClickedIcon(null);
+            // setCardIsClicked(false);
+            // setCurrentlyVisitedSection(null);
+            // setCard_data_for_ext_card(null);
     }
     
     useEffect(()=> {
-        console.log(". currently hovered icon: " + currentlyHoveredIcon);      // debug;
-    }, [currentlyHoveredIcon])
+    // console.log(
+    //     cardIsClicked, currentlyVisitedSection
+    // )
+        // console.log(". currently hovered icon: " + currentlyHoveredIcon);      // debug;
+    }, [icon_toggled])
 
     return (
 
-        <div class="map_and_icons_container">
+        <div class="map_and_icons_container"
+            onClick={()=> resetContextData()}
+        >
 
             {/* map svg */}
               {/* map icons svg ------>  use .map() to generate them dynamically, 
@@ -79,8 +118,9 @@ export default function Section_map_land() {
                                                     ? "m_icon_effect"
                                                     : ""    
                                                     }`} 
-                        onMouseEnter={()=>send_icon_id_to_context(location.id)}
+                        onMouseEnter={()=>send_icon_id_to_context(location.id, location)}
                         onMouseLeave={()=>remove_icon_id_from_context()}
+                        onClick={()=> triggerExtCard()}
                             style={{
                                 position: 'absolute',
                                 top: `${location.top}px`,

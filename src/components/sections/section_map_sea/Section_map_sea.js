@@ -1,12 +1,12 @@
 import React from 'react';
 import { useCardContext } from '../../../context/CardContext';
 import locations_data from '../../../locations_data/locations_data';
-
+import { useEffect, useState } from 'react';
 
 // icons:
 import {ReactComponent as Geoje_sea} from "../../../img/geoje_beach.svg";
 import {ReactComponent as Icon_sea} from "../../../img/beach.svg";
-import {ReactComponent as Icon_LightHouse} from "../../../img/faro.svg";
+// import {ReactComponent as Icon_LightHouse} from "../../../img/faro.svg";
 
 import "./section_map_sea.css";
 
@@ -14,26 +14,38 @@ export default function Section_map_sea() {
 
     // CONTEXT DATA
     const {
-            // data for icon/card events:
-            currentlyHoveredIcon, setCurrentlyHoveredIcon,
-            currentlyHoveredCard, setCurrentlyHoveredIconCard,
+                // data for icon/card events:
+                resetContextData,
+                toggle_animation, setToggle_animation,
+                currentlyHoveredIcon, setCurrentlyHoveredIcon, 
+                currentlyHoveredCard,
+                cardIsClicked, setCardIsClicked,
+                currentlyVisitedSection, setCurrentlyVisitedSection,
+                clickedIcon, setClickedIcon,
+                card_data_for_ext_card, setCard_data_for_ext_card,
     } = useCardContext();
 
-    function check_hovered_card(current_icon_id) {
-        if(currentlyHoveredCard === current_icon_id){
-            return 1;
-        }
-    }
-
-    function set_currently_hovered_icon_context(icon_id) {
-        setCurrentlyHoveredIcon(icon_id);   
-    }
-    function remove_currently_hovered_icon_context() {
-        setCurrentlyHoveredIcon(null);   
-    }
     
+
+    // ___ON HOVER
+    function send_icon_id_to_context(location_id, location_data) {
+        setCurrentlyVisitedSection("seaside");
+        setToggle_animation(true);
+        setCardIsClicked(true);
+        setCurrentlyHoveredIcon(location_id)
+        setClickedIcon(location_id);
+        setCard_data_for_ext_card(location_data);
+    }
+    // click to remove the card:
+    function triggerExtCard() {
+        setToggle_animation(false);
+        setCurrentlyHoveredIcon(null);      
+        }
+
     return (
-        <div className='map_and_icons_container'>
+        <div className='map_and_icons_container'
+        onClick={()=> resetContextData()}
+        >
             {/* SVG MAP */}
             <div class="single_map_section_container_sea">
                 <Geoje_sea class="geoje_land_svg" style={{ 
@@ -51,8 +63,10 @@ export default function Section_map_sea() {
                     {
                         locations_data.seaside.map((sea_location) => (
                             <div id="s_icon_container"
-                            onMouseEnter={()=> set_currently_hovered_icon_context(sea_location.id)}
-                            onMouseLeave={()=> remove_currently_hovered_icon_context()}
+                            onMouseEnter={()=> send_icon_id_to_context(sea_location.id, sea_location)}
+                            onClick={()=>triggerExtCard()}
+
+                            // onMouseLeave={()=> remove_currently_hovered_icon_context()}
                             style={{
                                 position: 'absolute',
                                 // backgroundColor: 'yellow',                               

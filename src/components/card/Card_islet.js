@@ -48,9 +48,9 @@ export default function Card_islet({card_data}) {
 
     //debug:
     useEffect(()=> {
-        console.log(currentlyHoveredCard);
-        console.log(currentlyVisitedSection);
-        console.log(currentlyClickedCardID);
+        // console.log(currentlyHoveredCard);
+        // console.log(currentlyVisitedSection);
+        // console.log(currentlyClickedCardID);
     },[currentlyHoveredCard]);
 
     return (

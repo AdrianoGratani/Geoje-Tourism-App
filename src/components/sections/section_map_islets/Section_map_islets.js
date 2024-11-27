@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {ReactComponent as Geoje_islets} from "../../../img/geoje_islets.svg";
 import {ReactComponent as Svg_islets} from "../../../img/islet.svg";
 import { useCardContext } from '../../../context/CardContext';
@@ -11,24 +11,69 @@ import locations_data from '../../../locations_data/locations_data';
 export default function Section_map_islets() {
     const icons_islets_data = locations_data.islets;                                                // data for icon positioning.
 
+    // previous method: no ext card on icon hover
+    // function handle_icon_hovered_context(set_case, set_data) {
+    //     switch(set_case) {
+    //         case "set_context":
+    //             setCurrentlyHoveredIcon(set_data);
+    //             break;
+            
+    //         case "delete_context":
+    //             setCurrentlyHoveredIcon(set_data);
+    //             break;
+    //     }
+    // }
     // CONTEXT DATA for icon layout - card layout interactions:
     const {
-        currentlyHoveredIcon, setCurrentlyHoveredIcon,
+        resetContextData,
+        toggle_animation, setToggle_animation,
+        currentlyHoveredIcon, setCurrentlyHoveredIcon, 
         currentlyHoveredCard,
+        cardIsClicked, setCardIsClicked,
+        currentlyVisitedSection, setCurrentlyVisitedSection,
+        clickedIcon, setClickedIcon,
+        card_data_for_ext_card, setCard_data_for_ext_card,
     } = useCardContext();
 
 
-    function handle_icon_hovered_context(set_case, set_data) {
-        switch(set_case) {
-            case "set_context":
-                setCurrentlyHoveredIcon(set_data);
-                break;
-            
-            case "delete_context":
-                setCurrentlyHoveredIcon(set_data);
-                break;
-        }
+
+     // ___ON HOVER
+     function send_icon_id_to_context(location_id, location_data) {
+        setToggle_animation(true);
+        setCurrentlyHoveredIcon(location_id)
+        setClickedIcon(location_id);
+        setCardIsClicked(true);
+        setCurrentlyVisitedSection("islets");
+        setCard_data_for_ext_card(location_data);
     }
+    function remove_icon_id_from_context() {
+        // setToggle_animation(false);
+        //     setCurrentlyHoveredIcon(null);
+        //     setClickedIcon(null);
+        //     setCardIsClicked(false);
+        //     setCurrentlyVisitedSection(null);
+        //     setCard_data_for_ext_card(null);
+    }
+
+    // on icon click:
+    const [icon_toggled, setIcon_toggled] = useState(false);
+
+    function triggerExtCard() {
+            setToggle_animation(false);
+            setCurrentlyHoveredIcon(null);
+            // setClickedIcon(null);
+            // setCardIsClicked(false);
+            // setCurrentlyVisitedSection(null);
+            // setCard_data_for_ext_card(null);
+    }
+    
+    useEffect(()=> {
+    // console.log(
+    //     cardIsClicked, currentlyVisitedSection
+    // )
+        // console.log(". currently hovered icon: " + currentlyHoveredIcon);      // debug;
+    }, [icon_toggled])
+
 
     // debug:
     // useEffect(()=> {
@@ -36,7 +81,8 @@ export default function Section_map_islets() {
     // },[currentlyHoveredCard]);
 
     return (
-        <div class="map_and_icons_container">
+        <div class="map_and_icons_container"
+             onClick={()=> resetContextData()}>
 
             {/* map svg */}            
             <div class="single_map_section_container islet_map">
@@ -81,8 +127,8 @@ export default function Section_map_islets() {
                                                     : ""                                
                     }`}
 
-                    onMouseEnter={()=> handle_icon_hovered_context("set_context", islet.id)}
-                    onMouseLeave={()=> handle_icon_hovered_context("delete_context", null)}
+                    onMouseEnter={()=> send_icon_id_to_context(islet.id, islet)}
+                    onClick={()=> triggerExtCard()}
                     style={{
                         width: 'fit-content',
                         height: 'fit-content',

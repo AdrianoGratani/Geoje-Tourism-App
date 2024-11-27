@@ -1,5 +1,5 @@
 import React from 'react'
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { useCardContext } from '../../../context/CardContext';
 import "../ext_card_style.css";
 
@@ -17,6 +17,7 @@ export default function ExtIslets({resetContextData, cards_data}) {
         setCardIsClicked,
         setCurrentlyVisitedSection,
         setCurrentlyClickedCardID,  
+        currentlyHoveredIcon
     } = useCardContext();
 
     function resetContextData() {                                          // when you click the extended card, means you don't want to see it, so this function makes it disappear.
@@ -28,11 +29,29 @@ export default function ExtIslets({resetContextData, cards_data}) {
 
     function handle_reset_data() {
         setToggle_animation(!toggle_animation);
-        console.log(cards_data.id);
-        setTimeout(()=> {
+        // console.log(cards_data.id);
             resetContextData();
-        }, 1000)
     }
+
+
+    // let previousIcon = currentlyHoveredIcon;
+    // function hoveredIconChanges(currentIcon) {
+        //     if(currentIcon !== previousIcon) {
+    //         console.log(currentIcon, previousIcon)
+    //         previousIcon = currentIcon;
+    //         return true;
+    //     }
+    //     return false;
+    // }
+    // constant refresh of ext cards based on which icon user hovers:    + (useEffect to check that on each change of currentlyHoveredIcon)
+    
+    const [newIcon_hovered, setNewIcon_hovered] = useState(false);
+    useEffect(()=> {
+        setNewIcon_hovered(true);
+        setTimeout(()=> {
+            setNewIcon_hovered(false);
+        }, 200) 
+    } , [currentlyHoveredIcon]);
 
     return (
         
@@ -44,7 +63,7 @@ export default function ExtIslets({resetContextData, cards_data}) {
         >
         {/* same layout, for all sections. */}
 
-            <div class="ext_card_text_container">
+            <div class={`ext_card_text_container ${newIcon_hovered ? "ext_card_title_appears": ""}`}>
 
                 <div class="ext_card_title_container">
                     <h1 class="ext_card_islets_title">{card_data_for_ext_card.name}</h1>

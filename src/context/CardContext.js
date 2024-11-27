@@ -18,6 +18,20 @@ export const  CardContextProvider = ( {children} ) => {                         
     const [currentlyHoveredIcon, setCurrentlyHoveredIcon] = useState(null);    
     const [currentlyHoveredCard, setCurrentlyHoveredIconCard] = useState(null);    
     const [card_data_for_ext_card, setCard_data_for_ext_card] =useState(null);
+    const [clickedIcon, setClickedIcon] =useState(null);
+    // ext card appears - disappears:
+    const [toggle_animation, setToggle_animation] = useState(true);
+
+    function resetContextData() {                                          // when you click the extended card, means you don't want to see it, so this function makes it disappear.
+        setCard_data_for_ext_card(null);    
+        setCardIsClicked(false);
+        setCurrentlyClickedCardID(null);
+        setCurrentlyVisitedSection(null);
+        setClickedIcon(null);
+        setToggle_animation(false);
+        setCard_data_for_ext_card(null);
+        setCurrentlyHoveredIcon(null);
+    }
 
     return (
         // IMPORTANT: `value` is the __only__ valide props name for the Provider prop. otherwise react returns an Error because the useContext gets 'undefined': the component using Context is NOT able to access the context data.
@@ -28,6 +42,9 @@ export const  CardContextProvider = ( {children} ) => {                         
             currentlyHoveredIcon, setCurrentlyHoveredIcon,
             currentlyHoveredCard, setCurrentlyHoveredIconCard,
             card_data_for_ext_card, setCard_data_for_ext_card,
+            clickedIcon, setClickedIcon,
+            toggle_animation, setToggle_animation,
+            resetContextData,
          }}>         {/* return a Provider of the Context, which is just a component storing the useState GLOBALLY. */}      
             { 
                 children                                                                   // any other component which is wrapped within this useState Context Provider, receives the Context with the useState. 

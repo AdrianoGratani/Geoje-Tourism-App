@@ -1,5 +1,20 @@
 //////////// <<schedule>> //////////////////////                                                                                   x = DONE
 
+- I click on an svg icon
+  it sends the icon location id to the context statevariable
+  the context state variable is read by Section.text.js
+  Sectiontextjs loops over every single card,
+  if it finds the card 
+    set card is clicked to true,
+    set visited section to "mainland"
+    set currently clicked card id to icon id
+    set card_data_for_ext_card:
+        
+
+
+
+
+
 # TODAY DO THE LAYOUT FOR EACH SECTION: text , cards icon, events
 
 # TODAY import data for each location into js files.

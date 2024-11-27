@@ -1,5 +1,5 @@
 import React from 'react';    // CONTEXT:
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useCardContext } from '../../../context/CardContext';
 import "../ext_card_style.css";
 import Carousel from '../extended_card_carousel/Carousel';
@@ -16,7 +16,8 @@ export default function ExtSeaside({resetContextData, cards_data}) {
         setCard_data_for_ext_card,
         setCardIsClicked,
         setCurrentlyVisitedSection,
-        setCurrentlyClickedCardID  
+        setCurrentlyClickedCardID,
+        currentlyHoveredIcon  
     } = useCardContext();
  
     function resetContextData() {                                          // when you click the extended card, means you don't want to see it, so this function makes it disappear.
@@ -32,13 +33,21 @@ export default function ExtSeaside({resetContextData, cards_data}) {
             resetContextData();
         }, 1000)
     }
+
+    const [newIcon_hovered, setNewIcon_hovered] = useState(false);
+    useEffect(()=> {
+        setNewIcon_hovered(true);
+        setTimeout(()=> {
+            setNewIcon_hovered(false);
+        }, 200) 
+    } , [currentlyHoveredIcon]);
     
     return (
         <div class={`ext_sea_card_container ext_sea_card_container_appears ${extended_card_toggled === false ? "ext_sea_card_container_fades" : ""}`} 
         onClick={handle_reset_data}>
         {/* same layout for all sections. */}
 
-        <div class="ext_card_text_container">
+        <div class={`ext_card_text_container ${newIcon_hovered ? "ext_card_title_appears" : ""}`}>
 
             <div class="ext_card_title_container">
                 <h1 class="ext_card_seaside_title">{card_data_for_ext_card.name}</h1>
@@ -55,7 +64,8 @@ export default function ExtSeaside({resetContextData, cards_data}) {
             </div>
 
             <div class="ext_card_seaside_infos_container">
-                <h1 className="ext_card_description_title">
+                <h1 className={`ext_card_description_title `}>
+
                 Useful Infos for {card_data_for_ext_card.name}:
                 </h1>
 

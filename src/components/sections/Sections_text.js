@@ -10,39 +10,48 @@ import ExtIslets from "../extended_cards/extended_card_islets/ExtIslets";
 
 import "./sections_text.css";
 
-export default function Sections_text({text_data, cards_data, section}) {
+export default function Sections_text({
+    text_data, 
+    cards_data, 
+    section}) {
 
     // CONTEXT:
     const { 
+        clickedIcon,
         cardIsClicked, setCardIsClicked,
         currentlyVisitedSection, setCurrentlyVisitedSection,
         currentlyClickedCardID, setCurrentlyClickedCardID  
     } = useCardContext();
 
+
+    //  the rendering for all ext cards relies on this bool:
     let display_extended_card = currentlyVisitedSection === section 
-                                && cardIsClicked 
-                                && currentlyClickedCardID !== null;
+                                && (cardIsClicked || clickedIcon) 
+                                
 
-
-
+    // if display_extended_card === true this is triggered:
     function ExtCardSectionEvaluator() {                                // for each section the extended card has different style and animation.
         if(section === "mainland") {
+            console.log(section + " rendering ext card.")
             return <ExtMainland cards_data={cards_data} section={section} currentlyClickedCardID={currentlyClickedCardID}/>;
         }
         else if(section === "seaside") {
+            console.log(section + " rendering ext card.")
             return <ExtSeaside cards_data={cards_data} section={section} currentlyClickedCardID={currentlyClickedCardID}/>
         }
         else if(section === "islets") {
+            console.log(section + " rendering ext card.")
             return   <ExtIslets cards_data={cards_data} section={section} currentlyClickedCardID={currentlyClickedCardID}/>
         }
     }
 
     // debug:
     useEffect(() => {
+        console.log(display_extended_card)
         if(display_extended_card){
-            console.log("Section_text.js; This is happening in: " + currentlyVisitedSection + " and current ID is:" + currentlyClickedCardID);
+            // console.log("Section_text.js; This is happening in: " + currentlyVisitedSection + " and current ID is:" + currentlyClickedCardID);
         }
-    }, [currentlyClickedCardID]);
+    },[display_extended_card]);
 
     return (   // text description on top, cards about each location on the bottom.
 
