@@ -43,26 +43,33 @@
 .card_name_mainland {
     display: flex; 
     gap: 5px;
+    padding-right: 2px;
+    border-radius: var(--radius_cards_hover);
+    background-color:var(--card_mainland_name);
 }
 
 .card_difficulty {
-    display: flex; 
+    display: flex;
+    font-size: 2.4vh; 
     gap: 5px;
 }
 
 .card_length {
-    display: flex; 
+    display: flex;
+    font-size: 2.4vh; 
     gap: 5px;
 }
 
 .card_duration {
-    display: flex; 
+    display: flex;
+    font-size: 2.4vh; 
     gap: 5px;
 }
 
 .card_additional_infos {
     /* background-color: red; */
     display: flex;
+    font-size: 2.4vh;
     flex-direction: row;
     gap: 10px;
 }
@@ -111,6 +118,7 @@
     display: flex;
     flex-direction: row;
     gap: 10px; 
+    background-color:  hwb(56 13% 1% / 0.445);
  /* background-color: red; */
 }
 
@@ -121,16 +129,19 @@
 
 .card_sand {
     display: flex;
+    font-size: 2.4vh;
     gap: 10px;
 }
 
 .card_name_parking {
     display: flex;
+    font-size: 2.4vh;
     gap: 10px;
 }
 
 .card_name_cafes {
     display: flex;
+    font-size: 2.4vh;
     gap: 10px;
 }
 
@@ -177,9 +188,11 @@
 }
 
 .card_name_islets {
+    border-radius: 15px;
+    padding-right: 2px;
     display: flex;
     gap: 10px; 
- /* background-color: red; */
+ background-color:hwb(205 25% 4% / 0.459);
 }
 
 .card_name_islets {
@@ -194,11 +207,13 @@
 
 .card_name_bycar {
     display: flex;
+    font-size: 2.4vh;
     gap: 10px;
 }
 
 .card_name_bridge {
     display: flex;
+    font-size: 2.4vh;
     gap: 10px;
 }
 

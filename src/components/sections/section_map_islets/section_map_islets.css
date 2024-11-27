@@ -34,16 +34,25 @@
 
 /* contextdata-based class */
 .is_icon_container {
+    padding: 4px;
     border-radius:  10px;
-    background-color: var(--is_icon);
-    transition: background-color 0.5s;
+    background-color: var(--moon);
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, border-radius 0.3s ease-in-out;
 }
 .is_icon_container:hover {
+    z-index: 1000;
+    padding: 15px;
+    border-radius:  30px;
     background-color: var(--svg_islets);
-    transition: background-color 0.5s;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+
 } 
 
 .is_icon_effect {
+    z-index: 1000;
+    padding: 15px;
+    border-radius:  30px;
     background-color: var(--svg_islets);
-    transition: background-color 0.5s;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+
 }

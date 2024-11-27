@@ -61,15 +61,17 @@
   --svg_islets: rgb(63, 169, 245);
   --svg_beach: rgb(252, 238, 33);
   --svg_land:  rgb(43, 137, 64);
+  --svg_land_icons:  rgb(91, 185, 111);
   
   /* sections, background: */
   --section_islets: hwb(205 24% 4% / 0.115);
-  --section_beach: hwb(56 13% 1% / 0.091);
-  --section_land:  hwb(133 17% 46% / 0.084); ;
+  --section_beach: hwb(56 13% 1% / 0.363);
+  --section_land:  hwb(133 17% 46% / 0.267); ;
   /* cards: */
+  --card_mainland_name: hwb(133 14% 39% / 0.124);;
   --card_land:  hwb(133 17% 46% / 0.124);;
   --card_land_hover:  hwb(133 17% 46% / 0.34);
-  --card_icon_mainland: hwb(34 55% 18%);
+  --card_icon_mainland: hwb(34 57% 23%);
   --card_sea: hwb(56 13% 1% / 0.252);
   --card_sea_hover: hwb(56 13% 1% / 0.637);
   --card_icon_sea: hwb(5 38% 0% / 0.632);
