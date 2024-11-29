@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // the context data Provider component,  for Card rendering:
 import { CardContextProvider } from "./context/CardContext";
+import { ScreenContextProvider } from "./context/ScreenSizeContext";
 
 function App() {
   return (
@@ -21,9 +22,11 @@ function App() {
 
           {/* in order to go to the menu, url has to switch to: http://localhost:3000/menu_page */}
             <Route path="/menu_page" element={
-              <CardContextProvider>
-                <Menu_page/>
-             </CardContextProvider>
+              <ScreenContextProvider>
+                <CardContextProvider>
+                  <Menu_page/>
+              </CardContextProvider>
+              </ScreenContextProvider>
              }
             />
        

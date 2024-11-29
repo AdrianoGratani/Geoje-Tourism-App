@@ -12,6 +12,7 @@ import "./section_map_sea.css";
 
 export default function SectionMapSea() {
 
+
     // CONTEXT DATA
     const {
                 // data for icon/card events:
