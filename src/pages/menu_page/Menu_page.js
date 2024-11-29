@@ -8,15 +8,8 @@ import FooterMain from "../../components/FooterMain";
 import "./menu_page.css";
 import "./svg.css";
 
-import { useScreenContext } from '../../context/ScreenSizeContext';
-
 export default function Menu_page() {
 
-    const {currentScreenWidthContext,
-            screenMode
-         }= useScreenContext();
-    
-    
     const hero_geoje_colors = ["land", "beach", "islets"];
     const [hero_geoje_current_color, setHero_geoje_current_color] = useState(hero_geoje_colors[0]);
     
@@ -44,7 +37,7 @@ export default function Menu_page() {
             <header className="menu_page_header">
                 <nav className="menu_page_nav">
                     <ul className="menu_page_ul">
-                        <li className="menu_about_me">{screenMode}</li>
+                        <li className="menu_about_me">About</li>
                         <MapsMenu />
                     </ul>
                 </nav>
