@@ -9,6 +9,7 @@
 .single_section_container {
     /* background-color: blue; */
     height: 100%;
+    width: 100%;
     margin-bottom: var(--margin_small_w);
     display: flex;
     flex-direction: row;

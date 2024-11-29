@@ -69,12 +69,11 @@ export default function SectionMapLand() {
     // }, [])
 
     return (
+            <div class="single_map_section_container_land"
+                        onClick={()=> resetContextData()}
+                        >
 
-        <div class="map_and_icons_container"
-            onClick={()=> resetContextData()}
-        >
-
-            {/* map svg */}
+                             {/* map svg */}
               {/* map icons svg ------>  use .map() to generate them dynamically, 
             with INLINE CSS for the container too. the container must have an ID
                 retrieve cohordinates for top and left from an array of objects:
@@ -92,8 +91,6 @@ export default function SectionMapLand() {
                     ...etc ...etc
                 ]
             */}
-
-            <div class="single_map_section_container_land">
                 <GeojeLand className="geoje_land_svg" style={{ 
                     // min-width etc retains the svg size over browser size changes;
                     }} 
@@ -133,6 +130,5 @@ export default function SectionMapLand() {
                     // ))
                 }
             </div>
-        </div>
     )
 }

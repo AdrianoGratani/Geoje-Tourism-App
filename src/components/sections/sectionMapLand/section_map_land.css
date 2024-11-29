@@ -7,11 +7,7 @@
 }
 
 .single_map_section_container_land {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    /* background-color: red; */
-    position: relative;
+
 
 }
 
@@ -57,12 +53,18 @@
 @media screen and (max-width: 1400px) {
 
     .map_and_icons_container {
+        /* background-color: blue; */
+    }
+    
+    .single_map_section_container_land {
+        /* background-color: red; */
+        width: 30vw;
+        margin-right: 5vw;
     }
     
     .geoje_land_svg {
-        width: 400px;
-        min-width: 400px;
-        max-width: 400px;
-        margin-right: 10vw;
+        width: inherit;
+        min-width: inherit;
+        max-width: inherit;
     }
 }
