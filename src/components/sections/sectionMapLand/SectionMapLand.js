@@ -96,48 +96,41 @@ export default function SectionMapLand() {
             <div class="single_map_section_container_land">
                 <GeojeLand className="geoje_land_svg" style={{ 
                     // min-width etc retains the svg size over browser size changes;
-                    width: '700px', 
-                    minWidth: '700px',
-                    maxWidth: '700px',
-                    height: '850px',
-                    minHeight: '850px',
-                    maxHeight: '850px',
-                    margin: '1vw' 
                     }} 
                 />
                 
                 {/* svg icons: */}
                 {
-                    locations_data.mainland.map((location) => (
-                        // icon container
-                        <div 
-                        class={`m_icon_container ${currentlyHoveredCard === location.id
-                                                    ? "m_icon_effect"
-                                                    : ""    
-                                                    }`} 
-                        onMouseEnter={()=>send_icon_id_to_context(location.id, location)}
-                        onMouseLeave={()=>remove_icon_id_from_context()}
-                        onClick={()=> triggerExtCard()}
-                            style={{
-                                position: 'absolute',
-                                top: `${location.top}px`,
-                                left:`${location.left}px`,
-                                width: 'fit-content',
-                                height: 'fit-content',
-                            }}>
-                                {/* icon */}
-                                {/* debug: {location.name} */}
-                            <IconHike style={{
-                                 width: '31px', 
-                                 minWidth: '31px',
-                                 maxWidth: '31px',
-                                 height: '31px',
-                                 minHeight: '31px',
-                                 maxHeight: '31px',
-                                 margin: '3px',
-                            }}/>
-                        </div>
-                    ))
+                    // locations_data.mainland.map((location) => (
+                    //     // icon container
+                    //     <div 
+                    //     class={`m_icon_container ${currentlyHoveredCard === location.id
+                    //                                 ? "m_icon_effect"
+                    //                                 : ""    
+                    //                                 }`} 
+                    //     onMouseEnter={()=>send_icon_id_to_context(location.id, location)}
+                    //     onMouseLeave={()=>remove_icon_id_from_context()}
+                    //     onClick={()=> triggerExtCard()}
+                    //         style={{
+                    //             position: 'absolute',
+                    //             top: `${location.top}px`,
+                    //             left:`${location.left}px`,
+                    //             width: 'fit-content',
+                    //             height: 'fit-content',
+                    //         }}>
+                    //             {/* icon */}
+                    //             {/* debug: {location.name} */}
+                    //         <IconHike style={{
+                    //              width: '31px', 
+                    //              minWidth: '31px',
+                    //              maxWidth: '31px',
+                    //              height: '31px',
+                    //              minHeight: '31px',
+                    //              maxHeight: '31px',
+                    //              margin: '3px',
+                    //         }}/>
+                    //     </div>
+                    // ))
                 }
             </div>
         </div>

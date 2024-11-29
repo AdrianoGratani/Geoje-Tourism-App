@@ -1,12 +1,14 @@
+
 .map_sections_container {
     /* background-color: red; */
-    width: 100vw;
+    width: 99%;
+    border-radius: 15px;
 }
 
 /* the section general style: */
 .single_section_container {
     /* background-color: blue; */
-    height: 100vh;
+    height: 100%;
     margin-bottom: var(--margin_small_w);
     display: flex;
     flex-direction: row;

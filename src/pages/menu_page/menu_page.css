@@ -112,6 +112,12 @@ html {
 /* sections: */
 
 @media screen and (max-width: 1400px) {
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .hero_container {
         position: relative;
         height: 90vh;

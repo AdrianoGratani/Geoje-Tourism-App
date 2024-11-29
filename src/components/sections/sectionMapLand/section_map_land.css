@@ -2,12 +2,8 @@
     width: 700px;
     min-width: 700px;
     max-width: 700px;
-    height: inherit;
-    min-height: inherit;
-    max-height: inherit;
-    /* background-color: blue; */
+
     display: flex;
-    justify-content: center;
 }
 
 .single_map_section_container_land {
@@ -49,22 +45,24 @@
 }
 
 
-
-/* debug */
-/* .i0 {
-    width:fit-content;
-    height:fit-content;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    background-color: yellow;
+.geoje_land_svg {
+    width: 600px;
+    min-width: 600px;
+    max-width: 600px;
+    margin: 1vw;
+    
 }
 
-.i1 {
-    width:fit-content;
-    height:fit-content;
-    position: absolute;
-    top: 10%;
-    left: 58%;
-    background-color: red;
-} */
+
+@media screen and (max-width: 1400px) {
+
+    .map_and_icons_container {
+    }
+    
+    .geoje_land_svg {
+        width: 400px;
+        min-width: 400px;
+        max-width: 400px;
+        margin-right: 10vw;
+    }
+}
