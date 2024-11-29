@@ -58,7 +58,7 @@ export default function FooterMain() {
         if (s==='large') {return "desktop"};
         return s;
     }
-    const animStr = `  Welcome to the ${ev(screenMode)} version of my Website.        `
+    const animStr = `  Welcome to the ${ev(screenMode)} version for my Website.        `
 
     return (
 // {/*  A PICTURE MAYBE?  */}
@@ -70,8 +70,8 @@ export default function FooterMain() {
 
             <div className="footer_header_container ">
                 <div className="footer_header_left">
-                    <div className="footer_header_logo_container">
-                         here is the logo
+                    <div className="footer_header_logo_container im-fell-great-primer-regular">
+                         A | G
                     </div>
                     <div className="footer_header_job_container">
                         Adriano Gratani, <br /> FrontEnd Developer.
