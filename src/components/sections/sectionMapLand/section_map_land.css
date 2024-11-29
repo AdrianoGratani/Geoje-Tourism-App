@@ -58,12 +58,12 @@
     
     .single_map_section_container_land {
         /* background-color: red; */
-        width: 30vw;
-        margin-right: 5vw;
+        width: 35vw;
+        /* margin-right: 5vw; */
     }
     
     .geoje_land_svg {
-        width: inherit;
+        width: 28vw;
         min-width: inherit;
         max-width: inherit;
     }

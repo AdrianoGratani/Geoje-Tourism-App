@@ -4,7 +4,7 @@
 
 /* section_text style: */
 .text_container {
-    width: 70vw;
+    /* width: 70vw; */
     /* background-color: red; */
 }
 
@@ -45,7 +45,24 @@
 @media screen and (max-width: 1400px) {
 
     .text_and_cards_container {
-        flex: 1;
+        margin-left: 5vw;
+        width: 65%;
+    }
+
+    .text_title {
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .text_subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+    }
+
+    .text_text {
+        text-align: center;
+        font-size: 1rem;
     }
 
 }

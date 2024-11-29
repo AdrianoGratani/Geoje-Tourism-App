@@ -69,7 +69,6 @@ export default function SectionsText({
                 <h2 className="text_title">{text_data.title}</h2>
                 <h3 className="text_subtitle">{text_data.subtitle}</h3>
                 <p className="text_text">{text_data.text_1}</p>
-                <p className="text_text">{text_data.text_2}</p>
             </div>  
 
             
