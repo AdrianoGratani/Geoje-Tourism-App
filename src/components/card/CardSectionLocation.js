@@ -19,16 +19,16 @@
 import React from "react";
 import "./card_section_location.css";
 
-import Card_mainland from "./Card_mainland";
-import Card_seaside from "./Card_seaside";
-import Card_islet from "./Card_islet";
+import CardMainland from "./CardMainland";
+import CardSeaside from "./CardSeaside";
+import CardIslet from "./CardIslet";
 
 export default function CardSectionLocation({card_data, id_index}) {
 
     const card_components = [
-        <Card_mainland card_data={card_data} id_index={id_index} />,
-        <Card_seaside card_data={card_data} id_index={id_index}/>,
-        <Card_islet card_data={card_data} id_index={id_index}/>,
+        <CardMainland card_data={card_data} id_index={id_index} />,
+        <CardSeaside card_data={card_data} id_index={id_index}/>,
+        <CardIslet card_data={card_data} id_index={id_index}/>,
     ];
 
     function evaluator(card_data_arg) {

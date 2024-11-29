@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCardContext } from '../../context/CardContext';
-import { useEffect } from 'react';
-import { useState } from 'react';
+// import { useEffect } from 'react';
+// import { useState } from 'react';
 
 import "./card_style.css";
 
@@ -12,22 +12,21 @@ import { FaCaravan } from "react-icons/fa6";
 import { FaGlassWaterDroplet } from "react-icons/fa6";
 
 
-export default function Card_seaside({ card_data }) {
+export default function CardSeaside({ card_data }) {
 
     // state for external card rendering:
 
     // CONTEXT:
     const {
         // context data for ext card:
-        card_data_for_ext_card,
         setCard_data_for_ext_card,
         cardIsClicked, setCardIsClicked,
         currentlyClickedCardID, setCurrentlyClickedCardID,
          
         // context data for icon/card events:
-        currentlyHoveredIcon, setCurrentlyHoveredIcon,
-        currentlyHoveredCard, setCurrentlyHoveredIconCard,
-        currentlyVisitedSection, setCurrentlyVisitedSection,
+        currentlyHoveredIcon,
+        setCurrentlyHoveredIconCard,
+        setCurrentlyVisitedSection,
         } = useCardContext();
 
     // props data:
@@ -55,7 +54,7 @@ export default function Card_seaside({ card_data }) {
         setCurrentlyVisitedSection("seaside");
         setCurrentlyClickedCardID(card_id);
         
-        console.log(card_id + "   " + currentlyClickedCardID + " " + currentlyVisitedSection + " " + cardIsClicked); // for debugging:
+        console.log(card_id + "   " + currentlyClickedCardID + " " + " " + cardIsClicked); // for debugging:
     }
 
     return (

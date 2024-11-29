@@ -3,26 +3,25 @@ import { FaMountain } from "react-icons/fa6";
 import { FaPersonHiking } from "react-icons/fa6";
 import { FaRightLeft } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa6";
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 // import the utility to USE the context useState data:
 import { useCardContext } from '../../context/CardContext';
 
 import "./card_style.css";
 
-export default function Card_mainland({card_data, id_index}) {
+export default function CardMainland({card_data, id_index}) {
     
     // CONTEXT DATA:
     const { 
-        toggle_animation, setToggle_animation,
-            card_data_for_ext_card,
+        setToggle_animation,
              setCard_data_for_ext_card,
-            cardIsClicked, setCardIsClicked,
-            currentlyVisitedSection, setCurrentlyVisitedSection,
-            currentlyClickedCardID, setCurrentlyClickedCardID,
+            setCardIsClicked,
+            setCurrentlyVisitedSection,
+            setCurrentlyClickedCardID,
             // data for hovering: 
-            currentlyHoveredIcon, setCurrentlyHoveredIcon,
-            currentlyHoveredCard, setCurrentlyHoveredIconCard,  
+            currentlyHoveredIcon,
+            setCurrentlyHoveredIconCard,  
         } = useCardContext();
 
     function send_hovered_card_data_to_context(hovered_card_id) {

@@ -9,16 +9,16 @@ import { useCardContext } from '../../context/CardContext';
 
 import "./card_style.css";
 
-export default function Card_islet({card_data}) {
+export default function CardIslet({card_data}) {
 
     // CONTEXT DATA:
     const { 
-        card_data_for_ext_card, setCard_data_for_ext_card,
-        cardIsClicked, setCardIsClicked,
-        currentlyVisitedSection, setCurrentlyVisitedSection,
-        currentlyClickedCardID, setCurrentlyClickedCardID,
+        setCard_data_for_ext_card,
+        setCardIsClicked,
+        setCurrentlyVisitedSection,
+        setCurrentlyClickedCardID,
         // data for hovering: 
-        currentlyHoveredIcon, setCurrentlyHoveredIcon,
+        currentlyHoveredIcon, 
         currentlyHoveredCard, setCurrentlyHoveredIconCard,  
     } = useCardContext();
 
