@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useCardContext } from '../../context/CardContext';
-import Card_section_location from '../card/Card_section_location';
+import CardSectionLocation from '../card/CardSectionLocation';
 // extended cards are RENDERED FROM HERE:
 // import {ExtMainland} from "../extended_cards/extended_card_mainland/ExtMainland";     {} WHEN IMPORTING  export default components, is wrong.
 import ExtMainland from "../extended_cards/extended_card_mainland/ExtMainland";
@@ -10,7 +10,7 @@ import ExtIslets from "../extended_cards/extended_card_islets/ExtIslets";
 
 import "./sections_text.css";
 
-export default function Sections_text({
+export default function SectionsText({
     text_data, 
     cards_data, 
     section}) {
@@ -18,9 +18,9 @@ export default function Sections_text({
     // CONTEXT:
     const { 
         clickedIcon,
-        cardIsClicked, setCardIsClicked,
-        currentlyVisitedSection, setCurrentlyVisitedSection,
-        currentlyClickedCardID, setCurrentlyClickedCardID  
+        cardIsClicked, 
+        currentlyVisitedSection,
+        currentlyClickedCardID,
     } = useCardContext();
 
 
@@ -97,7 +97,7 @@ export default function Sections_text({
                       // SET THE id_index TO >>>>>>> {c.id}
 
                       
-                      <Card_section_location card_data={c} id_index={i}/>
+                      <CardSectionLocation card_data={c} id_index={i}/>
                     ))
                 }
             </div>        

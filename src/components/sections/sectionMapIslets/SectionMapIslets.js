@@ -1,7 +1,7 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
-import {ReactComponent as Geoje_islets} from "../../../img/geoje_islets.svg";
-import {ReactComponent as Svg_islets} from "../../../img/islet.svg";
+// import { useEffect, useState } from 'react';
+import {ReactComponent as GeojeIslets} from "../../../img/geoje_islets.svg";
+import {ReactComponent as SvgIslets} from "../../../img/islet.svg";
 import { useCardContext } from '../../../context/CardContext';
 import "./section_map_islets.css";
 
@@ -26,13 +26,13 @@ export default function Section_map_islets() {
     // CONTEXT DATA for icon layout - card layout interactions:
     const {
         resetContextData,
-        toggle_animation, setToggle_animation,
-        currentlyHoveredIcon, setCurrentlyHoveredIcon, 
+        setToggle_animation,
+        setCurrentlyHoveredIcon, 
         currentlyHoveredCard,
-        cardIsClicked, setCardIsClicked,
-        currentlyVisitedSection, setCurrentlyVisitedSection,
-        clickedIcon, setClickedIcon,
-        card_data_for_ext_card, setCard_data_for_ext_card,
+        setCardIsClicked,
+        setCurrentlyVisitedSection,
+        setClickedIcon,
+        setCard_data_for_ext_card,
     } = useCardContext();
 
 
@@ -46,17 +46,14 @@ export default function Section_map_islets() {
         setCurrentlyVisitedSection("islets");
         setCard_data_for_ext_card(location_data);
     }
-    function remove_icon_id_from_context() {
+    // function remove_icon_id_from_context() {
         // setToggle_animation(false);
         //     setCurrentlyHoveredIcon(null);
         //     setClickedIcon(null);
         //     setCardIsClicked(false);
         //     setCurrentlyVisitedSection(null);
         //     setCard_data_for_ext_card(null);
-    }
-
-    // on icon click:
-    const [icon_toggled, setIcon_toggled] = useState(false);
+    // }
 
     function triggerExtCard() {
             setToggle_animation(false);
@@ -67,12 +64,12 @@ export default function Section_map_islets() {
             // setCard_data_for_ext_card(null);
     }
     
-    useEffect(()=> {
+    // useEffect(()=> {
     // console.log(
     //     cardIsClicked, currentlyVisitedSection
     // )
         // console.log(". currently hovered icon: " + currentlyHoveredIcon);      // debug;
-    }, [icon_toggled])
+    // }, [icon_toggled])
 
 
     // debug:
@@ -86,7 +83,7 @@ export default function Section_map_islets() {
 
             {/* map svg */}            
             <div class="single_map_section_container islet_map">
-                <Geoje_islets class="geoje_islets_svg" style={{ 
+                <GeojeIslets class="geoje_islets_svg" style={{ 
                     // min-width etc retains the svg size over browser size changes;
                     width: '700px', 
                     minWidth: '700px',
@@ -138,7 +135,7 @@ export default function Section_map_islets() {
                     }}
                     >
                     {/* {islet.id} */}
-                        <Svg_islets
+                        <SvgIslets
                             style={{
                                 width: '35px', 
                                 minWidth: '35px',

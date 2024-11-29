@@ -23,7 +23,7 @@ import Card_mainland from "./Card_mainland";
 import Card_seaside from "./Card_seaside";
 import Card_islet from "./Card_islet";
 
-export default function Card_section_location({card_data, id_index}) {
+export default function CardSectionLocation({card_data, id_index}) {
 
     const card_components = [
         <Card_mainland card_data={card_data} id_index={id_index} />,

@@ -1,28 +1,28 @@
 import React from 'react';
 import { useCardContext } from '../../../context/CardContext';
 import locations_data from '../../../locations_data/locations_data';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
 // icons:
-import {ReactComponent as Geoje_sea} from "../../../img/geoje_beach.svg";
-import {ReactComponent as Icon_sea} from "../../../img/beach.svg";
+import {ReactComponent as GeojeSea} from "../../../img/geoje_beach.svg";
+import {ReactComponent as IconSea} from "../../../img/beach.svg";
 // import {ReactComponent as Icon_LightHouse} from "../../../img/faro.svg";
 
 import "./section_map_sea.css";
 
-export default function Section_map_sea() {
+export default function SectionMapSea() {
 
     // CONTEXT DATA
     const {
                 // data for icon/card events:
                 resetContextData,
-                toggle_animation, setToggle_animation,
-                currentlyHoveredIcon, setCurrentlyHoveredIcon, 
+                setToggle_animation,
+                setCurrentlyHoveredIcon, 
                 currentlyHoveredCard,
-                cardIsClicked, setCardIsClicked,
-                currentlyVisitedSection, setCurrentlyVisitedSection,
-                clickedIcon, setClickedIcon,
-                card_data_for_ext_card, setCard_data_for_ext_card,
+                setCardIsClicked,
+                setCurrentlyVisitedSection,
+                setClickedIcon,
+                setCard_data_for_ext_card,
     } = useCardContext();
 
     
@@ -48,7 +48,7 @@ export default function Section_map_sea() {
         >
             {/* SVG MAP */}
             <div class="single_map_section_container_sea">
-                <Geoje_sea class="geoje_land_svg" style={{ 
+                <GeojeSea class="geoje_land_svg" style={{ 
                     // min-width etc retains the svg size over browser size changes;
                     width: '700px', 
                     minWidth: '700px',
@@ -84,7 +84,7 @@ export default function Section_map_sea() {
                                     }
                             >
                                 {/* {sea_location.id} */}
-                               <Icon_sea 
+                               <IconSea 
                                     style={{
                                         width: '31px', 
                                         minWidth: '31px',

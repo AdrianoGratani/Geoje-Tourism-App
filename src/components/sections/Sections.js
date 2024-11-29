@@ -1,10 +1,10 @@
 import React from 'react';
 // map svg component:
-import Section_map_land from './section_map_land/Section_map_land';
-import Section_map_sea from './section_map_sea/Section_map_sea';
-import Section_map_islets from './section_map_islets/Section_map_islets';
+import SectionMapLand from './sectionMapLand/SectionMapLand';
+import SectionMapSea from './sectionMapSea/SectionMapSea';
+import SectionMapIslets from './sectionMapIslets/SectionMapIslets';
 // text data:
-import Sections_text from './Sections_text';
+import SectionsText from './SectionsText';
 import sections_text from '../../text/sections_text';
 // cards data:
 import locations_data from "../../../src/locations_data/locations_data";
@@ -27,17 +27,17 @@ export default function Sections() {
         <div class="map_sections_container">
             <div id="land" className=" single_section_container s_land">
                 {/* 2. it takes the State. SVG <path> of the hovered location (on Card) changes its color */}
-                <Section_map_land />                                            
+                <SectionMapLand />                                            
                 {/* 1. it takes the SetState. it sends this setState to Card. when Card is hovered, it sends a setState back to Section.  */}
-                <Sections_text text_data={m} cards_data={la} section={"mainland"}/>                                  
+                <SectionsText text_data={m} cards_data={la} section={"mainland"}/>                                  
             </div>
             <div id="sea" className="single_section_container s_sea">
-                <Section_map_sea/>
-                <Sections_text text_data={s} cards_data={be} section={"seaside"}/>
+                <SectionMapSea/>
+                <SectionsText text_data={s} cards_data={be} section={"seaside"}/>
             </div>
             <div id="islets" className="single_section_container s_islets">
-                <Section_map_islets/>
-                <Sections_text text_data={i} cards_data={is} section={"islets"}/>
+                <SectionMapIslets/>
+                <SectionsText text_data={i} cards_data={is} section={"islets"}/>
             </div>
             
         </div>
