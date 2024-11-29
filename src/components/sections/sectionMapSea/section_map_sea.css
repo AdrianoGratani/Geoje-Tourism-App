@@ -2,18 +2,10 @@
     width: 700px;
     min-width: 700px;
     max-width: 700px;
-    height: inherit;
-    min-height: inherit;
-    max-height: inherit;
-    /* background-color: blue; */
     display: flex;
-    justify-content: center;
 }
 
 .single_map_section_container_sea {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
     position: relative;
     /* background-color: yellow; */
 }
@@ -40,4 +32,12 @@
     border-radius:  30px;
     background-color: var(--svg_beach);
     transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .single_map_section_container_sea {
+        width: 35%;
+    }
+
 }

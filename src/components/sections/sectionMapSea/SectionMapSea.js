@@ -44,20 +44,11 @@ export default function SectionMapSea() {
         }
 
     return (
-        <div className='map_and_icons_container'
-        onClick={()=> resetContextData()}
-        >
-            {/* SVG MAP */}
-            <div class="single_map_section_container_sea">
-                <GeojeSea class="geoje_land_svg" style={{ 
-                    // min-width etc retains the svg size over browser size changes;
-                    width: '700px', 
-                    minWidth: '700px',
-                    maxWidth: '700px',
-                    height: '850px',
-                    minHeight: '850px',
-                    maxHeight: '850px',
-                    margin: '1vw' 
+            // {/* SVG MAP */}
+            <div class="single_map_section_container_sea"
+            onClick={()=> resetContextData()}
+            >
+                <GeojeSea class="sea_geoje_land_svg" style={{ 
                 }} />
 
                 {/* SVG ICON */}
@@ -100,6 +91,5 @@ export default function SectionMapSea() {
                         ))
                     }
             </div>
-        </div>
     )
 }
