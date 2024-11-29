@@ -1,6 +1,5 @@
 import React from 'react';
 import { useCardContext } from '../../../context/CardContext';
-import { useScreenContext } from '../../../context/ScreenSizeContext';
 import locations_data from '../../../locations_data/locations_data';
 // import { useEffect, useState } from 'react';
 
@@ -13,8 +12,6 @@ import "./section_map_sea.css";
 
 export default function SectionMapSea() {
 
-    const  currentScreenWidthContext = useScreenContext();
-    console.log(currentScreenWidthContext);
 
     // CONTEXT DATA
     const {
