@@ -32,22 +32,22 @@ export default function SectionsText({
     // if display_extended_card === true this is triggered:
     function ExtCardSectionEvaluator() {                                // for each section the extended card has different style and animation.
         if(section === "mainland") {
-            console.log(section + " rendering ext card.")
+            // console.log(section + " rendering ext card.")
             return <ExtMainland cards_data={cards_data} section={section} currentlyClickedCardID={currentlyClickedCardID}/>;
         }
         else if(section === "seaside") {
-            console.log(section + " rendering ext card.")
+            // console.log(section + " rendering ext card.")
             return <ExtSeaside cards_data={cards_data} section={section} currentlyClickedCardID={currentlyClickedCardID}/>
         }
         else if(section === "islets") {
-            console.log(section + " rendering ext card.")
+            // console.log(section + " rendering ext card.")
             return   <ExtIslets cards_data={cards_data} section={section} currentlyClickedCardID={currentlyClickedCardID}/>
         }
     }
 
     // debug:
     useEffect(() => {
-        console.log(display_extended_card)
+        // console.log(display_extended_card)
         if(display_extended_card){
             // console.log("Section_text.js; This is happening in: " + currentlyVisitedSection + " and current ID is:" + currentlyClickedCardID);
         }
