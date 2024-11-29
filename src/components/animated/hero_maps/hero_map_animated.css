@@ -173,4 +173,22 @@
     fill: rgb(230, 230, 230);     
 }
 
+@media screen and (max-width: 1400px) {
+   .svg_hero_container {
+   }
+    .svg_hero_map_container, .svg_hero_map_container_islets {
+        margin-bottom: 4vh;
+    }
+    .svg_hero_map_container svg{
+        width: 20vw;
+        max-width: 20vw;
+    }
+    .svg_hero_map_container_islets svg {
+        width: 26vw;
+        max-width: 26vw;
+    }
 
+    .hero_text_container {
+        margin-top: 2vh;
+    }
+}

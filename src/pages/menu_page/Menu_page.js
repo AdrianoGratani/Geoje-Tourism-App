@@ -33,12 +33,10 @@ export default function Menu_page() {
     return (
         <body className="body">
 
-            {/* main page header  */}
-            <header className="menu_page_header">
+            <header>
                 <MenuHeader/>
             </header>
 
-            {/* main page hero text - hero maps   //  maps */}
             <main className="main">
                 <Hero hero_geoje_current_color={hero_geoje_current_color} />
                 <Sections />

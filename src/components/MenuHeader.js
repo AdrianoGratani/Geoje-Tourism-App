@@ -6,12 +6,13 @@ import MapsMenu from './navbar/MapsMenu';
 export default function MenuHeader() {
 
     return (
-        
-        <nav className="menu_page_nav">
-                <ul className="menu_page_ul">
-                <li className="menu_about_me">About</li>
-                <MapsMenu />
-            </ul>
-        </nav>
+        <div className="menu_page_header">
+            <nav className="menu_page_nav">
+                    <ul className="menu_page_ul">
+                    <li className="menu_about_me">About</li>
+                    <MapsMenu />
+                </ul>
+            </nav>
+        </div>
     )
 }

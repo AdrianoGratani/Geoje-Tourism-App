@@ -14,6 +14,7 @@ export const ScreenContextProvider = ({ children }) => {
         else if(currentScreenWidthContext <1000) {setScreenMode('tablet')}
         else if(currentScreenWidthContext <1900) {setScreenMode('desktop')}
         else {setScreenMode('large')}
+        
     }
 
     useEffect(() => {
