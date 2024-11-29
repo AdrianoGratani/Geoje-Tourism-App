@@ -5,7 +5,6 @@ import HeroMapAnimated from "../../components/animated/hero_maps/HeroMapAnimated
 import MapsMenu from "../../components/navbar/MapsMenu";
 import Sections from '../../components/sections/Sections';
 import FooterMain from "../../components/FooterMain";
-
 import "./menu_page.css";
 import "./svg.css";
 

@@ -2,12 +2,11 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import "./footer_main.css";
 
+//to change footer animation text, based on screen sizes:
+import { useScreenContext } from '../context/ScreenSizeContext';
+
 function FooterTextAnimation({textIn, intrvl}) {
-    // the string is always there, just invisible;
-    // split the string in array of chars and map through.
-    // you use a useStte iterator to move along
-    // every new char found, switch it to visible.
-   
+
     const [currCharsDisplayed, setCurrCharsDisplayed ] = useState('');   
     const [i, setI] = useState(0)
     const [rand, setRand] = useState(100 + Math.random() * 400);
@@ -16,11 +15,11 @@ function FooterTextAnimation({textIn, intrvl}) {
 
             const interval = setInterval(()=> {        
 
-                        setRand(                                             /// random set of interval
+                        setRand(                                       /// random set of interval
                             Math.floor(50 + Math.random() * 300)
                         )
 
-                        setCurrCharsDisplayed((prev) => {                   /// show the next char
+                        setCurrCharsDisplayed((prev) => {              /// show the next char
                             if (prev.length >= textIn.length) {
                                 return '';
                             } else {
@@ -28,14 +27,14 @@ function FooterTextAnimation({textIn, intrvl}) {
                             }
                         });
 
-                        setI( (prev) => {                                   // update the char pointer to the next (or first)
+                        setI( (prev) => {                            // update the char pointer to the next (or first)
                             if (prev === textIn.length) {return prev-prev}
                             else {return prev += 1}
                         });
 
                     }, rand);
 
-            return ()=> clearInterval(interval);
+            return ()=> clearInterval(interval);  //to prevent weird effects;
     },[ currCharsDisplayed])
 
 
@@ -53,15 +52,19 @@ function FooterTextAnimation({textIn, intrvl}) {
 }
 
 export default function FooterMain() {
-
-    const animStr = "  Nice to meet you.      Welcome to this Website.        "
+    // if you don't desctructure context data as obj, it will return the whole obj.
+    const {screenMode} = useScreenContext();
+    const ev=(s)=> {
+        if (s==='large') {return "desktop"};
+        return s;
+    }
+    const animStr = `  Welcome to the ${ev(screenMode)} version of my Website.        `
 
     return (
 // {/*  A PICTURE MAYBE?  */}
 // {/* https://ifonts.xyz/almarena-neue-font-family.html    for the animation */}
 // {/* https://fonnts.com/cotoris/   for the form description text  */}
 // {/* https://www.1001freefonts.com/bodoni.font   elegant. */}
-
 
         <div className="footer_container playfair-display_it_light">
 
