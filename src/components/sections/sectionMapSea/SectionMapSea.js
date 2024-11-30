@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCardContext } from '../../../context/CardContext';
+import { useScreenContext } from '../../../context/ScreenSizeContext';
 import locations_data from '../../../locations_data/locations_data';
 // import { useEffect, useState } from 'react';
 
@@ -12,6 +13,7 @@ import "./section_map_sea.css";
 
 export default function SectionMapSea() {
 
+    const {es} = useScreenContext();
 
     // CONTEXT DATA
     const {
@@ -48,8 +50,15 @@ export default function SectionMapSea() {
             <div class="single_map_section_container_sea"
             onClick={()=> resetContextData()}
             >
-                <GeojeSea class="geoje_land_svg" style={{ 
-                }} />
+                {
+                    es() !== 'mobile'
+                    ?    <GeojeSea class="geoje_land_svg" style={{ 
+                         }} />
+                :       <GeojeSea class="geoje_land_svg" style={{ 
+                            width: '68vw'
+                         }} />
+                }
+             
 
                 {/* SVG ICON */}
                     {
