@@ -26,12 +26,18 @@ export default function Mmenu() {
         // <FaCity className="header_icon item_cities"/>,
     ];
 
-    function r() {       //reset icon data
+    function r(t) {       //reset icon data
         setTimeout(()=> {
             setShowmmenu(false);
             setN(0);
             setX(false);
-        }, 1000)
+        }, t)
+    }
+
+    const s =(ss) => {    // scroll after clicking the button;
+        const x = document.getElementById(ss);
+        x.scrollIntoView({behavior: "smooth"});
+        r(300);
     }
 
     useEffect(()=> {
@@ -51,7 +57,7 @@ export default function Mmenu() {
 
     return (
             <div class={` mmenu ${showmmenu ? "mmenucomp" : ""}`}
-                onClick={()=> r()}
+                onClick={()=> r(700)}
             >
                 {/* {n}"  " {x ? "true":"false"} */}
                     <div className='mmic'>
@@ -60,13 +66,13 @@ export default function Mmenu() {
                             "Where do you want to go?"
                         </h1>
 
-                        <div className={`${x ? "mmi mmenucm" : "mmo"}`}>
+                        <div onClick={()=> s("land")} className={`${x ? "mmi mmenucm" : "mmo"}`}>
                                 {ic[0]}
                         </div>
-                        <div className={`${x ? "mmi mmenucs" : "mmo"}`}>
+                        <div onClick={()=> s("sea")} className={`${x ? "mmi mmenucs" : "mmo"}`}>
                                 {ic[1]}
                         </div>
-                        <div className={`${x ? "mmi mmenuci" : "mmo"}`}>
+                        <div onClick={()=> s("islets")} className={`${x ? "mmi mmenuci" : "mmo"}`}>
                                 {ic[2]}
                         </div>
                     </div>

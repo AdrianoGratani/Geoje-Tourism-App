@@ -71,12 +71,15 @@
 .mmenucm {
     margin-top: 10px;
     background-color: var(--svg_land);
+    opacity: 0.93;
 }
 .mmenucs{
     background-color: var(--svg_beach);
+    opacity: 0.93;
 }
 .mmenuci {
     background-color: var(--svg_islets);
+    opacity: 0.93;
     margin-bottom: 10px;
 }
 
