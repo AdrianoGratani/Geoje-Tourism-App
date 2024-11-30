@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import "./mmenu.css";
 // usee mmmenu context to decide if this appears or not :
 import { useMmenuctx } from '../../context/mmenuctx';
@@ -13,19 +13,65 @@ import { FaCity } from "react-icons/fa6";
 
 export default function Mmenu() {
     const {showmmenu,  setShowmmenu} = useMmenuctx();
+    const [n, setN] = useState(0);
+    const [lim, setLim] = useState(false);
+    const [x, setX]= useState(false); // if true: icons start appearing;
 
     const ic = [
-        <FaMountainSun className="header_icon item_hike"/>,
-        <FaUmbrellaBeach className="header_icon item_sea" />,
-        <FaPagelines className="header_icon item_isl"/>,
-        <FaFish className="header_icon item_food"/>,
-        <FaLandmarkDome className="header_icon item_infos"/>,
-        <FaCity className="header_icon item_cities"/>,
+        <FaMountainSun className="mmii" />,
+        <FaUmbrellaBeach className="mmii" />,
+        <FaPagelines className="mmii" />,
+        // <FaFish className="header_icon item_food"/>,
+        // <FaLandmarkDome className="header_icon item_infos"/>,
+        // <FaCity className="header_icon item_cities"/>,
     ];
+
+    function r() {       //reset icon data
+        setTimeout(()=> {
+            setShowmmenu(false);
+            setN(0);
+            setX(false);
+        }, 1000)
+    }
+
+    useEffect(()=> {
+        if( showmmenu && n!=ic.length-1) {
+            const t = setInterval(()=> setN((prev)=> prev+1), 300);
+            return ()=> clearInterval(t);
+        }
+        else if( showmmenu && n===ic.length-1) { 
+            setTimeout(()=> {
+                setX(true); // icons appear;
+            },300)
+        }
+        else return; 
+    });
+
+
+
     return (
-            <div class={`mmenu ${showmmenu ? "mmenucomp" : ""}`}
-                onClick={()=> setShowmmenu(false)}
+            <div class={` mmenu ${showmmenu ? "mmenucomp" : ""}`}
+                onClick={()=> r()}
             >
+                {/* {n}"  " {x ? "true":"false"} */}
+                    <div className='mmic'>
+
+                        <h1 className={`${x ? "mmtcm" : "mmto"}`}>
+                            "Where do you want to go?"
+                        </h1>
+
+                        <div className={`${x ? "mmi mmenucm" : "mmo"}`}>
+                                {ic[0]}
+                        </div>
+                        <div className={`${x ? "mmi mmenucs" : "mmo"}`}>
+                                {ic[1]}
+                        </div>
+                        <div className={`${x ? "mmi mmenuci" : "mmo"}`}>
+                                {ic[2]}
+                        </div>
+                    </div>
+
+
                 <div className='ocean'>
                     <div className="wave"></div>
                     <div className="wave"></div>

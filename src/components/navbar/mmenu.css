@@ -1,3 +1,5 @@
+/* it's mobile component by default */
+
 .mmenu {
     position: absolute;
     top:-100vh;
@@ -6,6 +8,8 @@
     width: 100%;
     transition: top 1s ease-in-out; 
     opacity: 1;
+    z-index: 1000;
+
 }
 
 .mmenucomp {
@@ -13,6 +17,71 @@
     opacity: 1;
     z-index: 1000;
     top: 0vh;
+}
+
+.mmic {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    opacity: 1;
+}
+
+
+.mmi {
+    opacity: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: auto;
+    transition: opacity 0.7s ease-in-out;
+    padding: 10vw;
+    border-radius: 100px;
+    transform-origin: center;
+    animation: p 1s ease-in-out infinite;
+}
+.mmo {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+.mmtcm {
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+}
+.mmto {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+/* button pulse effect */
+@keyframes p {
+    0%{
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.mmenucm {
+    margin-top: 10px;
+    background-color: var(--svg_land);
+}
+.mmenucs{
+    background-color: var(--svg_beach);
+}
+.mmenuci {
+    background-color: var(--svg_islets);
+    margin-bottom: 10px;
+}
+
+.ocean {
+    opacity: 0.3
 }
 
 /* original code by foolishdeveloper.com/css=wave-animation */
