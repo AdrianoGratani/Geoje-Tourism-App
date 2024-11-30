@@ -173,9 +173,25 @@
     fill: rgb(230, 230, 230);     
 }
 
-@media screen and (max-width: 1400px) {
-   .svg_hero_container {
-   }
+@media screen and (max-width: 600px) {
+
+    .svg_hero_container {
+        width: 90vw;
+    }
+    .svg_hero_map_container svg{
+        width: 70vw;
+        max-width: 70vw;
+        overflow: visible;
+        margin-right: 0;
+    }
+    .svg_hero_map_container_islets svg {
+        width: 80vw;
+        max-width: 80vw;
+        overflow: visible;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1400px) {
     .svg_hero_map_container, .svg_hero_map_container_islets {
         margin-bottom: 4vh;
     }

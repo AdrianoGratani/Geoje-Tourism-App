@@ -7,8 +7,8 @@ import { useScreenContext } from "../context/ScreenSizeContext";
 
 export default function Hero ({hero_geoje_current_color}) {
 
-    const {currentScreenWidthContext} = useScreenContext();
-
+    const {currentScreenWidthContext, screenMode} = useScreenContext();
+    
     return (
 
         <div>
@@ -29,8 +29,12 @@ export default function Hero ({hero_geoje_current_color}) {
                         {currentScreenWidthContext > 1400 && <br />}
                         </h1>
                     </div>
+                    
                     :   <span 
-                        className={`hero_geoje ${hero_geoje_current_color} `}>Everything About Geoje. In one Place.
+                        className={`hero_geoje  ${hero_geoje_current_color} `}>{
+                            currentScreenWidthContext > 600 && screenMode !== 'mobile' ?
+                            `Everything About Geoje. In one Place.` : "Geoje Mobile App"
+                        }
                         </span>
                 }
                 {/* hero maps */}

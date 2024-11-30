@@ -18,6 +18,7 @@ html {
     margin-top: var(--margin_small_h);
     margin-left: var(--margin_small_w);
     box-sizing: border-box;
+    
 }
 
 .menu_page_ul {
@@ -111,7 +112,47 @@ html {
 
 /* sections: */
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 600px) {
+ 
+    .hero_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height:92vh;
+        /* background-color: red; */
+
+    }
+    .menu_page_ul {
+        display: flex;
+        flex-direction: row;
+        gap: 50%;
+    }
+    .hero_geoje {
+        text-align: center;
+        /* background-color: red; */
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    /* _____IMPORTANT____ */
+    /* _____IMPORTANT____ */
+    /* _____IMPORTANT____ */
+    /* you center the SVG by fixing container size */
+    .hero_maps_and_description_container {
+        /* background-color: blue; */
+        width: 70vw;
+        max-width: 70vw;  
+        height: fit-content;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .menu_page_ul li {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1400px) {
 
     .main {
         display: flex;
