@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useCardContext } from '../../context/CardContext';
+import { useScreenContext } from '../../context/ScreenSizeContext';
 import CardSectionLocation from '../card/CardSectionLocation';
 // extended cards are RENDERED FROM HERE:
 // import {ExtMainland} from "../extended_cards/extended_card_mainland/ExtMainland";     {} WHEN IMPORTING  export default components, is wrong.
@@ -22,6 +23,10 @@ export default function SectionsText({
         currentlyVisitedSection,
         currentlyClickedCardID,
     } = useCardContext();
+
+    // cards NOT in mobile:
+    const { es } = useScreenContext();
+
 
 
     //  the rendering for all ext cards relies on this bool:
@@ -67,7 +72,11 @@ export default function SectionsText({
             {/* title and a brief description of each section. */}
             <div className="text_container">
                 <h2 className="text_title">{text_data.title}</h2>
-                <h3 className="text_subtitle">{text_data.subtitle}</h3>
+                {
+                    es() !== 'mobile'
+                        ? <h3 className="text_subtitle">{text_data.subtitle}</h3>
+                        : null
+                }
                 <p className="text_text">{text_data.text_1}</p>
             </div>  
 
@@ -84,22 +93,26 @@ export default function SectionsText({
                      use the id stored in useState to set the color of the <path> of the city.
                      the specific <path> changes style, now is a orange-brown for Mailand, orange-red in Seaside, yellow in Islets
             */}
-
-            <div className="cards_area_container">
-                {/* cards for each interesting point. useContext is used for making the map responsive with user interactions. */}
-                {
+            {
+                // evaluate which screen user -> if mobile = NO CARDS
+                es() !== 'mobile'
+                ? <div className="cards_area_container">
+                    {/* cards for each interesting point. useContext is used for making the map responsive with user interactions. */}
+                    {
                     cards_data.map((c, i)=> (
                         //  .map() of locations.js is used for dynamic rendering of Card.js component. 
                         // VERY IMPORTANT: .map() callback scope must be indented within round brackets, NOT curly brackets
                             // <div>debug: {currentlyVisitedSection}</div>
 
-                      // SET THE id_index TO >>>>>>> {c.id}
+                          // SET THE id_index TO >>>>>>> {c.id}
 
-                      
-                      <CardSectionLocation card_data={c} id_index={i}/>
-                    ))
-                }
-            </div>        
+                        <CardSectionLocation card_data={c} id_index={i}/>
+                        ))
+                    }
+                </div>     
+                    : null
+            }
+               
         </div>
     )
 }

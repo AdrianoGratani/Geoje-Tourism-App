@@ -9,6 +9,8 @@ import sections_text from '../../text/sections_text';
 // cards data:
 import locations_data from "../../../src/locations_data/locations_data";
 
+// cards NOT IN MOBILE VERSION
+
 import "./sections.css";
 
 export default function Sections() {

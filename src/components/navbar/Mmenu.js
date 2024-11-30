@@ -5,16 +5,15 @@ import { useMmenuctx } from '../../context/mmenuctx';
 import { FaMountainSun } from "react-icons/fa6";
 import { FaUmbrellaBeach } from "react-icons/fa6";
 import { FaPagelines } from "react-icons/fa6";
-import { FaFish } from "react-icons/fa6";
-import { FaLandmarkDome } from "react-icons/fa6";
-import { FaCity } from "react-icons/fa6";
+// import { FaFish } from "react-icons/fa6";
+// import { FaLandmarkDome } from "react-icons/fa6";
+// import { FaCity } from "react-icons/fa6";
 
 // compares logic is in mapsmenu.js
 
 export default function Mmenu() {
     const {showmmenu,  setShowmmenu} = useMmenuctx();
     const [n, setN] = useState(0);
-    const [lim, setLim] = useState(false);
     const [x, setX]= useState(false); // if true: icons start appearing;
 
     const ic = [
@@ -37,7 +36,7 @@ export default function Mmenu() {
     const s =(ss) => {    // scroll after clicking the button;
         let x = document.getElementById(ss);
         x.scrollIntoView({behavior: "smooth"});
-        // r(300);
+        r(300);
     }
 
     useEffect(()=> {
@@ -81,7 +80,7 @@ export default function Mmenu() {
                         </div>
                     </div>
 
-
+                    {/* /* original code by: foolishdeveloper.com/css=wave-animation  */}
                 <div className='ocean'>
                     <div className="wave"></div>
                     <div className="wave"></div>

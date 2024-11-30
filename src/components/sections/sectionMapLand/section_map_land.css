@@ -48,8 +48,27 @@
     
 }
 
+@media screen and (max-width: 600px) {
+    
+    
+    .single_map_section_container_land {
+        /* background-color: red; */
+        /* width:100vw;
+        height:90vh; */
+        display: flex;
+        justify-content: center;
+        /* margin-right: 5vw; */
+        margin-bottom: 10vh;
+    }
+    
+    .geoje_land_svg {
+        margin:0;
+    }
 
-@media screen and (max-width: 1400px) {
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 1400px) {
 
     .map_and_icons_container {
         /* background-color: blue; */

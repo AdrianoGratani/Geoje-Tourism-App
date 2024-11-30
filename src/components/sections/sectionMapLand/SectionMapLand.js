@@ -1,5 +1,7 @@
 import React from 'react';
 import { useCardContext } from '../../../context/CardContext';
+import { useScreenContext } from '../../../context/ScreenSizeContext';
+
 // import { useEffect, useState } from 'react';
 /*
     icons are SVG. to position each icon within the map svg, and make everything interactive, I treat them as React components inside <div> containers.
@@ -19,6 +21,8 @@ import "./section_map_land.css";
 // import Card_islet from '../../card/Card_islet';
 
 export default function SectionMapLand() {
+    // render differnt svg for mobile
+    const {es} = useScreenContext();
 
     // const mainland_data = locations_data.mainland;
 
@@ -92,11 +96,21 @@ export default function SectionMapLand() {
                 ]
             */}
             {/* geoje_land_svg IS FOR SVG COLOR CORRECTION */}
-                <GeojeLand className="geoje_land_svg" style={{ 
-                    // min-width etc retains the svg size over browser size changes;
-                    }} 
-                />
+
+                {
+                    es() !== 'mobile'
+                        ?  <GeojeLand className=" geoje_land_svg" style={{ 
+                            // min-width etc retains the svg size over browser size changes;
+                            // width: '77vw'
+                            }} />
+                        :  <GeojeLand className=" geoje_land_svg" style={{ 
+                            // min-width etc retains the svg size over browser size changes;
+                            width: '68vw'
+                            }} />
+                }
+               
                 
+                    {/* __________ FIX THAT __________ */}
                 {/* svg icons: */}
                 {
                     // locations_data.mainland.map((location) => (
