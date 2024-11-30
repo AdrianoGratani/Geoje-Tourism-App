@@ -9,6 +9,9 @@ import "./menu_page.css";
 import "./svg.css";
 import { useScreenContext } from '../../context/ScreenSizeContext';
 
+// context data: click on a mobile button -> a menu compares:
+import { MmenuctxProvider } from '../../context/mmenuctx';
+
 export default function Menu_page() {
     const {currentScreenWidthContext, screenMode} = useScreenContext();
     // console.log(currentScreenWidthContext)
@@ -36,14 +39,16 @@ export default function Menu_page() {
     return (
         <body className="body">
 
-            <header>
-                <MenuHeader/>
-            </header>
+                    <MmenuctxProvider>
+                <header>
+                        <MenuHeader/>
+                </header>
 
-            <main className="main">
-                <Hero hero_geoje_current_color={hero_geoje_current_color} />
-                <Sections />
-            </main>
+                <main className="main">
+                    <Hero hero_geoje_current_color={hero_geoje_current_color} />
+                    <Sections />
+                </main>
+                    </MmenuctxProvider>
 
             <footer>
                 <FooterMain/>

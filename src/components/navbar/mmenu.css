@@ -1,0 +1,13 @@
+.mmenu {
+    position: absolute;
+    top:-30vh;
+    height:25vh;
+    background-color: red;
+    width: 100%;
+    transition: top 1s ease-in-out; 
+}
+
+.mmenucomp {
+    background-color: blue;
+    top: 0vh;
+}
