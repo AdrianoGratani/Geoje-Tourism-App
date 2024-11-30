@@ -31,16 +31,29 @@
 
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and   (max-width: 600px)  {
+    
+        .single_map_section_container_islets {
+            margin-bottom: 23vh;
+        }
+
+    .geoje_land_svg {
+        width: 35vw;
+        min-width: inherit;
+        max-width: inherit;
+    }
+}
+
+@media screen and (min-width: 601px) and   (max-width: 1400px) {
 
     .single_map_section_container_islets {
         width: 35vw;
         margin-bottom: 10vh;
     }
     
-    .geoje_land_svg {
+    /* .geoje_land_svg {
         width: 28vw;
         min-width: inherit;
         max-width: inherit;
-    }
+    } */
 }

@@ -5,11 +5,15 @@ import {ReactComponent as SvgIslets} from "../../../img/islet.svg";
 import { useCardContext } from '../../../context/CardContext';
 import "./section_map_islets.css";
 
+import { useScreenContext } from '../../../context/ScreenSizeContext';
+
 // icon data rendering:
 import locations_data from '../../../locations_data/locations_data';
 
 export default function Section_map_islets() {
     const icons_islets_data = locations_data.islets;                                                // data for icon positioning.
+
+    const {es} = useScreenContext();
 
     // previous method: no ext card on icon hover
     // function handle_icon_hovered_context(set_case, set_data) {
@@ -79,14 +83,25 @@ export default function Section_map_islets() {
 
     return (
 
-            <div class="single_map_section_container_islets islet_map"
+            <div class="single_map_section_container_islets"
             onClick={()=> resetContextData()}
             >
                 {/* .geoje_islets_svg is JUST for original _colors_ */}
-                <GeojeIslets class="geoje_islets_svg" style={{ 
-                    // min-width etc retains the svg size over browser size changes;
-                    }} 
-                />
+
+                {
+                    es() !== 'mobile' 
+                    ?    <GeojeIslets class="geoje_islets_svg" style={{ 
+                        // min-width etc retains the svg size over browser size changes;
+                         }} />
+
+                    :     <GeojeIslets class="geoje_islets_svg" style={{ 
+                        // min-width etc retains the svg size over browser size changes;
+                            width: '90vw',
+                            minWidth: '90vw',
+                            maxWidth: '90vw',
+                    }} />
+                }
+             
 
                  {/* map icons svg ------>  use .map() to generate them dynamically, 
             with INLINE CSS for the container too. the container must have an ID
