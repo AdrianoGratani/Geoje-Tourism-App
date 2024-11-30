@@ -39,5 +39,10 @@
     .single_map_section_container_sea {
         width: 35%;
     }
+    .sea_geoje_land_svg {
+        width: 28vw;
+        min-width: inherit;
+        max-width: inherit;
+    }
 
 }

@@ -82,7 +82,7 @@ export default function Section_map_islets() {
             <div class="single_map_section_container_islets islet_map"
             onClick={()=> resetContextData()}
             >
-                {/* .geoje_islets_svg is for original _colors_ */}
+                {/* .geoje_islets_svg is JUST for original _colors_ */}
                 <GeojeIslets class="geoje_islets_svg" style={{ 
                     // min-width etc retains the svg size over browser size changes;
                     }} 

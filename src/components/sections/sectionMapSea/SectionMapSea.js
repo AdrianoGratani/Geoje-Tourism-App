@@ -48,7 +48,7 @@ export default function SectionMapSea() {
             <div class="single_map_section_container_sea"
             onClick={()=> resetContextData()}
             >
-                <GeojeSea class="sea_geoje_land_svg" style={{ 
+                <GeojeSea class="geoje_land_svg" style={{ 
                 }} />
 
                 {/* SVG ICON */}

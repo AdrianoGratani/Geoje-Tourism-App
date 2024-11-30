@@ -91,6 +91,7 @@ export default function SectionMapLand() {
                     ...etc ...etc
                 ]
             */}
+            {/* geoje_land_svg IS FOR SVG COLOR CORRECTION */}
                 <GeojeLand className="geoje_land_svg" style={{ 
                     // min-width etc retains the svg size over browser size changes;
                     }} 
