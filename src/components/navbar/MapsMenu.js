@@ -3,9 +3,11 @@ import {useState} from 'react';
 import MapItems from "./MapItems"
 import { AiOutlineDown } from "react-icons/ai";
 import "./maps_menu.css";
-
+import { useScreenContext } from "../../context/ScreenSizeContext";
 
 export default function MapsMenu() {
+
+    const {currentScreenWidthContext, screenMode} = useScreenContext();
 
     const [maps_triggered, setMaps_triggered] = useState(true);
     const [map_li_fades, setMap_li_fades] = useState(false);
@@ -24,11 +26,18 @@ export default function MapsMenu() {
                 ?
                     <div  className="map_menu_container">
                         <li className={` ${map_li_fades ? "maps_li_fades" : "maps_li"}`} onMouseEnter={() =>  wait_trigger_useState()}>
-                        Maps 
+                        {
+                            currentScreenWidthContext <=600 && screenMode === "mobile"
+                            ?  `Explore Now.`
+                            : `Maps`
+                        }
+                        
                         </li>
-                        <div className="map_li_icon">
-                            <AiOutlineDown className={` ${map_li_fades ? "maps_li_fades map_li_icon_hovered" : "maps_li"}`} onMouseEnter={() =>  wait_trigger_useState()}/>
-                        </div>
+                            {
+                                currentScreenWidthContext <=600 && screenMode === 'mobile'
+                                ? null :   <div className="map_li_icon">
+                                    <AiOutlineDown className={` ${map_li_fades ? "maps_li_fades map_li_icon_hovered" : "maps_li"}`} onMouseEnter={() =>  wait_trigger_useState()}/> </div>
+                            }
                     </div>
                 :   <MapItems maps_triggered={maps_triggered} setMaps_triggered={setMaps_triggered}/>
             }

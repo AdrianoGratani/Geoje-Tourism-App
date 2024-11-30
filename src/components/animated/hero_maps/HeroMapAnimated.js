@@ -4,6 +4,7 @@ import {ReactComponent as GeojeLand} from "./geoje_land.svg";
 import {ReactComponent as GeojeBeach} from "./geoje_beach.svg";
 import {ReactComponent as GeojeIslets} from "./geoje_islets.svg";
 
+import MapsMenu from "../../navbar/MapsMenu";
 // fa icons:
 // import { FaMountainSun } from "react-icons/fa6";
 // import { FaUmbrellaBeach } from "react-icons/fa6";
@@ -18,6 +19,7 @@ export default function HeroMapAnimated( index ) {
     const svg_components = [<GeojeLand />, <GeojeBeach/>, <GeojeIslets/>]; // based on the current prop render one of these.
     const islets = index.index === svgMaps[2];         // for CSS class assignment: current props is 'islets'?
 
+    
     return (
         <div class="svg_hero_container">
             <div class={`${islets ? 

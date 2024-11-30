@@ -3,6 +3,7 @@ import React from "react";
 import HeroMapAnimated from "./animated/hero_maps/HeroMapAnimated";
 import "../pages/menu_page/menu_page.css";
 import { useScreenContext } from "../context/ScreenSizeContext";
+import MapsMenu from "./navbar/MapsMenu";
 
 
 export default function Hero ({hero_geoje_current_color}) {
@@ -36,6 +37,16 @@ export default function Hero ({hero_geoje_current_color}) {
                             `Everything About Geoje. In one Place.` : "Geoje Mobile App"
                         }
                         </span>
+                }
+                {/* on mobile the navbar goes here: */}
+                {
+                    currentScreenWidthContext <= 600 && screenMode === 'mobile' 
+                    ?  <div className={`m-button m-button-${hero_geoje_current_color}`}
+
+                    >
+                        <MapsMenu/>
+                        </div>
+                    :  null
                 }
                 {/* hero maps */}
                     <div className="hero_maps_and_description_container">
