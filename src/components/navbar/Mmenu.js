@@ -35,9 +35,9 @@ export default function Mmenu() {
     }
 
     const s =(ss) => {    // scroll after clicking the button;
-        const x = document.getElementById(ss);
+        let x = document.getElementById(ss);
         x.scrollIntoView({behavior: "smooth"});
-        r(300);
+        // r(300);
     }
 
     useEffect(()=> {
@@ -53,8 +53,6 @@ export default function Mmenu() {
         else return; 
     });
 
-
-
     return (
             <div class={` mmenu ${showmmenu ? "mmenucomp" : ""}`}
                 onClick={()=> r(700)}
@@ -66,13 +64,19 @@ export default function Mmenu() {
                             "Where do you want to go?"
                         </h1>
 
-                        <div onClick={()=> s("land")} className={`${x ? "mmi mmenucm" : "mmo"}`}>
+                        <div onClick={()=> s("land")} 
+                             className={`${x ? "mmi mmenucm" : "mmo"}
+                        `}>
                                 {ic[0]}
                         </div>
-                        <div onClick={()=> s("sea")} className={`${x ? "mmi mmenucs" : "mmo"}`}>
+                        <div onClick={()=> s("sea")} 
+                             className={`${x ? "mmi mmenucs" : "mmo"}
+                        `}>
                                 {ic[1]}
                         </div>
-                        <div onClick={()=> s("islets")} className={`${x ? "mmi mmenuci" : "mmo"}`}>
+                        <div onClick={()=> s("islets")} 
+                             className={`${x ? "mmi mmenuci" : "mmo"}
+                        `}>
                                 {ic[2]}
                         </div>
                     </div>
