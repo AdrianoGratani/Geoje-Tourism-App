@@ -78,20 +78,13 @@ export default function Section_map_islets() {
     // },[currentlyHoveredCard]);
 
     return (
-        <div class="map_and_icons_container"
-             onClick={()=> resetContextData()}>
 
-            {/* map svg */}            
-            <div class="single_map_section_container islet_map">
+            <div class="single_map_section_container_islets islet_map"
+            onClick={()=> resetContextData()}
+            >
+                {/* .geoje_islets_svg is for original _colors_ */}
                 <GeojeIslets class="geoje_islets_svg" style={{ 
                     // min-width etc retains the svg size over browser size changes;
-                    width: '700px', 
-                    minWidth: '700px',
-                    maxWidth: '700px',
-                    height: '850px',
-                    minHeight: '850px',
-                    maxHeight: '850px',
-                    margin: '1vw' 
                     }} 
                 />
 
@@ -150,6 +143,5 @@ export default function Section_map_islets() {
                 ))
             }
             </div>
-        </div>
     )
 }
