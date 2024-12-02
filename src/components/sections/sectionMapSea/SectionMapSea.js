@@ -71,8 +71,8 @@ export default function SectionMapSea() {
                             style={{
                                 position: 'absolute',
                                 // backgroundColor: 'yellow',                               
-                                top: `${sea_location.top}px`,
-                                left: `${sea_location.left}px`,
+                                top:  es()!=='mobile' ? `${sea_location.top}px` : `${sea_location.mtop}px`,
+                                left: es()!=='mobile' ? `${sea_location.left}px`: `${sea_location.mleft}vw`,
                                 width: 'fit-content',
                                 height: 'fit-content',
                             }}
@@ -87,13 +87,13 @@ export default function SectionMapSea() {
                                 {/* {sea_location.id} */}
                                <IconSea 
                                     style={{
-                                        width: '31px', 
-                                        minWidth: '31px',
-                                        maxWidth: '31px',
-                                        height: '31px',
-                                        minHeight: '31px',
-                                        maxHeight: '31px',
-                                        margin: '3px',
+                                        width: es()!=='mobile'? '31px' : '19px', 
+                                        minWidth: es()!=='mobile'? '31px' : '19px',
+                                        maxWidth: es()!=='mobile'? '31px' : '19px',
+                                        height: es()!=='mobile'? '31px' : '19px',
+                                        minHeight: es()!=='mobile'? '31px' : '19px',
+                                        maxHeight: es()!=='mobile'? '31px' : '19px',
+                                        margin: es()!=='mobile'?  '3px' : '1px',
                                     }}
                                /> 
                             </div>

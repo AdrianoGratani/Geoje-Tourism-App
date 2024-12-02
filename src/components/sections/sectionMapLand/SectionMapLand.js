@@ -62,16 +62,16 @@ export default function SectionMapLand() {
                         onClick={()=> triggerExtCard()}
                             style={{
                                 position: 'absolute',
-                                top:  es()!=='mobile' ? `${location.top}px` : `${location.mtop}`,
-                                left: es()!=='mobile' ? `${location.left}px`: `${location.mleft}`,
+                                top:  es()!=='mobile' ? `${location.top}px` : `${location.mtop}px`,
+                                left: es()!=='mobile' ? `${location.left}px`: `${location.mleft}vw`,
                                 width: 'fit-content',
                                 height: 'fit-content',
                             }}>
                             <IconHike style={{
-                                 width: es()!=='mobile'? '31px' : '19px', 
+                                 width:  es()!=='mobile'? '31px' : '19px', 
                                  height: es()!=='mobile'? '31px' : '19px',
-                                 margin: es()!=='mobile'? '3px' : '1px',
-                            }}/>
+                                 margin: es()!=='mobile'?  '3px' : '1px',
+                            }}/> 
                         </div>
                     ))
                 }

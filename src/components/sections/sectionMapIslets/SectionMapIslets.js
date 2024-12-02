@@ -4,29 +4,13 @@ import {ReactComponent as GeojeIslets} from "../../../img/geoje_islets.svg";
 import {ReactComponent as SvgIslets} from "../../../img/islet.svg";
 import { useCardContext } from '../../../context/CardContext';
 import "./section_map_islets.css";
-
 import { useScreenContext } from '../../../context/ScreenSizeContext';
-
-// icon data rendering:
 import locations_data from '../../../locations_data/locations_data';
 
 export default function Section_map_islets() {
     const icons_islets_data = locations_data.islets;                                                // data for icon positioning.
-
     const {es} = useScreenContext();
 
-    // previous method: no ext card on icon hover
-    // function handle_icon_hovered_context(set_case, set_data) {
-    //     switch(set_case) {
-    //         case "set_context":
-    //             setCurrentlyHoveredIcon(set_data);
-    //             break;
-            
-    //         case "delete_context":
-    //             setCurrentlyHoveredIcon(set_data);
-    //             break;
-    //     }
-    // }
     // CONTEXT DATA for icon layout - card layout interactions:
     const {
         resetContextData,
@@ -39,8 +23,6 @@ export default function Section_map_islets() {
         setCard_data_for_ext_card,
     } = useCardContext();
 
-
-
      // ___ON HOVER
      function send_icon_id_to_context(location_id, location_data) {
         setToggle_animation(true);
@@ -50,37 +32,12 @@ export default function Section_map_islets() {
         setCurrentlyVisitedSection("islets");
         setCard_data_for_ext_card(location_data);
     }
-    // function remove_icon_id_from_context() {
-        // setToggle_animation(false);
-        //     setCurrentlyHoveredIcon(null);
-        //     setClickedIcon(null);
-        //     setCardIsClicked(false);
-        //     setCurrentlyVisitedSection(null);
-        //     setCard_data_for_ext_card(null);
-    // }
 
     function triggerExtCard() {
             setToggle_animation(false);
             setCurrentlyHoveredIcon(null);
-            // setClickedIcon(null);
-            // setCardIsClicked(false);
-            // setCurrentlyVisitedSection(null);
-            // setCard_data_for_ext_card(null);
     }
     
-    // useEffect(()=> {
-    // console.log(
-    //     cardIsClicked, currentlyVisitedSection
-    // )
-        // console.log(". currently hovered icon: " + currentlyHoveredIcon);      // debug;
-    // }, [icon_toggled])
-
-
-    // debug:
-    // useEffect(()=> {
-    //     console.log(currentlyHoveredCard);
-    // },[currentlyHoveredCard]);
-
     return (
 
             <div class="single_map_section_container_islets"
@@ -91,42 +48,19 @@ export default function Section_map_islets() {
                 {
                     es() !== 'mobile' 
                     ?    <GeojeIslets class="geoje_islets_svg" style={{ 
-                        // min-width etc retains the svg size over browser size changes;
                          }} />
 
                     :     <GeojeIslets class="geoje_islets_svg" style={{ 
-                        // min-width etc retains the svg size over browser size changes;
                             width: '90vw',
                             minWidth: '90vw',
                             maxWidth: '90vw',
                     }} />
                 }
              
-
-                 {/* map icons svg ------>  use .map() to generate them dynamically, 
-            with INLINE CSS for the container too. the container must have an ID
-                retrieve cohordinates for top and left from an array of objects:
-                MountainLocations = [
-                    {
-                        name: LocationName,
-                        top: x,
-                        y: y
-                    },
-                    {
-                        name: LocationName,
-                        top: x,
-                        y: y
-                    },
-                    ...etc ...etc
-                ]
-            */}
- 
-            {/* data maping -> icon container -> icon */}
             {
                 icons_islets_data.map((islet)=> (
 
                     <div 
-                    // if currentlyHoveredCard state is same as the islet.id, add some style to make the icon stand out:
                     className={`is_icon_container ${currentlyHoveredCard === islet.id
                                                     ? "is_icon_effect"
                                                     : ""                                
@@ -138,19 +72,19 @@ export default function Section_map_islets() {
                         width: 'fit-content',
                         height: 'fit-content',
                         position: 'absolute',
-                        top: `${islet.top}px`,
-                        left: `${islet.left}px`,
+                        top:  es()!=='mobile' ? `${islet.top}px` : `${islet.mtop}px`,
+                        left: es()!=='mobile' ? `${islet.left}px`: `${islet.mleft}vw`,
                     }}
                     >
                     {/* {islet.id} */}
                         <SvgIslets
                             style={{
-                                width: '35px', 
-                                minWidth: '35px',
-                                maxWidth: '35px',
-                                height: '35px',
-                                minHeight: '35px',
-                                maxHeight: '35px',
+                                width:  es()!=='mobile'? '35px' : '19px', 
+                                minWidth:  es()!=='mobile'? '35px' : '19px',
+                                maxWidth:  es()!=='mobile'? '35px' : '19px',
+                                height:  es()!=='mobile'? '35px' : '19px',
+                                minHeight:  es()!=='mobile'? '35px' : '19px',
+                                maxHeight:  es()!=='mobile'? '35px' : '19px',
                                 margin: '3px',
                             }}
                         />
