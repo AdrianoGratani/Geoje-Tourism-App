@@ -1,5 +1,6 @@
 .sun {
-    z-index: var(--sun_moon_z);
+    z-index: 2;
+    opacity: .8;
     width: 7vw;
     height: 7vw;
     background-color: var(--sun);

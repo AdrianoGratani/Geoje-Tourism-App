@@ -1,5 +1,5 @@
 .moon {
-    z-index: var(--sun_moon_z);
+    z-index: 2;
     width: 100px;
     height: 100px;
     background-color: var(--moon);
@@ -33,6 +33,11 @@
         /* moon rises from bottom: */
         right: 80vw;
         top: 130vh;
+        opacity: 0.7;
+        box-shadow: 0px 0px 0px 10px var(--moon);   
+    }
+     65% { 
+        /* moon rises from bottom: */
         opacity: 0.8;
         box-shadow: 0px 0px 0px 10px var(--moon);   
     }

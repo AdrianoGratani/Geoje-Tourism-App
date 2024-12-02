@@ -506,9 +506,9 @@ const locations_data = {
             eat: "there are restaurants",
             bridge: "no",
             top: "100",
-            mtop: "0",
             left: "500",
-            mleft: "0",
+            mtop: "10",
+            mleft: "60",
             picture_folder: ""
         },
         {
@@ -521,9 +521,9 @@ const locations_data = {
             eat: "there are restaurants",
             bridge: "no",
             top: "100",
-            mtop: "0",
             left: "620",
-            mleft: "0",
+            mtop: "14",
+            mleft: "80",
             picture_folder: "p"
         },
         {
@@ -536,9 +536,9 @@ const locations_data = {
             eat: "there are restaurants",
             bridge: "no",
             top: "200",
-            mtop: "0",
             left: "500",
-            mleft: "0",
+            mtop: "28",
+            mleft: "60",
             picture_folder: "ciao"
         },
         {
@@ -551,9 +551,9 @@ const locations_data = {
             eat: "there are restaurants",
             bridge: "no",
             top: "500",
-            mtop: "0",
             left: "520",
-            mleft: "0",
+            mtop: "58",
+            mleft: "74",
             picture_folder: ""
         },
         {
@@ -566,9 +566,9 @@ const locations_data = {
             eat: "there are restaurants",
             bridge: "no",
             top: "600",
-            mtop: "0",
             left: "430",
-            mleft: "0",
+            mtop: "72",
+            mleft: "59",
             picture_folder: ""
         },
         {
@@ -581,9 +581,9 @@ const locations_data = {
             eat: "there are restaurants",
             bridge: "no",
             top: "670",
-            mtop: "0",
             left: "430",
-            mleft: "0",
+            mtop: "83",
+            mleft: "62",
             picture_folder: ""
         },
         {
@@ -596,9 +596,9 @@ const locations_data = {
             eat: "there are restaurants",
             bridge: "no",
             top: "740",
-            mtop: "0",
             left: "100",
-            mleft: "0",
+            mtop: "82",
+            mleft: "10",
             picture_folder: ""
         },
         {
@@ -611,9 +611,9 @@ const locations_data = {
             eat: "there are restaurants",
             bridge: "no",
             top: "500",
-            mtop: "0",
+            mtop: "50",
+            mleft: "10",
             left: "110",
-            mleft: "0",
             picture_folder: ""
         },
         {
@@ -626,9 +626,9 @@ const locations_data = {
             eat: "there are restaurants",
             bridge: "no",
             top: "178",
-            mtop: "0",
-            left: "40",
+            mtop: "8",
             mleft: "0",
+            left: "40",
             picture_folder: ""
         },
       

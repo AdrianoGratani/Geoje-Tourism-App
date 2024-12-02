@@ -6,15 +6,11 @@ import Sections from '../../components/sections/Sections';
 import FooterMain from "../../components/FooterMain";
 import "./menu_page.css";
 import "./svg.css";
-import { useScreenContext } from '../../context/ScreenSizeContext';
 
 // context data: click on a mobile button -> a menu compares:
 import { MmenuctxProvider } from '../../context/mmenuctx';
 
 export default function Menu_page() {
-    const {currentScreenWidthContext, screenMode} = useScreenContext();
-    // console.log(currentScreenWidthContext)
-
     const hero_geoje_colors = ["land", "beach", "islets"];
     const [hero_geoje_current_color, setHero_geoje_current_color] = useState(hero_geoje_colors[0]);
     

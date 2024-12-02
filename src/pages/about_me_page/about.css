@@ -7,7 +7,7 @@
     color: white;
     display: flex;
     flex-direction: column;
-    
+    z-index: 3;
     align-items: center;
     justify-content: center;
 }
@@ -26,6 +26,7 @@
     margin-bottom: 6vh;
 }
 .mar {
+    z-index: 3;
     margin-left: 5vw;
     margin-right: 5vw;
 }

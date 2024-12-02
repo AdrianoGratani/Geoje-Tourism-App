@@ -72,7 +72,7 @@ export default function Section_map_islets() {
                         width: 'fit-content',
                         height: 'fit-content',
                         position: 'absolute',
-                        top:  es()!=='mobile' ? `${islet.top}px` : `${islet.mtop}px`,
+                        top:  es()!=='mobile' ? `${islet.top}px` : `${islet.mtop}vw`,
                         left: es()!=='mobile' ? `${islet.left}px`: `${islet.mleft}vw`,
                     }}
                     >
