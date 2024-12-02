@@ -1,6 +1,5 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
-
 import MenuHeader from '../../components/MenuHeader';
 import Hero from '../../components/Hero';
 import Sections from '../../components/sections/Sections';
@@ -39,7 +38,7 @@ export default function Menu_page() {
     return (
         <body className="body">
 
-                    <MmenuctxProvider>
+            <MmenuctxProvider>
                 <header>
                         <MenuHeader/>
                 </header>
@@ -48,7 +47,7 @@ export default function Menu_page() {
                     <Hero hero_geoje_current_color={hero_geoje_current_color} />
                     <Sections />
                 </main>
-                    </MmenuctxProvider>
+            </MmenuctxProvider>
 
             <footer>
                 <FooterMain/>
