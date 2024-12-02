@@ -1,15 +1,7 @@
-/* .cloud_svg {
-    position: absolute;
-    right: 70vw;
-    top: 50vh;
-    z-index: var(--cloud_z);
-    background-color: var(--sky_rgba);
-    fill: var(--moon);
-    opacity: 0.8;
-} */
 
 .cloud_img {
     position: absolute;
+    opacity: 0.2;
     width: 15vw;
     height: auto;
     background-color: var(--sky_rgba); 
@@ -21,6 +13,7 @@
     /* steps(1) = one step from a to b = no linear. is a CSS to jump directly to the result, avoiding keyframe animation smoothness from a to b */
     animation: cloud_moves 240s linear infinite, cloud_rotates 15s steps(1)  infinite;
 }
+
 
 @keyframes cloud_moves{
     0% {

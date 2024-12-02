@@ -1,16 +1,28 @@
 import React from 'react';
 // click 'about and it take you to the css animation page:
 import { useNavigate} from 'react-router-dom';               // for routing
-
+import { useState, useEffect } from 'react';
 import "../pages/menu_page/menu_page.css";
 import MapsMenu from './navbar/MapsMenu';
 import { useScreenContext } from '../context/ScreenSizeContext';
 
 export default function MenuHeader() {
+    const [oo, setOo] = useState(false);
     const n = useNavigate();   
+
     const hr = () => {
         n('/about');
     }
+
+    useEffect(()=> {
+        if(oo) {
+            const i = setInterval(()=> {
+                hr();
+            }, 500);
+            return ()=> clearInterval(i);
+        }
+        else return;
+    }, [oo]);
     const {currentScreenWidthContext, screenMode} = useScreenContext();
 
     return (
@@ -18,7 +30,7 @@ export default function MenuHeader() {
             <nav className="menu_page_nav">
                     <ul className="menu_page_ul ">
                         <li
-                        onClick={hr}
+                        onClick={()=>setOo(true)}
                         className="menu_about_me">About</li>
                         {
                             // not on mobile version:

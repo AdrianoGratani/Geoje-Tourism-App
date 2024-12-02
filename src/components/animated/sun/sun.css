@@ -28,7 +28,7 @@
     0%, 100% {
          /* keep the hidden position */
          top: 50vh;
-         right: -10vw;
+         right: -15vw;
      }
     20% {
         /* INVISIBLE > VISIBLE sun reaches the stop point towards left. */
@@ -54,7 +54,7 @@
         /* HIDDEN MOVEMENTS  */
         /* move from the middle of vw to the the -10 SUN KEEPS STAYING IN THE BOTTOM */
         top: 110vh;
-        right: -10vw;
+        right: -15vw;
         background-color: var(--sun);
         box-shadow: 0px 0px 40px 20px var(--sun);   
     }
@@ -63,7 +63,7 @@
         /* HIDDEN MOVEMENTS  */
         /* back to 0% position */
         top: 50vh;
-        right: -10vw;
+        right: -15vw;
        
     }
 }

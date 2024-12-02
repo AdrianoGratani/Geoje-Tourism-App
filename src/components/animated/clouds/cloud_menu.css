@@ -17,7 +17,8 @@
 .cloud_menu_text {
     font-family: var(--playwrite);
     position: absolute;
-    font-size: 4vw;
+    font-size: 3vw;
+    padding-bottom: 1vh;
     background-color: var(--sky_rgba); 
     top: 51vh;
     left: 50.3vw;

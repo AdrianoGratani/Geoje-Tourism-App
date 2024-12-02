@@ -20,7 +20,7 @@ export default function Cloud_menu() {
         class="cloud_menu_container" id="cloud_menu_container">
             <img src={cloudImage} class="cloud_img_menu" id="cloud_img_menu">
             </img>
-            <p class="cloud_menu_text" id="cloud_menu_text">Enter</p>
+            <p class="cloud_menu_text" id="cloud_menu_text">Play</p>
         </div>
 
     )

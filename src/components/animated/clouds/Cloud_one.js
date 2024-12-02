@@ -1,20 +1,21 @@
 import React from 'react';
 import "./cloud_one.css";
 import cloudImage from "../../../img/cloud.png";
-
-
+import { useScreenContext } from '../../../context/ScreenSizeContext';
 
 export default function Cloud_one() {
-
+    const {es} = useScreenContext();
 
     return (
-        <div class="" id="">
-            {/* "route to ABOUT ME page" */}
-            <img src={cloudImage} class="cloud_img" id="cloud_img">
-            </img>
-
-        </div>
-
+            <div>
+                {
+                    es() === 'mobile' 
+                    ? null
+                    :
+                    <img src={cloudImage} class="cloud_img" id="cloud_img">
+                    </img>
+                }
+            </div>
     )
 }
 

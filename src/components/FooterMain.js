@@ -168,7 +168,7 @@ export default function FooterMain() {
 
             {
                             es() === 'mobile'
-                             
+
                                 ? 
                                     <div className="footer_signature_container">
                                         <div className="footer_signature playfair-display_light">
@@ -178,7 +178,6 @@ export default function FooterMain() {
 
                                 : null
                         }
-
 
             {
                             es() !== 'mobile'
