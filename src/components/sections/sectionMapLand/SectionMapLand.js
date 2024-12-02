@@ -62,14 +62,15 @@ export default function SectionMapLand() {
                         onClick={()=> triggerExtCard()}
                             style={{
                                 position: 'absolute',
-                                top:  es()!=='mobile' ? `${location.top}px` : `${location.mtop}px`,
+                                // ON MOBILE vw is used for both x and y axis... it works.
+                                top:  es()!=='mobile' ? `${location.top}px` : `${location.mtop}vw`,
                                 left: es()!=='mobile' ? `${location.left}px`: `${location.mleft}vw`,
                                 width: 'fit-content',
                                 height: 'fit-content',
                             }}>
                             <IconHike style={{
-                                 width:  es()!=='mobile'? '31px' : '19px', 
-                                 height: es()!=='mobile'? '31px' : '19px',
+                                 width:  es()!=='mobile'? '31px' : '15px', 
+                                 height: es()!=='mobile'? '31px' : '15px',
                                  margin: es()!=='mobile'?  '3px' : '1px',
                             }}/> 
                         </div>
@@ -78,14 +79,3 @@ export default function SectionMapLand() {
             </div>
     )
 }
-
-// for mobile
-// <IconHike style={{
-//     width: '21px', 
-//     minWidth: '21px',
-//     maxWidth: '21px',
-//     height: '21px',
-//     minHeight: '21px',
-//     maxHeight: '21px',
-//     margin: '3px',
-// }}/>

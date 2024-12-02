@@ -71,7 +71,7 @@ export default function SectionMapSea() {
                             style={{
                                 position: 'absolute',
                                 // backgroundColor: 'yellow',                               
-                                top:  es()!=='mobile' ? `${sea_location.top}px` : `${sea_location.mtop}px`,
+                                top:  es()!=='mobile' ? `${sea_location.top}px` : `${sea_location.mtop}vw`,
                                 left: es()!=='mobile' ? `${sea_location.left}px`: `${sea_location.mleft}vw`,
                                 width: 'fit-content',
                                 height: 'fit-content',
