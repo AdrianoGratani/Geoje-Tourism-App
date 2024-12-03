@@ -6,6 +6,7 @@ import { useCardContext } from '../../../context/CardContext';
 import "./section_map_islets.css";
 import { useScreenContext } from '../../../context/ScreenSizeContext';
 import locations_data from '../../../locations_data/locations_data';
+import SecTextMob from '../SecTextMob';
 
 export default function Section_map_islets() {
     const icons_islets_data = locations_data.islets;                                                // data for icon positioning.
@@ -13,6 +14,7 @@ export default function Section_map_islets() {
 
     // CONTEXT DATA for icon layout - card layout interactions:
     const {
+        cmi, setCmi, setMc,
         resetContextData,
         setToggle_animation,
         setCurrentlyHoveredIcon, 
@@ -33,11 +35,22 @@ export default function Section_map_islets() {
         setCard_data_for_ext_card(location_data);
     }
 
-    function triggerExtCard() {
+    function triggerExtCard(i, d) {   // i is the id  d is the data. [refer to mainland or seaside]
+            if(es()==='mobile') {
+                setCmi(i);
+                setMc(d);
+                return;
+            }
             setToggle_animation(false);
             setCurrentlyHoveredIcon(null);
     }
-    
+
+    function p(i, p) {  // this function evaluates the position for MOBILE icons based on user-triggered context data.
+                        // is the same es evalmp() in mainland.
+        if(i===cmi) return 0;    
+        return p;                        
+    }
+
     return (
 
             <div class="single_map_section_container_islets"
@@ -56,7 +69,6 @@ export default function Section_map_islets() {
                             maxWidth: '90vw',
                     }} />
                 }
-             
             {
                 icons_islets_data.map((islet)=> (
 
@@ -67,13 +79,13 @@ export default function Section_map_islets() {
                     }`}
 
                     onMouseEnter={()=> send_icon_id_to_context(islet.id, islet)}
-                    onClick={()=> triggerExtCard()}
+                    onClick={()=> triggerExtCard(islet.id, islet)}
                     style={{
                         width: 'fit-content',
                         height: 'fit-content',
                         position: 'absolute',
-                        top:  es()!=='mobile' ? `${islet.top}px` : `${islet.mtop}vw`,
-                        left: es()!=='mobile' ? `${islet.left}px`: `${islet.mleft}vw`,
+                        top:  es()!=='mobile' ? `${islet.top}px` : `${p(islet.id, islet.mtop)}vw`,
+                        left: es()!=='mobile' ? `${islet.left}px`: `${p(islet.id, islet.mleft)}vw`,
                     }}
                     >
                     {/* {islet.id} */}
@@ -88,6 +100,13 @@ export default function Section_map_islets() {
                                 margin: '3px',
                             }}
                         />
+
+{/* MOBILE CARDS: */}
+                       {
+                            es() === 'mobile' &&  islet.id===cmi
+                                ? <SecTextMob /> 
+                                : null
+                       }
                     </div>
                 ))
             }

@@ -16,7 +16,7 @@ export default function SecTextMob() {
         setMc(null);       // and no data.
     }
 
-    useEffect(()=> {
+    useEffect(()=> {     // monitor c if changes.
         if(c) {
             r();
         }

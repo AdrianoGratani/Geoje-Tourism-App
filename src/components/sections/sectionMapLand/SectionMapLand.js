@@ -79,7 +79,7 @@ export default function SectionMapLand() {
                                                     }`} 
                         onMouseEnter={()=>send_icon_id_to_context(location.id, location)}
                         onMouseLeave={()=>remove_icon_id_from_context()}
-                        onClick={()=> triggerExtCard(location.id, location)}  
+                        onClick={()=> triggerExtCard(location.id, location)}  // both desktop and mobile
                             style={{
                                 position: 'absolute',
                                 // ON MOBILE vw is used for both x and y axis... it works.
