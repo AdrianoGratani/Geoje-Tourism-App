@@ -83,15 +83,15 @@ export default function SectionMapLand() {
                             style={{
                                 position: 'absolute',
                                 // ON MOBILE vw is used for both x and y axis... it works.
-                                top:  es()!=='mobile' ? `${location.top}px` : `${evalmp(location.mtop, location.id)}vw`,
-                                left: es()!=='mobile' ? `${location.left}px`: `${evalmp(location.mleft, location.id)}vw`,
+                                top:  es()!=='mobile' ? `${location.top}vw` : `${evalmp(location.mtop, location.id)}vw`,
+                                left: es()!=='mobile' ? `${location.left}vw`: `${evalmp(location.mleft, location.id)}vw`,
                                 width: 'fit-content',
                                 height: 'fit-content',
                             }}>
                          
                             <IconHike style={{
-                                 width:  es()!=='mobile'? '31px' : '15px', 
-                                 height: es()!=='mobile'? '31px' : '15px',
+                                 width:  es()!=='mobile'? '1.3vw' : '3.5vw', 
+                                 height: es()!=='mobile'? '1.3vw' : '3.5vw',
                                  margin: es()!=='mobile'?  '3px' : '1px',
                             }}/> 
 
