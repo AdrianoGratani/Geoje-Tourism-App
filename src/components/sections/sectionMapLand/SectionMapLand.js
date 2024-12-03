@@ -38,13 +38,14 @@ export default function SectionMapLand() {
     }
 
     function triggerExtCard(id, l) {                       // SAME FUNCTION FOR MOBILE AND DESKTOP
+        if(es()=='mobile') {    // set which mobile card must appear and give it data.
+            setCmi(id);
+            setMc(l); 
+            return;               
+        }  
             setToggle_animation(false);
             setCurrentlyHoveredIcon(null);
 
-            if(es()=='mobile') {    // set which mobile card must appear and give it data.
-                setCmi(id);
-                setMc(l);                
-            }  
     }
 
     // mobile icon position evaluator
@@ -95,11 +96,13 @@ export default function SectionMapLand() {
                             }}/> 
 
                                     {/* on mobile devices info cards is generated from the icon. */}
+                           
                             {
                                 es() === 'mobile'
                                  ?
                                  <div> 
                                     {
+                                        //  ...but only if the icon is clicked
                                         location.id === cmi && cmi !== null
                                         ? <SecTextMob /> 
                                         : null

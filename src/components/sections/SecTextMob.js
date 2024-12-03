@@ -45,7 +45,7 @@ export default function SecTextMob() {
         };
         case 's': {      
             return (
-                <div className="stmc"
+                <div className="stmc" onClick={()=> setC(1)}
                 style={{display: 'flex', flexDirection: 'column', gap: '10px'}}
                 >
                     <h1 class="mh"
@@ -64,7 +64,7 @@ export default function SecTextMob() {
 
         case 'i': {      
             return (
-                <div className="stmc"
+                <div className="stmc" onClick={()=> setC(1)}
                 style={{display: 'flex', flexDirection: 'column', gap: '10px'}}
                 >
                     <h1 class="mh"

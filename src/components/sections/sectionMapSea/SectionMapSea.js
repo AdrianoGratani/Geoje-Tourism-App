@@ -2,13 +2,11 @@ import React from 'react';
 import { useCardContext } from '../../../context/CardContext';
 import { useScreenContext } from '../../../context/ScreenSizeContext';
 import locations_data from '../../../locations_data/locations_data';
-// import { useEffect, useState } from 'react';
-
 // icons:
 import {ReactComponent as GeojeSea} from "../../../img/geoje_beach.svg";
 import {ReactComponent as IconSea} from "../../../img/beach.svg";
-// import {ReactComponent as Icon_LightHouse} from "../../../img/faro.svg";
-
+// ext mobile card:
+import SecTextMob from '../SecTextMob';
 import "./section_map_sea.css";
 
 export default function SectionMapSea() {
@@ -18,6 +16,7 @@ export default function SectionMapSea() {
     // CONTEXT DATA
     const {
                 // data for icon/card events:
+                cmi, setCmi, setMc,
                 resetContextData,
                 setToggle_animation,
                 setCurrentlyHoveredIcon, 
@@ -39,11 +38,26 @@ export default function SectionMapSea() {
         setClickedIcon(location_id);
         setCard_data_for_ext_card(location_data);
     }
-    // click to remove the card:
-    function triggerExtCard() {
+    // click to remove the card/   args needed for mobile ver.:
+    function triggerExtCard(iid, ii) {   // (id, obj data)
+        if(es()=='mobile') {    
+            setCmi(iid);         // id is used for making the card appearing/disappearing card
+            setMc(ii);           // ctx now has the data of the pushed icon and sectextmpb will use this data;
+            return;               
+        }  
         setToggle_animation(false);
         setCurrentlyHoveredIcon(null);      
         }
+
+    function ep(id, p) {             // mobile: evaluate icon position, based on user interaction. 
+        // arg id to check if the caller is pushed by comparison with context state data.
+        // arg p to avoid relocation if the above statement is proven not to be true.
+
+        if(cmi===id) {
+            return 0;
+        }
+        else return p;
+    }
 
     return (
             // {/* SVG MAP */}
@@ -65,14 +79,14 @@ export default function SectionMapSea() {
                         locations_data.seaside.map((sea_location) => (
                             <div id="s_icon_container"
                             onMouseEnter={()=> send_icon_id_to_context(sea_location.id, sea_location)}
-                            onClick={()=>triggerExtCard()}
-
+                            onClick={()=>triggerExtCard(sea_location.id, sea_location)}
                             // onMouseLeave={()=> remove_currently_hovered_icon_context()}
+
+                            // on mobile: pushed icon must be repositioned on top: that's why the evaluator is needed.
                             style={{
                                 position: 'absolute',
-                                // backgroundColor: 'yellow',                               
-                                top:  es()!=='mobile' ? `${sea_location.top}px` : `${sea_location.mtop}vw`,
-                                left: es()!=='mobile' ? `${sea_location.left}px`: `${sea_location.mleft}vw`,
+                                top:  es()!=='mobile' ? `${sea_location.top}px` : `${ep(sea_location.id, sea_location.mtop)}vw`,
+                                left: es()!=='mobile' ? `${sea_location.left}px`: `${ep(sea_location.id,sea_location.mleft)}vw`,
                                 width: 'fit-content',
                                 height: 'fit-content',
                             }}
@@ -96,6 +110,21 @@ export default function SectionMapSea() {
                                         margin: es()!=='mobile'?  '3px' : '1px',
                                     }}
                                /> 
+                           
+                                {/* on mobile devices info cards is generated from the icon. */}
+                            {
+                                es() === 'mobile'
+                                 ?
+                                 <div> 
+                                    {
+                                        //  ...but only if the icon is clicked
+                                        sea_location.id === cmi && cmi !== null
+                                        ? <SecTextMob /> 
+                                        : null
+                                    }
+                                 </div>
+                                 : null
+                            }
                             </div>
                         ))
                     }
