@@ -3,10 +3,10 @@ import React from 'react';
 import {ReactComponent as GeojeIslets} from "../../../img/geoje_islets.svg";
 import {ReactComponent as SvgIslets} from "../../../img/islet.svg";
 import { useCardContext } from '../../../context/CardContext';
-import "./section_map_islets.css";
 import { useScreenContext } from '../../../context/ScreenSizeContext';
 import locations_data from '../../../locations_data/locations_data';
 import SecTextMob from '../SecTextMob';
+import "./section_map_islets.css";
 
 export default function Section_map_islets() {
     const icons_islets_data = locations_data.islets;                                                // data for icon positioning.
@@ -65,8 +65,6 @@ export default function Section_map_islets() {
 
                     :     <GeojeIslets class="geoje_islets_svg" style={{ 
                             width: '90vw',
-                            minWidth: '90vw',
-                            maxWidth: '90vw',
                     }} />
                 }
             {
@@ -84,19 +82,19 @@ export default function Section_map_islets() {
                         width: 'fit-content',
                         height: 'fit-content',
                         position: 'absolute',
-                        top:  es()!=='mobile' ? `${islet.top}px` : `${p(islet.id, islet.mtop)}vw`,
-                        left: es()!=='mobile' ? `${islet.left}px`: `${p(islet.id, islet.mleft)}vw`,
+                        top:  es()!=='mobile' ? `${islet.top}vw` : `${p(islet.id, islet.mtop)}vw`,
+                        left: es()!=='mobile' ? `${islet.left}vw`: `${p(islet.id, islet.mleft)}vw`,
                     }}
                     >
                     {/* {islet.id} */}
                         <SvgIslets
                             style={{
-                                width:  es()!=='mobile'? '35px' : '19px', 
-                                minWidth:  es()!=='mobile'? '35px' : '19px',
-                                maxWidth:  es()!=='mobile'? '35px' : '19px',
-                                height:  es()!=='mobile'? '35px' : '19px',
-                                minHeight:  es()!=='mobile'? '35px' : '19px',
-                                maxHeight:  es()!=='mobile'? '35px' : '19px',
+                                width:  es()!=='mobile'? '2.5vw' : '5vw', 
+                                minWidth:  es()!=='mobile'? '2.5vw' : '5vw',
+                                maxWidth:  es()!=='mobile'? '2.5vw' : '5vw',
+                                height:  es()!=='mobile'? '2.5vw' : '5vw',
+                                minHeight:  es()!=='mobile'? '2.5vw' : '5vw',
+                                maxHeight:  es()!=='mobile'? '2.5vw' : '5vw',
                                 margin: '3px',
                             }}
                         />
