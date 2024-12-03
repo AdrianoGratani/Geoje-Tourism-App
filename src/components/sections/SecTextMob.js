@@ -51,11 +51,9 @@ export default function SecTextMob() {
                     <h1 class="mh"
                     >{mc.name}</h1>
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                        <p className='mpp'>{mc.height}</p>
-                        <p className='mpp'>{mc.difficulty}</p>
-                        <p className='mpp'>{mc.length}</p>
-                        <p className='mpp'>{mc.steepness}</p>
-                        <p className='mpp'>{mc.duration}</p>
+                    <p className='mpp'>{mc.sand}</p>
+                        <p className='mpp'>{mc.parking}</p>
+                        <p className='mpp'>{mc.cafes}</p>
                     </div>
                     <p className='mpp'>{mc.description}</p>
                 </div>
@@ -70,11 +68,10 @@ export default function SecTextMob() {
                     <h1 class="mh"
                     >{mc.name}</h1>
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                        <p className='mpp'>{mc.height}</p>
-                        <p className='mpp'>{mc.difficulty}</p>
-                        <p className='mpp'>{mc.length}</p>
-                        <p className='mpp'>{mc.steepness}</p>
-                        <p className='mpp'>{mc.duration}</p>
+                        <p className='mpp'>{mc.sand}</p>
+                        <p className='mpp'>{mc.car}</p>
+                        <p className='mpp'>{mc.eat}</p>
+                        <p className='mpp'>{mc.bridge}</p>
                     </div>
                     <p className='mpp'>{mc.description}</p>
                 </div>
