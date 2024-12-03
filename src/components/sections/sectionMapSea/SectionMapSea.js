@@ -85,8 +85,8 @@ export default function SectionMapSea() {
                             // on mobile: pushed icon must be repositioned on top: that's why the evaluator is needed.
                             style={{
                                 position: 'absolute',
-                                top:  es()!=='mobile' ? `${sea_location.top}px` : `${ep(sea_location.id, sea_location.mtop)}vw`,
-                                left: es()!=='mobile' ? `${sea_location.left}px`: `${ep(sea_location.id,sea_location.mleft)}vw`,
+                                top:  es()!=='mobile' ? `${sea_location.top}vw` : `${ep(sea_location.id, sea_location.mtop)}vw`,
+                                left: es()!=='mobile' ? `${sea_location.left}vw`: `${ep(sea_location.id,sea_location.mleft)}vw`,
                                 width: 'fit-content',
                                 height: 'fit-content',
                             }}
@@ -101,12 +101,12 @@ export default function SectionMapSea() {
                                 {/* {sea_location.id} */}
                                <IconSea 
                                     style={{
-                                        width: es()!=='mobile'? '31px' : '19px', 
-                                        minWidth: es()!=='mobile'? '31px' : '19px',
-                                        maxWidth: es()!=='mobile'? '31px' : '19px',
-                                        height: es()!=='mobile'? '31px' : '19px',
-                                        minHeight: es()!=='mobile'? '31px' : '19px',
-                                        maxHeight: es()!=='mobile'? '31px' : '19px',
+                                        width: es()!=='mobile'? '1.5vw' : '3.5vw', 
+                                        minWidth: es()!=='mobile'? '1.5vw' : '3.5vw',
+                                        maxWidth: es()!=='mobile'? '1.5vw' : '3.5vw',
+                                        height: es()!=='mobile'? '1.5vw' : '3.5vw',
+                                        minHeight: es()!=='mobile'? '1.5vw' : '3.5vw',
+                                        maxHeight: es()!=='mobile'? '1.5vw' : '3.5vw',
                                         margin: es()!=='mobile'?  '3px' : '1px',
                                     }}
                                /> 
