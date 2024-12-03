@@ -27,8 +27,7 @@ function App() {
               </ScreenContextProvider>
              }
             />
-
-             <   Route path="/about"  element={<About/>} />
+               <   Route path="/about"  element={<About/>} />
        
       </Routes>
     </Router>

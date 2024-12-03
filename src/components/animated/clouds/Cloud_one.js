@@ -10,10 +10,14 @@ export default function Cloud_one() {
             <div>
                 {
                     es() === 'mobile' 
-                    ? null
-                    :
-                    <img src={cloudImage} class="cloud_img" id="cloud_img">
-                    </img>
+                        ? <img src={cloudImage} class="cloud_img" id="cloud_img"></img>
+
+                        :
+                        <div>
+                            <img src={cloudImage} class="cloud_img" id="cloud_img"></img>
+                            <img src={cloudImage} class="cloud_img cla" id="cloud_img"></img>
+                            <img src={cloudImage} class="cloud_img clb" id="cloud_img"></img>
+                        </div>
                 }
             </div>
     )

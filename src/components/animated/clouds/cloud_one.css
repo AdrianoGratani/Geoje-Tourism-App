@@ -1,85 +1,69 @@
 
 .cloud_img {
     position: absolute;
-    opacity: 0.2;
-    width: 15vw;
+    opacity: 0.7;
+    width: 10vw;
     height: auto;
     background-color: var(--sky_rgba); 
     top: -5vh;
-    left: -20vw;
+    right: -5vw;
     /* z-index: var(--cloud_z); */
     z-index: 400;
     /* 'linear' to keep steady movements */
     /* steps(1) = one step from a to b = no linear. is a CSS to jump directly to the result, avoiding keyframe animation smoothness from a to b */
-    animation: cloud_moves 240s linear infinite, cloud_rotates 15s steps(1)  infinite;
+    animation: cloud_moves 100s linear infinite, cloud_rotates 15s steps(1)  infinite;
+}
+
+.cla {
+    animation: cloud_movesa 80s linear infinite, cloud_rotates 20s steps(1)  infinite;
+}
+.clb {
+    animation: cloud_movesb 60s linear infinite, cloud_rotates 18s steps(1)  infinite;
 }
 
 
 @keyframes cloud_moves{
     0% {
-        /* INVISIBLE, TOP LEFT */
-        /* opacity to make the title visible, bit opaque. */
         opacity: 0.92;
-        top: -5vh;
+        top: 70vh;
+        right: -5vw;
+    }
+   
+    100% {
+        opacity: 1;
+        top: 90vh;
+        right: 110vw;
+        width: 15vw;
+    }
+}
+
+@keyframes cloud_movesa{
+    0% {
+        opacity: 0.92;
+        top: 70vh;
+        left: -9vw;
+    }
+   
+    100% {
+        opacity: 1;
+        top: 50vh;
+        left: 120vw;
+        width: 18vw;
+    }
+}
+
+@keyframes cloud_movesb{
+    0% {
+        opacity: 0.92;
+        top: 10vh;
         left: -20vw;
     }
-    28% {
-        /* INVISIBLE > VISIBLE: REACHES THE RIGHT END >  HIDDEN */
-        width: 35vw;
-        height: auto;
-        opacity: 0.8;
+   
+    100% {
+        opacity: 1;
         top: 5vh;
         left: 110vw;
-        /* change the png color */
-        filter: hue-rotate(180deg);
-    }
-    29% {
-        /* WHILE HIDDEN, GO DOWN A BIT. STILL HIDDEN */
-        width: 10vw;
-        height: auto;
-        opacity: 1;
-        top: 30vh;
-        left: 130vw;
-        filter: hue-rotate(180deg);
-    }
-    58% {
-        /* INVISIBLE > VISIBLE. START BACK FROM RIGHT TO LEFT */
-        width: 40vw;
-        height: auto;
-        opacity: 0.8;
-        top: 45vh;
-        left: -50vw;
-        filter: hue-rotate(360deg);
-    }
-    60% {
-        /* WHILE HIDDEN, GO DOWN A BIT. STILL HIDDEN */
-        width: 35vw;
-        height: auto;
-        opacity: 1;
-        top: 60vh;
-        left: -50vw;
-        filter: hue-rotate(360deg);
-    }
-    98% {
-        /* INVISIBLE > VISIBLE: REACHES THE RIGHT END >  HIDDEN */
-        width: 10vw;
-        height: auto;
-        opacity: 0.8;
-        top: 30vh;
-        left: 130vw;
-        filter: hue-rotate(180deg);
-    }
-    99% {
-        /* BACK TO ORIGIN */
-        width: 15vw;
-        height: auto;
-        opacity: 0;
-        filter: hue-rotate(180deg);
-    }
-    100% {
-        opacity: 0;
-        top: -5vh;
-        left: -20vw;
+        width: 28vw;
     }
 }
 
