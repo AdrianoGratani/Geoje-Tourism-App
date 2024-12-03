@@ -1,0 +1,15 @@
+
+.stmc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mh {
+    font-size: 0.7rem;
+}
+
+.mpp  {
+    font-size: 0.5rem;
+}

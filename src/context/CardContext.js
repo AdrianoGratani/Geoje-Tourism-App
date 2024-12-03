@@ -12,6 +12,8 @@ const CardContext = createContext();                                            
 export const  CardContextProvider = ( {children} ) => {                                   // this generates a Provider for the useState data.
 
     // which is this data.
+    const [cmi, setCmi] = useState(null);  // which mobile map icon is clicked
+    const [mc, setMc] = useState(null);   // data for mobile cards;
     const [cardIsClicked, setCardIsClicked] = useState(false);               
     const [currentlyVisitedSection, setCurrentlyVisitedSection] = useState(null);         
     const [currentlyClickedCardID, setCurrentlyClickedCardID] = useState(null);    
@@ -36,6 +38,8 @@ export const  CardContextProvider = ( {children} ) => {                         
     return (
         // IMPORTANT: `value` is the __only__ valide props name for the Provider prop. otherwise react returns an Error because the useContext gets 'undefined': the component using Context is NOT able to access the context data.
         <CardContext.Provider value={{ 
+            cmi, setCmi,
+            mc, setMc,
             cardIsClicked, setCardIsClicked, 
             currentlyVisitedSection, setCurrentlyVisitedSection,
             currentlyClickedCardID, setCurrentlyClickedCardID,

@@ -27,8 +27,6 @@ export default function SectionsText({
     // cards NOT in mobile:
     const { es } = useScreenContext();
 
-
-
     //  the rendering for all ext cards relies on this bool:
     let display_extended_card = currentlyVisitedSection === section 
                                 && (cardIsClicked || clickedIcon) 
@@ -51,12 +49,12 @@ export default function SectionsText({
     }
 
     // debug:
-    useEffect(() => {
+    // useEffect(() => {
         // console.log(display_extended_card)
-        if(display_extended_card){
+        // if(display_extended_card){
             // console.log("Section_text.js; This is happening in: " + currentlyVisitedSection + " and current ID is:" + currentlyClickedCardID);
-        }
-    },[display_extended_card]);
+    //     }
+    // },[display_extended_card]);
 
     return (   // text description on top, cards about each location on the bottom.
 
@@ -64,14 +62,17 @@ export default function SectionsText({
 
             {/* EXTENDED CARD */}
             {
-                display_extended_card 
+                display_extended_card && es() !== 'mobile'
                 ? ExtCardSectionEvaluator()
                 : null
             }
 
             {/* title and a brief description of each section. */}
-            {/* 'dd  removes height from text and cards*/}
-            <div className={`text_container ${display_extended_card ? 'dd' : ''}`}>
+            {/* NOT MOBILE:  'dd  removes height from text and cards*/}
+            <div className={
+                `text_container 
+                ${display_extended_card && es() !== 'mobile' ? 'dd' : ''}`}
+            >
                 <h2 className="text_title">{text_data.title}</h2>
                 {
                     es() !== 'mobile'
