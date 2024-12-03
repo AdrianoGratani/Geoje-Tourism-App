@@ -4,8 +4,6 @@ import "../ext_card_style.css";
 import Carousel from '../extended_card_carousel/Carousel';
 
 export default function ExtMainland({ 
-    // cards_data, 
-    // section, 
     currentlyClickedCardID
 }) {
     // let card_data_extracted = cards_data[currentlyClickedCardID];

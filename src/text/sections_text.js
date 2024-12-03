@@ -7,17 +7,21 @@ const sections_text = {
         title: "Geoje: Mainland",
         subtitle: `"Hike trails, seesight, panoramas, and much more..."`,
         text_1: `Use the Interactive Map to explore, or click the Card for more informations.`,
+        text_1m: `Push the icon, let's hike!`,
         
     },
     section_seaside: {
         title: "Geoje: Seaside",
         subtitle: `"all the most beautiful beaches of the archipelago..."`,
         text_1: `Use the Interactive Map to explore, or click the Card for more informations.`,
+        text_1m: `Push the icons, can't wait to swim!`,
+
     },
     section_islets: {
         title: "Geoje: Islets",
         subtitle: `"Enjoy a road trip in these hidden gems..."`,
         text_1: `Use the Interactive Map to explore, or click the Card for more informations.`,
+        text_1m: `Push the icons, explore these hidden gems!`,
     },
     section_food: {
         title: "",

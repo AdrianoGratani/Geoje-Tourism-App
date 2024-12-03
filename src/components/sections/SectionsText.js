@@ -79,7 +79,12 @@ export default function SectionsText({
                         ? <h3 className="text_subtitle">{text_data.subtitle}</h3>
                         : null
                 }
-                <p className="text_text">{text_data.text_1}</p>
+                <p className="text_text">
+                    {
+                        es() !== 'mobile' ? text_data.text_1 : text_data.text_1m
+                    }
+                    
+                    </p>
             </div>  
 
             
