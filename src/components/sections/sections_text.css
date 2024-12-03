@@ -7,10 +7,15 @@
     /* width: 70vw; */
     /* background-color: red; */
 }
+.dd{                
+    /* make text section disappear. */
+    height: 0px;
+    transition: height 0.5s ease-in-out;
+}
 
 .text_title {
-    height: 11vh;
-    font-size: var(--size_title);
+    font-size: 2rem;
+    padding: 15px;
     text-align: center;
     margin-top: var(--margin_small_h);
     margin-bottom: var(--margin_small_h);

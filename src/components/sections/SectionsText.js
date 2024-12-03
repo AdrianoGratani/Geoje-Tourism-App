@@ -70,7 +70,8 @@ export default function SectionsText({
             }
 
             {/* title and a brief description of each section. */}
-            <div className="text_container">
+            {/* 'dd  removes height from text and cards*/}
+            <div className={`text_container ${display_extended_card ? 'dd' : ''}`}>
                 <h2 className="text_title">{text_data.title}</h2>
                 {
                     es() !== 'mobile'
@@ -96,7 +97,7 @@ export default function SectionsText({
             {
                 // evaluate which screen user -> if mobile = NO CARDS
                 es() !== 'mobile'
-                ? <div className="cards_area_container">
+                ? <div className={`cards_area_container ${display_extended_card ? 'dd' : ''}`}>
                     {/* cards for each interesting point. useContext is used for making the map responsive with user interactions. */}
                     {
                     cards_data.map((c, i)=> (
