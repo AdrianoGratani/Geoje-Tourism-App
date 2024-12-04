@@ -76,7 +76,7 @@ export default function SectionsText({
                 <h2 className="text_title">{text_data.title}</h2>
                 {
                     es() !== 'mobile'
-                        ? <h3 className="text_subtitle">{text_data.subtitle}</h3>
+                        ? <h3 className="text_subtitle">{text_data.subtitle} </h3>
                         : null
                 }
                 <p className="text_text">
@@ -100,8 +100,8 @@ export default function SectionsText({
                      use the id stored in useState to set the color of the <path> of the city.
                      the specific <path> changes style, now is a orange-brown for Mailand, orange-red in Seaside, yellow in Islets
             */}
-            {
-                // evaluate which screen user -> if mobile = NO CARDS
+            { 
+                // evaluate which screen user -> if mobile = NO CARDS     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-----------------------------------------------------
                 es() !== 'mobile'
                 ? <div className={`cards_area_container ${display_extended_card ? 'dd' : ''}`}>
                     {/* cards for each interesting point. useContext is used for making the map responsive with user interactions. */}

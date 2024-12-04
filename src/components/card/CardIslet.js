@@ -77,7 +77,11 @@ export default function CardIslet({card_data}) {
                 <div className="icon_container_islets">
                     <GiIsland />
                 </div>
-                <div className="islets_text">
+                <div className="islets_text"
+                    style={{
+                        fontSize: islets_card_data_keys.n.length > 10 ? '0.9rem' : '1rem'
+                    }}
+                >
                     {islets_card_data_keys.n}
                 </div>
             </h1>

@@ -74,11 +74,6 @@ export default function ExtIslets({resetContextData, cards_data}) {
                     </div>
                 </div>
 
-                {/* picture carousel goes here */}
-                {/* picture_folder: "" */}
-                <div class="ext_card_text_container">
-                    <Carousel />
-                </div>
 
                 <div class="ext_card_islets_infos_container">
 

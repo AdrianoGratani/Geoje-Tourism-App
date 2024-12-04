@@ -72,7 +72,11 @@ export default function CardSeaside({ card_data }) {
                 <div className="icon_container_seaside">
                     <FaHouseTsunami class="icon_sea"/>
                 </div>
-                <div className="seaside_text">
+                <div className="seaside_text"
+                    style={{
+                        fontSize: seaside_card_data_keys.n.length > 10 ? '0.9rem' : '1rem'
+                    }}
+                >
                     {seaside_card_data_keys.n}
                 </div>
             </h1>

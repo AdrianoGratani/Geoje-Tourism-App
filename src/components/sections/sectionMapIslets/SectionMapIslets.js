@@ -89,12 +89,12 @@ export default function Section_map_islets() {
                     {/* {islet.id} */}
                         <SvgIslets
                             style={{
-                                width:  es()!=='mobile'? '2.5vw' : '5vw', 
-                                minWidth:  es()!=='mobile'? '2.5vw' : '5vw',
-                                maxWidth:  es()!=='mobile'? '2.5vw' : '5vw',
-                                height:  es()!=='mobile'? '2.5vw' : '5vw',
-                                minHeight:  es()!=='mobile'? '2.5vw' : '5vw',
-                                maxHeight:  es()!=='mobile'? '2.5vw' : '5vw',
+                                width:  es()!=='mobile'? '1.7vw' : '5vw', 
+                                minWidth:  es()!=='mobile'? '1.7vw' : '5vw',
+                                maxWidth:  es()!=='mobile'? '1.7vw' : '5vw',
+                                height:  es()!=='mobile'? '1.7vw' : '5vw',
+                                minHeight:  es()!=='mobile'? '1.7vw' : '5vw',
+                                maxHeight:  es()!=='mobile'? '1.7vw' : '5vw',
                                 margin: '3px',
                             }}
                         />

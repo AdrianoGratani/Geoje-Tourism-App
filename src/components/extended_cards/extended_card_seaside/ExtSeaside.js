@@ -58,10 +58,7 @@ export default function ExtSeaside({resetContextData, cards_data}) {
                 </div>
             </div>
 
-            {/* picture_folder: "" */}
-            <div class="ext_card_text_container">
-                    <Carousel />
-            </div>
+
 
             <div class="ext_card_seaside_infos_container">
                 <h1 className={`ext_card_description_title `}>
@@ -70,7 +67,7 @@ export default function ExtSeaside({resetContextData, cards_data}) {
                 </h1>
 
                 <div class="ext_card_infos_sand_container">
-                    <p class="ext_card_infos_sand">
+                    <p class="ext_card_infos_sand  ">
                     {card_data_for_ext_card.name} is sandy or rocky beach? {card_data_for_ext_card.sand}
                     </p>
                 </div>

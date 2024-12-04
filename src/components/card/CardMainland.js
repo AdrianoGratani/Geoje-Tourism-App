@@ -87,8 +87,13 @@ export default function CardMainland({card_data, id_index}) {
                 <div className="icon_container">
                     <FaMountain className="icon" />
                 </div>
-                <div className="mainland_text">
-                    {mainland_card_data_keys.n}
+                <div className="mainland_text"
+                    style={{
+                        fontSize: mainland_card_data_keys.n.length > 10 ? '0.9rem' : '1rem' 
+                    }}>
+                    {
+                    mainland_card_data_keys.n
+                    }
                     {/* debug */}
                     {/* {mainland_card_data_keys.id} */}
                 </div>

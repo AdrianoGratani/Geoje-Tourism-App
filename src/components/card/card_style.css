@@ -3,12 +3,12 @@
 .card_mainland_container {
     position: relative;
     font-family: var(--atkinson);
-    font-size: 2.5vh;
-    width: 14vw;
-    height: 11vh;
+    font-size: 2vh;
+    width: fit-content;
+    height: auto;
     border-radius: var(--radius_cards);
     background-color: var(--card_land);   
-    padding: var(--padding_xxxsmall);
+    padding: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,26 +50,26 @@
 
 .card_difficulty {
     display: flex;
-    font-size: 2.4vh; 
+    font-size: 2vh; 
     gap: 5px;
 }
 
 .card_length {
     display: flex;
-    font-size: 2.4vh; 
+    font-size: 2vh; 
     gap: 5px;
 }
 
 .card_duration {
     display: flex;
-    font-size: 2.4vh; 
+    font-size: 2vh; 
     gap: 5px;
 }
 
 .card_additional_infos {
     /* background-color: red; */
     display: flex;
-    font-size: 2.4vh;
+    font-size: 2vh;
     flex-direction: row;
     gap: 10px;
 }
@@ -78,17 +78,17 @@
 /*    SEASIDE    */
 .card_seaside_container {
     font-family: var(--atkinson);
-    font-size: 2.5vh;
-    width: 14vw;
-    height: 11vh;
+    font-size: 2vh;
+    width: fit-content;
+    height: auto;
     border-radius: var(--radius_cards);
     background-color: var(--card_sea);   
     /* background-color: red;    */
-    padding: var(--padding_xxxsmall);
+    padding: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 1vh;
     transition: background-color 1s, width 0.05s;
 }
 .card_seaside_container:hover {
@@ -117,32 +117,32 @@
     display: flex;
     display: flex;
     flex-direction: row;
-    gap: 10px; 
+    gap: 1px; 
     background-color:  hwb(56 13% 1% / 0.445);
  /* background-color: red; */
 }
 
 .card_name_seaside {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .card_sand {
     display: flex;
     font-size: 2.4vh;
-    gap: 10px;
+    gap: 5px;
 }
 
 .card_name_parking {
     display: flex;
     font-size: 2.4vh;
-    gap: 10px;
+    gap: 5px;
 }
 
 .card_name_cafes {
     display: flex;
     font-size: 2.4vh;
-    gap: 10px;
+    gap: 5px;
 }
 
 
@@ -150,19 +150,19 @@
     /* background-color: red; */
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 5px;
 }
 
 /* ISLETS */
 
 .card_islets_container {
     font-family: var(--atkinson);
-    font-size: 2.5vh;
-    width: 14vw;
-    height: 11vh;
+    font-size: 2vh;
+    width: fit-content;
+    height: auto;
     border-radius: var(--radius_cards);
     background-color: var(--card_islets);   
-    padding: var(--padding_xxxsmall);
+    padding: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;

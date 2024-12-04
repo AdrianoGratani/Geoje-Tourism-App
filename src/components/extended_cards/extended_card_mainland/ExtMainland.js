@@ -87,10 +87,6 @@ export default function ExtMainland({
                     </div>
                 </div>
 
-                {/* picture_folder: "" */}
-                <div class="ext_card_text_container">
-                        <Carousel />
-                </div>
 
                 <div class="ext_card_infos_container">
                 <h1 className="ext_card_description_title">

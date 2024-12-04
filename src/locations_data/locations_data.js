@@ -261,7 +261,7 @@ const locations_data = {
             picture_folder: "image_path.jpg"
         },
          {
-            name: "Jayeon-Hyuyangrim",
+            name: "Jayeon",
             s: 'm',
             subtitle:"The beatiful mountain of Geoje",
             description: "Jayeon-Hyuyangrim is another breathtaking mountain in Geoje's repertoire of natural beauty. Looking out over Geoje, you'll enjoy a 360° view from the top. The trailhead starts near Jayeon-Hyuyangrim Biwon (aka Secret Garden). Just a little further up the road from here you will see a place to park almost across the street from the start. ",

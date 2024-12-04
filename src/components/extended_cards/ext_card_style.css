@@ -39,33 +39,33 @@
     align-items: center;
 }
 .ext_card_title {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     text-align: center;
     color: rgb(0, 48, 12);
     padding: 5px;
 }
 .ext_card_infos_subtitle {
-    font-size: 2rem;
+    font-size: 2vw;
     text-align: center;
     color: rgb(92, 153, 107);
     padding: 5px;
 }
 .ext_card_infos_container p {
     font-family: var(--merryweather);
-    font-size: 1.1rem;
+    font-size: 1.2vw;
     color: rgb(0, 48, 12);
     margin-bottom: 3px;
 }
 
 /* infos islets */
 .ext_card_islets_title {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     color: hwb(212 2% 73%);
     text-align: center;
     padding-bottom: 10px;
 }
 .ext_card_islets_infos_subtitle {
-    font-size: 2rem;
+    font-size: 2vw;
     color: hwb(211 79% 3%);
     text-align: center;
     padding-bottom: 10px;
@@ -73,14 +73,14 @@
 
 .ext_card_islets_infos_container p {
     font-family: var(--merryweather);
-    font-size: 1.1rem;
+    font-size: 1.3vw;
     color: hwb(212 2% 73%);
     margin-bottom: 3px;
 }
 
 .ext_card_description_title {
     margin-top: var( --margin_small_h) ;
-    font-size: 1.2rem; 
+    font-size: 1vw; 
     background-color: white;
     width:fit-content;
     border-radius: 10px;
@@ -90,37 +90,31 @@
 .ext_card_islets_description_container p {
     color: hwb(212 2% 73%);
     font-weight: bold;
-    font-size: 1.2rem; 
+    font-size: 1vw; 
     line-height: 2.5rem;
 }
 
 /* seaside */
 
 .ext_card_seaside_title {
-    font-size:2.5rem;
+    font-size:2.5vw;
     color: hwb(9 1% 61%);
     text-align: center;
     padding-bottom: 10px;
 }
 .ext_card_seaside_infos_subtitle {
-    font-size: 2rem;
+    font-size: 2vw;
     color: hwb(8 28% 50%);
     text-align: center;
     padding-bottom: 10px;
 }
 .ext_card_seaside_infos_container p{
-    font-family: 1.1rem;
-    font-size: var(--size_ext_text);
+    font-family: var(--merryweather);
+    font-size: 1.4vw;
     color: hwb(9 1% 61%);
     margin-bottom: 3px;
 }
 
-.ext_card_sea_description_container p {
-    color: hwb(9 1% 61%);
-    font-weight: bold;
-    font-size: 1.2rem; 
-    line-height: 2.5rem;
-}
 
 .ext_card_islets_description_container p {
     color: hwb(212 2% 73%);
@@ -220,3 +214,5 @@
         height: 0%;
     }
 }
+
+
