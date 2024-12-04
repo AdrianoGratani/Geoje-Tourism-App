@@ -34,15 +34,14 @@ html {
     /* THIS margin affects the relation maps-icon */
     margin-left: var(--margin_small_w);
     font-size: var( --size_regular_big);
-    border-bottom: solid  transparent;
+    border-bottom: solid 1px  transparent;
     transition: border-bottom 0.7s, margin-right 2s;
     /* border box: ogni li element occupa solo lo spazio del suo testo */
-    
-
 }
-.menu_page_ul li:hover {
+
+.menu_page_ul li:nth-child(1):hover {
     /* margin-right: var(--margin_small_w); */
-    border-bottom:  solid 2px black;
+    border-bottom:  solid 1px black;
     cursor: pointer;
     transition: border-bottom 0.7s;
 }

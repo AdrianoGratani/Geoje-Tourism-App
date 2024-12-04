@@ -44,15 +44,7 @@ const MapItems = ({maps_triggered, setMaps_triggered}) => {
             <li className="item_container " onClick={()=>go_to_section("islets")}>
                 {ti[2]} Islets
             </li>
-            <li className="item_container " >
-                {ti[3]} Food
-             </li>
-            <li className="item_container " >
-                {ti[5]} Towns
-             </li>
-            <li className="item_container " >
-                {ti[4]} Infos
-             </li>
+          
         </div>
     )
 }

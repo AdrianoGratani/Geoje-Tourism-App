@@ -7,12 +7,14 @@ import MapsMenu from './navbar/MapsMenu';
 import { useScreenContext } from '../context/ScreenSizeContext';
 
 export default function MenuHeader() {
-    const [oo, setOo] = useState(false);
+    const {currentScreenWidthContext, screenMode} = useScreenContext();
     const n = useNavigate();   
-
     const hr = () => {
         n('/about');
     }
+
+    const [oo, setOo] = useState(false);
+    
 
     useEffect(()=> {
         if(oo) {
@@ -23,7 +25,6 @@ export default function MenuHeader() {
         }
         else return;
     }, [oo]);
-    const {currentScreenWidthContext, screenMode} = useScreenContext();
 
     return (
         <div className="menu_page_header">
@@ -36,7 +37,7 @@ export default function MenuHeader() {
                             // not on mobile version:
                             currentScreenWidthContext > 600 && screenMode !== 'mobile'
                                 ?
-                                <li className="">
+                                <li className="lii">
                                     <MapsMenu />
                                 </li>
                             : null

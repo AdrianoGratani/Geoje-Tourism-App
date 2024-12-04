@@ -5,6 +5,17 @@
     top: var(--margin_small_h);
     animation: item_compares 1s ease-in-out 1;
 }
+
+.map_items_container li:not(li:nth-child(1)) {
+    border-bottom: 1px black transparent;
+}
+
+.map_items_container li:not(li:nth-child(1)):hover {
+    border-bottom: 1px black solid;
+    cursor: pointer;
+}
+
+
 .map_items_container_hide {
     display: flex;
     position:absolute;

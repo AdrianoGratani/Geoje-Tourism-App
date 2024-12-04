@@ -39,8 +39,8 @@ export default function Hero ({hero_geoje_current_color}) {
                     
                     :   <span 
                         className={`hero_geoje  ${hero_geoje_current_color} `}>{
-                            currentScreenWidthContext > 600 && screenMode !== 'mobile' ?
-                            `Everything About Geoje. In one Place.` : "Geoje Tourism App"
+                            currentScreenWidthContext > 1200 && screenMode !== 'mobile' ?
+                            `Everything About Geoje. In one Place.` : "Explore Geoje, Now!"
                         }
                         </span>
                 }

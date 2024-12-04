@@ -8,6 +8,19 @@
     transition: height 2s ease-in-out;
 }
 
+    
+/* .anim {
+    position: absolute;
+    width: 20vw;
+    height: 30vh;
+    opacity: 0.4;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);   
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%); 
+} 
+*/
+
 .ext_card_text_container {
     /* background-color: red; */
     margin: 20px;

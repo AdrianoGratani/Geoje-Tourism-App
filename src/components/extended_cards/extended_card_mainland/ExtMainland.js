@@ -72,6 +72,8 @@ export default function ExtMainland({
         >
         {/* same layout for all sections. */}
 
+        {/* <div className='anim'></div> */}
+
             <div class={`ext_card_text_container ${newIcon_hovered ? "ext_card_title_appears" : ""}`}>
 
                 <div class="ext_card_title_container">
