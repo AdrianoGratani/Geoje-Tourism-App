@@ -89,6 +89,7 @@ export default function SectionMapSea() {
                                 left: es()!=='mobile' ? `${sea_location.left}vw`: `${ep(sea_location.id,sea_location.mleft)}vw`,
                                 width: 'fit-content',
                                 height: 'fit-content',
+                                transition: 'left 0.5s, top 0.5s'
                             }}
                             //  
                             className={ `s_icon_container 
@@ -119,7 +120,15 @@ export default function SectionMapSea() {
                                     {
                                         //  ...but only if the icon is clicked
                                         sea_location.id === cmi && cmi !== null
-                                        ? <SecTextMob /> 
+                                        ? 
+                                        <div> 
+                                        {
+                                            //  ...but only if the icon is clicked
+                                            sea_location.id === cmi && cmi !== null
+                                            ? <SecTextMob /> 
+                                            : null
+                                        }
+                                     </div> 
                                         : null
                                     }
                                  </div>

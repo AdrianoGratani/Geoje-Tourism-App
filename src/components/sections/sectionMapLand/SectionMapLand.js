@@ -87,6 +87,7 @@ export default function SectionMapLand() {
                                 left: es()!=='mobile' ? `${location.left}vw`: `${evalmp(location.mleft, location.id)}vw`,
                                 width: 'fit-content',
                                 height: 'fit-content',
+                                transition: 'left 0.5s, top 0.5s'
                             }}>
                          
                             <IconHike style={{

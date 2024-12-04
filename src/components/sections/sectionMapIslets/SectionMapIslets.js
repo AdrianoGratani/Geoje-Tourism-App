@@ -84,6 +84,7 @@ export default function Section_map_islets() {
                         position: 'absolute',
                         top:  es()!=='mobile' ? `${islet.top}vw` : `${p(islet.id, islet.mtop)}vw`,
                         left: es()!=='mobile' ? `${islet.left}vw`: `${p(islet.id, islet.mleft)}vw`,
+                        transition: 'left 0.5s, top 0.5s'
                     }}
                     >
                     {/* {islet.id} */}
@@ -102,7 +103,15 @@ export default function Section_map_islets() {
 {/* MOBILE CARDS: */}
                        {
                             es() === 'mobile' &&  islet.id===cmi
-                                ? <SecTextMob /> 
+                                ?
+                                <div> 
+                                {
+                                    //  ...but only if the icon is clicked
+                                    islet.id === cmi && cmi !== null
+                                    ? <SecTextMob /> 
+                                    : null
+                                }
+                             </div>
                                 : null
                        }
                     </div>
