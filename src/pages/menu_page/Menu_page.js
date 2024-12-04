@@ -2,6 +2,7 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import MenuHeader from '../../components/MenuHeader';
 import Hero from '../../components/Hero';
+import ApiWeather from '../../components/apiWeather/ApiWeather';
 import Sections from '../../components/sections/Sections';
 import FooterMain from "../../components/FooterMain";
 import "./menu_page.css";
@@ -39,8 +40,10 @@ export default function Menu_page() {
                         <MenuHeader/>
                 </header>
 
+
                 <main className="main">
                     <Hero hero_geoje_current_color={hero_geoje_current_color} />
+                    <ApiWeather /> 
                     <Sections />
                 </main>
             </MmenuctxProvider>
