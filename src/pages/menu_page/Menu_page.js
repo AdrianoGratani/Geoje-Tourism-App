@@ -43,8 +43,8 @@ export default function Menu_page() {
 
                 <main className="main">
                     <Hero hero_geoje_current_color={hero_geoje_current_color} />
-                    <ApiWeather /> 
                     <Sections />
+                    <ApiWeather /> 
                 </main>
             </MmenuctxProvider>
 

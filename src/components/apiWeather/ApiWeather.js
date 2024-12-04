@@ -98,28 +98,24 @@ export default function ApiWeather() {
             <p>
                 <div className="apii">
                     <GiSunCloud size="3vw" fill="#ffc300"/>
-
                 </div>
               {evalt('title', d.weather[0].main.toLowerCase())}
             </p>
             <p>
                 <div className="apii">
                     <GiPlantWatering size="3vw" fill="#0f4c81"/>
-
                 </div>
               {evalt('humidty', d.weather[0].humidity)}
             </p>
             <p>
                 <div className="apii">
                     <GiWindSlap size="3vw" fill="#1c1c3c"/>
-
                 </div>
               {evalt('wind', d.wind.speed)}
             </p>
             <p>
                 <div className="apii">
                     <GiThermometerCold size="3vw" fill="#f79d84"/>
-
                 </div>
                 The temperature is: {Math.floor(d.main.temp)} celsius: <br/> {evalt('temp', Math.floor(d.main.temp))}
             </p>
