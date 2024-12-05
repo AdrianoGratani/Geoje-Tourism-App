@@ -22,8 +22,8 @@ function App() {
 
           {/* in order to go to the menu, url has to switch to: http://localhost:3000/menu_page */}
             <Route path="/" element={
-                <CardContextProvider>
               <ScreenContextProvider>
+                <CardContextProvider>
 		<SpeedInsights />
 
                   <Menu_page/>
