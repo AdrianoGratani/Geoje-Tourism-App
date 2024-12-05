@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import { GiIsland } from "react-icons/gi";
 import { FaCarSide } from "react-icons/fa6";
 import { FaBridgeWater } from "react-icons/fa6";
+import { PiBowlFoodBold } from "react-icons/pi";
+import { MdOutlineBeachAccess } from "react-icons/md";
 
 // import the utility to USE the context useState data:
 import { useCardContext } from '../../context/CardContext';
@@ -30,7 +32,6 @@ export default function CardIslet({card_data}) {
         n : c.name,
         c : c.car,
         b : c.bridge,
-        // expanded card data.
         s : c.sand,
         e : c.eat,
     };
@@ -88,22 +89,58 @@ export default function CardIslet({card_data}) {
 
             {/* additional card infos take one line altogether. */}
             <div class="card_additional_infos">
-                <h4 className="card_name_bycar">
-                    <div className="icon_container_islets">
-                        <FaCarSide />
-                    </div>
-                    <div className="islets_text">
-                        {islets_card_data_keys.c}
-                    </div>
-                </h4>
-                <h4 className="card_name_bridge">
-                    <div className="icon_container_islets">
-                        <FaBridgeWater />
-                    </div>
-                    <div className="islets_text">
-                        {islets_card_data_keys.b}
-                    </div>
-                </h4>
+
+                {
+                    islets_card_data_keys.c === 'yes'
+                    ?
+                        <h4 className="card_name_bycar">
+                            <div className="icon_container_islets">
+                                <FaCarSide />
+                            </div>
+                            <div className="islets_text">
+                            </div>
+                        </h4>
+                    : null
+                
+                }
+
+                {
+                    islets_card_data_keys.b === 'yes'
+                    ?
+                        <h4 className="card_name_bridge">
+                            <div className="icon_container_islets">
+                                <FaBridgeWater />
+                            </div>
+                            <div className="islets_text">
+                            </div>
+                        </h4>
+                    : null
+                }
+                {
+                    islets_card_data_keys.e === 'yes'
+                    ?
+                        <h4 className="card_name_bridge">
+                            <div className="icon_container_islets">
+                                <PiBowlFoodBold />
+                            </div>
+                            <div className="islets_text">
+                            </div>
+                        </h4>
+                    : null
+                }
+                {
+                    islets_card_data_keys.s === 'yes'
+                    ?
+                        <h4 className="card_name_bridge">
+                            <div className="icon_container_islets">
+                                <MdOutlineBeachAccess />
+                            </div>
+                            <div className="islets_text">
+                            </div>
+                        </h4>
+                    : null
+                }
+
             </div>
         </div>
     )

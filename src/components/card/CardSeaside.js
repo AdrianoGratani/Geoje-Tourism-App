@@ -68,6 +68,7 @@ export default function CardSeaside({ card_data }) {
             onClick={()=> handle_context_seaside_clicked_card_(card_data.id)}
             >
             {/* name takes a full line. */}
+           
             <h1 className="card_name_seaside">
                 <div className="icon_container_seaside">
                     <FaHouseTsunami class="icon_sea"/>
@@ -84,32 +85,48 @@ export default function CardSeaside({ card_data }) {
              {/* additional card infos take one line altogether. */}
             <div class="card_additional_infos_sea">
 
-                <h4 className="card_sand">
-                    <div className="icon_container_seaside">
-                        <FaUmbrellaBeach class="icon_sea"/>     
-                    </div>
-                    <div className="seaside_text">
-                        {seaside_card_data_keys.s}
-                    </div>
-                </h4>
+                {
+                    seaside_card_data_keys.s === "yes"
+                    ? 
+                    <h4 className="card_sand">
+                        <div className="icon_container_seaside">
+                            <FaUmbrellaBeach class="icon_sea"/>     
+                        </div>
+                        <div className="seaside_text">
+                          
+                        </div>
+                   </h4>
+                    : null
+                }    
+               
 
-                <h4 className="card_name_parking">
-                    <div className="icon_container_seaside">
-                        <FaCaravan class="icon_sea"/>
-                    </div>
-                    <div className="seaside_text">
-                        {seaside_card_data_keys.p}
-                    </div>
-                </h4>
+                {
+                    seaside_card_data_keys.p === 'yes'
+                    ?
+                        <h4 className="card_name_parking">
+                            <div className="icon_container_seaside">
+                                <FaCaravan class="icon_sea"/>
+                            </div>
+                            <div className="seaside_text">
+                            </div>
+                        </h4>
+                    : null
+
+                }
                 
-                <h4 className="card_name_cafes">
-                    <div className="icon_container_seaside">
-                        <FaGlassWaterDroplet class="icon_sea"/>
-                    </div>
-                    <div className="seaside_text">
-                        {seaside_card_data_keys.c}
-                    </div>
-                </h4>
+                {
+                    seaside_card_data_keys.c === 'yes'
+                    ?
+                        <h4 className="card_name_cafes">
+                            <div className="icon_container_seaside">
+                                <FaGlassWaterDroplet class="icon_sea"/>
+                            </div>
+                            <div className="seaside_text">
+                            </div>
+                        </h4>
+                    :   null
+                
+                }
              </div>
             
         </div>
