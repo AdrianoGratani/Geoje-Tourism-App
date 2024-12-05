@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { useCardContext } from '../../../context/CardContext';
 import { useScreenContext } from '../../../context/ScreenSizeContext';
 import {ReactComponent as GeojeLand} from "../../../img/geoje_land.svg";
@@ -11,13 +12,14 @@ import SecTextMob from '../SecTextMob';
 export default function SectionMapLand() {
     // render differnt svg for mobile
     const {es} = useScreenContext();
-
+    
     const { 
-        cmi, setCmi, setMc,
+        cmi, setCmi, setMc, cci, setCci,
         resetContextData,
         setToggle_animation,
+        currentlyHoveredIconCard,
         setCurrentlyHoveredIcon, 
-        currentlyHoveredCard,
+        currentlyHoveredCard, 
         setCardIsClicked,
         setCurrentlyVisitedSection,
         setClickedIcon,
@@ -40,11 +42,16 @@ export default function SectionMapLand() {
     function triggerExtCard(id, l) {                       // SAME FUNCTION FOR MOBILE AND DESKTOP
         if(es()=='mobile') {    // set which mobile card must appear and give it data.
             setCmi(id);
-            setMc(l); 
+            setMc(l);
+
+            if(cci!==null) setCci(null);  // you clicked an icon? it means the card is already displayed.
+                                         // which means you clicked AGAIN. so delete the context cci to update the icon style to default.
+            if(cci===null) setCci(id);
+
             return;               
         }  
             setToggle_animation(false);
-            setCurrentlyHoveredIcon(null);
+            // setCurrentlyHoveredIcon(null);
 
     }
 
@@ -73,10 +80,17 @@ export default function SectionMapLand() {
                 {                                                               // ICONS SVG
                     locations_data.mainland.map((location) => (
                         <div 
-                        class={`m_icon_container ${currentlyHoveredCard === location.id
+                        class={`m_icon_container 
+                                ${es() !== 'mobile' && currentlyHoveredCard === location.id 
                                                     ? "m_icon_effect"
                                                     : ""    
-                                                    }`} 
+                                                    }
+                                                    
+                                ${ es() === 'mobile' && cci === location.id   // for mobile
+                                                    ? "m_icon_effect"
+                                                    : ""    
+                                                    }
+                                `} 
                         onMouseEnter={()=>send_icon_id_to_context(location.id, location)}
                         onMouseLeave={()=>remove_icon_id_from_context()}
                         onClick={()=> triggerExtCard(location.id, location)}  // both desktop and mobile

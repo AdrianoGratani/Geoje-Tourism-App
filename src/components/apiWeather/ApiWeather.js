@@ -45,7 +45,7 @@ export default function ApiWeather() {
         }
         
         if(es()!== 'mobile') {
-            // f();
+            f();
         }
     }, []);  
     

@@ -14,7 +14,7 @@ export default function Section_map_islets() {
 
     // CONTEXT DATA for icon layout - card layout interactions:
     const {
-        cmi, setCmi, setMc,
+        cmi, setCmi, setMc, cci, setCci,
         resetContextData,
         setToggle_animation,
         setCurrentlyHoveredIcon, 
@@ -39,6 +39,9 @@ export default function Section_map_islets() {
             if(es()==='mobile') {
                 setCmi(i);
                 setMc(d);
+
+                if(cci!==null) setCci(null);
+                else setCci(i);
                 return;
             }
             setToggle_animation(false);
@@ -70,13 +73,21 @@ export default function Section_map_islets() {
             {
                 icons_islets_data.map((islet)=> (
 
-                    <div 
-                    className={`is_icon_container ${currentlyHoveredCard === islet.id
+                    <div className={
+                        // 1. for desktop    2. for mobile
+                        `is_icon_container ${currentlyHoveredCard === islet.id
                                                     ? "is_icon_effect"
                                                     : ""                                
-                    }`}
+                    }
+                    ${es()==='mobile' && cci === islet.id
+                        ? "is_icon_effect"
+                        : ""                                
+}
+                    `}
 
                     onMouseEnter={()=> send_icon_id_to_context(islet.id, islet)}
+
+                    // FOR BOTH DESKTOP AND MOBILE MAP ICONS!
                     onClick={()=> triggerExtCard(islet.id, islet)}
                     style={{
                         width: 'fit-content',

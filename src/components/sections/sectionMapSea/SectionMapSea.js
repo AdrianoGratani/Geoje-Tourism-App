@@ -16,7 +16,7 @@ export default function SectionMapSea() {
     // CONTEXT DATA
     const {
                 // data for icon/card events:
-                cmi, setCmi, setMc,
+                cmi, setCmi, setMc, cci, setCci,
                 resetContextData,
                 setToggle_animation,
                 setCurrentlyHoveredIcon, 
@@ -43,6 +43,11 @@ export default function SectionMapSea() {
         if(es()=='mobile') {    
             setCmi(iid);         // id is used for making the card appearing/disappearing card
             setMc(ii);           // ctx now has the data of the pushed icon and sectextmpb will use this data;
+            
+            // you clicked an icon? it means the card is already displayed.
+            // which means you clicked AGAIN. so delete the context cci to update the icon style to default.
+            if(cci!==null) setCci(null)  // already open: delete data -> the icon turnswhite again
+            else setCci(iid)   // no icon previously clicked = no card is already open -> put clicked icon id in cci
             return;               
         }  
         setToggle_animation(false);
@@ -91,9 +96,14 @@ export default function SectionMapSea() {
                                 height: 'fit-content',
                                 transition: 'left 0.5s, top 0.5s'
                             }}
-                            //  
+                            // 1 for desktop.    2 for mobile.
                             className={ `s_icon_container 
                                         ${currentlyHoveredCard === sea_location.id
+                                          ? "seaside_hovered_card_icon_effect"
+                                          : ""
+                                        }
+                                        
+                                        ${es()==='mobile' && cci===sea_location.id
                                           ? "seaside_hovered_card_icon_effect"
                                           : ""
                                         }`

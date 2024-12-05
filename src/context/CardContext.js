@@ -14,6 +14,7 @@ export const  CardContextProvider = ( {children} ) => {                         
     // which is this data.
     const [cmi, setCmi] = useState(null);  // which mobile map icon is clicked
     const [mc, setMc] = useState(null);   // data for mobile cards;
+    const [cci, setCci] = useState(null); // mobile: for card container style;
     const [cardIsClicked, setCardIsClicked] = useState(false);               
     const [currentlyVisitedSection, setCurrentlyVisitedSection] = useState(null);         
     const [currentlyClickedCardID, setCurrentlyClickedCardID] = useState(null);    
@@ -40,6 +41,7 @@ export const  CardContextProvider = ( {children} ) => {                         
         <CardContext.Provider value={{ 
             cmi, setCmi,
             mc, setMc,
+            cci, setCci,
             cardIsClicked, setCardIsClicked, 
             currentlyVisitedSection, setCurrentlyVisitedSection,
             currentlyClickedCardID, setCurrentlyClickedCardID,
