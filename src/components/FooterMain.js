@@ -123,12 +123,22 @@ export default function FooterMain() {
                     <div className="footer_form_container">
 
                         <form class="footer_form">
-                            <placeholder class="placeholder_name" id="name"></placeholder>
-                            <input  type="text" id="name" class="input_name" />
-                            <placeholder class="placeholder_mail" id="email"></placeholder>
-                            <input input="email" id="email" class="input_name"/>
+                            <div>
+                                <placeholder class="placeholder_name" id="name">Your Name: </placeholder>
+                                <input  type="text" id="name" class="input_name" />
+                            </div>
+                                <br/> 
+                            <div>
+                                <placeholder class="placeholder_mail" id="email">Your Email: </placeholder>
+                                <input type="email" id="email" class="input_name" />
+                            </div>
+                            <div>
+                                <textarea placeholder="Type here" />
+                            </div>
                         </form>
-                        <button class="footer_button">Send</button>
+                        <div class="footer_button_container">
+                            <button class="footer_button">Send Email</button>
+                        </div>
                     </div>
                 </div>
 
