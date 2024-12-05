@@ -40,9 +40,15 @@ export default function Section_map_islets() {
                 setCmi(i);
                 setMc(d);
 
-                if(cci!==null) setCci(null);
+                if(cci!==null) { 
+                    if(cci === i) {
+                        setCci(null);
+                    }
+                    else if(cci !== i) {
+                        setCci(i);
+                    }
+                }
                 else setCci(i);
-                return;
             }
             setToggle_animation(false);
             setCurrentlyHoveredIcon(null);

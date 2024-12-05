@@ -46,9 +46,15 @@ export default function SectionMapSea() {
             
             // you clicked an icon? it means the card is already displayed.
             // which means you clicked AGAIN. so delete the context cci to update the icon style to default.
-            if(cci!==null) setCci(null)  // already open: delete data -> the icon turnswhite again
-            else setCci(iid)   // no icon previously clicked = no card is already open -> put clicked icon id in cci
-            return;               
+            if(cci!==null) { 
+                if(cci === iid) {
+                    setCci(null);
+                }
+                else if(cci !== iid) {
+                    setCci(iid);
+                }
+            }
+            else setCci(iid);             
         }  
         setToggle_animation(false);
         setCurrentlyHoveredIcon(null);      

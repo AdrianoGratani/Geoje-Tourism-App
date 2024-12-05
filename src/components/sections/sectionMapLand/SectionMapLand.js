@@ -44,11 +44,19 @@ export default function SectionMapLand() {
             setCmi(id);
             setMc(l);
 
-            if(cci!==null) setCci(null);  // you clicked an icon? it means the card is already displayed.
-                                         // which means you clicked AGAIN. so delete the context cci to update the icon style to default.
-            if(cci===null) setCci(id);
-
-            return;               
+            // check if the id stored is different from the current clicked icon id
+            // you clicked an icon? it means the card is already displayed.
+            // which means you clicked AGAIN. so delete the context cci to update the icon style to default.
+           
+            if(cci!==null) { 
+                if(cci === id) {
+                    setCci(null);
+                }
+                else if(cci !== id) {
+                    setCci(id);
+                }
+            }
+            else setCci(id);
         }  
             setToggle_animation(false);
             // setCurrentlyHoveredIcon(null);
