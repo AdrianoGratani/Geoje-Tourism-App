@@ -1,7 +1,19 @@
+// LOCATION CARDS FOR MOBILE VERSION
+
 import React from 'react';
 import {useState , useEffect  } from 'react';
 import { useCardContext } from '../../context/CardContext';
 import "./sectextmob.css";
+// mobile card icons 
+import {GiMountainRoad} from 'react-icons/gi'
+import { GiStrong } from 'react-icons/gi';
+import { GiMountaintop } from 'react-icons/gi';
+import {BsArrowUpRight} from 'react-icons/bs';
+import {PiClockCounterClockwiseBold} from 'react-icons/pi';
+import {TbBeach} from "react-icons/tb";
+import {FaParking} from "react-icons/fa";
+import {GrCafeteria} from "react-icons/gr";
+import { GiCableStayedBridge } from 'react-icons/gi';
 
 export default function SecTextMob() {
 
@@ -53,16 +65,28 @@ export default function SecTextMob() {
                     noText ? "" :
                     <div>
                         <h1 class={`stmc ${c ? 'remt' : ''}`}
+                        style={{color: 'white'}}
                         >{mc.name}</h1>
-                        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                            <p className={`stmc ${c ? 'remt' : ''}`}>{mc.height}</p>
-                            <p className={`stmc ${c ? 'remt' : ''}`}>{mc.difficulty}</p>
-                            <p className={`stmc ${c ? 'remt' : ''}`}>{mc.length}</p>
-                            <p className={`stmc ${c ? 'remt' : ''}`}>{mc.steepness}</p>
-                            <p className={`stmc ${c ? 'remt' : ''}`}>{mc.duration}</p>
+                        <div className="stcinfos"
+                         >
+                            <p className={`stmc ${c ? 'remt' : ''}`}>
+                                <GiMountaintop/>{mc.height}
+                            </p>
+                            <p className={`stmc ${c ? 'remt' : ''}`}>
+                                <GiStrong/>{mc.difficulty}
+                            </p>
+                            <p className={`stmc ${c ? 'remt' : ''}`}>
+                                <GiMountainRoad/>{mc.length}
+                            </p>
+                            <p className={`stmc ${c ? 'remt' : ''}`}>
+                                <BsArrowUpRight/>{mc.steepness}
+                            </p>
+                            <p className={`stmc ${c ? 'remt' : ''}`}>
+                                <PiClockCounterClockwiseBold/>{mc.duration}
+                            </p>
                         </div>
                         <div className={`stmc ${c ? 'remt' : ''}`}>
-                            <p className={mc.description.length > 200? "mpm" : "mpp"}>{mc.description}</p>
+                            <p className={mc.description.length > 200? "mpm" : "mpp"}>Description: {mc.description}</p>
                         </div>
                     </div>
                 }
@@ -70,7 +94,7 @@ export default function SecTextMob() {
                 </div>
               )
         };
-        case 's': {      
+        case 's': {      // SEASIDE CARD  
             return (
                 <div className={`stmc ${c ? 'rem' : ''}`} onClick={()=> setC(1)}
                 style={{display: 'flex', flexDirection: 'column', gap: '10px'}}
@@ -80,14 +104,21 @@ export default function SecTextMob() {
                     noText ? "" :
                     <div>
                         <h1 className={`stmc ${c ? 'remt' : ''}`}
+                        style={{color: 'lightblue'}}
                         >{mc.name}</h1>
-                        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                        <p className={`stmc ${c ? 'remt' : ''}`}>{mc.sand}</p>
-                            <p className={`stmc ${c ? 'remt' : ''}`}>{mc.parking}</p>
-                            <p className={`stmc ${c ? 'remt' : ''}`}>{mc.cafes}</p>
+                        <div className="stcinfos">
+                            <p className={`stmc ${c ? 'remt' : ''}`}>
+                                <TbBeach/> {mc.sand} 
+                            </p>
+                            <p className={`stmc ${c ? 'remt' : ''}`}>
+                                <FaParking/>{mc.parking}
+                            </p>
+                            <p className={`stmc ${c ? 'remt' : ''}`}>
+                                <GrCafeteria/> {mc.cafes}
+                            </p>
                         </div>
                         <div className={`stmc ${c ? 'remt' : ''}`}>
-                            <p className={mc.description.length > 200? "mpm" : "mpp"}>{mc.description}</p>
+                            <p className={mc.description.length > 200? "mpm" : "mpp"}>Description: {mc.description}</p>
                         </div>
                     </div>
                 }
@@ -96,21 +127,29 @@ export default function SecTextMob() {
               )
         };
 
-        case 'i': {      
+        case 'i': {     // ISLET CARD
             return (
                 <div className={`stmc ${c ? 'remt' : ''}`} onClick={()=> setC(1)}
                 style={{display: 'flex', flexDirection: 'column', gap: '10px'}}
                 >
                     <h1 className={`stmc ${c ? 'remt' : ''}`}
                     >{mc.name}</h1>
-                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                        <p className={`stmc ${c ? 'remt' : ''}`}>{mc.sand}</p>
-                        <p className={`stmc ${c ? 'remt' : ''}`}>{mc.car}</p>
-                        <p className={`stmc ${c ? 'remt' : ''}`}>{mc.eat}</p>
-                        <p className={`stmc ${c ? 'remt' : ''}`}>{mc.bridge}</p>
+                     <div className="stcinfos" style={{color:'black'}}>
+                        <p className={`stmc ${c ? 'remt' : ''}`}>
+                            <TbBeach/> {mc.sand}
+                        </p>
+                        <p className={`stmc ${c ? 'remt' : ''}`}>
+                            <FaParking/> {mc.car}
+                        </p>
+                        <p className={`stmc ${c ? 'remt' : ''}`}>
+                            <GrCafeteria/>{mc.eat}
+                        </p>
+                        <p className={`stmc ${c ? 'remt' : ''}`}>
+                            <GiCableStayedBridge/>{mc.bridge}
+                        </p>
                     </div>
                     <div className={`stmc ${c ? 'remt' : ''}`}>
-                            <p className={mc.description.length > 200? "mpm" : "mpp"}>{mc.description}</p>
+                            <p className={mc.description.length > 200? "mpm" : "mpp"}>Description: {mc.description}</p>
                     </div>
                 </div>
               )
