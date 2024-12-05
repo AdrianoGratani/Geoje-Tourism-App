@@ -16,15 +16,16 @@ function App() {
   return (
     <Router>
       <Routes>
-	<SpeedInsights />
 
         {/* when the website is accessed, the main page is the Body component.
         url of landing page is: http://localhost:3000/(on local) */}
 
           {/* in order to go to the menu, url has to switch to: http://localhost:3000/menu_page */}
             <Route path="/" element={
-              <ScreenContextProvider>
                 <CardContextProvider>
+              <ScreenContextProvider>
+		<SpeedInsights />
+
                   <Menu_page/>
               </CardContextProvider>
               </ScreenContextProvider>
