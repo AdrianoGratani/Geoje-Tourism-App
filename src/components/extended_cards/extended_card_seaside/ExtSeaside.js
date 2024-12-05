@@ -34,13 +34,26 @@ export default function ExtSeaside({resetContextData, cards_data}) {
         }, 1000)
     }
 
+    const [re, setRe] = useState(0);
+    const [ca, setCa] = useState(0);
+    
+    function er() {            // return text about restaurants
+        setRe(Math.floor(Math.random() * 10));
+        setCa(Math.floor(Math.random() * 10));
+    }
+    useEffect(()=> {
+        er();
+    }, []);
     const [newIcon_hovered, setNewIcon_hovered] = useState(false);
     useEffect(()=> {
+        er();                                                   // refresh resto and cafe data
         setNewIcon_hovered(true);
         setTimeout(()=> {
             setNewIcon_hovered(false);
         }, 200) 
     } , [currentlyHoveredIcon]);
+
+
     
     return (
         <div class={`ext_sea_card_container ext_sea_card_container_appears ${extended_card_toggled === false ? "ext_sea_card_container_fades" : ""}`} 
@@ -68,17 +81,31 @@ export default function ExtSeaside({resetContextData, cards_data}) {
 
                 <div class="ext_card_infos_sand_container">
                     <p class="ext_card_infos_sand  ">
-                    {card_data_for_ext_card.name} is sandy or rocky beach? {card_data_for_ext_card.sand}
+                    {card_data_for_ext_card.name} is sandy or rocky beach? {
+                        
+                        card_data_for_ext_card.sand 
+                        ? "It's a sandy beach."
+                        : "It's a rocky beach."
+                    }
                     </p>
                 </div>
                 <div class="ext_card_infos_car_container">
                     <p class="ext_card_infos_car">
-                    Car Parking is available? {card_data_for_ext_card.parking}
+                    Car Parking is available? {
+                    card_data_for_ext_card.parking === 'yes' 
+                    ? "Parking is available."
+                    : "Parking is not available"
+                    }
                     </p>
                 </div>
                 <div class="ext_card_infos_eat_container">
                     <p class="ext_card_infos_eat">
-                    Are there restaurants nearby? {card_data_for_ext_card.cafes}
+                    Are there restaurants nearby? {
+                    card_data_for_ext_card.cafes === 'yes'
+                    // generate restaurant number
+                    ?  `There are ${re} restaurants, and ${ca} cafes nearby.`
+                    :  "There are no restaurants nearby."
+                    }
                     </p>
                 </div>
                 

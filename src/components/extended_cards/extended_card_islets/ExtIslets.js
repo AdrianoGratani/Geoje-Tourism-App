@@ -53,6 +53,17 @@ export default function ExtIslets({resetContextData, cards_data}) {
         }, 200) 
     } , [currentlyHoveredIcon]);
 
+
+    const [cr, setCr] = useState(0);
+    const [l, setL] = useState(0);
+    function rt() {                 // random text generator;
+        setL(`You drive along the island for ${Math.floor(Math.random() * 10)} km.`);
+        setCr(`There are ${Math.floor(Math.random() * 10)} and ${Math.floor(Math.random() * 10)} cafes in this Island.`);
+    }
+    useEffect(()=> {
+        rt();
+    },[currentlyHoveredIcon]);
+
     return (
         
         <div id="ext_islet_card_container" 
@@ -82,23 +93,39 @@ export default function ExtIslets({resetContextData, cards_data}) {
                     </h1>
                     <div class="ext_card_infos_car_container">
                         <p class="ext_card_infos_car">
-                        Can I reach it by car? {card_data_for_ext_card.car}
+                        Can I reach it by car? {
+                        card_data_for_ext_card.car === "yes"
+                        ? `${l}`
+                        : "You can only reach this island by walk."
+                        }
                         </p>
                     </div>
                     <div class="ext_card_infos_sand_container">
                         <p class="ext_card_infos_sand">
-                        Can I swim in {card_data_for_ext_card.name}, or just hike? {card_data_for_ext_card.sand}
+                        Can I swim in {card_data_for_ext_card.name}, or just hike? {
+                        card_data_for_ext_card.sand === "yes"
+                        ? "There is sand, you can enjoy the beach."
+                        : "No, it's a rocky beach. Only hiking here!"
+                        }
                         </p>
                     </div>
                     <div class="ext_card_infos_eat_container">
                         <p class="ext_card_infos_eat">
-                        Are there any restaurants in {card_data_for_ext_card.name}? {card_data_for_ext_card.eat}
+                        Are there any restaurants in {card_data_for_ext_card.name}? {
+                        card_data_for_ext_card.eat === "yes"
+                        ? `${cr}`
+                        : "No, there are no restaurants, nor cafes."
+                        }
                         </p>
                     </div>
                     <div class="ext_card_infos_bridge_container">
                         <p class="ext_card_infos_bridge">
                         Is it reachable by bridge or by ferry?
-                        {card_data_for_ext_card.bridge}
+                        {
+                        card_data_for_ext_card.bridge === "yes"
+                        ? "There as a bridge."
+                        : "No, you can only reach the Island by ferry."
+                        }
                         </p>
                     </div>
 

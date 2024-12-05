@@ -1,10 +1,12 @@
+// you clicked 'explore now' in the header and you get here.
+
 import {React, useState, useEffect} from 'react';
 import "./mmenu.css";
 // usee mmmenu context to decide if this appears or not :
 import { useMmenuctx } from '../../context/mmenuctx';
 import { FaMountainSun } from "react-icons/fa6";
 import { FaUmbrellaBeach } from "react-icons/fa6";
-import { FaPagelines } from "react-icons/fa6";
+import {PiIslandBold} from "react-icons/pi";
 // import { FaFish } from "react-icons/fa6";
 // import { FaLandmarkDome } from "react-icons/fa6";
 // import { FaCity } from "react-icons/fa6";
@@ -17,12 +19,9 @@ export default function Mmenu() {
     const [x, setX]= useState(false); // if true: icons start appearing;
 
     const ic = [
-        <FaMountainSun className="mmii" />,
-        <FaUmbrellaBeach className="mmii" />,
-        <FaPagelines className="mmii" />,
-        // <FaFish className="header_icon item_food"/>,
-        // <FaLandmarkDome className="header_icon item_infos"/>,
-        // <FaCity className="header_icon item_cities"/>,
+        <FaMountainSun className="mmii" size="7vw"/>,
+        <FaUmbrellaBeach className="mmii" size="7vw"/>,
+        <PiIslandBold className="mmii" size="7vw"/>,
     ];
 
     function r(t) {       //reset icon data
@@ -33,10 +32,10 @@ export default function Mmenu() {
         }, t)
     }
 
-    const s =(ss) => {    // scroll after clicking the button;
+    const s =(ss) => {    // scroll after clicking the button;          id can be found in Sections.js
         let x = document.getElementById(ss);
         x.scrollIntoView({behavior: "smooth"});
-        r(300);
+        r(300);                                              // call after the interval the transition animation triggerer
     }
 
     useEffect(()=> {
