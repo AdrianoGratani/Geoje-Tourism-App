@@ -2,6 +2,7 @@ import './App.css';
 // website pages:
 import Menu_page from './pages/menu_page/Menu_page';
 import About from "./pages/about_me_page/About";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 // functionalites to perform routing: switch through pages:
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -15,6 +16,8 @@ function App() {
   return (
     <Router>
       <Routes>
+	<SpeedInsights />
+
         {/* when the website is accessed, the main page is the Body component.
         url of landing page is: http://localhost:3000/(on local) */}
 
