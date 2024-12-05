@@ -73,15 +73,24 @@ export default function FooterMain() {
 
             <div className="footer_header_container ">
                 <div className="footer_header_left">
-                    <div className="footer_header_logo_container im-fell-great-primer-regular">
-                         A | G
+                        <div className="footer_header_logo_container im-fell-great-primer-regular">
+                            A | G
+                        </div>
+                  
+                  {
+                    es() !== 'mobile'
+                    ?
+                    <div>
+                        <div className="footer_header_job_container">
+                            Adriano Gratani, <br /> FrontEnd Developer.
+                        </div>
+                        <div className="footer_header_address_container">
+                            Geoje, <br /> South Korea.
+                        </div>
                     </div>
-                    <div className="footer_header_job_container">
-                        Adriano Gratani, <br /> FrontEnd Developer.
-                    </div>
-                    <div className="footer_header_address_container">
-                        Geoje, <br /> South Korea.
-                    </div>
+
+                    : null
+                  }
                 </div>
 
                 {
@@ -117,18 +126,23 @@ export default function FooterMain() {
                         {
                             es() !== 'mobile' ? 
                             "Contact me for further discussion about Frontend development"
-                            : "Send me an e-mail:"
+                            
+                            : null
                         }
                     </div>
-                    <div className="footer_form_container">
+                    <div className="footer_form_cont">
 
                         <form class="footer_form">
-                            <div>
+                            <div class="inputt">
                                 <placeholder class="placeholder_name" id="name">Your Name: </placeholder>
                                 <input  type="text" id="name" class="input_name" />
                             </div>
-                                <br/> 
-                            <div>
+                              {
+                                es() !== 'mobile'
+                                ? <br/>
+                                :null
+                              }   
+                            <div class="inputt">
                                 <placeholder class="placeholder_mail" id="email">Your Email: </placeholder>
                                 <input type="email" id="email" class="input_name" />
                             </div>
@@ -137,7 +151,14 @@ export default function FooterMain() {
                             </div>
                         </form>
                         <div class="footer_button_container">
-                            <button class="footer_button">Send Email</button>
+                            <button class="footer_button">
+                                {
+                                    es() === 'mobile'
+                                    ? "Send"
+                                    : "Send Email"
+                                }
+                                
+                                </button>
                         </div>
                     </div>
                 </div>
