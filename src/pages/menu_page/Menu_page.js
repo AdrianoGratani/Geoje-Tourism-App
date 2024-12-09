@@ -5,6 +5,7 @@ import Hero from '../../components/Hero';
 import ApiWeather from '../../components/apiWeather/ApiWeather';
 import Sections from '../../components/sections/Sections';
 import FooterMain from "../../components/FooterMain";
+import ScrollTopBtn from "../../components/ScrollTopBtn";
 import "./menu_page.css";
 import "./svg.css";
 
@@ -35,6 +36,7 @@ export default function Menu_page() {
     return (
         <body className="body">
 
+            <ScrollTopBtn />
             <MmenuctxProvider>
                 <header>
                         <MenuHeader/>

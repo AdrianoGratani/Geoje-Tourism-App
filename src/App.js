@@ -3,6 +3,7 @@ import './App.css';
 import Menu_page from './pages/menu_page/Menu_page';
 import About from "./pages/about_me_page/About";
 import { SpeedInsights } from '@vercel/speed-insights/react';
+// scroll to top button:
 
 // functionalites to perform routing: switch through pages:
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
