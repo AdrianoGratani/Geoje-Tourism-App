@@ -170,9 +170,6 @@ export default function FooterMain() {
                             </h1>
                         <a href="#" class="link playfair-display_light">GitHub</a>
                         <a href="#" class="link playfair-display_light">LinkedIn</a>
-                        <a href="#" class="link playfair-display_light">Youtube</a>
-                        <a href="#" class="link playfair-display_light">CV</a>
-                        
                         {
                             es() !== 'mobile' 
                                 ? 
@@ -191,8 +188,6 @@ export default function FooterMain() {
                             
                             </h1>
                         <a href="#" class="link playfair-display_light">Mail</a>
-                        <a href="#" class="link playfair-display_light">Telephone</a>
-                        <a href="#" class="link playfair-display_light">Full Address</a>
                     </div>
                 </div>
             </div>
