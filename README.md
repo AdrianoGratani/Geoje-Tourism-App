@@ -1,4 +1,6 @@
-![screenshot]()
+![screenshot](./src/img/b.png)
+![screenshot](./src/img/a.png)
+![screenshot](./src/img/api.png)
 
 ## Visit my website at [this link](https://geoje-tourism-app.vercel.app/). 
 
