@@ -181,6 +181,9 @@ textarea:hover {
 .link {
   font-size: 0.9rem;
 }
+.link:hover {
+  cursor: pointer;
+}
 
 .footer_links_social_container, .footer_links_addresses_container {
   display: flex;
@@ -346,8 +349,6 @@ textarea {
     flex-direction:  column;
     margin-left: 2vw;
     gap: 1.8vh;
-  }
-  .footer_links_addresses_container {
   }
 
   .footer_signature_container {

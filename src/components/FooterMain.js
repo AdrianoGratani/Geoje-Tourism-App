@@ -1,101 +1,108 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import "./footer_main.css";
 
 //to change footer animation text, based on screen sizes:
 import { useScreenContext } from '../context/ScreenSizeContext';
+import { BsWindowSidebar } from 'react-icons/bs';
 
-function FooterTextAnimation({textIn, intrvl}) {
+function FooterTextAnimation({ textIn, intrvl }) {
 
-    const [currCharsDisplayed, setCurrCharsDisplayed ] = useState('');   
+    const [currCharsDisplayed, setCurrCharsDisplayed] = useState('');
     const [i, setI] = useState(0)
     const [rand, setRand] = useState(100 + Math.random() * 400);
 
-    useEffect(()=> {                                            // update the text every time the current Chars displayed increase/change
+    useEffect(() => {                                            // update the text every time the current Chars displayed increase/change
 
-            const interval = setInterval(()=> {        
+        const interval = setInterval(() => {
 
-                        setRand(                                       /// random set of interval
-                            Math.floor(50 + Math.random() * 300)
-                        )
+            setRand(                                       /// random set of interval
+                Math.floor(50 + Math.random() * 300)
+            )
 
-                        setCurrCharsDisplayed((prev) => {              /// show the next char
-                            if (prev.length >= textIn.length) {
-                                return '';
-                            } else {
-                                return prev += textIn[i]
-                            }
-                        });
+            setCurrCharsDisplayed((prev) => {              /// show the next char
+                if (prev.length >= textIn.length) {
+                    return '';
+                } else {
+                    return prev += textIn[i]
+                }
+            });
 
-                        setI( (prev) => {                            // update the char pointer to the next (or first)
-                            if (prev === textIn.length) {return prev-prev}
-                            else {return prev += 1}
-                        });
+            setI((prev) => {                            // update the char pointer to the next (or first)
+                if (prev === textIn.length) { return prev - prev }
+                else { return prev += 1 }
+            });
 
-                    }, rand);
+        }, rand);
 
-            return ()=> clearInterval(interval);  //to prevent weird effects;
-    },[ currCharsDisplayed])
+        return () => clearInterval(interval);  //to prevent weird effects;
+    }, [currCharsDisplayed])
 
 
     return (
-        <div  
+        <div
         // style={{ width: (rand) + 'px' }}
         >
             <div>
-            {currCharsDisplayed}
+                {currCharsDisplayed}
             </div>
         </div>
     )
 
-       
+
 }
 
 export default function FooterMain() {
     // if you don't desctructure context data as obj, it will return the whole obj.
-    const {screenMode, es} = useScreenContext();
-    const ev=(s)=> {
-        if (s==='large') {return "desktop"};
+    const { screenMode, es } = useScreenContext();
+    const ev = (s) => {
+        if (s === 'large') { return "desktop" };
         return s;
     }
 
-    let animStr = es() !== 'mobile' 
-        ? `  Welcome to the ${ev(screenMode)} version for my Website.        ` 
-        :  `  Welcome to my Mobile Website.        `;
+    let animStr = es() !== 'mobile'
+        ? `  Welcome to the ${ev(screenMode)} version for my Website.        `
+        : `  Welcome to my Mobile Website.        `;
+
+    const hm = () => {
+        window.location.href = 'mailto:example@example.com';
+    }
+
 
     return (
-// {/*  A PICTURE MAYBE?  */}
-// {/* https://ifonts.xyz/almarena-neue-font-family.html    for the animation */}
-// {/* https://fonnts.com/cotoris/   for the form description text  */}
-// {/* https://www.1001freefonts.com/bodoni.font   elegant. */}
+        // {/*  A PICTURE MAYBE?  */}
+        // {/* https://ifonts.xyz/almarena-neue-font-family.html    for the animation */}
+        // {/* https://fonnts.com/cotoris/   for the form description text  */}
+        // {/* https://www.1001freefonts.com/bodoni.font   elegant. */}
 
         <div className="footer_container playfair-display_it_light">
 
             <div className="footer_header_container ">
                 <div className="footer_header_left">
-                        <div className="footer_header_logo_container im-fell-great-primer-regular">
-                            A | G
-                        </div>
-                  
-                  {
-                    es() !== 'mobile'
-                    ?
-                    <div>
-                        <div className="footer_header_job_container">
-                            Adriano Gratani, <br /> FrontEnd Developer.
-                        </div>
-                        <div className="footer_header_address_container">
-                            Geoje, <br /> South Korea.
-                        </div>
+                    <div className="footer_header_logo_container im-fell-great-primer-regular">
+                        A | G
                     </div>
 
-                    : null
-                  }
+                    {
+                        es() !== 'mobile'
+                            ?
+                            <div>
+                                <div className="footer_header_job_container">
+                                    Adriano Gratani, <br /> FrontEnd Developer.
+                                </div>
+                                <div className="footer_header_address_container">
+                                    Geoje, <br /> South Korea.
+                                </div>
+                            </div>
+
+                            : null
+                    }
                 </div>
 
                 {
                     es() !== 'mobile'
-                    ?
+                        ?
                         <div className="footer_header_right playfair-display_light">
                             <div className="footer_header_aboutme link">
                                 <a href="#">My Journey</a>
@@ -107,114 +114,126 @@ export default function FooterMain() {
                                 <a href="#">My Code</a>
                             </div>
                         </div>
-                    
-                    :   null
+
+                        : null
                 }
 
             </div>
 
-            <div class="footer_animation_container playfair-display_light">
-                <div class="a">
+            <div className="footer_animation_container playfair-display_light">
+                <div className="a">
                     <FooterTextAnimation textIn={animStr} interval={1000} />
                 </div>
             </div>
-            
+
             <div className="footer_form_links_container">
-                
+
                 <div className="footer_form_container">
                     <div className="footer_form_description_container playfair-display_light">
                         {
-                            es() !== 'mobile' ? 
-                            "Contact me for further discussion about Frontend development"
-                            
-                            : null
+                            es() !== 'mobile' ?
+                                "Contact me for further discussion about Frontend development"
+
+                                : null
                         }
                     </div>
                     <div className="footer_form_cont">
 
-                        <form class="footer_form">
-                            <div class="inputt">
-                                <placeholder class="placeholder_name" id="name">Your Name: </placeholder>
-                                <input  type="text" id="name" class="input_name" />
+                        <form className="footer_form">
+                            <div className="inputt">
+                                <placeholder className="placeholder_name" id="name">Your Name: </placeholder>
+                                <input type="text" id="name" className="input_name" />
                             </div>
-                              {
+                            {
                                 es() !== 'mobile'
-                                ? <br/>
-                                :null
-                              }   
-                            <div class="inputt">
-                                <placeholder class="placeholder_mail" id="email">Your Email: </placeholder>
-                                <input type="email" id="email" class="input_name" />
+                                    ? <br />
+                                    : null
+                            }
+                            <div className="inputt">
+                                <placeholder className="placeholder_mail" id="email">Your Email: </placeholder>
+                                <input type="email" id="email" className="input_name" />
                             </div>
                             <div>
                                 <textarea placeholder="Type here" />
                             </div>
                         </form>
-                        <div class="footer_button_container">
-                            <button class="footer_button">
+                        <div className="footer_button_container">
+                            <button className="footer_button">
                                 {
                                     es() === 'mobile'
-                                    ? "Send"
-                                    : "Send Email"
+                                        ? "Send"
+                                        : "Send Email"
                                 }
-                                
-                                </button>
+
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <div className="footer_links_container">
                     <div className="footer_links_social_container">
-                        <h1 class="links_title ">
-                        <FooterTextAnimation textIn={"   My Links!    "} interval={1000} />
-                            </h1>
-                        <a href="#" class="link playfair-display_light">GitHub</a>
-                        <a href="#" class="link playfair-display_light">LinkedIn</a>
+                        <h1 className="links_title ">
+                            <FooterTextAnimation textIn={"   My Links!    "} interval={1000} />
+                        </h1>
+                        <a href="https://github.com/AdrianoGratani" className="link playfair-display_light">GitHub</a>
+                        <a href="https://www.linkedin.com/in/gratani" className="link playfair-display_light">LinkedIn</a>
                         {
-                            es() !== 'mobile' 
-                                ? 
-                                    <div className="footer_signature_container">
-                                        <div className="footer_signature playfair-display_light">
+                            es() !== 'mobile'
+                                ?
+                                <div className="footer_signature_container">
+                                    <div className="footer_signature playfair-display_light">
+                                        <a href="https://adrianogratani.vercel.app/">
                                             Adriano Gratani
-                                        </div>
+                                        </a>
                                     </div>
+                                </div>
 
                                 : null
                         }
                     </div>
                     <div className="footer_links_addresses_container">
-                        <h1 class="hello_title">
+                        <h1 className="hello_title">
                             <FooterTextAnimation textIn={"   _Say 'hello!'   "} interval={1000} />
-                            
-                            </h1>
-                        <a href="#" class="link playfair-display_light">Mail</a>
+
+                        </h1>
+
+                        <Link to="#" className="link playfair-display_light"
+                            onClick={(e) => {
+                                hm();
+                                e.preventDefault();
+                            }}
+                        >
+                            Mail
+                        </Link>
                     </div>
                 </div>
             </div>
 
             {
-                            es() === 'mobile'
+                es() === 'mobile'
 
-                                ? 
-                                    <div className="footer_signature_container">
-                                        <div className="footer_signature playfair-display_light">
-                                            Adriano Gratani
-                                        </div>
-                                    </div>
+                    ?
+                    <div className="footer_signature_container">
+                        <div className="footer_signature playfair-display_light">
+                            <a href="https://adrianogratani.vercel.app/">
+                                Adriano Gratani
+                            </a>
+                        </div>
+                    </div>
 
-                                : null
-                        }
+                    : null
+            }
 
             {
-                            es() !== 'mobile'
+                es() !== 'mobile'
 
-                                ? 
-                                    <div className="footer_footer_container">
-                                        <div>Copyright</div>
-                                        <div>Go to top</div>
-                                    </div>
+                    ?
+                    <div className="footer_footer_container">
+                        <div>Copyright</div>
+                        <div><a href="#">Go to top</a></div>
+                    </div>
 
-                                : null
+                    : null
             }
 
         </div>
