@@ -1,15 +1,16 @@
+- project description;
+- my skillset;
+- how to install this project locally;
+
+### Visit my website at [this link](https://geoje-tourism-app.vercel.app/). 
 ![screenshot](./src/img/b.jpg.png)
-![screenshot](./src/img/a.jpg.png)
-![screenshot](./src/img/api.png)
 
-
-## Visit my website at [this link](https://geoje-tourism-app.vercel.app/). 
-
-### Description for this project
+## Description for this project
 
 This is a full-responsive website, made to encourage tourism in Geoje (the small arcipelago in the South Gyeongsan province, South Korea) by providing the best spots to visit in a very fast, efficient, and user-friendly way. and it's 100% ideated, designed and coded by me, in JavaScript, using the React Library.
 
-### Desktop and mobile are very different: I warmly reccommend you to check both versions.
+## Desktop and mobile are very different: I warmly reccommend you to check both versions.
+![screenshot](./src/img/c.png)
 
 In the desktop version, the user is presented with an interactive map and cards for each location.
 The map has buttons for each location, which are connected with their location card, and vice-versa.
@@ -21,10 +22,23 @@ It provides the potential user/tourist with useful information about many locati
 It also gives very important informations in real time, such as the current weather, the humidity, the speed of the wind, etc...
 UI/UX principles have been taken into serious account, to provide informations in a fast, effective, and engaging way.
 
-### This project shows:
+![screenshot](./src/img/api.png)
+## This project shows:
 -  my knowledge of JavaScript: events, search algorithms and callback functions;
 -  my proficiency with the React library: many types of hooks like useContext, useRouter, useRef, useState and useEffect;
 -  my understanding of UI-UX principles and CSS @media ruleset to create responsiveness;
 -  my ability at creating simple but appealing animations with pure CSS;
 
 All my contacts can be found in the footer section. The text animation in this section is achieved with a basic setInterval() plus an empty useState array wich fetches chars from a preset string.
+
+
+## How to test this project on your pc:
+- [clone] this Github repository on your pc, using the Terminal CMD or Bash, or Shell:
+        git clone https://github.com/AdrianoGratani/Geoje-Tourism-App.git
+
+- now you can access the project in your pc:
+- install the [npm] packages via terminal:
+        npm install
+
+  and then:
+        npm start
