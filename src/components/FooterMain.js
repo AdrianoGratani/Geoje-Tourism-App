@@ -7,6 +7,8 @@ import "./footer_main.css";
 import { useScreenContext } from '../context/ScreenSizeContext';
 import { BsWindowSidebar } from 'react-icons/bs';
 
+import { Helmet } from 'react-helmet';
+
 function FooterTextAnimation({ textIn, intrvl }) {
 
     const [currCharsDisplayed, setCurrCharsDisplayed] = useState('');
@@ -77,7 +79,14 @@ export default function FooterMain() {
         // {/* https://www.1001freefonts.com/bodoni.font   elegant. */}
 
         <div className="footer_container playfair-display_it_light">
-
+             {
+                    window.scrollY > 2400 && 
+                    
+                        <Helmet>
+                            <title>Footer | ContactMe</title>
+                        </Helmet> 
+                    
+                }
             <div className="footer_header_container ">
                 <div className="footer_header_left">
                     <div className="footer_header_logo_container im-fell-great-primer-regular">

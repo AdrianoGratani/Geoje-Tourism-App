@@ -7,6 +7,7 @@ import { useScreenContext } from '../../../context/ScreenSizeContext';
 import locations_data from '../../../locations_data/locations_data';
 import SecTextMob from '../SecTextMob';
 import "./section_map_islets.css";
+import {Helmet} from "react-helmet";
 
 export default function Section_map_islets() {
     const icons_islets_data = locations_data.islets;                                                // data for icon positioning.
@@ -65,6 +66,14 @@ export default function Section_map_islets() {
             <div class="single_map_section_container_islets"
             onClick={()=> resetContextData()}
             >
+                {
+                    window.scrollY > 1400 && window.scrollY < 1900
+                    ? 
+                        <Helmet>
+                            <title>GeojExplorer | Islets</title>
+                        </Helmet> 
+                    :  null
+                }
                 {/* .geoje_islets_svg is JUST for original _colors_ */}
 
                 {

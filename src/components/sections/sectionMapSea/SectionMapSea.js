@@ -8,7 +8,9 @@ import {ReactComponent as IconSea} from "../../../img/beach.svg";
 // ext mobile card:
 import SecTextMob from '../SecTextMob';
 import "./section_map_sea.css";
+import { Helmet
 
+ } from 'react-helmet';
 export default function SectionMapSea() {
 
     const {es} = useScreenContext();
@@ -72,9 +74,21 @@ export default function SectionMapSea() {
 
     return (
             // {/* SVG MAP */}
+
             <div class="single_map_section_container_sea"
             onClick={()=> resetContextData()}
             >
+                {
+                    window.scrollY > 900 && window.scrollY < 1400
+                    ? 
+                        <Helmet>
+                            <title>GeojExplorer | Seaside</title>
+                        </Helmet>
+                    :
+                        null
+                }
+
+
                 {
                     es() !== 'mobile'
                     ?    <GeojeSea class="geoje_land_svg" style={{ 

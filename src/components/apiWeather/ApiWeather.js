@@ -8,6 +8,8 @@ import {GiSunCloud} from "react-icons/gi";
 import {GiPlantWatering} from "react-icons/gi";
 import {GiThermometerCold} from "react-icons/gi";
 
+import { Helmet } from "react-helmet";
+
 // https://api.openweathermap.org/data/2.5/weather?lat={lat}&long={lon}&appid={key}
 // 34.8833 N
 // 128.6167 E
@@ -94,6 +96,14 @@ export default function ApiWeather() {
 
     return (
         <div className="apic">
+             {
+                    window.scrollY > 1900 && window.scrollY < 2400
+                    ? 
+                        <Helmet>
+                            <title>Real-time Weather</title>
+                        </Helmet> 
+                    :  null
+                }
             <p>Some useful informations about the weather in Geoje today:</p>
             <p>
                 <div className="apii">
