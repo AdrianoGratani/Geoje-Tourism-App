@@ -7,6 +7,7 @@ import Cloud_one from '../../components/animated/clouds/Cloud_one';
 import { ScreenContextProvider } from '../../context/ScreenSizeContext';
 import { useNavigate } from 'react-router-dom';
 import { useScreenContext } from '../../context/ScreenSizeContext';
+import {Helmet} from "react-helmet";
 
 export default function About () {
 
@@ -29,6 +30,11 @@ export default function About () {
     return (
         <ScreenContextProvider>
             <div className={`abc ${o ? "d" : null}`}>
+                <Helmet>
+                    <title>
+                        About_Me
+                    </title>
+                </Helmet>
                 <Sun />
                 <Moon/>
                 <Cloud_one />
