@@ -9,6 +9,9 @@ import ScrollTopBtn from "../../components/ScrollTopBtn";
 import "./menu_page.css";
 import "./svg.css";
 
+// to set the tab title I use react=helmet, makes everything easier by sending data directly to the <head> of the HTML.
+import { Helmet } from 'react-helmet';
+
 // context data: click on a mobile button -> a menu compares:
 import { MmenuctxProvider } from '../../context/mmenuctx';
 
@@ -35,6 +38,7 @@ export default function Menu_page() {
 
     return (
         <body className="body">
+            {/* tab name setter: an react-helmet component */}
 
             <ScrollTopBtn />
             <MmenuctxProvider>
@@ -45,6 +49,7 @@ export default function Menu_page() {
 
                 <main className="main">
                     <Hero hero_geoje_current_color={hero_geoje_current_color} />
+
                     <Sections />
                     <ApiWeather /> 
                 </main>

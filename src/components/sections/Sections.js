@@ -8,7 +8,7 @@ import SectionsText from './SectionsText';
 import sections_text from '../../text/sections_text';
 // cards data:
 import locations_data from "../../../src/locations_data/locations_data";
-
+import { Helmet } from 'react-helmet';
 // cards NOT IN MOBILE VERSION
 
 import "./sections.css";
@@ -28,6 +28,9 @@ export default function Sections() {
     return (
         <div class="map_sections_container">
             <div id="land" className=" single_section_container s_land">
+            <Helmet>
+                GeojExplorer | Mainland
+            </Helmet>
                 {/* 2. it takes the State. SVG <path> of the hovered location (on Card) changes its color */}
                 <SectionMapLand />                                            
                 {/* 1. it takes the SetState. it sends this setState to Card. when Card is hovered, it sends a setState back to Section.  */}
