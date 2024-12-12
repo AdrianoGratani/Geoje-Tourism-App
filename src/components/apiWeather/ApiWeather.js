@@ -51,7 +51,7 @@ export default function ApiWeather() {
         }
     }, []);  
     
-    console.log(d);
+    // console.log(d);
     
     function evalt(s, d) {      //evaluate text based on 'd' apidata for different 's' sections
         if(s==='title') {

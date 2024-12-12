@@ -6,7 +6,7 @@ import ApiWeather from '../../components/apiWeather/ApiWeather';
 import Sections from '../../components/sections/Sections';
 import FooterMain from "../../components/FooterMain";
 import ScrollTopBtn from "../../components/ScrollTopBtn";
-import AppDescriptionOne from "../../components/appDescription/AppDescriptionOne";
+import AppDescriptionOne from "./appDescription/AppDescriptionOne.js";
 import "./menu_page.css";
 import "./svg.css";
 
@@ -50,8 +50,7 @@ export default function Menu_page() {
 
                 <main className="main">
                     <Hero hero_geoje_current_color={hero_geoje_current_color} />
-
-                    <AppDescriptionOne/>
+                    <AppDescriptionOne />
                     <Sections />
                     <ApiWeather /> 
                 </main>
