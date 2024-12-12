@@ -5,7 +5,7 @@ import React from 'react';
 import "./appDescriptionOne.css";
 import i from "./1.png";
 import ii from "./2.png";
-import iii from "./1.png"
+import iii from "./3.png"
 import {ScreenSizeContext, useScreenContext} from "../../../context/ScreenSizeContext";
 
 export default function AppDescriptionOne() {
