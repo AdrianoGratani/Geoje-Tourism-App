@@ -27,11 +27,10 @@ export default function AppDescriptionOne() {
                             </div>
                         </div>
                         <h5 className='st'>Maps</h5>
-                        <h2>
+                        <h2 className='stt'>
                             "EVERY spot at eyesight!"
                         </h2>
-                        <p>Imagine you want to go to the beach and you don't want to drive for long hours...
-                            let's find the closest location!
+                        <p className='sp' >Let's find the closest location!
                             Each map has different icons related to different locations.
                             Hover (on Desktop) or click (on Mobile) on of the Icons to access all
                             the informations you need about a specific place.
@@ -48,12 +47,11 @@ export default function AppDescriptionOne() {
                             </div>
                         </div>
                         <h5 className='st'>Cards</h5>
-                        <h2>"All the infos are here"</h2>
-                        <p>
-                            Is parking accessible? Kids can play safely?
-                            What about restaurant and cafes?
-                            See all the Icons in each Card? It's really THAT easy to know
-                            if you can park your car nearby, and which one is the best cafe around...
+                        <h2 className='stt'>"All the infos are here"</h2>
+                        <p className='sp' >
+                            See all the Icons in each Card? It's really THAT easy to get all the answers...
+                           "Is parking accessible? Kids can play safely?"
+                            "What about restaurant and cafes?"
                         </p>
                     </section>
                 </div>
@@ -67,8 +65,8 @@ export default function AppDescriptionOne() {
                             </div>
                         </div>
                         <h5 className='st'>Suggestions</h5>
-                        <h2>"Mh... It's raining... What should I do?"</h2>
-                        <p> Don't worry, we have all the answers for you!
+                        <h2 className='stt'>"Mh... It's raining... What should I do?"</h2>
+                        <p className='sp' > Don't worry, we have all the answers for you!
                             Thanks to the OpenWeatherAPI data, you have access to real-time situation in
                             the Island: based on the current weather it'll suggest you what to do, and where to go...
                             even what to wear!
