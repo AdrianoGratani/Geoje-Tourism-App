@@ -104,22 +104,28 @@ export default function ApiWeather() {
                         </Helmet> 
                     :  null
                 }
-            <p>Some useful informations about the weather in Geoje today:</p>
+            <p className="pt">
+                {
+                    es() !== 'mobile'
+                    ? "Some useful informations about the weather in Geoje today:"
+                    : "The Weather Today"
+                }
+            </p>
             <p>
                 <div className="apii">
-                    <GiSunCloud size="3vw" fill="#ffc300"/>
+                    <GiSunCloud size={`${es() !== 'mobile' ? '3vw' : '10vw'}`} fill="#ffc300"/>
                 </div>
               {evalt('title', d.weather[0].main.toLowerCase())}
             </p>
             <p>
                 <div className="apii">
-                    <GiPlantWatering size="3vw" fill="#0f4c81"/>
+                    <GiPlantWatering size={`${es() !== 'mobile' ? '3vw' : '10vw'}`} fill="#0f4c81"/>
                 </div>
               {evalt('humidty', d.weather[0].humidity)}
             </p>
             <p>
                 <div className="apii">
-                    <GiWindSlap size="3vw" fill="#1c1c3c"/>
+                    <GiWindSlap size={`${es() !== 'mobile' ? '3vw' : '10vw'}`} fill="#1c1c3c"/>
                 </div>
               {evalt('wind', d.wind.speed)}
             </p>
@@ -130,20 +136,20 @@ export default function ApiWeather() {
                 The temperature is: {Math.floor(d.main.temp)} celsius: <br/> {evalt('temp', Math.floor(d.main.temp))}
             </p>
 
-
-
-            <div className={`${es()==='mobile' ?  "" : ""} mount `}>
-            </div>
-            <div className={`${es()==='mobile' ?  "skw" : ""} msh`}></div>
-
-            <div className={`${es()==='mobile' ?  "" : ""} mount1`}></div>
-            <div className={`${es()==='mobile' ?  "skw" : ""} msh1`}></div>
-
-            <div className={`${es()==='mobile' ?  "" : ""} mount2`}></div>
-            <div className={`${es()==='mobile' ?  "skw" : ""} msh2`}></div>
-
-            <div className={`${es()==='mobile' ?  "" : ""} mount3`}></div>
-            <div className={`${es()==='mobile' ?  "skw" : ""} msh3`}></div>
+                    <div className="mo">
+                        <div className={`${es()==='mobile' ?  "" : ""} mount `}>
+                        </div>
+                        <div className={`${es()==='mobile' ?  "skw" : ""} msh`}></div>
+            
+                        <div className={`${es()==='mobile' ?  "" : ""} mount1`}></div>
+                        <div className={`${es()==='mobile' ?  "skw" : ""} msh1`}></div>
+            
+                        <div className={`${es()==='mobile' ?  "" : ""} mount2`}></div>
+                        <div className={`${es()==='mobile' ?  "skw" : ""} msh2`}></div>
+            
+                        <div className={`${es()==='mobile' ?  "" : ""} mount3`}></div>
+                        <div className={`${es()==='mobile' ?  "skw" : ""} msh3`}></div>
+                    </div>
 
         </div>
     )

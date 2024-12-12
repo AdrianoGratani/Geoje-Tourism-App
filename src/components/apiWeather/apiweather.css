@@ -155,5 +155,20 @@
 
 .skw{
     transform: skewX(3deg);
+}
 
+.mo {
+    opacity: .4;
+}
+
+@media screen and (max-width: 800px) {
+    .mo {
+        opacity: .2;
+    }
+    .apic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

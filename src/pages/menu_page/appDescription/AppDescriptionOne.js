@@ -3,9 +3,9 @@
 
 import React from 'react';
 import "./appDescriptionOne.css";
-import i from "./r1.png";
-import ii from "./ii.png";
-import iii from "./r2.png"
+import i from "./1.png";
+import ii from "./2.png";
+import iii from "./1.png"
 import {ScreenSizeContext, useScreenContext} from "../../../context/ScreenSizeContext";
 
 export default function AppDescriptionOne() {
@@ -13,16 +13,15 @@ export default function AppDescriptionOne() {
 
     return (
         <div className='c'>
-
             {
                 es() !== 'mobile' &&
                  <h5 className="p">The App Explained</h5>
             }
+
             <h1 className='t'>Are you ready for new Discoveries?</h1>
-            {/* three pictures and three explanation below with small subtitle */}
+            {/* three pictures and three explanation below, with small subtitleS FOR EACH */}
 
             <div className="sc">
-
                 {/* how to use the map: icons and ext map */}
                 <div className="se">
                     <section className='s'>
