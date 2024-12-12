@@ -1,5 +1,6 @@
 .c {
     /* background-color: red; */
+    margin-top: 6vw;
     background-color: rgba(6, 6, 215, 0.29);
     color: rgb(53, 12, 12);
     width: 100%;
@@ -30,6 +31,7 @@
 .stt {
     padding-bottom: .7vw;
     text-align: center;
+    color: hwb(0 5% 79% / 0.504);
 }
 
 .sc {
@@ -76,4 +78,50 @@
     padding-top: .5vw;
     font-size: .8rem;
     text-align: center;
+    color: hwb(0 5% 79% / 0.282);
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .t {
+        margin-top: 5vw;
+        font-size: 2.5rem;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .sc {
+        flex-direction: column;
+        margin-right: 8vw;
+        margin-left: 8vw;
+    }
+
+    .se {
+        margin-bottom: 8vw;
+    }
+
+    .p {
+        margin-top: 5vw;
+    }
+
+    .stt {
+        margin-top: 10vw;
+        margin-bottom: 5vw;
+    }
+
+    .ic {
+        width: 60vw;
+        height: auto;
+    }
+
+    .st {
+        margin-top: 2.5vw;
+    }
+
+    .sp {
+        margin-right: 10vw;
+        margin-left: 10vw;
+        font-size: 3.8vw;
+    }
 }
