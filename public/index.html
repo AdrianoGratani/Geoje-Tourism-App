@@ -16,6 +16,7 @@
     <meta property="og:image" content="https://geoje-tourism-app.vercel.app/og.png">
     
     <!-- TWITTER CARDS: -->
+    <meta name="twitter:creator" content="Adriano Gratani" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="| GeojExplorer - The Korean Tourism App|">
     <meta name="twitter:description" content="A responsive, frontend website for tourism in The Island Geoje, made in ReactJs. Search algorithms, advanced use of Javascript and CSS for animations: these are the skills I am trying to highligh.">
@@ -25,6 +26,14 @@
     <!-- https://orcascan.com/tools/open-graph-validator -->
     <!-- https://threadcreator.com/tools/twitter-card-validator  -->
 
+
+    <!-- security meta tags -->
+    <!-- <meta http-equiv="content-security-policy" content="default-src 'self';">  -->
+    <!-- default-src 'self': This directive tells the browser that, by default, it is only allowed to load resources from the same origin (the same domain) as the website. 'self' is a keyword that refers to the same origin. -->
+
+    <!-- preload fonts: -->
+    <!-- just in case you'll upload fonts as files not as @fontfaces -->
+    <!-- <link rel="preload" href="/fonts/my-font.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
 
     <!--  robots -->
     <meta name="robots" content="index, follow">
@@ -63,6 +72,27 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
+    <!--  JSON-LD STRUCTURED DATA FOR SEO OPTIMIZATION -->
+      <!-- for test: https://search.google.com/test/rich-results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "ADRIANO GRATANI",
+        "url": "https://adrianogratani.vercel.app/",
+        "sameAs": [
+          "www.linkedin.com/in/gratani",
+          "https://github.com/AdrianoGratani",
+        ],
+        "jobTitle": "Frontend Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "'Freelancer'"
+        },
+        "description": "Arguably one of the best frontend developers in the wordld right now. Words are not enough to expain the greatness of his websites."
+      }
+    </script>
     <title>GeojExplorer | MainPage</title>
   </head>
   <body>
