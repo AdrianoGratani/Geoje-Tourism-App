@@ -95,7 +95,7 @@ export default function ApiWeather() {
     </div>
 
     return (
-        <div className="apic">
+        <div id="weather" className="apic">
              {
                     window.scrollY > 1900 && window.scrollY < 2400
                     ? 

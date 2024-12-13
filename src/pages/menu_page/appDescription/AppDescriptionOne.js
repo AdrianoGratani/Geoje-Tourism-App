@@ -12,7 +12,7 @@ export default function AppDescriptionOne() {
     const {es} = useScreenContext();
 
     return (
-        <div className='c'>
+        <div id="description" className='c'>
             {
                 es() !== 'mobile' &&
                  <h5 className="p">The App Explained</h5>

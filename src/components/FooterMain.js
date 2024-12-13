@@ -78,7 +78,7 @@ export default function FooterMain() {
         // {/* https://fonnts.com/cotoris/   for the form description text  */}
         // {/* https://www.1001freefonts.com/bodoni.font   elegant. */}
 
-        <div className="footer_container playfair-display_it_light">
+        <div id="footer" className="footer_container playfair-display_it_light">
              {
                     window.scrollY > 2400 && 
                     
