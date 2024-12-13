@@ -1,3 +1,5 @@
+Read this file to gain all the informations about this project.
+
 - project description;
 - my skillset;
 - how to install this project locally;
@@ -8,6 +10,8 @@
 ## Description for this project
 
 This is a full-responsive website, made to encourage tourism in Geoje (the small arcipelago in the South Gyeongsan province, South Korea) by providing the best spots to visit in a very fast, efficient, and user-friendly way. and it's 100% ideated, designed and coded by me, in JavaScript, using the React Library.
+It uses Open Graph protocol metatags which generates cards for social media, and Twitter cards as well.
+SEO is optimized through JSON-LD structured data script, and robots metatags.
 
 ## Desktop and mobile are very different: I warmly reccommend you to check both versions.
 ![screenshot](./src/img/c.png)
