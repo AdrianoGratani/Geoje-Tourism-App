@@ -75,7 +75,7 @@ export default function SectionMapSea() {
     return (
             // {/* SVG MAP */}
 
-            <div class="single_map_section_container_sea"
+            <div class="single_map_section_container_sea" tabindex='0'
             onClick={()=> resetContextData()}
             >
                 {

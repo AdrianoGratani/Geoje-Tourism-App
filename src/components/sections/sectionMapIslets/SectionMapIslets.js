@@ -63,7 +63,7 @@ export default function Section_map_islets() {
 
     return (
 
-            <div class="single_map_section_container_islets"
+            <div class="single_map_section_container_islets" tabindex='0'
             onClick={()=> resetContextData()}
             >
                 {

@@ -74,7 +74,7 @@ export default function SectionMapLand() {
     }
 
     return (
-        <div class="single_map_section_container_land"
+        <div class="single_map_section_container_land" tabindex='0'
             onClick={() => resetContextData()}
         >
             {
