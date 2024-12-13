@@ -101,8 +101,9 @@ export default function SectionMapSea() {
 
                 {/* SVG ICON */}
                     {
-                        locations_data.seaside.map((sea_location) => (
+                        locations_data.seaside.map((sea_location, tabIndex) => (
                             <div id="s_icon_container"
+                            tabIndex={tabIndex + 20}
                             onMouseEnter={()=> send_icon_id_to_context(sea_location.id, sea_location)}
                             onClick={()=>triggerExtCard(sea_location.id, sea_location)}
                             // onMouseLeave={()=> remove_currently_hovered_icon_context()}

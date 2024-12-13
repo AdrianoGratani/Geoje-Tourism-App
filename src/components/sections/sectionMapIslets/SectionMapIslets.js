@@ -86,7 +86,7 @@ export default function Section_map_islets() {
                     }} />
                 }
             {
-                icons_islets_data.map((islet)=> (
+                icons_islets_data.map((islet, tabIndex)=> (
 
                     <div className={
                         // 1. for desktop    2. for mobile
@@ -112,6 +112,8 @@ export default function Section_map_islets() {
                         left: es()!=='mobile' ? `${islet.left}vw`: `${p(islet.id, islet.mleft)}vw`,
                         transition: 'left 0.5s, top 0.5s'
                     }}
+                    // keyboard-only users:  AFTER ALL THE OTHERS
+                    tabIndex={tabIndex + 40}
                     >
                     {/* {islet.id} */}
                         <SvgIslets

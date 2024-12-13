@@ -98,8 +98,9 @@ export default function SectionMapLand() {
                     }} />
             }
             {                                                               // ICONS SVG
-                locations_data.mainland.map((location) => (
+                locations_data.mainland.map((location, tabIndex) => (
                     <div
+                        tabIndex={tabIndex + 1}
                         class={`m_icon_container 
                                 ${es() !== 'mobile' && currentlyHoveredCard === location.id
                                 ? "m_icon_effect"
