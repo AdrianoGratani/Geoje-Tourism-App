@@ -70,9 +70,9 @@ export default function CardMainland({card_data, id_index}) {
     }
 
     return (
-        
         // upper line: name;  lower line: infos.   >>> EVENT LISTENER GOES HERE TO THE CONTAINER.
-        <div className={`card_mainland_container 
+        <div aria-label={`Card Informations about ${mainland_card_data_keys.n}`}
+        className={`card_mainland_container 
              ${currentlyHoveredIcon=== mainland_card_data_keys.id
                                       ? "m_card_effect"
                                       : ""
@@ -83,29 +83,32 @@ export default function CardMainland({card_data, id_index}) {
         > 
             {/* SMALL CARD COMPONENT. */}
             {/* name takes a full line. */}
-            <h1 className="card_name_mainland">
-                <div className="icon_container">
-                    <FaMountain className="icon" />
-                </div>
-                <div className="mainland_text"
-                    style={{
-                        fontSize: mainland_card_data_keys.n.length > 10 ? '0.9rem' : '1rem' 
-                    }}>
-                    {
-                    mainland_card_data_keys.n
-                    }
-                    {/* debug */}
-                    {/* {mainland_card_data_keys.id} */}
-                </div>
-            </h1>
+            <section>
+                <h1 className="card_name_mainland">
+                    <div className="icon_container">
+                        <FaMountain className="icon" />
+                    </div>
+                    <div className="mainland_text"
+                        style={{
+                            fontSize: mainland_card_data_keys.n.length > 10 ? '0.9rem' : '1rem' 
+                        }}>
+                        {
+                        mainland_card_data_keys.n
+                        }
+                        {/* debug */}
+                        {/* {mainland_card_data_keys.id} */}
+                    </div>
+                </h1>
+            </section>
 
             {/* additional card infos take one line altogether. */}
-            <div className="card_additional_infos">
+            <section className="card_additional_infos">
                 <h4 className="card_difficulty">
                     <div className="icon_container">
                         <FaPersonHiking className="icon"/>
                     </div>
-                    <div className="mainland_text">
+                    <div className="mainland_text"
+                    aria-label={`description for ${mainland_card_data_keys.n}`}>
                         {mainland_card_data_keys.d}
                     </div>
                 </h4>
@@ -125,7 +128,7 @@ export default function CardMainland({card_data, id_index}) {
                         {mainland_card_data_keys.du}
                     </div>
                 </h4>
-            </div>
+            </section>
         </div>
     )
 }
