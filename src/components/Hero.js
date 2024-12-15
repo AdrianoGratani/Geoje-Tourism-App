@@ -22,11 +22,11 @@ export default function Hero ({hero_geoje_current_color}) {
              <div className="hero_container"
              onClick={ handlemmenu}>
                 {/* mmenu has to be called from mapsmenu mobile button */}
-                {  es()==='mobile' && <Mmenu /> }
+                {  es()==='mobile' && <Mmenu  /> }
 
                 {/* hero text */}
                 {currentScreenWidthContext > 1400 ? 
-                    <div className="hero_text_container">
+                    <div className="hero_text_container" aria-label='introductive page, with some animations, for my website.'>
                         <h1><span className={`hero_geoje ${hero_geoje_current_color} `}>Everything</span> 
 
                         {currentScreenWidthContext > 1400 && <br />}
@@ -49,7 +49,7 @@ export default function Hero ({hero_geoje_current_color}) {
                     currentScreenWidthContext <= 600 && screenMode === 'mobile' 
                     ?  <div className={`m-button m-button-${hero_geoje_current_color}`}
                     >
-                        <MapsMenu/>
+                        <MapsMenu aria-label=' button to access the menu, for mobile devices.'/>
                         </div>
                     :  null
                 }
