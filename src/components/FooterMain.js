@@ -87,8 +87,8 @@ export default function FooterMain() {
                         </Helmet> 
                     
                 }
-            <div className="footer_header_container ">
-                <div className="footer_header_left">
+            <header className="footer_header_container ">
+                <section className="footer_header_left">
                     <div className="footer_header_logo_container im-fell-great-primer-regular">
                         A | G
                     </div>
@@ -107,12 +107,12 @@ export default function FooterMain() {
 
                             : null
                     }
-                </div>
+                </section>
 
                 {
                     es() !== 'mobile'
                         ?
-                        <div className="footer_header_right playfair-display_light">
+                        <nav className="footer_header_right playfair-display_light">
                             <div className="footer_header_aboutme link">
                                 <a href="#">My Journey</a>
                             </div>
@@ -122,20 +122,20 @@ export default function FooterMain() {
                             <div className="footer_header_code link">
                                 <a href="#">My Code</a>
                             </div>
-                        </div>
+                        </nav>
 
                         : null
                 }
 
-            </div>
+            </header>
 
-            <div className="footer_animation_container playfair-display_light">
+            <section className="footer_animation_container playfair-display_light">
                 <div className="a">
                     <FooterTextAnimation textIn={animStr} interval={1000} />
                 </div>
-            </div>
+            </section>
 
-            <div className="footer_form_links_container">
+            <section className="footer_form_links_container">
 
                 <div className="footer_form_container">
                     <div className="footer_form_description_container playfair-display_light">
@@ -216,19 +216,19 @@ export default function FooterMain() {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {
                 es() === 'mobile'
 
                     ?
-                    <div className="footer_signature_container">
+                    <footer className="footer_signature_container">
                         <div className="footer_signature playfair-display_light">
                             <a href="https://adrianogratani.vercel.app/">
                                 Adriano Gratani
                             </a>
                         </div>
-                    </div>
+                    </footer>
 
                     : null
             }
@@ -237,10 +237,10 @@ export default function FooterMain() {
                 es() !== 'mobile'
 
                     ?
-                    <div className="footer_footer_container">
+                    <footer className="footer_footer_container">
                         <div>Copyright</div>
                         <div><a href="#">Go to top</a></div>
-                    </div>
+                    </footer>
 
                     : null
             }
