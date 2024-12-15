@@ -79,17 +79,19 @@ export default function FooterMain() {
         // {/* https://www.1001freefonts.com/bodoni.font   elegant. */}
 
         <div id="footer" className="footer_container playfair-display_it_light">
-             {
-                    window.scrollY > 2400 && 
-                    
-                        <Helmet>
-                            <title>Footer | ContactMe</title>
-                        </Helmet> 
-                    
-                }
+            {
+                window.scrollY > 2400 &&
+
+                <Helmet>
+                    <title>Footer | ContactMe</title>
+                    <meta name="description" content="Contact informations about Adriano Gratani, a React Frontend Developer based in Geoje, South Korea." />
+                </Helmet>
+
+            }
             <header className="footer_header_container ">
                 <section className="footer_header_left">
-                    <div className="footer_header_logo_container im-fell-great-primer-regular">
+                    <div className="footer_header_logo_container im-fell-great-primer-regular"
+                        aria-label='logo. the initials of my name, Adriano Gratani.'>
                         A | G
                     </div>
 
@@ -97,10 +99,14 @@ export default function FooterMain() {
                         es() !== 'mobile'
                             ?
                             <div>
-                                <div className="footer_header_job_container">
+                                <div className="footer_header_job_container"
+                                    aria-label="Footer contact details: my name: Adriano Gratani, and my profession: FrontEnd Developer."
+                                >
                                     Adriano Gratani, <br /> FrontEnd Developer.
                                 </div>
-                                <div className="footer_header_address_container">
+                                <div className="footer_header_address_container"
+                                aria-label='the city where I live: Geoje, in south Korea'
+                                >
                                     Geoje, <br /> South Korea.
                                 </div>
                             </div>
@@ -112,7 +118,9 @@ export default function FooterMain() {
                 {
                     es() !== 'mobile'
                         ?
-                        <nav className="footer_header_right playfair-display_light">
+                        <nav className="footer_header_right playfair-display_light"
+                        aria-label='links about me: 1 My Journey in this field; 2 My work ethic; 3 My Github page to see my code.'
+                        >
                             <div className="footer_header_aboutme link">
                                 <a href="#">My Journey</a>
                             </div>
@@ -129,15 +137,20 @@ export default function FooterMain() {
 
             </header>
 
-            <section className="footer_animation_container playfair-display_light">
+            <section
+                aria-label='an animation with text written automatically in real time, to show my coding skills.'
+                className="footer_animation_container playfair-display_light">
                 <div className="a">
                     <FooterTextAnimation textIn={animStr} interval={1000} />
                 </div>
             </section>
 
-            <main className="footer_form_links_container">
+            <main className="footer_form_links_container"
+            >
 
-                <section className="footer_form_container">
+                <section className="footer_form_container"
+                aria-labelledby="contact-form"
+                >
                     <h3 className="footer_form_description_container playfair-display_light">
                         {
                             es() !== 'mobile' ?
@@ -150,8 +163,11 @@ export default function FooterMain() {
 
                         <form className="footer_form">
                             <div className="inputt">
-                                <placeholder className="placeholder_name" id="name">Your Name: </placeholder>
-                                <input type="text" id="name" className="input_name" />
+                                <placeholder className="placeholder_name" id="name"
+                                >Your Name: </placeholder>
+                                <input
+                                    type="text" id="name" className="input_name"
+                                    aria-label='this is the input for your name. to send me an email.' />
                             </div>
                             {
                                 es() !== 'mobile'
@@ -160,14 +176,18 @@ export default function FooterMain() {
                             }
                             <div className="inputt">
                                 <placeholder className="placeholder_mail" id="email">Your Email: </placeholder>
-                                <input type="email" id="email" className="input_name" />
+                                <input type="email" id="email" className="input_name" 
+                                aria-label='this is the input for your email, for me to get your contacts.'
+                                />
                             </div>
                             <div>
-                                <textarea placeholder="Type here" />
+                                <textarea placeholder="Type here" 
+                                aria-label='the input field for your message.'/>
                             </div>
                         </form>
                         <div className="footer_button_container">
-                            <button className="footer_button">
+                            <button className="footer_button"
+                            aria-label='button. click it to send me your message.'>
                                 {
                                     es() === 'mobile'
                                         ? "Send"
@@ -180,12 +200,19 @@ export default function FooterMain() {
                 </section>
 
                 <div className="footer_links_container">
-                    <section className="footer_links_social_container">
-                        <h1 className="links_title ">
+                    <section className="footer_links_social_container"
+                    aria-labelledby='footer_social_links'>
+                        <h1 className="links_title" 
+                        id='footer_social_links'
+                        >
                             <FooterTextAnimation textIn={"   My Links!    "} interval={1000} />
                         </h1>
-                        <a href="https://github.com/AdrianoGratani" className="link playfair-display_light">GitHub</a>
-                        <a href="https://www.linkedin.com/in/gratani" className="link playfair-display_light">LinkedIn</a>
+                        <a href="https://github.com/AdrianoGratani" className="link playfair-display_light"
+                        aria-label='link. click to visit my Github profile and check my code.'
+                        >GitHub</a>
+                        <a href="https://www.linkedin.com/in/gratani" className="link playfair-display_light"
+                         aria-label='link. click to visit my Github profile and check my code.'
+                         >LinkedIn</a>
                         {
                             es() !== 'mobile'
                                 ?
