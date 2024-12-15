@@ -86,7 +86,7 @@ export default function CardMainland({card_data, id_index}) {
             <section>
                 <h1 className="card_name_mainland">
                     <div className="icon_container">
-                        <FaMountain className="icon" />
+                        <FaMountain className="icon" aria-hidden="true"/>
                     </div>
                     <div className="mainland_text"
                         style={{
@@ -105,7 +105,7 @@ export default function CardMainland({card_data, id_index}) {
             <section className="card_additional_infos">
                 <h4 className="card_difficulty">
                     <div className="icon_container">
-                        <FaPersonHiking className="icon"/>
+                        <FaPersonHiking className="icon" aria-hidden="true"/>
                     </div>
                     <div className="mainland_text"
                     aria-label={`description for ${mainland_card_data_keys.n}`}>
@@ -114,7 +114,7 @@ export default function CardMainland({card_data, id_index}) {
                 </h4>
                 <h4 className="card_length">
                     <div className="icon_container">
-                        <FaRightLeft className="icon"/>
+                        <FaRightLeft className="icon" aria-hidden="true"/>
                     </div>
                     <div className="mainland_text">
                         {mainland_card_data_keys.l}
@@ -122,7 +122,7 @@ export default function CardMainland({card_data, id_index}) {
                 </h4>
                 <h4 className="card_duration">
                     <div className="icon_container">
-                        <FaClock className="icon"/>
+                        <FaClock className="icon" aria-hidden="true"/>
                     </div>
                     <div className="mainland_text">
                         {mainland_card_data_keys.du}
