@@ -135,17 +135,17 @@ export default function FooterMain() {
                 </div>
             </section>
 
-            <section className="footer_form_links_container">
+            <main className="footer_form_links_container">
 
-                <div className="footer_form_container">
-                    <div className="footer_form_description_container playfair-display_light">
+                <section className="footer_form_container">
+                    <h3 className="footer_form_description_container playfair-display_light">
                         {
                             es() !== 'mobile' ?
                                 "Contact me for further discussion about Frontend development"
 
                                 : null
                         }
-                    </div>
+                    </h3>
                     <div className="footer_form_cont">
 
                         <form className="footer_form">
@@ -177,10 +177,10 @@ export default function FooterMain() {
                             </button>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <div className="footer_links_container">
-                    <div className="footer_links_social_container">
+                    <section className="footer_links_social_container">
                         <h1 className="links_title ">
                             <FooterTextAnimation textIn={"   My Links!    "} interval={1000} />
                         </h1>
@@ -199,8 +199,8 @@ export default function FooterMain() {
 
                                 : null
                         }
-                    </div>
-                    <div className="footer_links_addresses_container">
+                    </section>
+                    <section className="footer_links_addresses_container">
                         <h1 className="hello_title">
                             <FooterTextAnimation textIn={"   _Say 'hello!'   "} interval={1000} />
 
@@ -214,9 +214,9 @@ export default function FooterMain() {
                         >
                             Mail
                         </Link>
-                    </div>
+                    </section>
                 </div>
-            </section>
+            </main>
 
             {
                 es() === 'mobile'
