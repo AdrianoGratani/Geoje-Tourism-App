@@ -66,14 +66,15 @@ export default function CardSeaside({ card_data }) {
 
             // event listener for extended card:
             onClick={()=> handle_context_seaside_clicked_card_(card_data.id)}
+            aria-label={`infos for ${seaside_card_data_keys.n}`} 
             >
             {/* name takes a full line. */}
            
             <h1 className="card_name_seaside">
                 <div className="icon_container_seaside">
-                    <FaHouseTsunami class="icon_sea"/>
+                    <FaHouseTsunami class="icon_sea" aria-hidden='true'/>
                 </div>
-                <div className="seaside_text"
+                <div className="seaside_text" aria-hidden='true'
                     style={{
                         fontSize: seaside_card_data_keys.n.length > 10 ? '0.9rem' : '1rem'
                     }}
